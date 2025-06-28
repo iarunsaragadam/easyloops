@@ -142,52 +142,24 @@ In a world where programming education is often expensive, fragmented, or inacce
 
 ## 🤖 AI-Powered Development
 
-EasyLoops embraces modern AI-powered development tools! Here's how you can leverage them to contribute effectively:
+**Want to contribute 10x faster?** EasyLoops embraces modern AI development tools!
 
-### 🎯 Supported AI Tools
+### Why AI Development?
 
-#### **Cursor IDE**
+- **Create exercises** in 15 minutes instead of 2-3 hours
+- **Generate test cases** in 5 minutes instead of 1-2 hours
+- **Write documentation** in 5 minutes instead of 1 hour
 
-- **Perfect for**: Full-stack development with AI pair programming
-- **How to use**:
-  - Install [Cursor](https://cursor.sh/)
-  - Open the project in Cursor
-  - Use `Ctrl+K` (Cmd+K on Mac) for AI code generation
-  - Use `Ctrl+L` (Cmd+L on Mac) for AI chat assistance
-  - Leverage Cursor's **Background Agent** for automated code improvements
+### Supported Tools
 
-#### **GitHub Copilot**
+- **Cursor IDE** (Recommended for beginners)
+- **GitHub Copilot** (Perfect for VS Code users)
+- **Windsurf** (Collaborative AI development)
+- **ChatGPT/Claude** (Planning and content generation)
 
-- **Perfect for**: Code completion and function generation
-- **How to use**:
-  - Install GitHub Copilot extension in VS Code
-  - Write comments describing what you want to build
-  - Accept AI suggestions with `Tab`
-  - Use **GitHub Copilot Chat** for complex problem-solving
+**📖 [Complete AI Development Guide →](AI_DEVELOPMENT.md)**
 
-#### **Windsurf**
-
-- **Perfect for**: Collaborative AI development
-- **How to use**:
-  - Install [Windsurf](https://windsurf.ai/)
-  - Use AI-powered code suggestions and reviews
-  - Collaborate with AI on complex features
-
-#### **ChatGPT/GPT-4**
-
-- **Perfect for**: Architecture planning and problem-solving
-- **How to use**:
-  - Plan new features with AI assistance
-  - Generate comprehensive test cases
-  - Debug complex issues with AI guidance
-
-### 🚀 AI Development Workflow
-
-1. **Planning Phase**: Use AI to brainstorm and plan features
-2. **Development Phase**: Leverage AI for code generation and completion
-3. **Testing Phase**: Generate test cases and edge cases with AI
-4. **Review Phase**: Use AI to review code quality and suggest improvements
-5. **Documentation**: Let AI help write clear, comprehensive documentation
+_Even if you've never used AI for coding before, our step-by-step guide will have you contributing in minutes!_
 
 ## 🧪 Testing
 
@@ -220,6 +192,11 @@ npm run test:e2e
 
 # All tests
 npm run test:all
+
+# Run specific test suites
+npm run test:exercises    # Test exercise validation
+npm run test:components   # Test React components
+npm run test:utils        # Test utility functions
 ```
 
 ## 🛠️ Development
@@ -288,6 +265,9 @@ easyloops-react/
 ├── src/
 │   ├── app/              # Next.js app router
 │   ├── components/       # Reusable React components
+│   │   ├── ui/          # Basic UI components
+│   │   ├── exercises/   # Exercise-specific components
+│   │   ├── editor/      # Code editor components
 │   │   ├── __tests__/   # Component tests
 │   │   └── ...
 │   ├── hooks/           # Custom React hooks
@@ -300,28 +280,40 @@ easyloops-react/
 │   ├── utils/           # Utility functions
 │   └── constants/       # Application constants
 ├── public/
-│   ├── questions/       # Programming exercises and test cases
+│   ├── questions/       # Programming exercises (200+ topics)
+│   │   ├── 01-variable-declaration/
+│   │   ├── 02-data-types/
+│   │   └── ...          # Organized by difficulty and topic
 │   └── testcases/       # Test case files
 ├── scripts/             # Build and utility scripts
 ├── docs/                # Documentation
-└── .github/             # GitHub templates and workflows
+├── .github/             # GitHub templates and workflows
+└── README.md           # You are here!
 ```
 
 ## 📱 Deployment
 
 The project is configured for easy deployment on multiple platforms:
 
-### Vercel (Recommended)
+### Firebase (Production)
 
 ```bash
 npm run build
-# Deploy to Vercel
+firebase deploy
 ```
 
-### Firebase
+### Vercel (Alternative)
 
 ```bash
-npm run deploy:firebase
+npm run build
+# Connect to Vercel for automatic deployments
+```
+
+### Docker (Self-hosted)
+
+```bash
+docker build -t easyloops-react .
+docker run -p 3000:3000 easyloops-react
 ```
 
 ### Environment Variables
@@ -353,6 +345,7 @@ We welcome contributions from developers of all skill levels! Whether you're fix
 - 🔧 **Code Contributions**: Fix bugs or add new features
 - 🎓 **Educational Content**: Create new programming exercises
 - 🌐 **Translations**: Help make the platform accessible globally
+- 🤖 **AI-Assisted Development**: Use AI tools to contribute 10x faster!
 
 ## 🌟 Community
 
