@@ -124,129 +124,22 @@ npm run lint       # Run ESLint
 
 ## 🤖 AI-Powered Development
 
-EasyLoops embraces modern AI-powered development tools! Here's how you can leverage them to contribute effectively:
+**Want to contribute 10x faster?** EasyLoops embraces modern AI development tools! 
 
-### 🎯 Supported AI Tools
+### Why AI Development?
+- **Create exercises** in 15 minutes instead of 2-3 hours
+- **Generate test cases** in 5 minutes instead of 1-2 hours
+- **Write documentation** in 5 minutes instead of 1 hour
 
-#### **Cursor IDE**
-- **Perfect for**: Full-stack development with AI pair programming
-- **How to use**: 
-  - Install [Cursor](https://cursor.sh/)
-  - Open the project in Cursor
-  - Use `Ctrl+K` (Cmd+K on Mac) for AI code generation
-  - Use `Ctrl+L` (Cmd+L on Mac) for AI chat assistance
-  - Leverage Cursor's **Background Agent** for automated code improvements
+### Supported Tools
+- **Cursor IDE** (Recommended for beginners) 
+- **GitHub Copilot** (Perfect for VS Code users)
+- **Windsurf** (Collaborative AI development)
+- **ChatGPT/Claude** (Planning and content generation)
 
-#### **GitHub Copilot**
-- **Perfect for**: Code completion and function generation
-- **How to use**:
-  - Install GitHub Copilot extension in VS Code
-  - Write comments describing what you want to build
-  - Accept AI suggestions with `Tab`
-  - Use **GitHub Copilot Chat** for complex problem-solving
+**� [Complete AI Development Guide →](AI_DEVELOPMENT.md)**
 
-#### **Windsurf**
-- **Perfect for**: Collaborative AI development
-- **How to use**:
-  - Install [Windsurf](https://windsurf.ai/)
-  - Use AI-powered code suggestions and reviews
-  - Collaborate with AI on complex features
-
-#### **ChatGPT/GPT-4**
-- **Perfect for**: Architecture planning and problem-solving
-- **How to use**:
-  - Plan new features with AI assistance
-  - Generate comprehensive test cases
-  - Create documentation and comments
-  - Debug complex issues
-
-### 🛠️ AI Development Workflow
-
-#### **1. Feature Planning with AI**
-```bash
-# Use AI to plan new programming exercises
-# Example prompt: "Create a comprehensive binary search exercise with multiple test cases"
-```
-
-#### **2. Code Generation**
-```bash
-# Generate components with AI
-# Example: Use Cursor to generate a new exercise component
-# Prompt: "Create a React component for displaying programming hints"
-```
-
-#### **3. Test-Driven Development with AI**
-```bash
-# Generate test cases first
-# Example prompt: "Create Jest test cases for a sorting algorithm exercise"
-```
-
-#### **4. Documentation with AI**
-```bash
-# Generate comprehensive documentation
-# Example: "Create detailed API documentation for exercise validation"
-```
-
-### 📝 AI Contribution Guidelines
-
-#### **Best Practices:**
-- ✅ **Verify AI-generated code** - Always review and test AI suggestions
-- ✅ **Use AI for boilerplate** - Let AI handle repetitive code patterns
-- ✅ **Combine AI with domain knowledge** - Your expertise + AI efficiency
-- ✅ **Generate comprehensive tests** - Use AI to create edge case scenarios
-- ✅ **Document AI-assisted features** - Note when AI was used in PR descriptions
-
-#### **AI-Assisted Contribution Types:**
-
-**🎓 Educational Content Creation**
-```bash
-# Use AI to generate programming exercises
-# Tools: ChatGPT, Cursor, GitHub Copilot
-# Focus: Problem statements, test cases, solutions, explanations
-```
-
-**🔧 Code Improvements**
-```bash
-# Use AI for refactoring and optimization
-# Tools: Cursor Background Agent, GitHub Copilot
-# Focus: Performance improvements, code clarity, bug fixes
-```
-
-**📚 Documentation Enhancement**
-```bash
-# Use AI for comprehensive documentation
-# Tools: ChatGPT, GitHub Copilot Chat
-# Focus: API docs, tutorials, code comments
-```
-
-**🧪 Test Coverage**
-```bash
-# Use AI to generate comprehensive test suites
-# Tools: GitHub Copilot, Cursor
-# Focus: Unit tests, integration tests, edge cases
-```
-
-### 🚀 AI Development Commands
-
-```bash
-# Cursor AI Commands
-cursor --ai-generate component    # Generate new components
-cursor --ai-refactor             # Refactor existing code
-cursor --ai-test                 # Generate test cases
-
-# GitHub Copilot Commands
-# Use comments to guide AI generation:
-# TODO: Create a function to validate exercise solutions
-# TODO: Generate test cases for binary search algorithm
-# TODO: Add TypeScript interfaces for exercise data
-
-# Background Agent Tasks
-# Let AI agents handle:
-# - Code formatting and linting
-# - Import organization
-# - Basic refactoring tasks
-# - Documentation generation
-```
+*Even if you've never used AI for coding before, our step-by-step guide will have you contributing in minutes!*
 
 ## 📖 Usage
 
@@ -276,7 +169,7 @@ We welcome contributions from developers of all skill levels! Whether you're fix
 - 🔧 **Code Contributions**: Fix bugs or add new features
 - 🎓 **Educational Content**: Create new programming exercises
 - 🌐 **Translations**: Help make the platform accessible globally
-- 🤖 **AI-Assisted Development**: Use AI tools to accelerate contributions
+- 🤖 **AI-Assisted Development**: Use AI tools to contribute 10x faster!
 
 ## 📁 Project Structure
 
