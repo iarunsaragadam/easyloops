@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { AppState } from '@/shared/types';
-import { loadQuestion, getAvailableQuestions } from '@/shared/lib';
-import { DEFAULT_CODE, DEFAULT_QUESTION_ID } from '@/shared/constants';
+import { loadQuestion, getAvailableQuestions, loadCodeStub } from '@/shared/lib';
+import { SUPPORTED_LANGUAGES } from '@/shared/constants/languages';
+import { DEFAULT_QUESTION_ID } from '@/shared/constants';
 
 export const useAppState = () => {
   const loadingRef = useRef(false);
+  const codeStubsRef = useRef<Record<string, string>>({});
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -13,32 +15,8 @@ export const useAppState = () => {
   const initialQuestionId = searchParams.get('q') || DEFAULT_QUESTION_ID;
 
   const [appState, setAppState] = useState<AppState>({
-    pythonCode: DEFAULT_CODE,
-    goCode: `package main
-
-import (
-	"fmt"
-	"os"
-	"bufio"
-	"strconv"
-)
-
-func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	
-	// Read the number of rows
-	scanner.Scan()
-	n, _ := strconv.Atoi(scanner.Text())
-	
-	// Outer loop: iterate through rows (1 to n)
-	for i := 1; i <= n; i++ {
-		// Inner loop: print stars for current row
-		for j := 0; j < i; j++ {
-			fmt.Print("*")
-		}
-		fmt.Println() // Move to next line after each row
-	}
-}`,
+    pythonCode: '',
+    goCode: '',
     output: '',
     testResults: [],
     isRunning: false,
@@ -96,6 +74,44 @@ func main() {
     }
   }, [appState.selectedQuestionId]);
 
+  // Load code stubs when question changes
+  useEffect(() => {
+    if (appState.selectedQuestionId) {
+      const loadCodeStubs = async () => {
+        try {
+          // Load code stubs for all supported languages
+          const supportedLanguages = SUPPORTED_LANGUAGES.map(lang => lang.value);
+          const codeStubs: Record<string, string> = {};
+          
+          // Load all stubs in parallel
+          const promises = supportedLanguages.map(async (language) => {
+            const stub = await loadCodeStub(appState.selectedQuestionId, language);
+            codeStubs[language] = stub;
+          });
+          
+          await Promise.all(promises);
+          
+          // Store stubs in ref for quick access
+          codeStubsRef.current = codeStubs;
+          
+          // Update the app state with the loaded stubs
+          setAppState((prev) => ({
+            ...prev,
+            pythonCode: codeStubs.python || '',
+            goCode: codeStubs.go || '',
+            // Add other languages as needed
+          }));
+          
+          console.log('✅ Code stubs loaded for question:', appState.selectedQuestionId);
+        } catch (error) {
+          console.error('Error loading code stubs:', error);
+        }
+      };
+      
+      loadCodeStubs();
+    }
+  }, [appState.selectedQuestionId]);
+
   const handleQuestionChange = (questionId: string) => {
     // Only update if the question is actually different
     if (questionId !== appState.selectedQuestionId) {
@@ -115,12 +131,48 @@ func main() {
     setAppState((prev) => ({ ...prev, selectedLanguage: language }));
   };
 
+  // Get code for the currently selected language
+  const getCurrentCode = () => {
+    const language = appState.selectedLanguage;
+    
+    // First check if we have a cached stub for this language
+    if (codeStubsRef.current[language]) {
+      return codeStubsRef.current[language];
+    }
+    
+    // Fall back to the state values (for backwards compatibility)
+    if (language === 'python') {
+      return appState.pythonCode;
+    } else if (language === 'go') {
+      return appState.goCode;
+    }
+    
+    return '';
+  };
+
   const setPythonCode = (code: string) => {
     setAppState((prev) => ({ ...prev, pythonCode: code }));
+    // Also update the cached stub
+    codeStubsRef.current['python'] = code;
   };
 
   const setGoCode = (code: string) => {
     setAppState((prev) => ({ ...prev, goCode: code }));
+    // Also update the cached stub
+    codeStubsRef.current['go'] = code;
+  };
+
+  // Generic function to set code for any language
+  const setCodeForLanguage = (language: string, code: string) => {
+    // Update cached stub
+    codeStubsRef.current[language] = code;
+    
+    // Update state for backwards compatibility
+    if (language === 'python') {
+      setPythonCode(code);
+    } else if (language === 'go') {
+      setGoCode(code);
+    }
   };
 
   const setOutput = (output: string) => {
@@ -141,6 +193,8 @@ func main() {
     handleLanguageChange,
     setPythonCode,
     setGoCode,
+    setCodeForLanguage,
+    getCurrentCode,
     setOutput,
     setTestResults,
     setIsRunning,

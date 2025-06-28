@@ -30,6 +30,8 @@ export const MONACO_CONFIG = {
 
 export const DEFAULT_QUESTION_ID = '01-variable-declaration';
 
+// Note: SUPPORTED_LANGUAGES is now imported from languages.ts
+// This is kept for backwards compatibility
 export const SUPPORTED_LANGUAGES = [
   { value: 'python', label: 'Python3' },
   { value: 'go', label: 'Go' },

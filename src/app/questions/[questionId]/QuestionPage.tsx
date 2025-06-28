@@ -25,8 +25,8 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
     appState,
     handleQuestionChange,
     handleLanguageChange,
-    setPythonCode,
-    setGoCode,
+    setCodeForLanguage,
+    getCurrentCode,
     setOutput,
     setTestResults,
     setIsRunning,
@@ -128,21 +128,8 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
     const language = appState.selectedLanguage;
     console.log(`Updating ${language} code:`, code.substring(0, 100) + '...');
 
-    if (language === 'go') {
-      setGoCode(code);
-    } else {
-      setPythonCode(code);
-    }
-  };
-
-  const getCurrentCode = () => {
-    const language = appState.selectedLanguage;
-    const code = language === 'go' ? appState.goCode : appState.pythonCode;
-    console.log(
-      `Getting code for ${language}:`,
-      code.substring(0, 100) + '...'
-    );
-    return code;
+    // Use the new generic function for any language
+    setCodeForLanguage(language, code);
   };
 
   return (
