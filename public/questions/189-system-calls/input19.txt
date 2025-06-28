@@ -1,0 +1,8 @@
+7
+OPEN twn.dat r
+OPEN rbs.log r
+OPEN ykr.txt w
+LIST
+CLOSE 3
+CLOSE 4
+CLOSE 5

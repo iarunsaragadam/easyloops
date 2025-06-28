@@ -1,0 +1,7 @@
+WRITE: file1.txt (11 chars)
+WRITE: file1.txt (6 chars)
+READ: file1.txt = fj6yaa
+READ: file1.txt = fj6yaa
+APPEND: file1.txt (20 total chars)
+WRITE: file1.txt (2 chars)
+WRITE: file1.txt (9 chars)

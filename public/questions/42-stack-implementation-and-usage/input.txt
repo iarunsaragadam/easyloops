@@ -1,1 +1,8 @@
-placeholder
+7
+push 10
+push 20
+size
+peek
+pop
+isEmpty
+pop

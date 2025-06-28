@@ -1,1 +1,4 @@
-placeholder
+Rectangle: 0.01
+Circle: 0.79
+Triangle: 0.50
+Rectangle: 100.00

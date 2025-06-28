@@ -1,0 +1,48 @@
+CREATE 50
+CLEANUP
+STATUS
+CONNECT complex_client_1
+CONNECT complex_client_2
+LIST
+DISCONNECT 1
+CONNECT complex_client_3
+LIST
+CLEANUP
+STATUS
+CONNECT complex_client_1
+CLEANUP
+CONNECT complex_client_1
+CONNECT complex_client_2
+CONNECT complex_client_3
+STATUS
+CONNECT complex_client_4
+LIST
+CLEANUP
+CONNECT complex_client_1
+LIST
+CONNECT complex_client_2
+STATUS
+CONNECT complex_client_3
+CLEANUP
+STATUS
+STATUS
+CONNECT complex_client_1
+CLEANUP
+CONNECT complex_client_1
+CLEANUP
+LIST
+STATUS
+CONNECT complex_client_1
+CLEANUP
+STATUS
+CONNECT complex_client_1
+CLEANUP
+CLEANUP
+CONNECT complex_client_1
+DISCONNECT 1
+LIST
+DISCONNECT 1
+DISCONNECT 1
+CLEANUP
+CONNECT complex_client_1
+STATUS

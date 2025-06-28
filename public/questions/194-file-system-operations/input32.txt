@@ -1,0 +1,8 @@
+7
+mkdir test_dir
+touch test_dir/file.txt
+ls test_dir
+find file.txt
+size test_dir
+rm test_dir/file.txt
+rm test_dir

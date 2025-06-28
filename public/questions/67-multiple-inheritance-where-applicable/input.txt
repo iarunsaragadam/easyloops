@@ -1,1 +1,8 @@
-placeholder
+7
+CREATE Person p1 Alice
+CREATE Worker w1 Bob Engineer
+CREATE Student s1 Charlie MIT
+CREATE WorkingStudent ws1 Dave Developer Harvard
+CALL p1 introduce
+CALL ws1 balance
+MRO WorkingStudent

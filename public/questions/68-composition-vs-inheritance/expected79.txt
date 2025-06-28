@@ -1,0 +1,88 @@
+Created Motorcycle P19V0
+Created Motorcycle P19V1
+Created Truck P19V2
+Created Truck P19V3
+Created Motorcycle P19V4
+Created Truck P19V5
+Created Motorcycle P19V6
+Created Car P19V7
+Created Truck P19V8
+Created Truck P19V9
+Created Motorcycle P19V10
+Created Motorcycle P19V11
+Created Motorcycle P19V12
+Created Car P19V13
+Created Motorcycle P19V14
+Created Car P19V15
+Created Truck P19V16
+Created Truck P19V17
+Created Truck P19V18
+Created Car P19V19
+Created Motorcycle P19V20
+Created Truck P19V21
+Created Motorcycle P19V22
+Created Car P19V23
+Created Truck P19V24
+Created Car P19V25
+Created Car P19V26
+Created Motorcycle P19V27
+Created Truck P19V28
+Created Motorcycle P19V29
+Created Motorcycle P19V30
+Created Truck P19V31
+Created Motorcycle P19V32
+Created Motorcycle P19V33
+Created Truck P19V34
+Created Motorcycle P19V35
+Created Motorcycle P19V36
+Created Truck P19V37
+Created Car P19V38
+Created Motorcycle P19V39
+Created Truck P19V40
+Created Motorcycle P19V41
+Created Motorcycle P19V42
+Created Car P19V43
+Created Truck P19V44
+Created Truck P19V45
+Created Truck P19V46
+Created Car P19V47
+Created Car P19V48
+Created Car P19V49
+Created Car P19V50
+Created Motorcycle P19V51
+Created Car P19V52
+Created Car P19V53
+Created Car P19V54
+Created Truck P19V55
+Created Truck P19V56
+Created Car P19V57
+Vehicle P19V0 started. Engine started: V6 engine
+P19V0: 2003 Ford Motorcycle (running)
+Fuel cost for 475 miles: $2.1
+Vehicle P19V2 started. Engine started: V8 engine
+P19V2: 2002 BMW Truck (running)
+Fuel cost for 303 miles: $95.7
+Vehicle P19V4 started. Engine started: V8 engine
+P19V4: 2024 Ford Motorcycle (running)
+Fuel cost for 462 miles: $210.7
+Vehicle P19V6 started. Engine started: V8 engine
+P19V6: 2008 Honda Motorcycle (running)
+Fuel cost for 158 miles: $2.3
+Vehicle P19V8 started. Engine started: Electric engine
+P19V8: 2022 Toyota Truck (running)
+Fuel cost for 279 miles: $16.4
+Vehicle P19V10 started. Engine started: V8 engine
+P19V10: 2025 Toyota Motorcycle (running)
+Fuel cost for 414 miles: $93.0
+Vehicle P19V12 started. Engine started: Electric engine
+P19V12: 2000 BMW Motorcycle (running)
+Fuel cost for 326 miles: $0.2
+Vehicle P19V14 started. Engine started: V4 engine
+P19V14: 2010 Toyota Motorcycle (running)
+Fuel cost for 187 miles: $17.4
+Vehicle P19V16 started. Engine started: V4 engine
+P19V16: 2016 BMW Truck (running)
+Fuel cost for 180 miles: $45.9
+Vehicle P19V18 started. Engine started: V8 engine
+P19V18: 2017 Yamaha Truck (running)
+Fuel cost for 183 miles: $166.5

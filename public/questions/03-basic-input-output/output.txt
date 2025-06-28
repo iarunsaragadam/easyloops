@@ -1,0 +1,6 @@
+Name (uppercase): JOHN DOE
+Age: 25 years
+Birth Year: 1999
+Height: 1.75m (175.0cm)
+Favorite Language: Python
+Profile: John Doe, 25 years old, 1.75m tall, loves Python

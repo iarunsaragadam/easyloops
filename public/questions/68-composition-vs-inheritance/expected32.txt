@@ -1,0 +1,6 @@
+Created Car E1
+Created Truck E2
+Vehicle E1 started. Engine started: Electric engine
+Vehicle E2 started. Engine started: Electric engine
+Fuel cost for 100 miles: $0.1
+Fuel cost for 100 miles: $0.3

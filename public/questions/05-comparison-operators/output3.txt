@@ -1,0 +1,6 @@
+3 == 8: false
+3 != 8: true
+3 < 8: true
+3 <= 8: true
+3 > 8: false
+3 >= 8: false

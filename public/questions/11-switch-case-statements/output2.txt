@@ -1,0 +1,4 @@
+First number: 20
+Operator: *
+Second number: 3
+Result: 20 * 3 = 60

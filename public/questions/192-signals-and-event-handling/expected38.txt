@@ -1,0 +1,5 @@
+Processing events:
+Event 1: [P10] MAX_CONSTRAINT at 1000000 - maximum_values
+System state:
+Total events processed: 1
+MAX_CONSTRAINT: 1

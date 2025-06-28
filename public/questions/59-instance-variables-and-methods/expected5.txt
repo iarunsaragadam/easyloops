@@ -1,0 +1,7 @@
+Account ACC001 created for Alice
+Account ACC002 created for Frank
+Deposited 293.00 to account ACC002
+Account: ACC002, Owner: Frank, Balance: 2136.00
+Deposited 366.00 to account ACC002
+Account: ACC001, Owner: Alice, Balance: 870.00
+Deposited 499.00 to account ACC001

@@ -1,1 +1,6 @@
-placeholder
+5
+Circle 10
+Rectangle 5 5
+Triangle 10 8
+Circle 1.5
+Rectangle 12.5 8.4

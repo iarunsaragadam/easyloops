@@ -1,0 +1,142 @@
+141
+OPEN perf0.txt rw
+OPEN perf1.txt rw
+OPEN perf2.txt rw
+OPEN perf3.txt rw
+OPEN perf4.txt rw
+OPEN perf5.txt rw
+OPEN perf6.txt rw
+OPEN perf7.txt rw
+OPEN perf8.txt rw
+OPEN perf9.txt rw
+OPEN perf10.txt rw
+OPEN perf11.txt rw
+OPEN perf12.txt rw
+OPEN perf13.txt rw
+OPEN perf14.txt rw
+OPEN perf15.txt rw
+OPEN perf16.txt rw
+READ 3 47
+LIST
+READ 5 35
+WRITE 6 xxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+LIST
+WRITE 9 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+WRITE 11 xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITE 12 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 13 10
+WRITE 14 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 15 37
+WRITE 16 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 17 12
+READ 18 29
+WRITE 19 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 3 21
+LIST
+LIST
+WRITE 6 xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+READ 8 16
+WRITE 9 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+WRITE 11 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 12 38
+LIST
+WRITE 14 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITE 15 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITE 16 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+LIST
+LIST
+READ 3 39
+READ 4 35
+READ 5 33
+READ 6 50
+READ 7 5
+WRITE 8 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 9 4
+LIST
+LIST
+LIST
+WRITE 13 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITE 14 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITE 15 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+WRITE 17 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+READ 19 1
+LIST
+READ 4 44
+WRITE 5 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITE 6 xxxxxxxxxxxxxxxxxx
+READ 7 44
+READ 8 29
+READ 9 40
+WRITE 10 xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+LIST
+LIST
+LIST
+READ 15 20
+READ 16 22
+WRITE 17 xxxxxxxxxx
+LIST
+WRITE 19 xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 3 39
+WRITE 4 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 5 27
+READ 6 22
+WRITE 7 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITE 8 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+READ 10 21
+WRITE 11 xxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 12 47
+LIST
+WRITE 14 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+LIST
+READ 17 22
+READ 18 45
+READ 19 9
+WRITE 3 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+WRITE 5 xxxxxxxxxxxxxxxxxxxx
+WRITE 6 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITE 7 xxxxxxxxxxxxxxxxx
+WRITE 8 xxxxxxxxxxxxxxxxxxxxx
+READ 9 3
+WRITE 10 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 11 26
+WRITE 12 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ 13 19
+READ 14 21
+WRITE 15 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+READ 17 47
+LIST
+READ 19 45
+READ 3 1
+WRITE 4 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+WRITE 6 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+LIST
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6
+CLOSE 7
+CLOSE 8
+CLOSE 9
+CLOSE 10
+CLOSE 11
+CLOSE 12
+CLOSE 13
+CLOSE 14
+CLOSE 15
+CLOSE 16
+CLOSE 17
+CLOSE 18
+CLOSE 19

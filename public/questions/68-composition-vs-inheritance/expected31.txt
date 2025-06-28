@@ -1,0 +1,5 @@
+Created Car C1
+Vehicle C1 started. Engine started: V6 engine
+Vehicle C1 is already running
+Vehicle C1 stopped. Engine stopped: V6 engine
+Vehicle C1 is already stopped

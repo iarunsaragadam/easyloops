@@ -1,0 +1,3 @@
+Created Truck E27
+Vehicle E27 started. Engine started: V8 engine
+Fuel cost for 1 miles: $0.3

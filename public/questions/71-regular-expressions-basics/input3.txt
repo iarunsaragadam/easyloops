@@ -1,1 +1,5 @@
-placeholder
+Contact admin@company.com or admin@company.com for admin issues.
+Development team: dev.team@startup-inc.org, test.user+label@domain.co.uk
+Sales inquiries: sales@company.com, marketing@company.com
+For support, email admin@company.com again.
+Complex email: user.name+tag@sub-domain.example-site.com

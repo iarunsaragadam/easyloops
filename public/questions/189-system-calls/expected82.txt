@@ -1,0 +1,27 @@
+OPENED complex0_0.txt AS FD 3
+OPENED complex0_1.txt AS FD 4
+OPENED complex0_2.txt AS FD 5
+OPENED complex0_3.txt AS FD 6
+OPENED complex0_4.txt AS FD 7
+EOF
+FD 3: complex0_0.txt (w)
+FD 4: complex0_1.txt (r)
+FD 5: complex0_2.txt (r)
+FD 6: complex0_3.txt (rw)
+FD 7: complex0_4.txt (r)
+FD 3: complex0_0.txt (w)
+FD 4: complex0_1.txt (r)
+FD 5: complex0_2.txt (r)
+FD 6: complex0_3.txt (rw)
+FD 7: complex0_4.txt (r)
+FD 3: complex0_0.txt (w)
+FD 4: complex0_1.txt (r)
+FD 5: complex0_2.txt (r)
+FD 6: complex0_3.txt (rw)
+FD 7: complex0_4.txt (r)
+EOF
+CLOSED FD 3 (complex0_0.txt)
+CLOSED FD 4 (complex0_1.txt)
+CLOSED FD 5 (complex0_2.txt)
+CLOSED FD 6 (complex0_3.txt)
+CLOSED FD 7 (complex0_4.txt)

@@ -1,1 +1,7 @@
-placeholder
+6
+OPEN file1.txt w
+OPEN file2.txt r
+LIST
+CLOSE 3
+CLOSE 4
+LIST

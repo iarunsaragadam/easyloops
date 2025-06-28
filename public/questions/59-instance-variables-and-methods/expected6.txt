@@ -1,0 +1,5 @@
+Account ACC001 created for Diana
+Account ACC002 created for Charlie
+Withdrew 368.00 from account ACC002
+Withdrew 81.00 from account ACC002
+Deposited 135.00 to account ACC002

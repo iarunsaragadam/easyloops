@@ -1,0 +1,6 @@
+Directory 'empty' created
+
+Changed to /empty
+
+Changed to /
+Removed 'empty'

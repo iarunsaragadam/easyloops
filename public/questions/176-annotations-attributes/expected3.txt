@@ -1,1 +1,10 @@
-placeholder
+Function 1:
+  Name: advanced_method
+  Decorators: classmethod, property, cache
+  Parameters: 4
+    self
+    data -> Union[str, int]
+    callback -> Callable[[int], bool] = lambda x: True
+    timeout -> float = 1.0
+  Return Type: Tuple[bool, str]
+

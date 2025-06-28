@@ -1,0 +1,19 @@
+18
+OPEN complex1_0.txt r
+OPEN complex1_1.txt r
+OPEN complex1_2.txt rw
+READ 5 12
+LIST
+LIST
+READ 5 5
+LIST
+READ 4 15
+WRITE 5 data79
+READ 5 18
+READ 3 17
+READ 5 20
+READ 3 20
+LIST
+CLOSE 3
+CLOSE 4
+CLOSE 5

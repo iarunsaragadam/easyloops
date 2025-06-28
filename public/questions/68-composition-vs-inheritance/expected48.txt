@@ -1,0 +1,3 @@
+Created Truck E18
+Vehicle E18 started. Engine started: V4 engine
+Fuel cost for 1000 miles: $179.7

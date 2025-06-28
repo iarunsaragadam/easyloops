@@ -1,0 +1,5 @@
+OPENED zfmvglj.dat AS FD 3
+OPENED puqgqn.log AS FD 4
+OPENED otia.txt AS FD 5
+OPENED oif.dat AS FD 6
+WRITTEN 11 BYTES TO FD 6

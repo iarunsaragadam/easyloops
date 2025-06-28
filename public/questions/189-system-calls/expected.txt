@@ -1,1 +1,7 @@
-placeholder
+OPENED file1.txt AS FD 3
+WRITTEN 11 BYTES TO FD 3
+ERROR: FD 3 NOT READABLE
+CLOSED FD 3 (file1.txt)
+OPENED file2.txt AS FD 4
+FD 4: file2.txt (r)
+CLOSED FD 4 (file2.txt)

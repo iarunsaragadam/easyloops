@@ -1,0 +1,10 @@
+body_length=53
+body_lines=2
+content_length=53
+content_type=text/css
+header_count=3
+http_version=2.0
+server=IIS/10.0
+status_category=Success
+status_code=202
+status_message=Accepted

@@ -1,0 +1,12 @@
+11
+471 5 EDGE same_priority_0
+43 5 EDGE same_priority_1
+100 5 EDGE same_priority_2
+281 5 CASE same_priority_3
+181 5 EDGE same_priority_4
+279 5 CASE same_priority_5
+20 5 TEST same_priority_6
+378 5 CASE same_priority_7
+414 5 CASE same_priority_8
+250 5 EDGE same_priority_9
+166 5 CASE same_priority_10

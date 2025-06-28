@@ -1,0 +1,7 @@
+Integer variable: 42
+String variable: Hello, World!
+Boolean variable: true
+Float variable: 3.14159
+Character variable: A
+Updated integer variable: 100
+Late-initialized variable: Programming

@@ -1,0 +1,3 @@
+CREATE Car E8 Honda 2030 V4 500 diesel
+START E8
+FUEL_COST E8 1

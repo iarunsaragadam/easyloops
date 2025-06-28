@@ -1,0 +1,1 @@
+17 | MUL 4, ABS, ADD -3, POW 1, POW 2, NEG, SQRT

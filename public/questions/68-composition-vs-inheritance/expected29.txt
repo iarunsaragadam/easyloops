@@ -1,0 +1,4 @@
+Created Car C29
+Vehicle C29 started. Engine started: V6 engine
+C29: 2016 Yamaha Car (running)
+Fuel cost for 122 miles: $21.1

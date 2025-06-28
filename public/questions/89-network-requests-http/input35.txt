@@ -1,0 +1,6 @@
+HTTP/1.1 200 OK
+Content-TYPE: application/json
+SERVER: nginx/1.0
+content-length: 15
+
+{"key": "value"}

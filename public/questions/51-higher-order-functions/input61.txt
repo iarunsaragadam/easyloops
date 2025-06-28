@@ -1,0 +1,1 @@
+19 | NEG, SQRT, ABS, MUL 1

@@ -1,6 +1,0 @@
-Integer: 42
-Integer to float: 42.0
-Float: 3.1400
-Float to integer: 3
-String: 100
-String to integer: 100

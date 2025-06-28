@@ -1,0 +1,5 @@
+Array size: 6
+Array elements: [-3, -2, -1, 0, 1, 2]
+First element: -3
+Last element: 2
+Array sum: -3

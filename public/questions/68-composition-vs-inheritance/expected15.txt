@@ -1,0 +1,4 @@
+Created Car C15
+Vehicle C15 started. Engine started: Electric engine
+C15: 2020 Nissan Car (running)
+Fuel cost for 142 miles: $0.2

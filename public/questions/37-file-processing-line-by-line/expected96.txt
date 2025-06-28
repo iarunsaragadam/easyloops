@@ -1,0 +1,23 @@
+Line 1: 0 words, 0 characters
+Line 2: 8 words, 58 characters
+Line 3: 7 words, 57 characters
+Line 4: 0 words, 15 characters
+Line 5: 1 words, 3 characters
+Line 6: 0 words, 9 characters
+Line 7: 11 words, 134 characters
+Line 8: 0 words, 0 characters
+Line 9: 0 words, 6 characters
+Line 10: 0 words, 15 characters
+Line 11: 0 words, 9 characters
+Line 12: 4 words, 26 characters
+Line 13: 1 words, 2 characters
+Line 14: 7 words, 45 characters
+Line 15: 4 words, 30 characters
+Line 16: 11 words, 124 characters
+Line 17: 1 words, 3 characters
+Line 18: 8 words, 52 characters
+Line 19: 0 words, 15 characters
+Line 20: 2 words, 12 characters
+Line 21: 1 words, 3 characters
+Line 22: 0 words, 0 characters
+Total: 22 lines, 66 words, 618 characters

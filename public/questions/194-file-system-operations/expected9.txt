@@ -1,0 +1,7 @@
+File 'temp.txt' created
+Directory 'temp_dir' created
+temp.txt temp_dir
+Removed 'temp.txt'
+temp_dir
+Removed 'temp_dir'
+

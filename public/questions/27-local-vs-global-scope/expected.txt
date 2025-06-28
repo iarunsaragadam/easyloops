@@ -1,1 +1,4 @@
-placeholder
+Global counter after adding 3: 8
+Local function returned: 17, global counter unchanged: 8
+Global counter after modification: 10
+Global counter set to: 20

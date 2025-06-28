@@ -1,0 +1,7 @@
+[2023-12-01 10:00:00] INFO: Security alert
+[2023-12-01 10:02:00] WARN: Security alert
+[2023-12-01 10:14:00] WARN: Security alert
+[2023-12-01 10:03:00] DEBUG: Memory allocation failed
+[2023-12-01 10:16:00] ERROR: Application started
+[2023-12-01 10:40:00] INFO: Service unavailable
+[2023-12-01 10:48:00] DEBUG: Disk space low

@@ -1,1 +1,6 @@
-placeholder
+5
+circle 10.5
+rectangle 12.25 8.75
+triangle 13 14 15
+circle 2.5
+rectangle 5 5

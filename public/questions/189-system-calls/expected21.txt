@@ -1,0 +1,10 @@
+OPENED rxhdfcgg.log AS FD 3
+OPENED qjfk.dat AS FD 4
+OPENED mdvrffb.txt AS FD 5
+FD 3: rxhdfcgg.log (w)
+FD 4: qjfk.dat (r)
+FD 5: mdvrffb.txt (w)
+FD 3: rxhdfcgg.log (w)
+FD 4: qjfk.dat (r)
+FD 5: mdvrffb.txt (w)
+CLOSED FD 3 (rxhdfcgg.log)

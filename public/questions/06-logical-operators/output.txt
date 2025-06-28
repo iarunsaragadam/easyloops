@@ -1,0 +1,4 @@
+A and B: true and false = false
+A OR B: true or false = true
+NOT A: not true = false
+NOT B: not false = true

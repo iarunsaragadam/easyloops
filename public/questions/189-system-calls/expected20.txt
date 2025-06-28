@@ -1,0 +1,15 @@
+OPENED jnnh.tmp AS FD 3
+OPENED ltjm.tmp AS FD 4
+OPENED apyukbzz.log AS FD 5
+OPENED rqec.tmp AS FD 6
+OPENED ncrllj.log AS FD 7
+WRITTEN 21 BYTES TO FD 4
+FD 3: jnnh.tmp (r)
+FD 4: ltjm.tmp (rw)
+FD 5: apyukbzz.log (rw)
+FD 6: rqec.tmp (r)
+FD 7: ncrllj.log (r)
+WRITTEN 4 BYTES TO FD 4
+CLOSED FD 3 (jnnh.tmp)
+CLOSED FD 4 (ltjm.tmp)
+CLOSED FD 5 (apyukbzz.log)

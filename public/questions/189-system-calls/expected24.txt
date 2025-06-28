@@ -1,0 +1,10 @@
+OPENED toyf.tmp AS FD 3
+OPENED zsrfopov.dat AS FD 4
+FD 3: toyf.tmp (r)
+FD 4: zsrfopov.dat (w)
+WRITTEN 26 BYTES TO FD 4
+FD 3: toyf.tmp (r)
+FD 4: zsrfopov.dat (w)
+WRITTEN 16 BYTES TO FD 4
+CLOSED FD 3 (toyf.tmp)
+CLOSED FD 4 (zsrfopov.dat)

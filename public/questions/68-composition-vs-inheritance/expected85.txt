@@ -1,0 +1,100 @@
+Created Car P25V0
+Created Motorcycle P25V1
+Created Car P25V2
+Created Motorcycle P25V3
+Created Truck P25V4
+Created Motorcycle P25V5
+Created Car P25V6
+Created Truck P25V7
+Created Motorcycle P25V8
+Created Truck P25V9
+Created Car P25V10
+Created Truck P25V11
+Created Truck P25V12
+Created Motorcycle P25V13
+Created Car P25V14
+Created Motorcycle P25V15
+Created Car P25V16
+Created Truck P25V17
+Created Motorcycle P25V18
+Created Car P25V19
+Created Car P25V20
+Created Car P25V21
+Created Car P25V22
+Created Motorcycle P25V23
+Created Truck P25V24
+Created Motorcycle P25V25
+Created Car P25V26
+Created Truck P25V27
+Created Car P25V28
+Created Truck P25V29
+Created Motorcycle P25V30
+Created Car P25V31
+Created Truck P25V32
+Created Car P25V33
+Created Motorcycle P25V34
+Created Motorcycle P25V35
+Created Motorcycle P25V36
+Created Car P25V37
+Created Car P25V38
+Created Truck P25V39
+Created Motorcycle P25V40
+Created Car P25V41
+Created Motorcycle P25V42
+Created Motorcycle P25V43
+Created Truck P25V44
+Created Motorcycle P25V45
+Created Car P25V46
+Created Motorcycle P25V47
+Created Motorcycle P25V48
+Created Car P25V49
+Created Motorcycle P25V50
+Created Car P25V51
+Created Car P25V52
+Created Truck P25V53
+Created Truck P25V54
+Created Car P25V55
+Created Car P25V56
+Created Truck P25V57
+Created Motorcycle P25V58
+Created Car P25V59
+Created Motorcycle P25V60
+Created Motorcycle P25V61
+Created Car P25V62
+Created Car P25V63
+Created Car P25V64
+Created Truck P25V65
+Created Car P25V66
+Created Truck P25V67
+Created Car P25V68
+Created Car P25V69
+Vehicle P25V0 started. Engine started: Electric engine
+P25V0: 2014 BMW Car (running)
+Fuel cost for 461 miles: $17.1
+Vehicle P25V2 started. Engine started: Electric engine
+P25V2: 2019 Honda Car (running)
+Fuel cost for 258 miles: $0.4
+Vehicle P25V4 started. Engine started: V8 engine
+P25V4: 2014 Yamaha Truck (running)
+Fuel cost for 197 miles: $194.6
+Vehicle P25V6 started. Engine started: V8 engine
+P25V6: 2018 Honda Car (running)
+Fuel cost for 431 miles: $7.7
+Vehicle P25V8 started. Engine started: V4 engine
+P25V8: 2022 Toyota Motorcycle (running)
+Fuel cost for 320 miles: $34.7
+Vehicle P25V10 started. Engine started: V4 engine
+P25V10: 2000 Yamaha Car (running)
+Fuel cost for 200 miles: $59.0
+Vehicle P25V12 started. Engine started: Electric engine
+P25V12: 2015 Yamaha Truck (running)
+Fuel cost for 297 miles: $15.2
+Vehicle P25V14 started. Engine started: V4 engine
+P25V14: 2022 BMW Car (running)
+Fuel cost for 429 miles: $60.0
+Vehicle P25V16 started. Engine started: Electric engine
+P25V16: 2004 BMW Car (running)
+Fuel cost for 169 miles: $5.9
+Vehicle P25V18 started. Engine started: V8 engine
+P25V18: 2004 Toyota Motorcycle (running)
+Fuel cost for 494 miles: $207.5

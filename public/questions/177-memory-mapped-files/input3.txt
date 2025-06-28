@@ -1,1 +1,6 @@
-placeholder
+1000
+4
+READ 995 5
+WRITE 0 255 254 253
+SUM 998 2
+READ 0 3

@@ -1,1 +1,22 @@
-placeholder
+Function 1:
+  Name: no_params
+  Decorators: None
+  Parameters: 0
+  Return Type: None
+
+Function 2:
+  Name: complex_func
+  Decorators: multiple, decorators
+  Parameters: 2
+    a -> List[int]
+    b -> Dict[str, Any] = None
+  Return Type: Optional[str]
+
+Function 3:
+  Name: simple
+  Decorators: None
+  Parameters: 2
+    x
+    y = 10
+  Return Type: None
+

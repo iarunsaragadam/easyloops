@@ -1,0 +1,1 @@
+1 | ADD 2, POW 3, ADD 1, SQRT, MUL 2

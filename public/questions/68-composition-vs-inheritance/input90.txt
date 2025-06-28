@@ -1,0 +1,110 @@
+CREATE Car P30V0 BMW 2005 V6 87 diesel
+CREATE Motorcycle P30V1 BMW 2000 V6 257 diesel
+CREATE Car P30V2 Honda 2016 V8 112 diesel
+CREATE Motorcycle P30V3 Ford 2004 V4 137 gasoline
+CREATE Truck P30V4 Toyota 2002 V8 290 gasoline
+CREATE Truck P30V5 Yamaha 2009 V4 139 diesel
+CREATE Truck P30V6 Yamaha 2022 Electric 371 gasoline
+CREATE Motorcycle P30V7 BMW 2005 Electric 191 electric
+CREATE Car P30V8 Yamaha 2005 Electric 296 electric
+CREATE Car P30V9 Ford 2009 V8 186 diesel
+CREATE Motorcycle P30V10 Ford 2021 Electric 287 gasoline
+CREATE Truck P30V11 Ford 2018 V4 314 gasoline
+CREATE Truck P30V12 BMW 2000 V6 388 gasoline
+CREATE Car P30V13 Ford 2022 V6 351 diesel
+CREATE Motorcycle P30V14 Toyota 2005 V8 349 gasoline
+CREATE Motorcycle P30V15 Toyota 2004 V4 195 diesel
+CREATE Motorcycle P30V16 BMW 2019 V4 206 gasoline
+CREATE Truck P30V17 Ford 2015 Electric 308 gasoline
+CREATE Car P30V18 Ford 2003 Electric 226 diesel
+CREATE Car P30V19 BMW 2004 V4 290 diesel
+CREATE Motorcycle P30V20 Ford 2000 V6 227 electric
+CREATE Car P30V21 Honda 2022 V6 250 gasoline
+CREATE Car P30V22 Yamaha 2012 Electric 269 gasoline
+CREATE Truck P30V23 Yamaha 2009 V6 400 electric
+CREATE Car P30V24 BMW 2016 V6 357 diesel
+CREATE Motorcycle P30V25 Yamaha 2011 V4 224 electric
+CREATE Motorcycle P30V26 Toyota 2010 Electric 168 electric
+CREATE Truck P30V27 Ford 2011 V6 317 electric
+CREATE Truck P30V28 BMW 2023 V6 324 gasoline
+CREATE Motorcycle P30V29 BMW 2019 V6 171 gasoline
+CREATE Truck P30V30 BMW 2014 V6 335 electric
+CREATE Car P30V31 Honda 2022 V4 308 electric
+CREATE Motorcycle P30V32 Yamaha 2012 V4 168 electric
+CREATE Motorcycle P30V33 Honda 2025 V6 82 electric
+CREATE Car P30V34 BMW 2004 Electric 365 gasoline
+CREATE Motorcycle P30V35 Honda 2005 V8 259 diesel
+CREATE Motorcycle P30V36 Honda 2021 Electric 375 diesel
+CREATE Truck P30V37 BMW 2006 Electric 94 diesel
+CREATE Motorcycle P30V38 Toyota 2024 V8 182 gasoline
+CREATE Car P30V39 Toyota 2024 V8 217 diesel
+CREATE Motorcycle P30V40 Yamaha 2014 V6 81 diesel
+CREATE Truck P30V41 Ford 2013 V6 287 diesel
+CREATE Motorcycle P30V42 Ford 2004 V6 339 electric
+CREATE Motorcycle P30V43 Yamaha 2007 V6 318 electric
+CREATE Truck P30V44 BMW 2004 V6 161 electric
+CREATE Motorcycle P30V45 BMW 2003 V6 317 diesel
+CREATE Car P30V46 Honda 2023 V8 97 electric
+CREATE Car P30V47 BMW 2003 V6 150 diesel
+CREATE Truck P30V48 BMW 2000 V4 200 gasoline
+CREATE Truck P30V49 Ford 2020 Electric 368 diesel
+CREATE Motorcycle P30V50 Ford 2012 V6 225 electric
+CREATE Car P30V51 Yamaha 2005 V6 275 electric
+CREATE Car P30V52 Ford 2017 V8 297 diesel
+CREATE Truck P30V53 Ford 2011 V4 353 electric
+CREATE Truck P30V54 Ford 2008 V8 131 diesel
+CREATE Motorcycle P30V55 Honda 2017 V6 197 gasoline
+CREATE Car P30V56 Honda 2010 Electric 251 diesel
+CREATE Motorcycle P30V57 BMW 2007 V6 331 electric
+CREATE Motorcycle P30V58 Toyota 2000 Electric 299 gasoline
+CREATE Car P30V59 Ford 2022 V8 152 electric
+CREATE Motorcycle P30V60 Ford 2022 V6 355 gasoline
+CREATE Truck P30V61 BMW 2005 V8 167 gasoline
+CREATE Motorcycle P30V62 Yamaha 2022 V8 397 electric
+CREATE Car P30V63 Yamaha 2017 V4 101 electric
+CREATE Motorcycle P30V64 Yamaha 2020 V6 278 gasoline
+CREATE Motorcycle P30V65 Yamaha 2011 Electric 313 electric
+CREATE Truck P30V66 BMW 2012 V8 145 diesel
+CREATE Motorcycle P30V67 BMW 2007 Electric 169 gasoline
+CREATE Car P30V68 Toyota 2004 V8 282 diesel
+CREATE Truck P30V69 Ford 2019 Electric 302 gasoline
+CREATE Truck P30V70 BMW 2015 V4 143 electric
+CREATE Truck P30V71 Yamaha 2017 Electric 335 diesel
+CREATE Motorcycle P30V72 BMW 2015 V6 207 electric
+CREATE Truck P30V73 Ford 2002 Electric 318 diesel
+CREATE Motorcycle P30V74 Toyota 2013 V4 149 electric
+CREATE Car P30V75 Toyota 2009 V6 132 gasoline
+CREATE Car P30V76 Ford 2014 Electric 263 electric
+CREATE Truck P30V77 Ford 2000 V4 378 diesel
+CREATE Motorcycle P30V78 Ford 2014 V8 236 electric
+CREATE Truck P30V79 BMW 2012 V6 202 diesel
+START P30V0
+INFO P30V0
+FUEL_COST P30V0 200
+START P30V2
+INFO P30V2
+FUEL_COST P30V2 134
+START P30V4
+INFO P30V4
+FUEL_COST P30V4 236
+START P30V6
+INFO P30V6
+FUEL_COST P30V6 249
+START P30V8
+INFO P30V8
+FUEL_COST P30V8 173
+START P30V10
+INFO P30V10
+FUEL_COST P30V10 477
+START P30V12
+INFO P30V12
+FUEL_COST P30V12 223
+START P30V14
+INFO P30V14
+FUEL_COST P30V14 348
+START P30V16
+INFO P30V16
+FUEL_COST P30V16 262
+START P30V18
+INFO P30V18
+FUEL_COST P30V18 198

@@ -1,1 +1,212 @@
-placeholder
+211
+push 1
+push 2
+push 3
+push 4
+push 5
+push 6
+push 7
+push 8
+push 9
+push 10
+push 11
+push 12
+push 13
+push 14
+push 15
+push 16
+push 17
+push 18
+push 19
+push 20
+push 21
+push 22
+push 23
+push 24
+push 25
+push 26
+push 27
+push 28
+push 29
+push 30
+push 31
+push 32
+push 33
+push 34
+push 35
+push 36
+push 37
+push 38
+push 39
+push 40
+push 41
+push 42
+push 43
+push 44
+push 45
+push 46
+push 47
+push 48
+push 49
+push 50
+push 51
+push 52
+push 53
+push 54
+push 55
+push 56
+push 57
+push 58
+push 59
+push 60
+push 61
+push 62
+push 63
+push 64
+push 65
+push 66
+push 67
+push 68
+push 69
+push 70
+push 71
+push 72
+push 73
+push 74
+push 75
+push 76
+push 77
+push 78
+push 79
+push 80
+push 81
+push 82
+push 83
+push 84
+push 85
+push 86
+push 87
+push 88
+push 89
+push 90
+push 91
+push 92
+push 93
+push 94
+push 95
+push 96
+push 97
+push 98
+push 99
+push 100
+size
+peek
+pop
+pop
+size
+isEmpty
+push 200
+push 201
+push 202
+push 203
+push 204
+push 205
+push 206
+push 207
+push 208
+push 209
+push 210
+push 211
+push 212
+push 213
+push 214
+push 215
+push 216
+push 217
+push 218
+push 219
+push 220
+push 221
+push 222
+push 223
+push 224
+push 225
+push 226
+push 227
+push 228
+push 229
+push 230
+push 231
+push 232
+push 233
+push 234
+push 235
+push 236
+push 237
+push 238
+push 239
+push 240
+push 241
+push 242
+push 243
+push 244
+push 245
+push 246
+push 247
+push 248
+push 249
+push 250
+size
+peek
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+size
+peek

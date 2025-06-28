@@ -1,0 +1,14 @@
+2887
+12
+square
+add -106
+multiply -96
+abs
+multiply 85
+negate
+abs
+negate
+add -507
+square
+negate
+multiply 7

@@ -1,0 +1,12 @@
+11
+append complex0.txt nWtAdlOZ1MnDOBUVeLxYkO96xbad8Rq chx4OtZih9i
+write complex2.txt SgnUWtZ5G6dYf6RQ6lVG0kEebPUfKj q1tn HPJRkx4PDRqvo
+append complex2.txt o6NhBh6ymPIOtEDUanWRMC 4x6XmSaB
+append complex3.txt 7ae0p9SfrnIDG55CWthIHbQYPNExQyBqa7zwVylx
+read complex2.txt
+write complex3.txt jZqHYK0nTzosvcAMLTeqputNHxLQ0VujYJ
+write complex2.txt tk3yoO2o1EbeHOmySpCdXCdazuQRn1kSujIRtaaR9HvPvDm7
+read complex0.txt
+write complex2.txt yrpefZNaBajD4LfjL3tzHOtO6DKSLXGeQ8D6e7n0t0i3ycs
+read complex2.txt
+write complex2.txt  9Hl7HKSarDuuXCSpmTfl6ho9HCEn96u5WNkZw9

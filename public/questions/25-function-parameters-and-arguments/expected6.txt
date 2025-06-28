@@ -1,0 +1,2 @@
+Function called: calculate('multiply', -4, 3)
+Result: -12

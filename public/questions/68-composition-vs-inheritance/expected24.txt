@@ -1,0 +1,4 @@
+Created Truck T24
+Vehicle T24 started. Engine started: V4 engine
+T24: 2018 Nissan Truck (running)
+Fuel cost for 194 miles: $41.0

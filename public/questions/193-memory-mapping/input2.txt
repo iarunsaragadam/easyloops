@@ -1,1 +1,6 @@
-placeholder
+2 1024
+4
+write 0
+write 1024
+read 0
+write 2048

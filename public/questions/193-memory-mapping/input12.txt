@@ -1,0 +1,10 @@
+4 2048
+8
+read 6122
+write 4174
+read 2956
+read 7856
+write 2642
+write 2040
+read 1186
+write 4950

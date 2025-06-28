@@ -1,1 +1,5 @@
-placeholder
+ERROR: Unknown command
+ERROR: Unexpected ACK
+ERROR: Session in error state
+ERROR: Unknown message type
+ERROR: Session in error state

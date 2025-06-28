@@ -1,0 +1,5 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+X-Custom-Header: Special chars: àáâãäå ñ ç
+
+<html>Content with special characters: àáâãäå ñ ç</html>

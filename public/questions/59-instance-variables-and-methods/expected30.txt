@@ -1,0 +1,4 @@
+Account ACC001 created for Bob
+Deposited 332.00 to account ACC001
+Account: ACC001, Owner: Bob, Balance: 1591.00
+Account: ACC001, Owner: Bob, Balance: 1591.00

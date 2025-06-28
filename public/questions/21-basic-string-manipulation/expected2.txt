@@ -1,1 +1,4 @@
-placeholder
+Length: 0
+Reversed: 
+Vowels: 0
+Uppercase: 

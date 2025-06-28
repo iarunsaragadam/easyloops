@@ -1,0 +1,5 @@
+Array size: 14
+Array elements: [176, 172, 126, 64, 44, 25, 25, 22, 12, -51, -116, -126, -146, -171]
+First element: 176
+Last element: -171
+Array sum: 56

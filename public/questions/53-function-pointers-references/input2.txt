@@ -1,1 +1,7 @@
-placeholder
+6
+DIV 10 0
+MOD 15 0
+DIV 22 7
+MOD 17 5
+INVALID_OP 5 3
+ADD 0 0

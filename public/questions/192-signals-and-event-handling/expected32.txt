@@ -1,0 +1,9 @@
+Processing events:
+Event 1: [P5] SAME at 0 - event_0
+Event 2: [P5] SAME at 10 - event_1
+Event 3: [P5] SAME at 20 - event_2
+Event 4: [P5] SAME at 30 - event_3
+Event 5: [P5] SAME at 40 - event_4
+System state:
+Total events processed: 5
+SAME: 5

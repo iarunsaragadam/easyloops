@@ -1,0 +1,4 @@
+CREATE Motorcycle M30 Nissan 2018 Electric 283 electric
+START M30
+INFO M30
+FUEL_COST M30 71

@@ -1,0 +1,9 @@
+8
+append file2.txt 6tt3jhFXNGOFar u G
+write file1.txt tT7EIUnuikxUC2oM8dBQ
+read file1.txt
+append file1.txt CAowEd
+append file2.txt NDaYCjGoZ
+read file2.txt
+append file2.txt 0H
+write file2.txt DTaK6CtV5 75y8y9k

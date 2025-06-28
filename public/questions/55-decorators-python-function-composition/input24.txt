@@ -1,0 +1,5 @@
+-33
+3
+add 163
+multiply 12
+square

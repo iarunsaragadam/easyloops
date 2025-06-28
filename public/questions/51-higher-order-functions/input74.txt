@@ -1,0 +1,1 @@
+-17 | MUL -1, POW 3, ADD 5, ADD 1, ABS

@@ -1,0 +1,5 @@
+APPEND: ecnw4muty.log (26 total chars)
+CREATE: v8ebh2vbd.log
+READ: uzz6gtfj48.ini = FILE_NOT_FOUND
+CREATE: g7qqxnzn.ini
+CREATE: x4qy23.ini

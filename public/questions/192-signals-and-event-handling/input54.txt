@@ -1,0 +1,16 @@
+15
+718 1 TYPE_0 same_timestamp_0
+718 8 TYPE_1 same_timestamp_1
+718 8 TYPE_2 same_timestamp_2
+718 6 TYPE_3 same_timestamp_3
+718 4 TYPE_0 same_timestamp_4
+718 8 TYPE_1 same_timestamp_5
+718 2 TYPE_2 same_timestamp_6
+718 5 TYPE_3 same_timestamp_7
+718 6 TYPE_0 same_timestamp_8
+718 6 TYPE_1 same_timestamp_9
+718 2 TYPE_2 same_timestamp_10
+718 7 TYPE_3 same_timestamp_11
+718 1 TYPE_0 same_timestamp_12
+718 6 TYPE_1 same_timestamp_13
+718 3 TYPE_2 same_timestamp_14

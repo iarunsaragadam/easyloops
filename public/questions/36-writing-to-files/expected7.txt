@@ -1,0 +1,8 @@
+APPEND: file2.txt (18 total chars)
+WRITE: file1.txt (20 chars)
+READ: file1.txt = tT7EIUnuikxUC2oM8dBQ
+APPEND: file1.txt (26 total chars)
+APPEND: file2.txt (27 total chars)
+READ: file2.txt = 6tt3jhFXNGOFar u GNDaYCjGoZ
+APPEND: file2.txt (29 total chars)
+WRITE: file2.txt (17 chars)

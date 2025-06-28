@@ -1,0 +1,5 @@
+-44
+3
+multiply -48
+negate
+abs

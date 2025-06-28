@@ -1,1 +1,6 @@
-placeholder
+File 'file1.txt' created
+File 'file2.txt' created
+file1.txt file2.txt
+Removed 'file1.txt'
+file2.txt
+1

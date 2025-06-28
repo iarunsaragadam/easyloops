@@ -1,0 +1,5 @@
+LOG LEVEL SUMMARY:
+ERROR: 1
+
+ERROR ENTRIES:
+[2023-12-01 10:00:00] Failed to parse JSON: {"error": "syntax error"}

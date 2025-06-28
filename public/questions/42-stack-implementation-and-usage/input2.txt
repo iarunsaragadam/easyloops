@@ -1,1 +1,6 @@
-placeholder
+5
+pop
+peek
+isEmpty
+push 5
+size

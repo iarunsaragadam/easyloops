@@ -1,1 +1,9 @@
-placeholder
+Alice Smith
+12345
+student
+5
+name
+id
+add_grade 85
+gpa
+verify_key key_12345

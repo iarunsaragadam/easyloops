@@ -1,0 +1,21 @@
+Processing events:
+Event 1: [P9] CASE at 23 - same_priority_10
+Event 2: [P9] TEST at 49 - same_priority_1
+Event 3: [P9] CASE at 77 - same_priority_13
+Event 4: [P9] CASE at 107 - same_priority_11
+Event 5: [P9] CASE at 108 - same_priority_0
+Event 6: [P9] TEST at 128 - same_priority_8
+Event 7: [P9] TEST at 148 - same_priority_2
+Event 8: [P9] EDGE at 151 - same_priority_5
+Event 9: [P9] CASE at 204 - same_priority_7
+Event 10: [P9] EDGE at 222 - same_priority_6
+Event 11: [P9] EDGE at 288 - same_priority_12
+Event 12: [P9] TEST at 354 - same_priority_9
+Event 13: [P9] TEST at 358 - same_priority_14
+Event 14: [P9] EDGE at 451 - same_priority_3
+Event 15: [P9] TEST at 478 - same_priority_4
+System state:
+Total events processed: 15
+CASE: 5
+EDGE: 4
+TEST: 6

@@ -1,0 +1,75 @@
+OPENED complex19_0.txt AS FD 3
+OPENED complex19_1.txt AS FD 4
+OPENED complex19_2.txt AS FD 5
+OPENED complex19_3.txt AS FD 6
+OPENED complex19_4.txt AS FD 7
+OPENED complex19_5.txt AS FD 8
+FD 3: complex19_0.txt (w)
+FD 4: complex19_1.txt (w)
+FD 5: complex19_2.txt (w)
+FD 6: complex19_3.txt (r)
+FD 7: complex19_4.txt (rw)
+FD 8: complex19_5.txt (r)
+WRITTEN 6 BYTES TO FD 3
+FD 3: complex19_0.txt (w)
+FD 4: complex19_1.txt (w)
+FD 5: complex19_2.txt (w)
+FD 6: complex19_3.txt (r)
+FD 7: complex19_4.txt (rw)
+FD 8: complex19_5.txt (r)
+FD 3: complex19_0.txt (w)
+FD 4: complex19_1.txt (w)
+FD 5: complex19_2.txt (w)
+FD 6: complex19_3.txt (r)
+FD 7: complex19_4.txt (rw)
+FD 8: complex19_5.txt (r)
+EOF
+EOF
+WRITTEN 6 BYTES TO FD 7
+FD 3: complex19_0.txt (w)
+FD 4: complex19_1.txt (w)
+FD 5: complex19_2.txt (w)
+FD 6: complex19_3.txt (r)
+FD 7: complex19_4.txt (rw)
+FD 8: complex19_5.txt (r)
+FD 3: complex19_0.txt (w)
+FD 4: complex19_1.txt (w)
+FD 5: complex19_2.txt (w)
+FD 6: complex19_3.txt (r)
+FD 7: complex19_4.txt (rw)
+FD 8: complex19_5.txt (r)
+EOF
+FD 3: complex19_0.txt (w)
+FD 4: complex19_1.txt (w)
+FD 5: complex19_2.txt (w)
+FD 6: complex19_3.txt (r)
+FD 7: complex19_4.txt (rw)
+FD 8: complex19_5.txt (r)
+FD 3: complex19_0.txt (w)
+FD 4: complex19_1.txt (w)
+FD 5: complex19_2.txt (w)
+FD 6: complex19_3.txt (r)
+FD 7: complex19_4.txt (rw)
+FD 8: complex19_5.txt (r)
+WRITTEN 6 BYTES TO FD 7
+FD 3: complex19_0.txt (w)
+FD 4: complex19_1.txt (w)
+FD 5: complex19_2.txt (w)
+FD 6: complex19_3.txt (r)
+FD 7: complex19_4.txt (rw)
+FD 8: complex19_5.txt (r)
+READ: data5
+FD 3: complex19_0.txt (w)
+FD 4: complex19_1.txt (w)
+FD 5: complex19_2.txt (w)
+FD 6: complex19_3.txt (r)
+FD 7: complex19_4.txt (rw)
+FD 8: complex19_5.txt (r)
+WRITTEN 6 BYTES TO FD 3
+EOF
+CLOSED FD 3 (complex19_0.txt)
+CLOSED FD 4 (complex19_1.txt)
+CLOSED FD 5 (complex19_2.txt)
+CLOSED FD 6 (complex19_3.txt)
+CLOSED FD 7 (complex19_4.txt)
+CLOSED FD 8 (complex19_5.txt)

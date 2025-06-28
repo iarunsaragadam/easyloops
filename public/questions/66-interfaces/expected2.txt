@@ -1,1 +1,4 @@
-placeholder
+ERROR: Radius must be positive
+ERROR: Width and height must be positive
+ERROR: Invalid triangle: sides don't satisfy triangle inequality
+ERROR: Unknown shape type 'square'

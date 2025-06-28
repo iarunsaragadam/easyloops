@@ -1,1 +1,6 @@
-placeholder
+admin@company.com
+dev.team@startup-inc.org
+test.user+label@domain.co.uk
+sales@company.com
+marketing@company.com
+user.name+tag@sub-domain.example-site.com

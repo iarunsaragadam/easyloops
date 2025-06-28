@@ -1,0 +1,7 @@
+29
+5
+negate
+square
+negate
+negate
+abs

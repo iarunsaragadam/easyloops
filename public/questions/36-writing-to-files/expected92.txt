@@ -1,0 +1,8 @@
+CREATE: test.txt
+WRITE: test.txt (5 chars)
+APPEND: test.txt (10 total chars)
+READ: test.txt = HelloWorld
+WRITE: test.txt (3 chars)
+APPEND: test.txt (10 total chars)
+APPEND: test.txt (14 total chars)
+READ: test.txt = NewContentMore

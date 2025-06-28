@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Content-Type: text/plain
+X-Rate-Limit-1: 1000
+X-Rate-Limit-2: 500
+X-Retry-After-3: 60
+
+Rate limited response

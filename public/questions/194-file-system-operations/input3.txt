@@ -1,1 +1,12 @@
-placeholder
+11
+mkdir a
+mkdir a/b
+mkdir a/b/c
+cd a/b
+pwd
+cd ..
+pwd
+cd ./b/c
+pwd
+cd /
+pwd

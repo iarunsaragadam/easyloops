@@ -1,0 +1,9 @@
+8
+731 7 TYPE_0 same_timestamp_0
+731 6 TYPE_1 same_timestamp_1
+731 5 TYPE_2 same_timestamp_2
+731 4 TYPE_3 same_timestamp_3
+731 5 TYPE_0 same_timestamp_4
+731 6 TYPE_1 same_timestamp_5
+731 4 TYPE_2 same_timestamp_6
+731 10 TYPE_3 same_timestamp_7

@@ -1,0 +1,6 @@
+CREATE Car E1 Tesla 2023 Electric 400 electric
+CREATE Truck E2 Rivian 2022 Electric 500 electric
+START E1
+START E2
+FUEL_COST E1 100
+FUEL_COST E2 100

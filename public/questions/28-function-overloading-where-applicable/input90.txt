@@ -1,0 +1,4 @@
+multiply_three
+4.65
+8.0
+-8.06

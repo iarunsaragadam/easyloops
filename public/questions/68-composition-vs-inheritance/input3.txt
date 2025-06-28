@@ -1,1 +1,4 @@
-placeholder
+CREATE Motorcycle M1 Honda 2021 V4 100 gasoline
+START M1
+INFO M1
+FUEL_COST M1 100

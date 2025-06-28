@@ -1,0 +1,4 @@
+Created Motorcycle M23
+Vehicle M23 started. Engine started: Electric engine
+M23: 2017 BMW Motorcycle (running)
+Fuel cost for 82 miles: $2.1

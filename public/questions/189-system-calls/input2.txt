@@ -1,1 +1,5 @@
-placeholder
+4
+OPEN file.txt rw
+WRITE 3 hello
+READ 3 5
+CLOSE 3

@@ -1,0 +1,7 @@
+HTTP/2.0 202 Accepted
+Content-Type: text/css
+Content-Length: 53
+Server: IIS/10.0
+
+Response body for test case 20
+Second line of content

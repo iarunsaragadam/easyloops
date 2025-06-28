@@ -1,0 +1,4 @@
+Account ACC001 created for Alice
+Deposited 100.00 to account ACC001
+Withdrew 50.00 from account ACC001
+Balance for account ACC001: 50.00

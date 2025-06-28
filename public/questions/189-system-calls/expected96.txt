@@ -1,0 +1,15 @@
+OPENED complex14_0.txt AS FD 3
+OPENED complex14_1.txt AS FD 4
+WRITTEN 6 BYTES TO FD 3
+WRITTEN 6 BYTES TO FD 3
+FD 3: complex14_0.txt (w)
+FD 4: complex14_1.txt (w)
+WRITTEN 6 BYTES TO FD 3
+WRITTEN 6 BYTES TO FD 3
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex14_0.txt (w)
+FD 4: complex14_1.txt (w)
+FD 3: complex14_0.txt (w)
+FD 4: complex14_1.txt (w)
+CLOSED FD 3 (complex14_0.txt)
+CLOSED FD 4 (complex14_1.txt)

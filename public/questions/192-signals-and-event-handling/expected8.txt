@@ -1,0 +1,11 @@
+Processing events:
+Event 1: [P1] DB at 75 - query
+Event 2: [P1] LOG at 125 - info
+Event 3: [P2] HTTP at 50 - request
+Event 4: [P3] CACHE at 100 - miss
+System state:
+Total events processed: 4
+CACHE: 1
+DB: 1
+HTTP: 1
+LOG: 1

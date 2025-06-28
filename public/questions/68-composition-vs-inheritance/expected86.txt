@@ -1,0 +1,102 @@
+Created Car P26V0
+Created Motorcycle P26V1
+Created Motorcycle P26V2
+Created Car P26V3
+Created Motorcycle P26V4
+Created Truck P26V5
+Created Motorcycle P26V6
+Created Truck P26V7
+Created Car P26V8
+Created Motorcycle P26V9
+Created Car P26V10
+Created Motorcycle P26V11
+Created Car P26V12
+Created Truck P26V13
+Created Truck P26V14
+Created Motorcycle P26V15
+Created Motorcycle P26V16
+Created Motorcycle P26V17
+Created Truck P26V18
+Created Truck P26V19
+Created Motorcycle P26V20
+Created Truck P26V21
+Created Motorcycle P26V22
+Created Car P26V23
+Created Car P26V24
+Created Truck P26V25
+Created Motorcycle P26V26
+Created Motorcycle P26V27
+Created Motorcycle P26V28
+Created Truck P26V29
+Created Truck P26V30
+Created Car P26V31
+Created Motorcycle P26V32
+Created Motorcycle P26V33
+Created Motorcycle P26V34
+Created Car P26V35
+Created Car P26V36
+Created Truck P26V37
+Created Car P26V38
+Created Car P26V39
+Created Truck P26V40
+Created Car P26V41
+Created Motorcycle P26V42
+Created Car P26V43
+Created Motorcycle P26V44
+Created Motorcycle P26V45
+Created Car P26V46
+Created Motorcycle P26V47
+Created Truck P26V48
+Created Truck P26V49
+Created Car P26V50
+Created Car P26V51
+Created Truck P26V52
+Created Car P26V53
+Created Truck P26V54
+Created Truck P26V55
+Created Car P26V56
+Created Motorcycle P26V57
+Created Truck P26V58
+Created Car P26V59
+Created Truck P26V60
+Created Motorcycle P26V61
+Created Truck P26V62
+Created Truck P26V63
+Created Car P26V64
+Created Car P26V65
+Created Motorcycle P26V66
+Created Motorcycle P26V67
+Created Truck P26V68
+Created Truck P26V69
+Created Truck P26V70
+Created Truck P26V71
+Vehicle P26V0 started. Engine started: V6 engine
+P26V0: 2014 Honda Car (running)
+Fuel cost for 450 miles: $97.1
+Vehicle P26V2 started. Engine started: V4 engine
+P26V2: 2010 BMW Motorcycle (running)
+Fuel cost for 216 miles: $0.7
+Vehicle P26V4 started. Engine started: V8 engine
+P26V4: 2010 Ford Motorcycle (running)
+Fuel cost for 428 miles: $6.2
+Vehicle P26V6 started. Engine started: Electric engine
+P26V6: 2021 Yamaha Motorcycle (running)
+Fuel cost for 418 miles: $9.8
+Vehicle P26V8 started. Engine started: Electric engine
+P26V8: 2016 Ford Car (running)
+Fuel cost for 399 miles: $0.5
+Vehicle P26V10 started. Engine started: V4 engine
+P26V10: 2013 Toyota Car (running)
+Fuel cost for 248 miles: $1.5
+Vehicle P26V12 started. Engine started: V8 engine
+P26V12: 2018 BMW Car (running)
+Fuel cost for 211 miles: $4.0
+Vehicle P26V14 started. Engine started: V6 engine
+P26V14: 2019 BMW Truck (running)
+Fuel cost for 154 miles: $121.7
+Vehicle P26V16 started. Engine started: V8 engine
+P26V16: 2020 Honda Motorcycle (running)
+Fuel cost for 425 miles: $6.1
+Vehicle P26V18 started. Engine started: Electric engine
+P26V18: 2001 Toyota Truck (running)
+Fuel cost for 206 miles: $10.1

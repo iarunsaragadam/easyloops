@@ -1,0 +1,9 @@
+8
+OPEN toyf.tmp r
+OPEN zsrfopov.dat w
+LIST
+WRITE 4 call code file programming
+LIST
+WRITE 4 programming call
+CLOSE 3
+CLOSE 4

@@ -1,0 +1,13 @@
+OPENED bsnegps.txt AS FD 3
+OPENED pkgesgzp.tmp AS FD 4
+FD 3: bsnegps.txt (w)
+FD 4: pkgesgzp.tmp (w)
+WRITTEN 19 BYTES TO FD 4
+FD 3: bsnegps.txt (w)
+FD 4: pkgesgzp.tmp (w)
+FD 3: bsnegps.txt (w)
+FD 4: pkgesgzp.tmp (w)
+WRITTEN 24 BYTES TO FD 4
+WRITTEN 4 BYTES TO FD 3
+WRITTEN 19 BYTES TO FD 3
+CLOSED FD 3 (bsnegps.txt)

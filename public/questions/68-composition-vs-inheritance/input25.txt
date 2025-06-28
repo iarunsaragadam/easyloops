@@ -1,0 +1,4 @@
+CREATE Motorcycle M25 Toyota 2019 V8 106 electric
+START M25
+INFO M25
+FUEL_COST M25 151

@@ -1,0 +1,13 @@
+[2023-12-10 10:00:00] DEBUG: Memory allocation failed
+[2023-12-10 10:01:00] INFO: Memory allocation failed
+[2023-12-10 10:04:00] DEBUG: Security alert
+[2023-12-10 10:03:00] INFO: Disk space low
+[2023-12-10 10:08:00] INFO: Request processed
+[2023-12-10 10:10:00] INFO: Cache updated
+[2023-12-10 10:48:00] WARN: System maintenance
+[2023-12-10 10:42:00] WARN: Authentication failed
+[2023-12-10 10:24:00] DEBUG: Backup completed
+[2023-12-10 10:18:00] ERROR: Memory allocation failed
+[2023-12-10 11:00:00] DEBUG: Database connected
+[2023-12-10 11:39:00] ERROR: Backup completed
+[2023-12-10 10:24:00] WARN: Application started

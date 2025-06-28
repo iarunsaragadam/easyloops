@@ -1,0 +1,7 @@
+6
+OPEN rxhdfcgg.log w
+OPEN qjfk.dat r
+OPEN mdvrffb.txt w
+LIST
+LIST
+CLOSE 3

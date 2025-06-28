@@ -1,0 +1,4 @@
+Created Car C7
+Vehicle C7 started. Engine started: Electric engine
+C7: 2020 Nissan Car (running)
+Fuel cost for 186 miles: $0.3

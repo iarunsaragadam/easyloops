@@ -1,0 +1,5 @@
+4
+OPEN readonly.txt r
+WRITE 3 test
+OPEN writeonly.txt w
+READ 4 5

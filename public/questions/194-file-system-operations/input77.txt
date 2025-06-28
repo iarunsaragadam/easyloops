@@ -1,0 +1,18 @@
+17
+count files
+touch file_77_1.txt
+mkdir dir_77_3
+mkdir dir_77_4
+ls
+pwd
+count files
+mkdir dir_77_8
+touch file_77_9.txt
+count directories
+ls
+mkdir dir_77_12
+ls
+pwd
+ls
+count directories
+count files

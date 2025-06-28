@@ -1,0 +1,128 @@
+WRITE: perf9.txt (16 chars)
+WRITE: perf14.txt (14 chars)
+APPEND: perf8.txt (1 total chars)
+APPEND: perf6.txt (26 total chars)
+WRITE: perf5.txt (16 chars)
+CREATE: perf15.txt
+APPEND: perf2.txt (19 total chars)
+CREATE: perf4.txt
+APPEND: perf2.txt (20 total chars)
+APPEND: perf7.txt (12 total chars)
+READ: perf11.txt = FILE_NOT_FOUND
+APPEND: perf2.txt (50 total chars)
+CREATE: perf11.txt
+READ: perf2.txt = PvQNUek w5Lk48J2fDK4oRUEVOyUnKqEbI7KwlxSPcN8yQ0obd
+WRITE: perf15.txt (18 chars)
+CREATE: perf10.txt
+CREATE: perf4.txt
+WRITE: perf1.txt (30 chars)
+WRITE: perf9.txt (22 chars)
+READ: perf12.txt = FILE_NOT_FOUND
+READ: perf7.txt = ItLJwhDtyq J
+READ: perf6.txt = OMEWWpxvk95I f wrUeFwdTYEb
+APPEND: perf5.txt (23 total chars)
+CREATE: perf16.txt
+READ: perf12.txt = FILE_NOT_FOUND
+READ: perf1.txt = eVt3oBVc7lQSudcx78DBSdJWrPJheB
+READ: perf16.txt =
+CREATE: perf15.txt
+READ: perf12.txt = FILE_NOT_FOUND
+APPEND: perf16.txt (3 total chars)
+READ: perf12.txt = FILE_NOT_FOUND
+CREATE: perf1.txt
+WRITE: perf8.txt (30 chars)
+APPEND: perf6.txt (29 total chars)
+READ: perf4.txt =
+WRITE: perf13.txt (24 chars)
+CREATE: perf3.txt
+READ: perf3.txt =
+APPEND: perf7.txt (41 total chars)
+CREATE: perf6.txt
+READ: perf3.txt =
+CREATE: perf4.txt
+READ: perf4.txt =
+CREATE: perf0.txt
+WRITE: perf2.txt (26 chars)
+WRITE: perf11.txt (18 chars)
+APPEND: perf9.txt (23 total chars)
+READ: perf0.txt =
+CREATE: perf6.txt
+READ: perf4.txt =
+APPEND: perf7.txt (50 total chars)
+CREATE: perf15.txt
+CREATE: perf5.txt
+APPEND: perf0.txt (4 total chars)
+APPEND: perf2.txt (39 total chars)
+READ: perf14.txt = HzllouGkde0CR6
+READ: perf7.txt = ItLJwhDtyq JbEaJgb0GtYGgbRV7TcHGCs4 XBWmRoHj248ZYZ
+APPEND: perf8.txt (47 total chars)
+APPEND: perf5.txt (52 total chars)
+CREATE: perf14.txt
+CREATE: perf12.txt
+READ: perf2.txt = mKgqcLFdnVgWg4ulbuWLfBS4kmzH5KuXFmwikCY
+APPEND: perf16.txt (32 total chars)
+WRITE: perf16.txt (5 chars)
+WRITE: perf3.txt (11 chars)
+WRITE: perf0.txt (27 chars)
+WRITE: perf16.txt (26 chars)
+APPEND: perf12.txt (21 total chars)
+WRITE: perf3.txt (14 chars)
+APPEND: perf8.txt (62 total chars)
+APPEND: perf10.txt (17 total chars)
+CREATE: perf1.txt
+APPEND: perf11.txt (29 total chars)
+READ: perf3.txt = AHOWIEGz vUZz3
+CREATE: perf2.txt
+READ: perf16.txt = duBXMXkRtOdamfsogyTStuxptN
+CREATE: perf14.txt
+WRITE: perf10.txt (15 chars)
+WRITE: perf15.txt (5 chars)
+APPEND: perf5.txt (77 total chars)
+CREATE: perf8.txt
+WRITE: perf2.txt (17 chars)
+READ: perf10.txt = 8F6bpgDssEzsb 5
+CREATE: perf0.txt
+WRITE: perf5.txt (26 chars)
+READ: perf10.txt = 8F6bpgDssEzsb 5
+APPEND: perf15.txt (29 total chars)
+READ: perf0.txt = oPrX54TRS19NvHMsGQGQWom27dH
+CREATE: perf2.txt
+APPEND: perf3.txt (30 total chars)
+READ: perf3.txt = AHOWIEGz vUZz3M7Z8xz5xmrWY bQM
+WRITE: perf6.txt (18 chars)
+WRITE: perf1.txt (15 chars)
+CREATE: perf14.txt
+READ: perf10.txt = 8F6bpgDssEzsb 5
+WRITE: perf7.txt (14 chars)
+APPEND: perf6.txt (40 total chars)
+APPEND: perf7.txt (32 total chars)
+WRITE: perf6.txt (16 chars)
+APPEND: perf7.txt (51 total chars)
+CREATE: perf4.txt
+APPEND: perf7.txt (66 total chars)
+CREATE: perf10.txt
+WRITE: perf12.txt (28 chars)
+CREATE: perf14.txt
+READ: perf12.txt = 7XgkXwwzRAushnyL6TsEX3vYKjIU
+CREATE: perf13.txt
+WRITE: perf11.txt (29 chars)
+WRITE: perf10.txt (29 chars)
+CREATE: perf14.txt
+READ: perf15.txt = ecNdTh44pacKtbS2eDwVSwCh6oLHU
+CREATE: perf2.txt
+READ: perf16.txt = duBXMXkRtOdamfsogyTStuxptN
+APPEND: perf14.txt (17 total chars)
+WRITE: perf7.txt (30 chars)
+APPEND: perf2.txt (33 total chars)
+APPEND: perf4.txt (30 total chars)
+APPEND: perf11.txt (52 total chars)
+CREATE: perf11.txt
+READ: perf8.txt = 6f8xFOUIIg38f6yjnI1MweX8kCiU7ldk9Od9Em6ahov1fWqsGHFxtN9IoIOvFS
+APPEND: perf14.txt (28 total chars)
+APPEND: perf6.txt (43 total chars)
+READ: perf6.txt = psg69RUFohCG0qqKsE7IWnAhueLpCvnhtkPdTwdipm6
+APPEND: perf6.txt (54 total chars)
+APPEND: perf7.txt (54 total chars)
+READ: perf1.txt = AHB1r9j7DlwRlkP
+APPEND: perf15.txt (52 total chars)
+WRITE: perf15.txt (10 chars)

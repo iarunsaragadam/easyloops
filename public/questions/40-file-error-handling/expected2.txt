@@ -1,1 +1,1 @@
-placeholder
+Error: File 'nonexistent_file.txt' not found

@@ -1,0 +1,24 @@
+23
+pwd
+mkdir home
+mkdir home/user
+mkdir home/user/documents
+mkdir home/user/downloads
+touch home/user/documents/readme.txt
+touch home/user/documents/notes.md
+cd home/user
+pwd
+ls
+ls documents
+find readme.txt
+size documents
+cd downloads
+touch file1.zip
+touch file2.zip
+cd ..
+size .
+count files
+rm downloads/file1.zip
+count files
+cd /
+size home

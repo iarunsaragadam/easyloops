@@ -1,0 +1,80 @@
+Created Car P15V0
+Created Motorcycle P15V1
+Created Motorcycle P15V2
+Created Truck P15V3
+Created Car P15V4
+Created Truck P15V5
+Created Motorcycle P15V6
+Created Car P15V7
+Created Truck P15V8
+Created Car P15V9
+Created Truck P15V10
+Created Truck P15V11
+Created Truck P15V12
+Created Car P15V13
+Created Motorcycle P15V14
+Created Motorcycle P15V15
+Created Car P15V16
+Created Truck P15V17
+Created Truck P15V18
+Created Motorcycle P15V19
+Created Car P15V20
+Created Motorcycle P15V21
+Created Motorcycle P15V22
+Created Motorcycle P15V23
+Created Car P15V24
+Created Truck P15V25
+Created Car P15V26
+Created Truck P15V27
+Created Car P15V28
+Created Truck P15V29
+Created Truck P15V30
+Created Motorcycle P15V31
+Created Motorcycle P15V32
+Created Truck P15V33
+Created Motorcycle P15V34
+Created Truck P15V35
+Created Truck P15V36
+Created Car P15V37
+Created Truck P15V38
+Created Motorcycle P15V39
+Created Motorcycle P15V40
+Created Truck P15V41
+Created Truck P15V42
+Created Motorcycle P15V43
+Created Car P15V44
+Created Car P15V45
+Created Car P15V46
+Created Car P15V47
+Created Truck P15V48
+Created Truck P15V49
+Vehicle P15V0 started. Engine started: Electric engine
+P15V0: 2009 Ford Car (running)
+Fuel cost for 500 miles: $20.2
+Vehicle P15V2 started. Engine started: Electric engine
+P15V2: 2005 Toyota Motorcycle (running)
+Fuel cost for 290 miles: $0.2
+Vehicle P15V4 started. Engine started: Electric engine
+P15V4: 2018 Yamaha Car (running)
+Fuel cost for 342 miles: $0.5
+Vehicle P15V6 started. Engine started: Electric engine
+P15V6: 2018 Yamaha Motorcycle (running)
+Fuel cost for 480 miles: $0.4
+Vehicle P15V8 started. Engine started: V4 engine
+P15V8: 2000 BMW Truck (running)
+Fuel cost for 465 miles: $5.3
+Vehicle P15V10 started. Engine started: V4 engine
+P15V10: 2017 Honda Truck (running)
+Fuel cost for 173 miles: $34.1
+Vehicle P15V12 started. Engine started: V6 engine
+P15V12: 2011 Honda Truck (running)
+Fuel cost for 147 miles: $110.9
+Vehicle P15V14 started. Engine started: V8 engine
+P15V14: 2022 Yamaha Motorcycle (running)
+Fuel cost for 494 miles: $225.2
+Vehicle P15V16 started. Engine started: Electric engine
+P15V16: 2017 Toyota Car (running)
+Fuel cost for 267 miles: $9.5
+Vehicle P15V18 started. Engine started: Electric engine
+P15V18: 2019 Ford Truck (running)
+Fuel cost for 250 miles: $13.3

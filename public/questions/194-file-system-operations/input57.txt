@@ -1,0 +1,22 @@
+21
+mkdir level_0
+mkdir level_1
+mkdir level_0/sub_1
+mkdir level_2
+mkdir level_1/sub_2
+mkdir level_3
+mkdir level_2/sub_3
+mkdir level_4
+mkdir level_3/sub_4
+mkdir level_5
+mkdir level_4/sub_5
+mkdir level_6
+mkdir level_5/sub_6
+mkdir level_7
+mkdir level_6/sub_7
+mkdir level_8
+mkdir level_7/sub_8
+mkdir level_9
+mkdir level_8/sub_9
+count directories
+size /

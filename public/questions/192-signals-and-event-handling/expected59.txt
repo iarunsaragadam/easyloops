@@ -1,0 +1,20 @@
+Processing events:
+Event 1: [P1] TYPE_0 at 332 - same_timestamp_12
+Event 2: [P3] TYPE_0 at 332 - same_timestamp_0
+Event 3: [P4] TYPE_2 at 332 - same_timestamp_6
+Event 4: [P4] TYPE_3 at 332 - same_timestamp_7
+Event 5: [P5] TYPE_2 at 332 - same_timestamp_10
+Event 6: [P7] TYPE_0 at 332 - same_timestamp_8
+Event 7: [P7] TYPE_1 at 332 - same_timestamp_1
+Event 8: [P7] TYPE_1 at 332 - same_timestamp_9
+Event 9: [P8] TYPE_2 at 332 - same_timestamp_2
+Event 10: [P9] TYPE_0 at 332 - same_timestamp_4
+Event 11: [P10] TYPE_1 at 332 - same_timestamp_5
+Event 12: [P10] TYPE_3 at 332 - same_timestamp_11
+Event 13: [P10] TYPE_3 at 332 - same_timestamp_3
+System state:
+Total events processed: 13
+TYPE_0: 4
+TYPE_1: 3
+TYPE_2: 3
+TYPE_3: 3

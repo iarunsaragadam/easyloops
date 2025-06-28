@@ -1,0 +1,52 @@
+-1000
+50
+abs
+square
+negate
+negate
+add 782
+square
+negate
+abs
+abs
+abs
+negate
+square
+negate
+negate
+negate
+multiply -86
+add 265
+square
+multiply 100
+negate
+add -814
+square
+add 988
+negate
+negate
+negate
+add -939
+add 417
+multiply 27
+square
+square
+negate
+negate
+negate
+multiply 61
+square
+square
+square
+square
+add -656
+multiply -44
+square
+multiply -84
+multiply 26
+add 863
+negate
+square
+multiply 53
+square
+add -202

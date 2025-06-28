@@ -1,0 +1,10 @@
+9
+769 2 TYPE_0 same_timestamp_0
+769 6 TYPE_1 same_timestamp_1
+769 9 TYPE_2 same_timestamp_2
+769 3 TYPE_3 same_timestamp_3
+769 7 TYPE_0 same_timestamp_4
+769 2 TYPE_1 same_timestamp_5
+769 2 TYPE_2 same_timestamp_6
+769 5 TYPE_3 same_timestamp_7
+769 2 TYPE_0 same_timestamp_8

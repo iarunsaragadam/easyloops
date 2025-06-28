@@ -1,0 +1,4 @@
+Created Motorcycle M19
+Vehicle M19 started. Engine started: V6 engine
+M19: 2024 Nissan Motorcycle (running)
+Fuel cost for 82 miles: $9.4

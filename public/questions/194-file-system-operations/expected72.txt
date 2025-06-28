@@ -1,0 +1,13 @@
+File 'perf_file_72_0.txt' created
+Directory 'perf_dir_72_1' created
+File 'perf_file_72_2.txt' created
+Directory 'perf_dir_72_3' created
+/
+/
+/
+perf_dir_72_1 perf_dir_72_3 perf_file_72_0.txt perf_file_72_2.txt
+perf_dir_72_1 perf_dir_72_3 perf_file_72_0.txt perf_file_72_2.txt
+perf_dir_72_1 perf_dir_72_3 perf_file_72_0.txt perf_file_72_2.txt
+perf_dir_72_1 perf_dir_72_3 perf_file_72_0.txt perf_file_72_2.txt
+Directory 'perf_dir_72_11' created
+/

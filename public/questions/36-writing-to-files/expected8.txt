@@ -1,0 +1,10 @@
+READ: file1.txt = FILE_NOT_FOUND
+READ: file1.txt = FILE_NOT_FOUND
+APPEND: file1.txt (7 total chars)
+APPEND: file1.txt (23 total chars)
+READ: file1.txt = pYJMRcvrs0WoN5PCAcUZbFE
+READ: file2.txt = FILE_NOT_FOUND
+WRITE: file1.txt (12 chars)
+APPEND: file1.txt (16 total chars)
+WRITE: file1.txt (11 chars)
+APPEND: file2.txt (17 total chars)

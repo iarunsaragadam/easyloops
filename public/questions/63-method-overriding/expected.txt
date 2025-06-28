@@ -1,1 +1,6 @@
-placeholder
+Buddy says: Woof! Woof!
+I am Buddy, a dog
+Whiskers says: Meow! Meow!
+I am Whiskers, a cat
+Tweety says: Tweet! Tweet!
+I am Tweety, a bird

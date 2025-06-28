@@ -1,0 +1,8 @@
+7
+OPEN shgwab.dat w
+OPEN cokms.txt r
+OPEN vgmvyo.dat r
+OPEN kuwutqy.tmp rw
+OPEN akx.tmp rw
+WRITE 3 file call
+CLOSE 3

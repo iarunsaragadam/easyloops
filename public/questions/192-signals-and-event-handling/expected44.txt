@@ -1,0 +1,14 @@
+Processing events:
+Event 1: [P1] REPEATED at 0 - occurrence_0
+Event 2: [P1] REPEATED at 15 - occurrence_3
+Event 3: [P1] REPEATED at 30 - occurrence_6
+Event 4: [P1] REPEATED at 45 - occurrence_9
+Event 5: [P2] REPEATED at 5 - occurrence_1
+Event 6: [P2] REPEATED at 20 - occurrence_4
+Event 7: [P2] REPEATED at 35 - occurrence_7
+Event 8: [P3] REPEATED at 10 - occurrence_2
+Event 9: [P3] REPEATED at 25 - occurrence_5
+Event 10: [P3] REPEATED at 40 - occurrence_8
+System state:
+Total events processed: 10
+REPEATED: 10

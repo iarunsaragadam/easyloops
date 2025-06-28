@@ -1,1 +1,11 @@
-placeholder
+3
+def no_params() -> None:
+    pass
+---
+@multiple
+@decorators
+def complex_func(a: List[int], b: Dict[str, Any] = None) -> Optional[str]:
+    pass
+---
+def simple(x, y=10):
+    pass

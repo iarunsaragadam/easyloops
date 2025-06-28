@@ -1,0 +1,75 @@
+74
+read perf0.txt
+create perf8.txt
+append perf6.txt buw50YCWCM0BdNH
+append perf8.txt tKJD9llS0WL6IrqW
+append perf9.txt 46uoeO
+create perf2.txt
+read perf4.txt
+read perf2.txt
+create perf1.txt
+write perf6.txt yPFmfqSuWtbur9wBe
+create perf4.txt
+create perf3.txt
+write perf5.txt pdUk
+append perf9.txt JSv8C
+read perf6.txt
+create perf7.txt
+append perf10.txt RbYPlLppZN
+write perf2.txt xLZIdfUDgAoEzAiQB3lHmsfg4
+append perf7.txt h2JHCF2LAxmeHq7rNUDFH
+create perf2.txt
+write perf9.txt cO0wbiZrHEhq
+create perf4.txt
+create perf4.txt
+read perf10.txt
+append perf4.txt i
+append perf7.txt t3OFxF5dLY7im1eb2kwwXM
+append perf3.txt oE3HLWbSrlQHndQ4KRxUhlH
+create perf9.txt
+create perf0.txt
+create perf0.txt
+write perf2.txt 4icru0S J1C
+append perf3.txt vtjZF8PK5SljZ62V
+append perf1.txt wI1z7JxG
+append perf10.txt wq6k
+read perf6.txt
+append perf1.txt jx1 AdmrI90SBJr1
+create perf6.txt
+append perf10.txt O HvTfUU ZIJr5hEiK
+append perf7.txt p6blH6gSdKouXbDRDBxZJon
+append perf4.txt dFH25yCGTr7RQlQrV0rJt5 
+write perf2.txt nZAbZ
+append perf6.txt gQeCYQoyypTLx6lTn8hAejv93
+write perf0.txt M3CryLk
+write perf3.txt 1Nj5Zk2vadMp
+append perf7.txt LDrSnz8c02RFRC1LM55LnZDTL R7Cw
+create perf2.txt
+write perf9.txt UkYdf5uztb1DJzU
+append perf1.txt XUs8FD7eKNne
+read perf3.txt
+append perf4.txt I6jgTGbkODWkqt3cQghfE7IDpW P
+append perf3.txt nc72GeRaLdLu
+write perf0.txt lWXt
+read perf2.txt
+read perf1.txt
+write perf6.txt yy aCq0uJAAvqTvueglLj
+read perf0.txt
+create perf10.txt
+write perf6.txt 7cTdOfYkstvJ
+write perf2.txt 4pMukNvfC
+create perf8.txt
+read perf0.txt
+append perf10.txt kY
+append perf4.txt kTRzJef
+read perf3.txt
+append perf6.txt Db6kRP3
+create perf1.txt
+write perf4.txt wZsaA6gwjaIP3hJF
+create perf8.txt
+write perf1.txt UoemUE
+read perf0.txt
+write perf5.txt 5 CsJrZEW
+create perf10.txt
+create perf6.txt
+append perf10.txt Mg

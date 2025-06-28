@@ -1,0 +1,4 @@
+CREATE Motorcycle M13 Ford 2024 Electric 241 gasoline
+START M13
+INFO M13
+FUEL_COST M13 107

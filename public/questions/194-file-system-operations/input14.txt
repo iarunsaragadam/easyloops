@@ -1,0 +1,9 @@
+8
+pwd
+ls
+ls
+touch file_14_2.txt
+touch file_14_3.txt
+touch file_14_4.txt
+cd ..
+count files

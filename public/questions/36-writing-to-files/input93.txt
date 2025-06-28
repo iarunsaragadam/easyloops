@@ -1,0 +1,12 @@
+11
+append complex2.txt Iv50Ih5W8V9JPmIrU4zZ9
+write complex3.txt 5RrY xa8eW a7H
+create complex3.txt
+create complex2.txt
+read complex6.txt
+write complex5.txt jL5xSZ3n8i UNso
+read complex1.txt
+create complex0.txt
+read complex5.txt
+append complex2.txt zTb3rtWg3QAPM4uKz3jDT7kBFb6tGTbxd5a4rTwPsAboC0h
+create complex7.txt

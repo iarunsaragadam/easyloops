@@ -1,0 +1,2 @@
+CREATE Car LD1 Toyota 2020 V4 150 gasoline
+FUEL_COST LD1 1000

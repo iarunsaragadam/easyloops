@@ -1,0 +1,5 @@
+HTTP/1.1 418 I'm a teapot
+Content-Type: text/plain
+Server: TeapotServer/1.0
+
+I'm a little teapot, short and stout

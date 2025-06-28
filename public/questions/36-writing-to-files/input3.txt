@@ -1,1 +1,4 @@
-placeholder
+3
+create config.ini
+write config.ini database=localhost
+read config.ini

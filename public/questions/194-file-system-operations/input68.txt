@@ -1,0 +1,15 @@
+14
+mkdir perf_dir_68_0
+ls
+touch perf_file_68_2.txt
+mkdir perf_dir_68_3
+pwd
+pwd
+mkdir perf_dir_68_6
+ls
+touch perf_file_68_8.txt
+mkdir perf_dir_68_9
+pwd
+mkdir perf_dir_68_11
+ls
+ls

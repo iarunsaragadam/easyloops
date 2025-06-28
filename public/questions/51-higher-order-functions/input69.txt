@@ -1,0 +1,1 @@
+9 | SQRT, POW 2, NEG, NEG

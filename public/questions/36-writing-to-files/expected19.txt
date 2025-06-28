@@ -1,0 +1,2 @@
+WRITE: file1.txt (5 chars)
+WRITE: file2.txt (3 chars)

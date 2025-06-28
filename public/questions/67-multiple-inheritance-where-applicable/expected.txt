@@ -1,1 +1,3 @@
-placeholder
+I am Alice
+Dave balances work at Developer and studies at Harvard
+WorkingStudent -> Worker -> Student -> Person -> object

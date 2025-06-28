@@ -1,0 +1,4 @@
+Created Car C17
+Vehicle C17 started. Engine started: Electric engine
+C17: 2019 Yamaha Car (running)
+Fuel cost for 54 miles: $0.1

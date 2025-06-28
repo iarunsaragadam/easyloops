@@ -1,0 +1,5 @@
+Array size: 8
+Array elements: [3, 3, 3, 3, 3, 3, 3, 3]
+First element: 3
+Last element: 3
+Array sum: 24

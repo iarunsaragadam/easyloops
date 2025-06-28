@@ -1,0 +1,4 @@
+CREATE Car C6 Chevrolet 2023 Electric 211 gasoline
+START C6
+INFO C6
+FUEL_COST C6 112

@@ -1,0 +1,6 @@
+WRITE: file1.txt (13 chars)
+WRITE: file1.txt (2 chars)
+READ: file1.txt = R3
+READ: file3.txt = FILE_NOT_FOUND
+WRITE: file1.txt (3 chars)
+WRITE: file1.txt (11 chars)

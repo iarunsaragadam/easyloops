@@ -1,0 +1,10 @@
+Processing events:
+Event 1: [P1] USER at 431 - event_3_data
+Event 2: [P2] USER at 863 - event_0_data
+Event 3: [P5] DATABASE at 342 - event_2_data
+Event 4: [P5] SYSTEM at 346 - event_1_data
+System state:
+Total events processed: 4
+DATABASE: 1
+SYSTEM: 1
+USER: 2

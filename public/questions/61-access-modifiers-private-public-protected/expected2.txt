@@ -1,1 +1,6 @@
-placeholder
+name: Bob Johnson
+id: T001
+add_grade: success
+add_grade: success
+gpa: 90.0
+verify_key: success

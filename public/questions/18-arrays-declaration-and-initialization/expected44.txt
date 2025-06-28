@@ -1,0 +1,5 @@
+Array size: 8
+Array elements: [4, 4, 4, 4, 4, 4, 4, 4]
+First element: 4
+Last element: 4
+Array sum: 32

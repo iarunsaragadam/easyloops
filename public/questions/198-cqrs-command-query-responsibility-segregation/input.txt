@@ -1,1 +1,6 @@
-placeholder
+5
+COMMAND ADD_EVENT user_login alice 1000
+COMMAND ADD_EVENT user_logout alice 2000
+QUERY GET_EVENTS_BY_TYPE user_login
+QUERY COUNT_EVENTS user_login
+QUERY GET_RECENT_EVENTS 2

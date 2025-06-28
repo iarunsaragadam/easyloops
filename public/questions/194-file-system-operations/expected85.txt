@@ -1,0 +1,7 @@
+Directory 'valid' created
+Invalid command: invalid_command
+cd: no such file or directory: nonexistent
+
+File 'valid/file.txt' created
+rm: cannot remove 'nonexistent': No such file or directory
+file.txt

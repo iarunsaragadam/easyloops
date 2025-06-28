@@ -1,1 +1,21 @@
-placeholder
+Created Memory resource R1 with capacity 1000
+Created CPU resource R2 with capacity 8
+Created Disk resource R3 with capacity 2000
+Allocation successful
+Allocation successful
+Allocation successful
+Active: 3, Created: 3, Destroyed: 0
+Deallocation successful
+Deallocation successful
+Memory R1: 300/1000 used
+CPU R2: 2/8 used
+Disk R3: 1500/2000 used
+Allocation successful
+Deallocation successful
+Destroyed CPU resource R2
+Active: 2, Created: 3, Destroyed: 1
+Created Network resource R4 with capacity 100
+Allocation successful
+Destroyed Memory resource R1
+Destroyed Disk resource R3
+Destroyed Network resource R4

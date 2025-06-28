@@ -1,0 +1,6 @@
+5
+OPEN fvlolav.dat rw
+OPEN umtotz.dat w
+LIST
+WRITE 4 test test
+CLOSE 3

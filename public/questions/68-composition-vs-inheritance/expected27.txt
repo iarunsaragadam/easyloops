@@ -1,0 +1,4 @@
+Created Car C27
+Vehicle C27 started. Engine started: V8 engine
+C27: 2016 Ford Car (running)
+Fuel cost for 151 miles: $67.5

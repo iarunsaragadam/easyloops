@@ -1,0 +1,5 @@
+Array size: 0
+Array elements: []
+Empty array
+No elements to display
+Array sum: 0

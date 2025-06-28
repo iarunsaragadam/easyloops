@@ -1,0 +1,55 @@
+OPENED complex15_0.txt AS FD 3
+OPENED complex15_1.txt AS FD 4
+OPENED complex15_2.txt AS FD 5
+OPENED complex15_3.txt AS FD 6
+OPENED complex15_4.txt AS FD 7
+OPENED complex15_5.txt AS FD 8
+OPENED complex15_6.txt AS FD 9
+OPENED complex15_7.txt AS FD 10
+FD 3: complex15_0.txt (rw)
+FD 4: complex15_1.txt (rw)
+FD 5: complex15_2.txt (w)
+FD 6: complex15_3.txt (r)
+FD 7: complex15_4.txt (w)
+FD 8: complex15_5.txt (r)
+FD 9: complex15_6.txt (w)
+FD 10: complex15_7.txt (r)
+WRITTEN 6 BYTES TO FD 7
+EOF
+EOF
+EOF
+FD 3: complex15_0.txt (rw)
+FD 4: complex15_1.txt (rw)
+FD 5: complex15_2.txt (w)
+FD 6: complex15_3.txt (r)
+FD 7: complex15_4.txt (w)
+FD 8: complex15_5.txt (r)
+FD 9: complex15_6.txt (w)
+FD 10: complex15_7.txt (r)
+EOF
+EOF
+WRITTEN 6 BYTES TO FD 7
+WRITTEN 6 BYTES TO FD 5
+WRITTEN 6 BYTES TO FD 3
+EOF
+EOF
+EOF
+WRITTEN 6 BYTES TO FD 7
+WRITTEN 6 BYTES TO FD 5
+FD 3: complex15_0.txt (rw)
+FD 4: complex15_1.txt (rw)
+FD 5: complex15_2.txt (w)
+FD 6: complex15_3.txt (r)
+FD 7: complex15_4.txt (w)
+FD 8: complex15_5.txt (r)
+FD 9: complex15_6.txt (w)
+FD 10: complex15_7.txt (r)
+EOF
+CLOSED FD 3 (complex15_0.txt)
+CLOSED FD 4 (complex15_1.txt)
+CLOSED FD 5 (complex15_2.txt)
+CLOSED FD 6 (complex15_3.txt)
+CLOSED FD 7 (complex15_4.txt)
+CLOSED FD 8 (complex15_5.txt)
+CLOSED FD 9 (complex15_6.txt)
+CLOSED FD 10 (complex15_7.txt)

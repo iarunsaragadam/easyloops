@@ -1,0 +1,6 @@
+5
+mkdir home
+cd home
+pwd
+cd /
+pwd

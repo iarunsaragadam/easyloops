@@ -1,0 +1,9 @@
+8
+pwd
+ls
+mkdir dir_21_1
+touch file_21_2.txt
+cd ..
+mkdir dir_21_4
+cd ..
+count files

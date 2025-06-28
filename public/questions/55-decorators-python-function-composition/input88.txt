@@ -1,0 +1,23 @@
+283
+21
+multiply 17
+negate
+square
+multiply 95
+square
+negate
+add 808
+negate
+negate
+abs
+abs
+multiply 58
+abs
+multiply 78
+abs
+negate
+multiply 26
+negate
+multiply -86
+add -677
+multiply 70

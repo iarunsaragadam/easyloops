@@ -1,0 +1,17 @@
+Line 1: 6 words, 44 characters
+Line 2: 1 words, 4 characters
+Line 3: 3 words, 16 characters
+Line 4: 0 words, 0 characters
+Line 5: 0 words, 12 characters
+Line 6: 0 words, 9 characters
+Line 7: 4 words, 34 characters
+Line 8: 0 words, 3 characters
+Line 9: 6 words, 45 characters
+Line 10: 0 words, 0 characters
+Line 11: 0 words, 9 characters
+Line 12: 0 words, 0 characters
+Line 13: 0 words, 15 characters
+Line 14: 4 words, 28 characters
+Line 15: 1 words, 3 characters
+Line 16: 0 words, 0 characters
+Total: 16 lines, 25 words, 222 characters

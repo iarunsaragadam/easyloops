@@ -1,0 +1,1 @@
+8 | SQRT, SQRT, POW 4

@@ -1,0 +1,1 @@
+100 | SQRT, SQRT, POW 4

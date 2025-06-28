@@ -1,0 +1,45 @@
+44
+OPEN complex12_0.txt rw
+OPEN complex12_1.txt rw
+OPEN complex12_2.txt r
+OPEN complex12_3.txt rw
+OPEN complex12_4.txt r
+OPEN complex12_5.txt rw
+READ 3 16
+READ 7 8
+READ 3 12
+WRITE 4 data58
+LIST
+WRITE 3 data46
+WRITE 6 data5
+LIST
+LIST
+READ 5 7
+LIST
+LIST
+READ 8 8
+LIST
+READ 8 8
+LIST
+LIST
+READ 6 13
+WRITE 4 data12
+READ 7 2
+LIST
+WRITE 6 data28
+LIST
+READ 6 18
+READ 5 18
+READ 7 8
+LIST
+WRITE 8 data79
+READ 8 5
+READ 3 10
+WRITE 8 data73
+WRITE 3 data2
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6
+CLOSE 7
+CLOSE 8

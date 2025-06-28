@@ -1,0 +1,12 @@
+4 512
+10
+write 8824
+read 12090
+write 2069651493
+write 5010
+read 11974
+read 7449
+read 9852
+write 1939973561
+write 2076029081
+read 15512

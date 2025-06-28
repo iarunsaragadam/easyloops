@@ -1,0 +1,83 @@
+OPENED complex11_0.txt AS FD 3
+OPENED complex11_1.txt AS FD 4
+OPENED complex11_2.txt AS FD 5
+OPENED complex11_3.txt AS FD 6
+OPENED complex11_4.txt AS FD 7
+OPENED complex11_5.txt AS FD 8
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+EOF
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+WRITTEN 6 BYTES TO FD 6
+EOF
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+READ: data83
+WRITTEN 6 BYTES TO FD 8
+EOF
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+EOF
+READ: data76
+EOF
+EOF
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+FD 3: complex11_0.txt (rw)
+FD 4: complex11_1.txt (rw)
+FD 5: complex11_2.txt (r)
+FD 6: complex11_3.txt (w)
+FD 7: complex11_4.txt (rw)
+FD 8: complex11_5.txt (rw)
+CLOSED FD 3 (complex11_0.txt)
+CLOSED FD 4 (complex11_1.txt)
+CLOSED FD 5 (complex11_2.txt)
+CLOSED FD 6 (complex11_3.txt)
+CLOSED FD 7 (complex11_4.txt)
+CLOSED FD 8 (complex11_5.txt)

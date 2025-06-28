@@ -1,0 +1,59 @@
+[2023-12-01 10:25:00] ERROR: Complex scenario message 5 with special chars: @#$%^&*()
+[2023-12-01 11:06:00] INFO: Complex scenario message 33 with special chars: @#$%^&*()
+[2023-12-01 10:15:00] DEBUG: Complex scenario message 3 with special chars: @#$%^&*()
+[2023-12-01 10:16:00] ERROR: Complex scenario message 8 with special chars: @#$%^&*()
+Invalid entry 12
+[2023-12-01 10:48:00] INFO: Complex scenario message 12 with special chars: @#$%^&*()
+[2023-12-01 10:34:00] DEBUG: Complex scenario message 34 with special chars: @#$%^&*()
+Invalid entry 0
+[2023-12-01 10:16:00] ERROR: Complex scenario message 4 with special chars: @#$%^&*()
+[2023-12-01 11:48:00] WARN: Complex scenario message 36 with special chars: @#$%^&*()
+[2023-12-01 10:22:00] WARN: Complex scenario message 22 with special chars: @#$%^&*()
+Invalid entry 1
+[2023-12-01 13:15:00] INFO: Complex scenario message 39 with special chars: @#$%^&*()
+[2023-12-01 13:40:00] ERROR: Complex scenario message 44 with special chars: @#$%^&*()
+[2023-12-01 11:16:00] ERROR: Complex scenario message 38 with special chars: @#$%^&*()
+[2023-12-01 10:40:00] ERROR: Complex scenario message 20 with special chars: @#$%^&*()
+[2023-12-01 12:20:00] WARN: Complex scenario message 28 with special chars: @#$%^&*()
+[2023-12-01 11:08:00] DEBUG: Complex scenario message 17 with special chars: @#$%^&*()
+Invalid entry 10
+[2023-12-01 13:45:00] ERROR: Complex scenario message 45 with special chars: @#$%^&*()
+[2023-12-01 10:42:00] INFO: Complex scenario message 21 with special chars: @#$%^&*()
+Invalid entry 6
+[2023-12-01 11:12:00] INFO: Complex scenario message 18 with special chars: @#$%^&*()
+[2023-12-01 10:32:00] DEBUG: Complex scenario message 32 with special chars: @#$%^&*()
+[2023-12-01 10:30:00] ERROR: Complex scenario message 10 with special chars: @#$%^&*()
+[2023-12-01 11:33:00] ERROR: Complex scenario message 31 with special chars: @#$%^&*()
+[2023-12-01 10:18:00] DEBUG: Complex scenario message 9 with special chars: @#$%^&*()
+[2023-12-01 10:39:00] DEBUG: Complex scenario message 13 with special chars: @#$%^&*()
+Invalid entry 3
+Invalid entry 11
+[2023-12-01 10:42:00] WARN: Complex scenario message 42 with special chars: @#$%^&*()
+[2023-12-01 10:00:00] ERROR: Complex scenario message 0 with special chars: @#$%^&*()
+Invalid entry 5
+[2023-12-01 11:10:00] WARN: Complex scenario message 35 with special chars: @#$%^&*()
+[2023-12-01 12:03:00] DEBUG: Complex scenario message 41 with special chars: @#$%^&*()
+[2023-12-01 10:10:00] INFO: Complex scenario message 2 with special chars: @#$%^&*()
+Invalid entry 4
+Invalid entry 7
+[2023-12-01 10:48:00] DEBUG: Complex scenario message 24 with special chars: @#$%^&*()
+Invalid entry 8
+[2023-12-01 11:20:00] ERROR: Complex scenario message 40 with special chars: @#$%^&*()
+[2023-12-01 10:44:00] INFO: Complex scenario message 11 with special chars: @#$%^&*()
+[2023-12-01 10:35:00] ERROR: Complex scenario message 7 with special chars: @#$%^&*()
+[2023-12-01 11:09:00] ERROR: Complex scenario message 23 with special chars: @#$%^&*()
+[2023-12-01 10:54:00] ERROR: Complex scenario message 27 with special chars: @#$%^&*()
+[2023-12-01 12:09:00] WARN: Complex scenario message 43 with special chars: @#$%^&*()
+[2023-12-01 10:30:00] INFO: Complex scenario message 30 with special chars: @#$%^&*()
+[2023-12-01 10:19:00] ERROR: Complex scenario message 19 with special chars: @#$%^&*()
+[2023-12-01 12:05:00] DEBUG: Complex scenario message 25 with special chars: @#$%^&*()
+[2023-12-01 10:03:00] WARN: Complex scenario message 1 with special chars: @#$%^&*()
+[2023-12-01 10:24:00] INFO: Complex scenario message 6 with special chars: @#$%^&*()
+Invalid entry 9
+[2023-12-01 10:26:00] WARN: Complex scenario message 26 with special chars: @#$%^&*()
+[2023-12-01 10:28:00] DEBUG: Complex scenario message 14 with special chars: @#$%^&*()
+[2023-12-01 12:28:00] ERROR: Complex scenario message 37 with special chars: @#$%^&*()
+[2023-12-01 10:29:00] DEBUG: Complex scenario message 29 with special chars: @#$%^&*()
+Invalid entry 2
+[2023-12-01 11:00:00] ERROR: Complex scenario message 15 with special chars: @#$%^&*()
+[2023-12-01 11:20:00] ERROR: Complex scenario message 16 with special chars: @#$%^&*()

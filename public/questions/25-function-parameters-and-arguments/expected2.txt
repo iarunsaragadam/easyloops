@@ -1,1 +1,2 @@
-placeholder
+Function called: calculate('subtract', 15, 7)
+Result: 8

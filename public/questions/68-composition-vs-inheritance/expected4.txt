@@ -1,0 +1,9 @@
+Created Car C1
+Created Truck T1
+Created Motorcycle M1
+Vehicle C1 started. Engine started: V4 engine
+Vehicle T1 started. Engine started: V8 engine
+Vehicle M1 started. Engine started: V4 engine
+Fuel cost for 50 miles: $6.8
+Fuel cost for 50 miles: $49.4
+Fuel cost for 50 miles: $4.1

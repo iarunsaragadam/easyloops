@@ -1,0 +1,9 @@
+Processing events:
+Event 1: [P1] SYSTEM at 100 - high_priority
+Event 2: [P2] NETWORK at 100 - medium_priority
+Event 3: [P3] USER at 100 - low_priority
+System state:
+Total events processed: 3
+NETWORK: 1
+SYSTEM: 1
+USER: 1

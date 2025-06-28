@@ -1,0 +1,11 @@
+LOG LEVEL SUMMARY:
+DEBUG: 1
+ERROR: 1
+
+ERROR ENTRIES:
+[2023-12-01 10:01:00] uppercase level
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-01 10:00:00
+Last entry: 2023-12-01 10:01:00
+Total entries: 2

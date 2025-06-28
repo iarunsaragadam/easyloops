@@ -1,0 +1,7 @@
+6
+pwd
+ls
+touch file_12_2.txt
+touch file_12_3.txt
+ls
+count files

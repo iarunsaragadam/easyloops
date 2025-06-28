@@ -1,0 +1,5 @@
+4
+OPEN pedyaq.dat r
+OPEN ufkggo.txt rw
+LIST
+WRITE 4 system data world system

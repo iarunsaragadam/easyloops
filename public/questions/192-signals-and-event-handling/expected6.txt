@@ -1,0 +1,11 @@
+Processing events:
+Event 1: [P1] A at 1 - first
+Event 2: [P2] B at 2 - second
+Event 3: [P3] C at 3 - third
+Event 4: [P4] D at 4 - fourth
+System state:
+Total events processed: 4
+A: 1
+B: 1
+C: 1
+D: 1

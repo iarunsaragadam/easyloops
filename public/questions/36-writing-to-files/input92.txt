@@ -1,0 +1,9 @@
+8
+create test.txt
+write test.txt Hello
+append test.txt World
+read test.txt
+write test.txt New
+append test.txt Content
+append test.txt More
+read test.txt

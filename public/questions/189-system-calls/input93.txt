@@ -1,0 +1,34 @@
+33
+OPEN complex11_0.txt rw
+OPEN complex11_1.txt rw
+OPEN complex11_2.txt r
+OPEN complex11_3.txt w
+OPEN complex11_4.txt rw
+OPEN complex11_5.txt rw
+LIST
+LIST
+READ 4 7
+LIST
+WRITE 6 data96
+READ 8 1
+LIST
+WRITE 4 data83
+LIST
+READ 4 12
+WRITE 8 data76
+READ 3 7
+LIST
+READ 7 2
+READ 8 17
+READ 7 15
+READ 3 5
+LIST
+LIST
+LIST
+LIST
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6
+CLOSE 7
+CLOSE 8

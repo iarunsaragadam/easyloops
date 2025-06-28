@@ -1,0 +1,7 @@
+LOG LEVEL SUMMARY:
+INFO: 2
+
+TIME SPAN ANALYSIS:
+First entry: 2023-01-01 00:00:00
+Last entry: 2023-12-31 23:59:59
+Total entries: 2

@@ -1,1 +1,5 @@
-placeholder
+0
+3
+global_set 10
+local_function 5
+modify_global 3

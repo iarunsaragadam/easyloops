@@ -1,0 +1,58 @@
+Created Car P4V0
+Created Truck P4V1
+Created Motorcycle P4V2
+Created Truck P4V3
+Created Car P4V4
+Created Car P4V5
+Created Truck P4V6
+Created Motorcycle P4V7
+Created Car P4V8
+Created Truck P4V9
+Created Motorcycle P4V10
+Created Motorcycle P4V11
+Created Car P4V12
+Created Truck P4V13
+Created Motorcycle P4V14
+Created Truck P4V15
+Created Car P4V16
+Created Car P4V17
+Created Motorcycle P4V18
+Created Truck P4V19
+Created Car P4V20
+Created Car P4V21
+Created Motorcycle P4V22
+Created Truck P4V23
+Created Truck P4V24
+Created Motorcycle P4V25
+Created Motorcycle P4V26
+Created Car P4V27
+Vehicle P4V0 started. Engine started: V6 engine
+P4V0: 2017 Ford Car (running)
+Fuel cost for 320 miles: $1.9
+Vehicle P4V2 started. Engine started: V4 engine
+P4V2: 2000 Toyota Motorcycle (running)
+Fuel cost for 472 miles: $41.9
+Vehicle P4V4 started. Engine started: V4 engine
+P4V4: 2021 BMW Car (running)
+Fuel cost for 430 miles: $2.7
+Vehicle P4V6 started. Engine started: V8 engine
+P4V6: 2008 Honda Truck (running)
+Fuel cost for 455 miles: $449.5
+Vehicle P4V8 started. Engine started: V8 engine
+P4V8: 2008 Honda Car (running)
+Fuel cost for 384 miles: $120.3
+Vehicle P4V10 started. Engine started: V4 engine
+P4V10: 2014 Toyota Motorcycle (running)
+Fuel cost for 406 miles: $56.5
+Vehicle P4V12 started. Engine started: Electric engine
+P4V12: 2019 Ford Car (running)
+Fuel cost for 464 miles: $15.2
+Vehicle P4V14 started. Engine started: Electric engine
+P4V14: 2022 BMW Motorcycle (running)
+Fuel cost for 248 miles: $6.0
+Vehicle P4V16 started. Engine started: V6 engine
+P4V16: 2009 Ford Car (running)
+Fuel cost for 455 miles: $100.3
+Vehicle P4V18 started. Engine started: V6 engine
+P4V18: 2019 BMW Motorcycle (running)
+Fuel cost for 130 miles: $23.2

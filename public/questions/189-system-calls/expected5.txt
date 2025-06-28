@@ -1,0 +1,5 @@
+OPENED data.txt AS FD 3
+WRITTEN 10 BYTES TO FD 3
+READ: abc
+READ: abcd
+CLOSED FD 3 (data.txt)

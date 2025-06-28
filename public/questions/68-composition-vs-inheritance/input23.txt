@@ -1,0 +1,4 @@
+CREATE Motorcycle M23 BMW 2017 Electric 231 diesel
+START M23
+INFO M23
+FUEL_COST M23 82

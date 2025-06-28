@@ -1,1 +1,1 @@
-placeholder
+RESULT: 42

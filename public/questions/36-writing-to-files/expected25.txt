@@ -1,0 +1,9 @@
+READ: file1.txt = FILE_NOT_FOUND
+APPEND: file1.txt (17 total chars)
+READ: file1.txt =  W iV6iLW7wVbUN99
+READ: file1.txt =  W iV6iLW7wVbUN99
+APPEND: file1.txt (32 total chars)
+APPEND: file1.txt (36 total chars)
+WRITE: file1.txt (3 chars)
+WRITE: file1.txt (5 chars)
+WRITE: file1.txt (20 chars)

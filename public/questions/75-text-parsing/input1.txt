@@ -1,0 +1,8 @@
+[2023-12-01 09:00:00] INFO: Application started
+[2023-12-01 09:00:05] DEBUG: Loading configuration file
+[2023-12-01 09:00:10] INFO: Database connection established
+[2023-12-01 09:01:00] WARN: High memory usage detected
+[2023-12-01 09:01:30] ERROR: Failed to process user request
+[2023-12-01 09:02:00] INFO: Processing batch job
+[2023-12-01 09:02:15] ERROR: Database timeout occurred
+[2023-12-01 09:03:00] INFO: Batch job completed successfully

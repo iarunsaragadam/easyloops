@@ -1,1 +1,4 @@
-placeholder
+Created Truck T1
+Vehicle T1 started. Engine started: V8 engine
+T1: 2019 Ford Truck (running)
+Fuel cost for 100 miles: $98.8

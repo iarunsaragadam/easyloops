@@ -1,0 +1,3 @@
+2
+write dejbo.ini
+read lp76tw.log

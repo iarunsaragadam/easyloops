@@ -1,0 +1,10 @@
+9
+mkdir abs_test
+cd abs_test
+mkdir rel_sub
+touch rel_sub/file.txt
+cd /
+ls /abs_test/rel_sub
+size /abs_test
+cd abs_test/rel_sub
+pwd

@@ -1,0 +1,4 @@
+HTTP/3.0 200 OK
+Content-Type: application/future
+
+Future HTTP response

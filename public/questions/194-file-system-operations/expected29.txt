@@ -1,0 +1,8 @@
+Directory 'a' created
+Changed to /a
+Changed to /
+Changed to /a
+Changed to /a
+/a
+Changed to /
+/

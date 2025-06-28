@@ -1,0 +1,13 @@
+OPENED apewvasr.dat AS FD 3
+OPENED apx.log AS FD 4
+OPENED hxzikbo.dat AS FD 5
+FD 3: apewvasr.dat (rw)
+FD 4: apx.log (rw)
+FD 5: hxzikbo.dat (r)
+WRITTEN 22 BYTES TO FD 3
+FD 3: apewvasr.dat (rw)
+FD 4: apx.log (rw)
+FD 5: hxzikbo.dat (r)
+CLOSED FD 3 (apewvasr.dat)
+CLOSED FD 4 (apx.log)
+CLOSED FD 5 (hxzikbo.dat)

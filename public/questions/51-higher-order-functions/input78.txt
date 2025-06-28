@@ -1,0 +1,1 @@
+-19 | ADD 3, POW 2, POW 3, ADD -4, ADD -2, POW 2

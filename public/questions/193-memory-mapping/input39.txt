@@ -1,0 +1,10 @@
+1 1024
+8
+write 9606
+write 3766
+write 15199
+read 300941019
+read 9005
+read 1517279519
+read 1888448246
+read 20272

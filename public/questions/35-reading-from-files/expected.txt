@@ -1,1 +1,5 @@
-placeholder
+apple
+banana
+cherry
+date
+Unique words: 4

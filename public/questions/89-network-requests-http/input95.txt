@@ -1,0 +1,6 @@
+HTTP/1.1 200 OK
+Content-Type : text/html
+Server : nginx/1.0
+X-Custom   :   value with spaces
+
+Body with spaced headers

@@ -1,0 +1,7 @@
+22
+5
+multiply -26
+square
+add -626
+multiply 98
+add -270

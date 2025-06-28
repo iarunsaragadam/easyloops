@@ -1,0 +1,6 @@
+Created Car HP1
+Created Truck HP2
+Vehicle HP1 started. Engine started: V8 engine
+Vehicle HP2 started. Engine started: V8 engine
+Fuel cost for 200 miles: $126.0
+Fuel cost for 200 miles: $197.6

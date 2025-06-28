@@ -1,0 +1,5 @@
+Duplicates: 8 20 23 26 29 32 53 62
+Naive Time: 0.015ms
+Optimized Time: 0.003ms
+Faster: Optimized
+Speedup: 4.17x

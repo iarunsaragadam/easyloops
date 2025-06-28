@@ -1,0 +1,7 @@
+3
+5
+multiply 2
+add 4
+square
+negate
+abs

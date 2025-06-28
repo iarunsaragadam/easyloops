@@ -1,0 +1,22 @@
+2743
+20
+negate
+add -804
+multiply 63
+multiply -4
+square
+add 600
+multiply -32
+add -860
+multiply 9
+abs
+abs
+square
+multiply -42
+abs
+square
+abs
+abs
+square
+multiply 11
+square

@@ -1,0 +1,10 @@
+9
+OPEN bmiszmej.txt rw
+OPEN frq.tmp r
+OPEN ixbuc.tmp rw
+OPEN ogzg.log r
+OPEN pla.dat r
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6

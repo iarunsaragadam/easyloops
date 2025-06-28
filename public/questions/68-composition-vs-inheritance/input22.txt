@@ -1,0 +1,4 @@
+CREATE Motorcycle M22 BMW 2017 Electric 279 diesel
+START M22
+INFO M22
+FUEL_COST M22 103

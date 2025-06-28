@@ -1,1 +1,6 @@
-placeholder
+5
+Employee One, 1001, 45000.25, HR
+Employee Two, 1002, 55000.50, IT
+Employee Three, 1003, 65000.75, FINANCE
+Employee Four, 1004, 35000, ADMIN
+Employee Five, 1005, 85000.99, TECH

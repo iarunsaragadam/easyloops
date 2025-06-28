@@ -1,0 +1,2 @@
+WRITE: dejbo.ini (0 chars)
+READ: lp76tw.log = FILE_NOT_FOUND

@@ -1,0 +1,36 @@
+35
+mkdir level_0
+mkdir level_0/level_1
+mkdir level_0/level_1/level_2
+mkdir level_0/level_1/level_2/level_3
+mkdir level_0/level_1/level_2/level_3/level_4
+mkdir level_0/level_1/level_2/level_3/level_4/level_5
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21/level_22
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21/level_22/level_23
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21/level_22/level_23/level_24
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21/level_22/level_23/level_24/level_25
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21/level_22/level_23/level_24/level_25/level_26
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21/level_22/level_23/level_24/level_25/level_26/level_27
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21/level_22/level_23/level_24/level_25/level_26/level_27/level_28
+mkdir level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21/level_22/level_23/level_24/level_25/level_26/level_27/level_28/level_29
+cd level_0/level_1/level_2/level_3/level_4/level_5/level_6/level_7/level_8/level_9/level_10/level_11/level_12/level_13/level_14/level_15/level_16/level_17/level_18/level_19/level_20/level_21/level_22/level_23/level_24/level_25/level_26/level_27/level_28/level_29
+pwd
+cd /
+find level_29
+size /

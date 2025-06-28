@@ -1,1 +1,8 @@
-placeholder
+Bob is working as Manager
+Carol is studying at Harvard
+David is working as Engineer
+David is studying at MIT
+I am David
+Person -> object
+Worker -> Person -> object
+Student -> Person -> object

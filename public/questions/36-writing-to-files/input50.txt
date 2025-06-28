@@ -1,0 +1,3 @@
+2
+read nplxgsfj.data
+read x46s.ini

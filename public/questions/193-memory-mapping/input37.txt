@@ -1,0 +1,12 @@
+5 4096
+10
+write 945285027
+read 2054263763
+write 3889
+read 5783
+write 2986
+read 1843855287
+read 13514
+read 8746
+write 8676
+read 1804

@@ -1,0 +1,14 @@
+OPENED read1.txt AS FD 3
+OPENED write1.txt AS FD 4
+OPENED readwrite1.txt AS FD 5
+EOF
+WRITTEN 5 BYTES TO FD 4
+EOF
+WRITTEN 5 BYTES TO FD 5
+FD 3: read1.txt (r)
+FD 4: write1.txt (w)
+FD 5: readwrite1.txt (rw)
+CLOSED FD 3 (read1.txt)
+CLOSED FD 4 (write1.txt)
+CLOSED FD 5 (readwrite1.txt)
+NO OPEN FILES

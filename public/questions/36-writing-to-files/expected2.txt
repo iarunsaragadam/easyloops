@@ -1,1 +1,4 @@
-placeholder
+WRITE: log.txt (5 chars)
+APPEND: log.txt (8 total chars)
+APPEND: log.txt (19 total chars)
+READ: log.txt = StartingApplication

@@ -1,0 +1,4 @@
+Created Truck T12
+Vehicle T12 started. Engine started: V4 engine
+T12: 2019 Yamaha Truck (running)
+Fuel cost for 126 miles: $1.0

@@ -1,0 +1,1 @@
+-8 | POW 3, ABS, SQRT, ABS, NEG, ADD 2, ABS

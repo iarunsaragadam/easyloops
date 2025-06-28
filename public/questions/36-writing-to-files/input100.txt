@@ -1,0 +1,15 @@
+14
+create complex2.txt
+read complex0.txt
+read complex0.txt
+create complex1.txt
+read complex2.txt
+read complex1.txt
+append complex2.txt wK0zxcx6B9QHhmnBaE9oGDahPkGMkdU7HIcdJ
+write complex0.txt kbqnz9UmBnXjrqCRJkjV1cgXjBdlhwg1 5ajzpqin SaK
+append complex0.txt XWRYpv6T2puxdC1
+read complex1.txt
+append complex2.txt zFNR7tE4Zq8rkQ 64C1np7HI
+append complex1.txt L8uFrrpTzIcj9QfIFGT08JoRMNB
+read complex2.txt
+create complex1.txt

@@ -1,0 +1,119 @@
+Processing events:
+Event 1: [P1] TRACE at 2 - high_priority_burst_0
+Event 2: [P1] INFO at 207 - high_priority_burst_20
+Event 3: [P1] ERROR at 304 - high_priority_burst_30
+Event 4: [P1] INFO at 409 - high_priority_burst_40
+Event 5: [P1] DEBUG at 504 - high_priority_burst_50
+Event 6: [P1] SYSTEM at 707 - high_priority_burst_70
+Event 7: [P1] SECURITY at 910 - high_priority_burst_90
+Event 8: [P1] ERROR at 464669 - regular_event_88_787
+Event 9: [P1] SECURITY at 653536 - regular_event_6_335
+Event 10: [P1] SECURITY at 674560 - regular_event_99_959
+Event 11: [P1] NETWORK at 789377 - regular_event_19_303
+Event 12: [P1] WARNING at 853064 - regular_event_87_669
+Event 13: [P2] SYSTEM at 105 - high_priority_burst_10
+Event 14: [P2] SECURITY at 607 - high_priority_burst_60
+Event 15: [P2] ERROR at 806 - high_priority_burst_80
+Event 16: [P2] NETWORK at 1002 - high_priority_burst_100
+Event 17: [P2] SYSTEM at 158150 - regular_event_51_234
+Event 18: [P2] SECURITY at 206127 - regular_event_102_867
+Event 19: [P2] DATABASE at 311134 - regular_event_68_130
+Event 20: [P2] TRACE at 502774 - regular_event_8_284
+Event 21: [P2] SYSTEM at 544505 - regular_event_55_170
+Event 22: [P2] INFO at 856496 - regular_event_12_999
+Event 23: [P3] USER at 400 - same_timestamp_group_28
+Event 24: [P3] TRACE at 1500 - same_timestamp_group_105
+Event 25: [P3] DATABASE at 173296 - regular_event_78_326
+Event 26: [P3] ERROR at 360585 - regular_event_32_312
+Event 27: [P3] NETWORK at 492309 - regular_event_53_405
+Event 28: [P3] DEBUG at 694237 - regular_event_97_794
+Event 29: [P3] WARNING at 845454 - regular_event_15_266
+Event 30: [P3] DATABASE at 916420 - regular_event_44_526
+Event 31: [P3] DATABASE at 987662 - regular_event_65_219
+Event 32: [P4] INFO at 300 - same_timestamp_group_21
+Event 33: [P4] WARNING at 1200 - same_timestamp_group_84
+Event 34: [P4] SYSTEM at 39020 - regular_event_62_866
+Event 35: [P4] DATABASE at 46987 - regular_event_96_819
+Event 36: [P4] DATABASE at 161763 - regular_event_24_493
+Event 37: [P4] SECURITY at 467059 - regular_event_38_249
+Event 38: [P4] TRACE at 488771 - regular_event_103_464
+Event 39: [P4] INFO at 540733 - regular_event_93_459
+Event 40: [P4] DEBUG at 567178 - regular_event_29_868
+Event 41: [P4] ERROR at 645428 - regular_event_89_109
+Event 42: [P4] INFO at 833225 - regular_event_74_697
+Event 43: [P5] WARNING at 900 - same_timestamp_group_63
+Event 44: [P5] SECURITY at 1100 - same_timestamp_group_77
+Event 45: [P5] DATABASE at 3685 - regular_event_43_594
+Event 46: [P5] ERROR at 65706 - regular_event_82_646
+Event 47: [P5] TRACE at 77902 - regular_event_47_215
+Event 48: [P5] ERROR at 78433 - regular_event_69_829
+Event 49: [P5] SYSTEM at 376936 - regular_event_66_179
+Event 50: [P5] DATABASE at 546827 - regular_event_1_638
+Event 51: [P5] SYSTEM at 657488 - regular_event_83_942
+Event 52: [P5] USER at 677172 - regular_event_58_164
+Event 53: [P6] TRACE at 200 - same_timestamp_group_14
+Event 54: [P6] USER at 1400 - same_timestamp_group_98
+Event 55: [P6] DATABASE at 34579 - regular_event_54_290
+Event 56: [P6] NETWORK at 90487 - regular_event_3_625
+Event 57: [P6] SYSTEM at 97630 - regular_event_64_228
+Event 58: [P6] NETWORK at 174587 - regular_event_13_189
+Event 59: [P6] TRACE at 270372 - regular_event_34_739
+Event 60: [P6] SECURITY at 282356 - regular_event_75_127
+Event 61: [P6] NETWORK at 495056 - regular_event_2_245
+Event 62: [P6] USER at 581260 - regular_event_17_847
+Event 63: [P6] INFO at 890632 - regular_event_67_936
+Event 64: [P7] DEBUG at 500 - same_timestamp_group_35
+Event 65: [P7] SECURITY at 213283 - regular_event_61_615
+Event 66: [P7] SECURITY at 468507 - regular_event_59_972
+Event 67: [P7] DATABASE at 471063 - regular_event_4_945
+Event 68: [P7] DATABASE at 601455 - regular_event_39_978
+Event 69: [P7] USER at 633452 - regular_event_27_283
+Event 70: [P7] USER at 650644 - regular_event_9_246
+Event 71: [P7] DATABASE at 664058 - regular_event_26_480
+Event 72: [P7] DEBUG at 729280 - regular_event_41_614
+Event 73: [P7] NETWORK at 946045 - regular_event_86_628
+Event 74: [P7] INFO at 973457 - regular_event_31_957
+Event 75: [P8] WARNING at 100 - same_timestamp_group_7
+Event 76: [P8] DEBUG at 700 - same_timestamp_group_49
+Event 77: [P8] ERROR at 33397 - regular_event_18_789
+Event 78: [P8] DEBUG at 134649 - regular_event_5_750
+Event 79: [P8] SYSTEM at 447565 - regular_event_76_107
+Event 80: [P8] ERROR at 637358 - regular_event_52_786
+Event 81: [P8] WARNING at 648693 - regular_event_23_557
+Event 82: [P8] USER at 853785 - regular_event_85_996
+Event 83: [P9] SECURITY at 800 - same_timestamp_group_56
+Event 84: [P9] USER at 93721 - regular_event_48_963
+Event 85: [P9] SYSTEM at 269961 - regular_event_22_866
+Event 86: [P9] DEBUG at 275809 - regular_event_94_297
+Event 87: [P9] INFO at 381741 - regular_event_79_998
+Event 88: [P9] DATABASE at 390737 - regular_event_37_294
+Event 89: [P9] USER at 684470 - regular_event_72_756
+Event 90: [P9] NETWORK at 790894 - regular_event_11_827
+Event 91: [P10] INFO at 600 - same_timestamp_group_42
+Event 92: [P10] USER at 1300 - same_timestamp_group_91
+Event 93: [P10] NETWORK at 7219 - regular_event_81_837
+Event 94: [P10] SYSTEM at 37945 - regular_event_104_504
+Event 95: [P10] DEBUG at 105524 - regular_event_25_479
+Event 96: [P10] SYSTEM at 165144 - regular_event_36_720
+Event 97: [P10] TRACE at 301162 - regular_event_57_610
+Event 98: [P10] DEBUG at 321996 - regular_event_73_633
+Event 99: [P10] DEBUG at 371785 - regular_event_101_397
+Event 100: [P10] WARNING at 503943 - regular_event_16_124
+Event 101: [P10] NETWORK at 640767 - regular_event_33_891
+Event 102: [P10] ERROR at 729223 - regular_event_92_386
+Event 103: [P10] SECURITY at 736475 - regular_event_95_160
+Event 104: [P10] SYSTEM at 834891 - regular_event_71_734
+Event 105: [P10] USER at 861302 - regular_event_46_383
+Event 106: [P10] SYSTEM at 872460 - regular_event_45_640
+System state:
+Total events processed: 106
+DATABASE: 13
+DEBUG: 11
+ERROR: 10
+INFO: 10
+NETWORK: 10
+SECURITY: 12
+SYSTEM: 14
+TRACE: 8
+USER: 11
+WARNING: 7

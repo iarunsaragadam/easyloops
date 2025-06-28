@@ -1,0 +1,7 @@
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 53
+Server: nginx/1.18.0
+
+Response body for test case 18
+Second line of content

@@ -1,0 +1,5 @@
+WRITE: file1.txt (10 chars)
+WRITE: file1.txt (15 chars)
+READ: file1.txt = 9AsyhfkPS9w0DyP
+WRITE: file1.txt (11 chars)
+READ: file1.txt = 3 DAXwfuAiA

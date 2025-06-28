@@ -1,0 +1,4 @@
+3
+OPEN eazrjxll.dat w
+LIST
+CLOSE 3

@@ -1,0 +1,74 @@
+Created Motorcycle P12V0
+Created Car P12V1
+Created Truck P12V2
+Created Car P12V3
+Created Motorcycle P12V4
+Created Truck P12V5
+Created Truck P12V6
+Created Motorcycle P12V7
+Created Car P12V8
+Created Truck P12V9
+Created Car P12V10
+Created Car P12V11
+Created Truck P12V12
+Created Motorcycle P12V13
+Created Truck P12V14
+Created Truck P12V15
+Created Car P12V16
+Created Car P12V17
+Created Truck P12V18
+Created Motorcycle P12V19
+Created Car P12V20
+Created Car P12V21
+Created Truck P12V22
+Created Motorcycle P12V23
+Created Motorcycle P12V24
+Created Motorcycle P12V25
+Created Car P12V26
+Created Motorcycle P12V27
+Created Truck P12V28
+Created Truck P12V29
+Created Car P12V30
+Created Car P12V31
+Created Car P12V32
+Created Motorcycle P12V33
+Created Truck P12V34
+Created Car P12V35
+Created Motorcycle P12V36
+Created Motorcycle P12V37
+Created Car P12V38
+Created Truck P12V39
+Created Truck P12V40
+Created Truck P12V41
+Created Car P12V42
+Created Car P12V43
+Vehicle P12V0 started. Engine started: V4 engine
+P12V0: 2000 Toyota Motorcycle (running)
+Fuel cost for 331 miles: $26.8
+Vehicle P12V2 started. Engine started: V4 engine
+P12V2: 2025 Yamaha Truck (running)
+Fuel cost for 147 miles: $36.9
+Vehicle P12V4 started. Engine started: V8 engine
+P12V4: 2015 Honda Motorcycle (running)
+Fuel cost for 382 miles: $2.9
+Vehicle P12V6 started. Engine started: V8 engine
+P12V6: 2001 Yamaha Truck (running)
+Fuel cost for 319 miles: $4.9
+Vehicle P12V8 started. Engine started: V4 engine
+P12V8: 2017 Yamaha Car (running)
+Fuel cost for 155 miles: $1.2
+Vehicle P12V10 started. Engine started: V6 engine
+P12V10: 2005 Ford Car (running)
+Fuel cost for 275 miles: $134.4
+Vehicle P12V12 started. Engine started: V6 engine
+P12V12: 2006 Toyota Truck (running)
+Fuel cost for 339 miles: $98.5
+Vehicle P12V14 started. Engine started: V4 engine
+P12V14: 2004 Ford Truck (running)
+Fuel cost for 197 miles: $75.1
+Vehicle P12V16 started. Engine started: V4 engine
+P12V16: 2014 Toyota Car (running)
+Fuel cost for 307 miles: $2.1
+Vehicle P12V18 started. Engine started: V8 engine
+P12V18: 2002 Ford Truck (running)
+Fuel cost for 365 miles: $5.6

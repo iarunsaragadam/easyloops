@@ -1,0 +1,4 @@
+Created Motorcycle M16
+Vehicle M16 started. Engine started: Electric engine
+M16: 2020 Ford Motorcycle (running)
+Fuel cost for 136 miles: $3.4

@@ -1,0 +1,6 @@
+2 1024
+4
+read 0
+read 0
+read 0
+write 0

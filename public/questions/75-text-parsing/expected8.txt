@@ -1,0 +1,19 @@
+LOG LEVEL SUMMARY:
+DEBUG: 2
+ERROR: 7
+INFO: 5
+WARN: 1
+
+ERROR ENTRIES:
+[2023-12-09 10:10:00] User logged in
+[2023-12-09 10:14:00] Request processed
+[2023-12-09 10:18:00] Request processed
+[2023-12-09 10:54:00] Application started
+[2023-12-09 11:18:00] Request processed
+[2023-12-09 11:21:00] Security alert
+[2023-12-09 12:20:00] Security alert
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-09 10:00:00
+Last entry: 2023-12-09 12:20:00
+Total entries: 15

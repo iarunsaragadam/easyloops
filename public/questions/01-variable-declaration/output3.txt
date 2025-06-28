@@ -1,0 +1,7 @@
+Integer variable: 0
+String variable: Special chars: @#$%
+Boolean variable: true
+Float variable: -123.456
+Character variable: !
+Updated integer variable: 42
+Late-initialized variable: Algorithms_and_Data_Structures

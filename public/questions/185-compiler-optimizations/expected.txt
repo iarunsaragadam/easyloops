@@ -1,1 +1,4 @@
-placeholder
+ASSIGN x 10
+ASSIGN y 20
+PRINT x
+USE x y

@@ -1,0 +1,4 @@
+Created Motorcycle M8
+Vehicle M8 started. Engine started: V6 engine
+M8: 2018 Chevrolet Motorcycle (running)
+Fuel cost for 130 miles: $25.4

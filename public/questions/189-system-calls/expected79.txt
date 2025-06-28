@@ -1,0 +1,16 @@
+OPENED file1.txt AS FD 3
+OPENED file2.txt AS FD 4
+WRITTEN 5 BYTES TO FD 3
+WRITTEN 5 BYTES TO FD 4
+READ: data1
+READ: data2
+WRITTEN 5 BYTES TO FD 3
+WRITTEN 5 BYTES TO FD 4
+FD 3: file1.txt (rw)
+FD 4: file2.txt (rw)
+READ: data1more1
+READ: data2more2
+CLOSED FD 3 (file1.txt)
+FD 4: file2.txt (rw)
+CLOSED FD 4 (file2.txt)
+NO OPEN FILES

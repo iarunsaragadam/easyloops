@@ -1,1 +1,3 @@
-placeholder
+[2023-12-02 10:00:00] INFO: Test case 2
+[2023-12-02 10:01:00] DEBUG: Debug message for test 2
+[2023-12-02 10:02:00] ERROR: Error in test case 2

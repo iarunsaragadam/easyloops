@@ -1,0 +1,5 @@
+42
+3
+negate
+add 99
+add 407

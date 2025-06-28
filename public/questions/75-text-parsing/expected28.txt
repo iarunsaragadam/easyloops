@@ -1,0 +1,13 @@
+LOG LEVEL SUMMARY:
+DEBUG: 2
+ERROR: 1
+INFO: 2
+WARN: 2
+
+ERROR ENTRIES:
+[2023-12-01 10:16:00] Application started
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-01 10:00:00
+Last entry: 2023-12-01 10:48:00
+Total entries: 7

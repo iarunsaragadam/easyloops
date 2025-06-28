@@ -1,0 +1,24 @@
+4733
+22
+add -757
+square
+square
+negate
+add 861
+square
+square
+multiply -64
+abs
+square
+abs
+multiply 37
+add 639
+negate
+add -727
+negate
+add -762
+add -627
+multiply 19
+negate
+square
+add -126

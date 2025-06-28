@@ -1,0 +1,4 @@
+Account ACC001 created for User20
+Deposited 79.00 to account ACC001
+Insufficient funds or invalid amount
+Balance for account ACC001: 79.00

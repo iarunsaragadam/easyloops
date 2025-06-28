@@ -1,0 +1,11 @@
+10
+OPEN flotiu.txt w
+OPEN skml.txt rw
+OPEN gvemxejb.dat rw
+OPEN ucfh.tmp w
+OPEN xhaplgrm.dat w
+WRITE 6 test hello
+LIST
+CLOSE 3
+CLOSE 4
+CLOSE 5

@@ -1,0 +1,4 @@
+Created Motorcycle M21
+Vehicle M21 started. Engine started: V4 engine
+M21: 2024 Yamaha Motorcycle (running)
+Fuel cost for 71 miles: $7.3

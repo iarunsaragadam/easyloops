@@ -1,0 +1,4 @@
+3
+OPEN empty.txt r
+READ 3 10
+CLOSE 3

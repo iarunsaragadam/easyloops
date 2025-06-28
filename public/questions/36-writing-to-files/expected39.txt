@@ -1,0 +1,4 @@
+READ: m0ku6kn7v0.cfg = FILE_NOT_FOUND
+APPEND: fmq.data (20 total chars)
+CREATE: 0ay7r5n0f.txt
+WRITE: sieqj6wi8i.cfg (0 chars)

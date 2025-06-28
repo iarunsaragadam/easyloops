@@ -1,1 +1,8 @@
-placeholder
+7
+OPEN file1.txt w
+WRITE 3 hello world
+READ 3 5
+CLOSE 3
+OPEN file2.txt r
+LIST
+CLOSE 4

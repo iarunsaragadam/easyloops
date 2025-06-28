@@ -1,1 +1,3 @@
-placeholder
+Department: Engineering | Count: 2 | Average Age: 29.0
+Department: Marketing | Count: 2 | Average Age: 29.5
+Department: Sales | Count: 1 | Average Age: 35.0

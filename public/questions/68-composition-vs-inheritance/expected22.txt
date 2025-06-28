@@ -1,0 +1,4 @@
+Created Motorcycle M22
+Vehicle M22 started. Engine started: Electric engine
+M22: 2017 BMW Motorcycle (running)
+Fuel cost for 103 miles: $2.7

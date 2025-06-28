@@ -1,0 +1,86 @@
+Created Truck P18V0
+Created Motorcycle P18V1
+Created Truck P18V2
+Created Car P18V3
+Created Car P18V4
+Created Car P18V5
+Created Motorcycle P18V6
+Created Motorcycle P18V7
+Created Car P18V8
+Created Truck P18V9
+Created Truck P18V10
+Created Truck P18V11
+Created Car P18V12
+Created Truck P18V13
+Created Truck P18V14
+Created Motorcycle P18V15
+Created Truck P18V16
+Created Truck P18V17
+Created Car P18V18
+Created Motorcycle P18V19
+Created Motorcycle P18V20
+Created Truck P18V21
+Created Car P18V22
+Created Truck P18V23
+Created Motorcycle P18V24
+Created Car P18V25
+Created Car P18V26
+Created Truck P18V27
+Created Truck P18V28
+Created Truck P18V29
+Created Motorcycle P18V30
+Created Car P18V31
+Created Truck P18V32
+Created Motorcycle P18V33
+Created Truck P18V34
+Created Car P18V35
+Created Motorcycle P18V36
+Created Car P18V37
+Created Motorcycle P18V38
+Created Motorcycle P18V39
+Created Car P18V40
+Created Motorcycle P18V41
+Created Car P18V42
+Created Truck P18V43
+Created Truck P18V44
+Created Car P18V45
+Created Truck P18V46
+Created Motorcycle P18V47
+Created Motorcycle P18V48
+Created Truck P18V49
+Created Truck P18V50
+Created Truck P18V51
+Created Motorcycle P18V52
+Created Truck P18V53
+Created Truck P18V54
+Created Car P18V55
+Vehicle P18V0 started. Engine started: V4 engine
+P18V0: 2009 Toyota Truck (running)
+Fuel cost for 348 miles: $124.5
+Vehicle P18V2 started. Engine started: V8 engine
+P18V2: 2014 Yamaha Truck (running)
+Fuel cost for 471 miles: $257.1
+Vehicle P18V4 started. Engine started: Electric engine
+P18V4: 2020 Toyota Car (running)
+Fuel cost for 329 miles: $13.5
+Vehicle P18V6 started. Engine started: Electric engine
+P18V6: 2005 Yamaha Motorcycle (running)
+Fuel cost for 230 miles: $5.9
+Vehicle P18V8 started. Engine started: V4 engine
+P18V8: 2014 BMW Car (running)
+Fuel cost for 292 miles: $1.7
+Vehicle P18V10 started. Engine started: V6 engine
+P18V10: 2001 Toyota Truck (running)
+Fuel cost for 160 miles: $4.3
+Vehicle P18V12 started. Engine started: V8 engine
+P18V12: 2006 Yamaha Car (running)
+Fuel cost for 316 miles: $79.5
+Vehicle P18V14 started. Engine started: V4 engine
+P18V14: 2016 Yamaha Truck (running)
+Fuel cost for 260 miles: $3.9
+Vehicle P18V16 started. Engine started: V6 engine
+P18V16: 2021 Toyota Truck (running)
+Fuel cost for 339 miles: $296.7
+Vehicle P18V18 started. Engine started: V6 engine
+P18V18: 2017 Toyota Car (running)
+Fuel cost for 221 miles: $1.7

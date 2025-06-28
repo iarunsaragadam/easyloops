@@ -1,0 +1,5 @@
+[2023-12-20 10:00:00] ERROR: Application started
+[2023-12-20 10:06:00] WARN: Backup completed
+[2023-12-20 10:14:00] INFO: Application started
+[2023-12-20 10:24:00] WARN: System maintenance
+[2023-12-20 10:28:00] WARN: Configuration loaded

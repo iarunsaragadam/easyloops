@@ -1,0 +1,52 @@
+Created Car P1V0
+Created Motorcycle P1V1
+Created Truck P1V2
+Created Motorcycle P1V3
+Created Motorcycle P1V4
+Created Motorcycle P1V5
+Created Motorcycle P1V6
+Created Truck P1V7
+Created Car P1V8
+Created Truck P1V9
+Created Motorcycle P1V10
+Created Car P1V11
+Created Motorcycle P1V12
+Created Motorcycle P1V13
+Created Car P1V14
+Created Car P1V15
+Created Motorcycle P1V16
+Created Truck P1V17
+Created Car P1V18
+Created Motorcycle P1V19
+Created Car P1V20
+Created Car P1V21
+Vehicle P1V0 started. Engine started: V4 engine
+P1V0: 2004 Yamaha Car (running)
+Fuel cost for 105 miles: $24.9
+Vehicle P1V2 started. Engine started: V6 engine
+P1V2: 2010 Ford Truck (running)
+Fuel cost for 311 miles: $4.3
+Vehicle P1V4 started. Engine started: V4 engine
+P1V4: 2016 BMW Motorcycle (running)
+Fuel cost for 496 miles: $49.0
+Vehicle P1V6 started. Engine started: Electric engine
+P1V6: 2024 Honda Motorcycle (running)
+Fuel cost for 448 miles: $10.3
+Vehicle P1V8 started. Engine started: V8 engine
+P1V8: 2012 Yamaha Car (running)
+Fuel cost for 383 miles: $89.0
+Vehicle P1V10 started. Engine started: V6 engine
+P1V10: 2010 Honda Motorcycle (running)
+Fuel cost for 426 miles: $43.0
+Vehicle P1V12 started. Engine started: V6 engine
+P1V12: 2023 Toyota Motorcycle (running)
+Fuel cost for 139 miles: $51.5
+Vehicle P1V14 started. Engine started: V8 engine
+P1V14: 2006 Yamaha Car (running)
+Fuel cost for 380 miles: $102.3
+Vehicle P1V16 started. Engine started: V8 engine
+P1V16: 2019 Yamaha Motorcycle (running)
+Fuel cost for 164 miles: $22.1
+Vehicle P1V18 started. Engine started: V8 engine
+P1V18: 2015 Toyota Car (running)
+Fuel cost for 357 miles: $110.8

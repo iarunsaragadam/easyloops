@@ -1,0 +1,6 @@
+OPENED frbvlh.dat AS FD 3
+FD 3: frbvlh.dat (w)
+WRITTEN 25 BYTES TO FD 3
+WRITTEN 16 BYTES TO FD 3
+WRITTEN 25 BYTES TO FD 3
+CLOSED FD 3 (frbvlh.dat)

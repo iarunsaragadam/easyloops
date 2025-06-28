@@ -1,0 +1,104 @@
+CREATE Car P27V0 BMW 2004 V8 143 gasoline
+CREATE Truck P27V1 Toyota 2011 V6 362 diesel
+CREATE Truck P27V2 Yamaha 2023 V4 327 gasoline
+CREATE Truck P27V3 BMW 2024 Electric 289 gasoline
+CREATE Truck P27V4 Yamaha 2024 Electric 371 diesel
+CREATE Truck P27V5 Ford 2009 V8 353 electric
+CREATE Car P27V6 Toyota 2002 V8 168 electric
+CREATE Motorcycle P27V7 Yamaha 2001 V6 98 gasoline
+CREATE Car P27V8 Ford 2020 V6 166 diesel
+CREATE Motorcycle P27V9 Yamaha 2019 V6 91 gasoline
+CREATE Motorcycle P27V10 Toyota 2009 V6 167 gasoline
+CREATE Car P27V11 Honda 2007 V6 254 diesel
+CREATE Motorcycle P27V12 BMW 2002 Electric 321 gasoline
+CREATE Truck P27V13 Toyota 2009 V8 363 gasoline
+CREATE Truck P27V14 Ford 2012 V8 320 diesel
+CREATE Motorcycle P27V15 Ford 2025 Electric 368 diesel
+CREATE Truck P27V16 Ford 2013 Electric 106 diesel
+CREATE Car P27V17 Honda 2013 V4 199 electric
+CREATE Motorcycle P27V18 Honda 2020 Electric 91 electric
+CREATE Motorcycle P27V19 BMW 2024 Electric 105 diesel
+CREATE Truck P27V20 Yamaha 2021 V4 244 electric
+CREATE Car P27V21 BMW 2020 Electric 343 gasoline
+CREATE Truck P27V22 Yamaha 2024 V8 133 electric
+CREATE Motorcycle P27V23 Honda 2002 V8 96 electric
+CREATE Car P27V24 Honda 2011 V8 144 gasoline
+CREATE Truck P27V25 Toyota 2024 V8 137 diesel
+CREATE Motorcycle P27V26 Ford 2004 Electric 344 gasoline
+CREATE Motorcycle P27V27 Toyota 2025 Electric 224 electric
+CREATE Car P27V28 Honda 2023 V6 276 diesel
+CREATE Car P27V29 Yamaha 2018 V6 212 electric
+CREATE Car P27V30 Toyota 2007 Electric 168 gasoline
+CREATE Motorcycle P27V31 Ford 2018 V6 373 gasoline
+CREATE Truck P27V32 Ford 2022 V8 245 gasoline
+CREATE Motorcycle P27V33 Ford 2011 V6 155 electric
+CREATE Truck P27V34 BMW 2004 V8 242 diesel
+CREATE Motorcycle P27V35 Toyota 2008 Electric 88 gasoline
+CREATE Truck P27V36 Ford 2020 V8 207 electric
+CREATE Car P27V37 BMW 2023 V6 333 electric
+CREATE Truck P27V38 Toyota 2024 Electric 189 gasoline
+CREATE Motorcycle P27V39 Ford 2019 V4 302 electric
+CREATE Motorcycle P27V40 Yamaha 2024 V6 308 electric
+CREATE Truck P27V41 Honda 2003 V6 274 diesel
+CREATE Car P27V42 BMW 2009 Electric 278 electric
+CREATE Truck P27V43 Honda 2016 Electric 344 electric
+CREATE Car P27V44 Honda 2001 V6 271 electric
+CREATE Truck P27V45 Ford 2012 V8 80 diesel
+CREATE Truck P27V46 BMW 2019 Electric 251 electric
+CREATE Motorcycle P27V47 BMW 2023 V6 336 gasoline
+CREATE Car P27V48 BMW 2022 Electric 181 gasoline
+CREATE Motorcycle P27V49 Honda 2013 V8 308 diesel
+CREATE Car P27V50 Honda 2008 V4 113 gasoline
+CREATE Motorcycle P27V51 BMW 2023 Electric 155 diesel
+CREATE Motorcycle P27V52 Toyota 2022 V8 92 diesel
+CREATE Motorcycle P27V53 Toyota 2021 V8 110 electric
+CREATE Motorcycle P27V54 Honda 2021 V6 213 diesel
+CREATE Truck P27V55 Toyota 2010 V6 161 electric
+CREATE Truck P27V56 Honda 2003 V6 254 diesel
+CREATE Car P27V57 Toyota 2025 V6 151 diesel
+CREATE Motorcycle P27V58 BMW 2020 V4 348 gasoline
+CREATE Truck P27V59 Toyota 2021 V6 112 diesel
+CREATE Truck P27V60 Honda 2016 V8 88 gasoline
+CREATE Car P27V61 BMW 2018 V6 343 diesel
+CREATE Motorcycle P27V62 Yamaha 2020 V8 367 electric
+CREATE Motorcycle P27V63 Honda 2016 Electric 140 gasoline
+CREATE Motorcycle P27V64 Toyota 2000 V6 144 electric
+CREATE Truck P27V65 Honda 2005 Electric 165 electric
+CREATE Motorcycle P27V66 BMW 2011 Electric 343 electric
+CREATE Truck P27V67 Honda 2009 Electric 135 diesel
+CREATE Car P27V68 BMW 2012 V8 106 diesel
+CREATE Motorcycle P27V69 Honda 2013 V4 325 diesel
+CREATE Car P27V70 BMW 2013 V6 181 electric
+CREATE Motorcycle P27V71 Honda 2005 V4 269 diesel
+CREATE Truck P27V72 Toyota 2019 Electric 172 gasoline
+CREATE Motorcycle P27V73 Ford 2006 Electric 272 gasoline
+START P27V0
+INFO P27V0
+FUEL_COST P27V0 276
+START P27V2
+INFO P27V2
+FUEL_COST P27V2 465
+START P27V4
+INFO P27V4
+FUEL_COST P27V4 414
+START P27V6
+INFO P27V6
+FUEL_COST P27V6 223
+START P27V8
+INFO P27V8
+FUEL_COST P27V8 106
+START P27V10
+INFO P27V10
+FUEL_COST P27V10 243
+START P27V12
+INFO P27V12
+FUEL_COST P27V12 331
+START P27V14
+INFO P27V14
+FUEL_COST P27V14 458
+START P27V16
+INFO P27V16
+FUEL_COST P27V16 369
+START P27V18
+INFO P27V18
+FUEL_COST P27V18 401

@@ -1,0 +1,14 @@
+13
+touch perf_file_72_0.txt
+mkdir perf_dir_72_1
+touch perf_file_72_2.txt
+mkdir perf_dir_72_3
+pwd
+pwd
+pwd
+ls
+ls
+ls
+ls
+mkdir perf_dir_72_11
+pwd

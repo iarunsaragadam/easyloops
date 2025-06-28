@@ -1,0 +1,8 @@
+Regular text
+123 numbers
+!@# symbols
+
+Empty line above
+   Whitespace   
+Special: àáâã
+Final line

@@ -1,0 +1,4 @@
+CREATE Motorcycle M8 Chevrolet 2018 V6 285 gasoline
+START M8
+INFO M8
+FUEL_COST M8 130

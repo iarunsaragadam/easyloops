@@ -1,0 +1,4 @@
+CREATE Car C17 Yamaha 2019 Electric 109 electric
+START C17
+INFO C17
+FUEL_COST C17 54

@@ -1,1 +1,3 @@
-placeholder
+Please contact us at support@example.com for technical issues.
+You can also reach our sales team at sales@company.org or 
+business-dev@startup.io for partnerships.

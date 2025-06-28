@@ -1,0 +1,11 @@
+APPEND: complex0.txt (43 total chars)
+WRITE: complex2.txt (49 chars)
+APPEND: complex2.txt (80 total chars)
+APPEND: complex3.txt (40 total chars)
+READ: complex2.txt = SgnUWtZ5G6dYf6RQ6lVG0kEebPUfKj q1tn HPJRkx4PDRqvoo6NhBh6ymPIOtEDUanWRMC 4x6XmSaB
+WRITE: complex3.txt (34 chars)
+WRITE: complex2.txt (48 chars)
+READ: complex0.txt = nWtAdlOZ1MnDOBUVeLxYkO96xbad8Rq chx4OtZih9i
+WRITE: complex2.txt (47 chars)
+READ: complex2.txt = yrpefZNaBajD4LfjL3tzHOtO6DKSLXGeQ8D6e7n0t0i3ycs
+WRITE: complex2.txt (39 chars)

@@ -1,0 +1,7 @@
+Concatenation: Python + Programming = PythonProgramming
+Length of first string: 6
+Length of second string: 11
+Uppercase: PYTHON
+Lowercase: programming
+Substring from index 2: thon
+Substring from index 3: hon

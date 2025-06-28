@@ -1,0 +1,1 @@
+-18 | NEG, NEG, ABS, NEG, MUL -1, NEG, POW 1, NEG

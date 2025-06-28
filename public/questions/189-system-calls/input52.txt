@@ -1,0 +1,201 @@
+200
+OPEN file0.txt rw
+OPEN file1.txt rw
+OPEN file2.txt rw
+OPEN file3.txt rw
+OPEN file4.txt rw
+OPEN file5.txt rw
+OPEN file6.txt rw
+OPEN file7.txt rw
+OPEN file8.txt rw
+OPEN file9.txt rw
+OPEN file10.txt rw
+OPEN file11.txt rw
+OPEN file12.txt rw
+OPEN file13.txt rw
+OPEN file14.txt rw
+OPEN file15.txt rw
+OPEN file16.txt rw
+OPEN file17.txt rw
+OPEN file18.txt rw
+OPEN file19.txt rw
+OPEN file20.txt rw
+OPEN file21.txt rw
+OPEN file22.txt rw
+OPEN file23.txt rw
+OPEN file24.txt rw
+OPEN file25.txt rw
+OPEN file26.txt rw
+OPEN file27.txt rw
+OPEN file28.txt rw
+OPEN file29.txt rw
+OPEN file30.txt rw
+OPEN file31.txt rw
+OPEN file32.txt rw
+OPEN file33.txt rw
+OPEN file34.txt rw
+OPEN file35.txt rw
+OPEN file36.txt rw
+OPEN file37.txt rw
+OPEN file38.txt rw
+OPEN file39.txt rw
+OPEN file40.txt rw
+OPEN file41.txt rw
+OPEN file42.txt rw
+OPEN file43.txt rw
+OPEN file44.txt rw
+OPEN file45.txt rw
+OPEN file46.txt rw
+OPEN file47.txt rw
+OPEN file48.txt rw
+OPEN file49.txt rw
+WRITE 3 data0
+READ 4 5
+LIST
+WRITE 6 data3
+READ 7 5
+LIST
+WRITE 9 data6
+READ 10 5
+LIST
+WRITE 12 data9
+READ 13 5
+LIST
+WRITE 15 data12
+READ 16 5
+LIST
+WRITE 18 data15
+READ 19 5
+LIST
+WRITE 21 data18
+READ 22 5
+LIST
+WRITE 24 data21
+READ 25 5
+LIST
+WRITE 27 data24
+READ 28 5
+LIST
+WRITE 30 data27
+READ 31 5
+LIST
+WRITE 33 data30
+READ 34 5
+LIST
+WRITE 36 data33
+READ 37 5
+LIST
+WRITE 39 data36
+READ 40 5
+LIST
+WRITE 42 data39
+READ 43 5
+LIST
+WRITE 45 data42
+READ 46 5
+LIST
+WRITE 48 data45
+READ 49 5
+LIST
+WRITE 51 data48
+READ 52 5
+LIST
+WRITE 4 data51
+READ 5 5
+LIST
+WRITE 7 data54
+READ 8 5
+LIST
+WRITE 10 data57
+READ 11 5
+LIST
+WRITE 13 data60
+READ 14 5
+LIST
+WRITE 16 data63
+READ 17 5
+LIST
+WRITE 19 data66
+READ 20 5
+LIST
+WRITE 22 data69
+READ 23 5
+LIST
+WRITE 25 data72
+READ 26 5
+LIST
+WRITE 28 data75
+READ 29 5
+LIST
+WRITE 31 data78
+READ 32 5
+LIST
+WRITE 34 data81
+READ 35 5
+LIST
+WRITE 37 data84
+READ 38 5
+LIST
+WRITE 40 data87
+READ 41 5
+LIST
+WRITE 43 data90
+READ 44 5
+LIST
+WRITE 46 data93
+READ 47 5
+LIST
+WRITE 49 data96
+READ 50 5
+LIST
+WRITE 52 data99
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6
+CLOSE 7
+CLOSE 8
+CLOSE 9
+CLOSE 10
+CLOSE 11
+CLOSE 12
+CLOSE 13
+CLOSE 14
+CLOSE 15
+CLOSE 16
+CLOSE 17
+CLOSE 18
+CLOSE 19
+CLOSE 20
+CLOSE 21
+CLOSE 22
+CLOSE 23
+CLOSE 24
+CLOSE 25
+CLOSE 26
+CLOSE 27
+CLOSE 28
+CLOSE 29
+CLOSE 30
+CLOSE 31
+CLOSE 32
+CLOSE 33
+CLOSE 34
+CLOSE 35
+CLOSE 36
+CLOSE 37
+CLOSE 38
+CLOSE 39
+CLOSE 40
+CLOSE 41
+CLOSE 42
+CLOSE 43
+CLOSE 44
+CLOSE 45
+CLOSE 46
+CLOSE 47
+CLOSE 48
+CLOSE 49
+CLOSE 50
+CLOSE 51
+CLOSE 52

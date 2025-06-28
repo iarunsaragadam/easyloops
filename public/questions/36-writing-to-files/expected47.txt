@@ -1,0 +1,3 @@
+WRITE: 140ce.cfg (32 chars)
+READ: xivqy.txt = FILE_NOT_FOUND
+APPEND: bvdh6ah8m4.log (3 total chars)

@@ -1,1 +1,11 @@
-placeholder
+10
+PUT a val1 KEEP
+PUT b val2 KEEP
+PUT c val3
+GET a
+GET b
+GET c
+DELETE_REF a
+GC
+GET a
+SIZE

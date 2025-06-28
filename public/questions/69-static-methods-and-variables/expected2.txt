@@ -1,1 +1,6 @@
-placeholder
+Total: 0, Sum: 0, Average: 0.00
+Total: 1, Sum: 100, Average: 100.00
+John: 100
+Student NotFound not found
+Total: 2, Sum: 100, Average: 50.00
+Student Missing not found

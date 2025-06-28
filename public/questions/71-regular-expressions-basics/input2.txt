@@ -1,1 +1,4 @@
-placeholder
+No emails here! Just random text with @ symbols and .com domains.
+Some text with @ but no valid email format.
+Invalid emails like @invalid.com or user@.com should be ignored.
+Also ignore malformed ones like user@domain or user@domain.

@@ -1,0 +1,49 @@
+CREATE 21
+CONNECT complex_client_1
+CLEANUP
+STATUS
+STATUS
+CONNECT complex_client_1
+STATUS
+LIST
+LIST
+DISCONNECT 1
+CONNECT complex_client_2
+STATUS
+LIST
+LIST
+STATUS
+CLEANUP
+LIST
+CLEANUP
+CONNECT complex_client_1
+DISCONNECT 1
+CONNECT complex_client_2
+CONNECT complex_client_3
+CLEANUP
+CONNECT complex_client_1
+CONNECT complex_client_2
+CONNECT complex_client_3
+STATUS
+LIST
+CONNECT complex_client_4
+CONNECT complex_client_5
+CONNECT complex_client_6
+LIST
+LIST
+STATUS
+CONNECT complex_client_7
+STATUS
+DISCONNECT 6
+STATUS
+STATUS
+STATUS
+CONNECT complex_client_8
+CLEANUP
+STATUS
+CONNECT complex_client_1
+CLEANUP
+CONNECT complex_client_1
+DISCONNECT 1
+DISCONNECT 1
+STATUS

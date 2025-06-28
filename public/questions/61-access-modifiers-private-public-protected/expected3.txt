@@ -1,1 +1,8 @@
-placeholder
+name: Carol Davis
+id: 99999
+add_grade: success
+add_grade: invalid
+add_grade: success
+add_grade: success
+gpa: 88.33
+verify_key: failed

@@ -1,0 +1,10 @@
+9
+read file1.txt
+append file1.txt  W iV6iLW7wVbUN99
+read file1.txt
+read file1.txt
+append file1.txt xB1eQ36y0Gh4V0L
+append file1.txt xHdN
+write file1.txt BIV
+write file1.txt Bqx7O
+write file1.txt IGWj7OXZbFQR4D3oa66T

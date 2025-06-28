@@ -1,0 +1,1 @@
+5 | MUL 5, ADD 25, SQRT

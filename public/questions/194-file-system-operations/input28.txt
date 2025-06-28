@@ -1,0 +1,7 @@
+6
+cd nonexistent
+ls nonexistent
+rm nonexistent
+mkdir a
+touch a/b
+cd a/b

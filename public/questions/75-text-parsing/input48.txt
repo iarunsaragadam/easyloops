@@ -1,0 +1,2 @@
+[2023-01-01 00:00:00] INFO: New Year log
+[2023-12-31 23:59:59] INFO: End of year

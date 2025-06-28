@@ -1,0 +1,6 @@
+5
+write data.txt First
+append data.txt Second
+write data.txt Third
+append data.txt Fourth
+read data.txt

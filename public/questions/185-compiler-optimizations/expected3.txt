@@ -1,1 +1,7 @@
-placeholder
+ASSIGN a 1
+ASSIGN b 2
+ASSIGN c 3
+ASSIGN d 4
+PRINT a
+USE b c
+PRINT d

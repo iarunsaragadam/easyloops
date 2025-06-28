@@ -1,0 +1,5 @@
+APPEND: 6gnolbhr.cfg (27 total chars)
+CREATE: deenqdyru.ini
+CREATE: 5y8.txt
+WRITE: kcedz.data (50 chars)
+READ: cmk6k1k1tu.log = FILE_NOT_FOUND

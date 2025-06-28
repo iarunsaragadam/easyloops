@@ -1,0 +1,8 @@
+7
+read file2.txt
+append file1.txt iWxV99fKje
+read file2.txt
+read file1.txt
+read file1.txt
+read file2.txt
+append file1.txt E9

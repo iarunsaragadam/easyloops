@@ -1,0 +1,14 @@
+LOG LEVEL SUMMARY:
+DEBUG: 1
+ERROR: 2
+INFO: 1
+WARN: 1
+
+ERROR ENTRIES:
+[2023-12-27 10:00:00] Disk space low
+[2023-12-27 10:08:00] System maintenance
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-27 10:00:00
+Last entry: 2023-12-27 10:40:00
+Total entries: 5

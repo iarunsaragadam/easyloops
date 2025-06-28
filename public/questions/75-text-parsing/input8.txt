@@ -1,0 +1,15 @@
+[2023-12-09 10:00:00] INFO: Connection timeout
+[2023-12-09 10:10:00] ERROR: User logged in
+[2023-12-09 10:14:00] DEBUG: Database connected
+[2023-12-09 10:18:00] ERROR: Request processed
+[2023-12-09 10:28:00] DEBUG: Application started
+[2023-12-09 10:25:00] INFO: Backup completed
+[2023-12-09 10:54:00] ERROR: Application started
+[2023-12-09 10:14:00] ERROR: Request processed
+[2023-12-09 11:20:00] INFO: Security alert
+[2023-12-09 11:21:00] ERROR: Security alert
+[2023-12-09 11:20:00] INFO: Service unavailable
+[2023-12-09 11:06:00] WARN: Configuration loaded
+[2023-12-09 11:12:00] INFO: User logged in
+[2023-12-09 11:18:00] ERROR: Request processed
+[2023-12-09 12:20:00] ERROR: Security alert

@@ -1,0 +1,106 @@
+Created Truck P28V0
+Created Motorcycle P28V1
+Created Motorcycle P28V2
+Created Car P28V3
+Created Motorcycle P28V4
+Created Car P28V5
+Created Motorcycle P28V6
+Created Car P28V7
+Created Truck P28V8
+Created Truck P28V9
+Created Truck P28V10
+Created Truck P28V11
+Created Car P28V12
+Created Car P28V13
+Created Truck P28V14
+Created Truck P28V15
+Created Truck P28V16
+Created Car P28V17
+Created Car P28V18
+Created Motorcycle P28V19
+Created Truck P28V20
+Created Truck P28V21
+Created Truck P28V22
+Created Motorcycle P28V23
+Created Car P28V24
+Created Car P28V25
+Created Truck P28V26
+Created Truck P28V27
+Created Motorcycle P28V28
+Created Motorcycle P28V29
+Created Car P28V30
+Created Truck P28V31
+Created Motorcycle P28V32
+Created Motorcycle P28V33
+Created Motorcycle P28V34
+Created Truck P28V35
+Created Truck P28V36
+Created Truck P28V37
+Created Motorcycle P28V38
+Created Car P28V39
+Created Truck P28V40
+Created Truck P28V41
+Created Truck P28V42
+Created Motorcycle P28V43
+Created Car P28V44
+Created Truck P28V45
+Created Car P28V46
+Created Car P28V47
+Created Car P28V48
+Created Motorcycle P28V49
+Created Truck P28V50
+Created Truck P28V51
+Created Truck P28V52
+Created Motorcycle P28V53
+Created Car P28V54
+Created Motorcycle P28V55
+Created Car P28V56
+Created Motorcycle P28V57
+Created Motorcycle P28V58
+Created Truck P28V59
+Created Motorcycle P28V60
+Created Car P28V61
+Created Motorcycle P28V62
+Created Car P28V63
+Created Car P28V64
+Created Car P28V65
+Created Motorcycle P28V66
+Created Motorcycle P28V67
+Created Motorcycle P28V68
+Created Motorcycle P28V69
+Created Motorcycle P28V70
+Created Car P28V71
+Created Truck P28V72
+Created Truck P28V73
+Created Truck P28V74
+Created Truck P28V75
+Vehicle P28V0 started. Engine started: Electric engine
+P28V0: 2021 Honda Truck (running)
+Fuel cost for 106 miles: $0.1
+Vehicle P28V2 started. Engine started: Electric engine
+P28V2: 2021 BMW Motorcycle (running)
+Fuel cost for 101 miles: $2.4
+Vehicle P28V4 started. Engine started: V6 engine
+P28V4: 2002 Yamaha Motorcycle (running)
+Fuel cost for 457 miles: $93.2
+Vehicle P28V6 started. Engine started: V6 engine
+P28V6: 2005 Toyota Motorcycle (running)
+Fuel cost for 319 miles: $3.1
+Vehicle P28V8 started. Engine started: V4 engine
+P28V8: 2010 Toyota Truck (running)
+Fuel cost for 486 miles: $86.6
+Vehicle P28V10 started. Engine started: Electric engine
+P28V10: 2008 Honda Truck (running)
+Fuel cost for 129 miles: $6.4
+Vehicle P28V12 started. Engine started: V8 engine
+P28V12: 2004 Yamaha Car (running)
+Fuel cost for 450 miles: $5.5
+Vehicle P28V14 started. Engine started: V4 engine
+P28V14: 2007 Ford Truck (running)
+Fuel cost for 206 miles: $41.3
+Vehicle P28V16 started. Engine started: V8 engine
+P28V16: 2004 Honda Truck (running)
+Fuel cost for 456 miles: $162.1
+Vehicle P28V18 started. Engine started: V4 engine
+P28V18: 2009 Ford Car (running)
+Fuel cost for 132 miles: $26.2

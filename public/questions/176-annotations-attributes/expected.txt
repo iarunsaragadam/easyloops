@@ -1,1 +1,15 @@
-placeholder
+Function 1:
+  Name: hello
+  Decorators: decorator
+  Parameters: 1
+    name -> str
+  Return Type: str
+
+Function 2:
+  Name: add_numbers
+  Decorators: None
+  Parameters: 2
+    x -> int
+    y -> int = 5
+  Return Type: int
+

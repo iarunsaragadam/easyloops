@@ -1,1 +1,4 @@
-placeholder
+Length: 5
+Reversed: olleh
+Vowels: 2
+Uppercase: HELLO

@@ -1,0 +1,9 @@
+8
+mkdir a
+cd a
+cd ..
+cd ./a
+cd ./../a
+pwd
+cd //
+pwd

@@ -1,0 +1,12 @@
+Directory 'project' created
+Directory 'project/src' created
+Directory 'project/tests' created
+Directory 'project/docs' created
+File 'project/README.md' created
+File 'project/src/main.py' created
+File 'project/src/utils.py' created
+File 'project/tests/test_main.py' created
+Changed to /project
+/project/src/main.py
+4
+2

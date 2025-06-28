@@ -1,0 +1,1 @@
+6 | NEG, ABS, MUL 2

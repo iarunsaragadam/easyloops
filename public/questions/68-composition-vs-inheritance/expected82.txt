@@ -1,0 +1,94 @@
+Created Truck P22V0
+Created Truck P22V1
+Created Motorcycle P22V2
+Created Truck P22V3
+Created Motorcycle P22V4
+Created Car P22V5
+Created Car P22V6
+Created Truck P22V7
+Created Motorcycle P22V8
+Created Truck P22V9
+Created Car P22V10
+Created Motorcycle P22V11
+Created Truck P22V12
+Created Car P22V13
+Created Motorcycle P22V14
+Created Truck P22V15
+Created Truck P22V16
+Created Motorcycle P22V17
+Created Truck P22V18
+Created Truck P22V19
+Created Motorcycle P22V20
+Created Motorcycle P22V21
+Created Motorcycle P22V22
+Created Truck P22V23
+Created Car P22V24
+Created Car P22V25
+Created Motorcycle P22V26
+Created Truck P22V27
+Created Motorcycle P22V28
+Created Motorcycle P22V29
+Created Motorcycle P22V30
+Created Motorcycle P22V31
+Created Motorcycle P22V32
+Created Car P22V33
+Created Motorcycle P22V34
+Created Motorcycle P22V35
+Created Motorcycle P22V36
+Created Motorcycle P22V37
+Created Car P22V38
+Created Car P22V39
+Created Truck P22V40
+Created Truck P22V41
+Created Motorcycle P22V42
+Created Truck P22V43
+Created Car P22V44
+Created Motorcycle P22V45
+Created Truck P22V46
+Created Car P22V47
+Created Truck P22V48
+Created Motorcycle P22V49
+Created Car P22V50
+Created Car P22V51
+Created Car P22V52
+Created Motorcycle P22V53
+Created Motorcycle P22V54
+Created Truck P22V55
+Created Motorcycle P22V56
+Created Car P22V57
+Created Car P22V58
+Created Car P22V59
+Created Car P22V60
+Created Truck P22V61
+Created Motorcycle P22V62
+Created Car P22V63
+Vehicle P22V0 started. Engine started: V6 engine
+P22V0: 2022 Yamaha Truck (running)
+Fuel cost for 272 miles: $2.1
+Vehicle P22V2 started. Engine started: V8 engine
+P22V2: 2001 Ford Motorcycle (running)
+Fuel cost for 263 miles: $103.4
+Vehicle P22V4 started. Engine started: V6 engine
+P22V4: 2007 Toyota Motorcycle (running)
+Fuel cost for 342 miles: $82.5
+Vehicle P22V6 started. Engine started: V8 engine
+P22V6: 2024 BMW Car (running)
+Fuel cost for 141 miles: $67.8
+Vehicle P22V8 started. Engine started: V4 engine
+P22V8: 2008 Honda Motorcycle (running)
+Fuel cost for 328 miles: $28.9
+Vehicle P22V10 started. Engine started: V8 engine
+P22V10: 2010 Ford Car (running)
+Fuel cost for 101 miles: $35.6
+Vehicle P22V12 started. Engine started: V4 engine
+P22V12: 2011 BMW Truck (running)
+Fuel cost for 205 miles: $36.3
+Vehicle P22V14 started. Engine started: V8 engine
+P22V14: 2007 Ford Motorcycle (running)
+Fuel cost for 376 miles: $1.9
+Vehicle P22V16 started. Engine started: V6 engine
+P22V16: 2000 Toyota Truck (running)
+Fuel cost for 102 miles: $1.6
+Vehicle P22V18 started. Engine started: Electric engine
+P22V18: 2023 BMW Truck (running)
+Fuel cost for 267 miles: $16.1

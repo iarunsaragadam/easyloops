@@ -1,0 +1,6 @@
+17
+4
+add -332
+abs
+multiply -80
+add 597

@@ -1,0 +1,7 @@
+=== MENU ===
+1. Print message
+2. Show count
+3. Exit
+Enter choice (1-3):
+Goodbye!
+Final count: 0

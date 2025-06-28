@@ -1,1 +1,7 @@
-placeholder
+ASCII Letters: 1000
+ASCII Digits: 0
+Unicode Letters: 3300
+Unicode Digits: 0
+Symbols: 100
+Emojis: 400
+Other: 800

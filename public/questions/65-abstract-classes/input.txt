@@ -1,1 +1,4 @@
-placeholder
+3
+rectangle 4 5
+circle 3
+triangle 3 4 5

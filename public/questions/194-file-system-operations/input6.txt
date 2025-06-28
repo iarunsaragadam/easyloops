@@ -1,0 +1,5 @@
+4
+touch file.txt
+ls
+touch file.txt
+ls

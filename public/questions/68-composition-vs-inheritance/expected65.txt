@@ -1,0 +1,60 @@
+Created Truck P5V0
+Created Car P5V1
+Created Motorcycle P5V2
+Created Car P5V3
+Created Truck P5V4
+Created Motorcycle P5V5
+Created Car P5V6
+Created Motorcycle P5V7
+Created Car P5V8
+Created Car P5V9
+Created Motorcycle P5V10
+Created Truck P5V11
+Created Motorcycle P5V12
+Created Car P5V13
+Created Motorcycle P5V14
+Created Motorcycle P5V15
+Created Car P5V16
+Created Car P5V17
+Created Truck P5V18
+Created Motorcycle P5V19
+Created Car P5V20
+Created Truck P5V21
+Created Truck P5V22
+Created Truck P5V23
+Created Motorcycle P5V24
+Created Car P5V25
+Created Truck P5V26
+Created Truck P5V27
+Created Car P5V28
+Created Car P5V29
+Vehicle P5V0 started. Engine started: V6 engine
+P5V0: 2015 Toyota Truck (running)
+Fuel cost for 378 miles: $195.4
+Vehicle P5V2 started. Engine started: V6 engine
+P5V2: 2005 BMW Motorcycle (running)
+Fuel cost for 467 miles: $170.6
+Vehicle P5V4 started. Engine started: V8 engine
+P5V4: 2021 BMW Truck (running)
+Fuel cost for 457 miles: $143.9
+Vehicle P5V6 started. Engine started: V4 engine
+P5V6: 2010 Honda Car (running)
+Fuel cost for 487 miles: $4.8
+Vehicle P5V8 started. Engine started: V6 engine
+P5V8: 2016 Yamaha Car (running)
+Fuel cost for 499 miles: $229.1
+Vehicle P5V10 started. Engine started: V4 engine
+P5V10: 2022 Yamaha Motorcycle (running)
+Fuel cost for 326 miles: $42.7
+Vehicle P5V12 started. Engine started: V4 engine
+P5V12: 2001 Yamaha Motorcycle (running)
+Fuel cost for 102 miles: $10.3
+Vehicle P5V14 started. Engine started: V4 engine
+P5V14: 2012 Toyota Motorcycle (running)
+Fuel cost for 477 miles: $39.1
+Vehicle P5V16 started. Engine started: V8 engine
+P5V16: 2010 Yamaha Car (running)
+Fuel cost for 453 miles: $285.4
+Vehicle P5V18 started. Engine started: V4 engine
+P5V18: 2004 Toyota Truck (running)
+Fuel cost for 412 miles: $113.4

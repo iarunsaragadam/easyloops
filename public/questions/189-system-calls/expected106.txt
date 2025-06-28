@@ -1,0 +1,33 @@
+OPENED complex24_0.txt AS FD 3
+OPENED complex24_1.txt AS FD 4
+OPENED complex24_2.txt AS FD 5
+OPENED complex24_3.txt AS FD 6
+OPENED complex24_4.txt AS FD 7
+OPENED complex24_5.txt AS FD 8
+OPENED complex24_6.txt AS FD 9
+OPENED complex24_7.txt AS FD 10
+EOF
+EOF
+EOF
+EOF
+EOF
+WRITTEN 6 BYTES TO FD 3
+WRITTEN 6 BYTES TO FD 5
+EOF
+WRITTEN 6 BYTES TO FD 3
+FD 3: complex24_0.txt (w)
+FD 4: complex24_1.txt (rw)
+FD 5: complex24_2.txt (w)
+FD 6: complex24_3.txt (w)
+FD 7: complex24_4.txt (r)
+FD 8: complex24_5.txt (r)
+FD 9: complex24_6.txt (r)
+FD 10: complex24_7.txt (r)
+CLOSED FD 3 (complex24_0.txt)
+CLOSED FD 4 (complex24_1.txt)
+CLOSED FD 5 (complex24_2.txt)
+CLOSED FD 6 (complex24_3.txt)
+CLOSED FD 7 (complex24_4.txt)
+CLOSED FD 8 (complex24_5.txt)
+CLOSED FD 9 (complex24_6.txt)
+CLOSED FD 10 (complex24_7.txt)

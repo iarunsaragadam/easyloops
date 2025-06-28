@@ -1,0 +1,7 @@
+6
+OPEN ogvqjzvt.dat r
+OPEN ozr.log rw
+OPEN ptqfs.log w
+OPEN mypcqr.log rw
+CLOSE 3
+CLOSE 4

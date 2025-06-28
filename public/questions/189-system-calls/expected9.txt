@@ -1,0 +1,7 @@
+OPENED shgwab.dat AS FD 3
+OPENED cokms.txt AS FD 4
+OPENED vgmvyo.dat AS FD 5
+OPENED kuwutqy.tmp AS FD 6
+OPENED akx.tmp AS FD 7
+WRITTEN 9 BYTES TO FD 3
+CLOSED FD 3 (shgwab.dat)

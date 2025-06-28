@@ -1,0 +1,6 @@
+5
+OPEN zfmvglj.dat r
+OPEN puqgqn.log rw
+OPEN otia.txt r
+OPEN oif.dat rw
+WRITE 6 world hello

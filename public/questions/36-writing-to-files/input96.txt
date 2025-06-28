@@ -1,0 +1,26 @@
+25
+read complex2.txt
+create complex0.txt
+create complex1.txt
+write complex2.txt  M8aYaTcA
+append complex1.txt PLdnIaQfcbVzbavopUiYdvzhONlT9QR86nekCMYC UNMZDd
+read complex0.txt
+write complex2.txt InAbko7e
+append complex0.txt 0NAFc74GV0
+write complex0.txt FQaMXxrxTvXuDJMBsEBV4T2pZFzaexMq5mGxN7K3a63
+append complex1.txt X3b9rOiJWcfLYC TBwRyyEnFthTZ5SABBs
+read complex0.txt
+create complex0.txt
+create complex2.txt
+create complex1.txt
+append complex1.txt K4p2JFmBUDsN6O
+write complex1.txt NjEs1sdKRzb GY8vGUILrV2hpwnu94EGWkcIa8KnbfNRn1cfCr
+read complex1.txt
+read complex0.txt
+write complex2.txt eUTOycroLDi23c5SboZ
+read complex1.txt
+read complex1.txt
+read complex1.txt
+create complex0.txt
+append complex0.txt gTAKG5DN4D2Aq4I
+read complex0.txt

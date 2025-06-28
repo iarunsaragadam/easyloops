@@ -1,1 +1,7 @@
-placeholder
+6
+touch file1.txt
+touch file2.txt
+ls
+rm file1.txt
+ls
+count files

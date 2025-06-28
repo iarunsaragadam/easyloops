@@ -1,1 +1,3 @@
-placeholder
+Name: Maria García
+Age: 45
+City: São Paulo

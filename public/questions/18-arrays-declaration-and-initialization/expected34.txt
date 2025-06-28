@@ -1,0 +1,5 @@
+Array size: 4
+Array elements: [1000, -1000, 500, -500]
+First element: 1000
+Last element: -500
+Array sum: 0

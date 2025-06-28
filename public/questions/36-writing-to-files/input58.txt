@@ -1,0 +1,5 @@
+4
+create m910c3f8.data
+create mfkt6gz.cfg
+write ox72.cfg uve8KOgor0vrtsfxnOmBcULvz9QQBGCog7W3MhFo3bBRt
+read up0f.txt

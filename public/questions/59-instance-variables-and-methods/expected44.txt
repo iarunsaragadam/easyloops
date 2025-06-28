@@ -1,0 +1,5 @@
+Account ACC001 created for Alice8
+Account ACC002 created for Bob8
+Transfer failed: insufficient funds
+One or both accounts not found
+Balance for account ACC001: 100.00

@@ -1,1 +1,3 @@
-placeholder
+Adam: 84.38
+Maria: 90.10
+Zoe: 94.80

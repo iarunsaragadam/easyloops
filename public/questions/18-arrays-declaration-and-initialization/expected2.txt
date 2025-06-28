@@ -1,1 +1,5 @@
-placeholder
+Array size: 2
+Array elements: [1, 2]
+First element: 1
+Last element: 2
+Array sum: 3

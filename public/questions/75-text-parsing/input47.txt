@@ -1,0 +1,1 @@
+[2023-12-01 10:00:00] ERROR: Failed to parse JSON: {"error": "syntax error"}

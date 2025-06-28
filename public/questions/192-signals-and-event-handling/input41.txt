@@ -1,0 +1,2 @@
+1
+0 1 MIN_CONSTRAINT minimum_values

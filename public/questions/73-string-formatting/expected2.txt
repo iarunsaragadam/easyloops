@@ -1,1 +1,6 @@
-placeholder
+Employee Report
+==================================================
+Name                ID       Salary   Dept  
+--------------------------------------------------
+                999999         0.00    A    
+Very Long Employee Name 000001 1,000,000.99   DEPT  

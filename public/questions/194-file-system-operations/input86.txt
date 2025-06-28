@@ -1,0 +1,13 @@
+12
+mkdir project
+mkdir project/src
+mkdir project/tests
+mkdir project/docs
+touch project/README.md
+touch project/src/main.py
+touch project/src/utils.py
+touch project/tests/test_main.py
+cd project
+find main.py
+count files
+size src

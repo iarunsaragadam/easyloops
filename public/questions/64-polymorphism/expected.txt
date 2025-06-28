@@ -1,1 +1,3 @@
-placeholder
+Circle: 78.54
+Rectangle: 24.00
+Triangle: 12.00

@@ -1,0 +1,9 @@
+8
+0 1 TYPE_0 data_0
+10 2 TYPE_1 data_1
+20 3 TYPE_2 data_2
+30 4 TYPE_0 data_3
+40 5 TYPE_1 data_4
+50 1 TYPE_2 data_5
+60 2 TYPE_0 data_6
+70 3 TYPE_1 data_7

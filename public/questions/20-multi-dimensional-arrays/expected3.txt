@@ -1,1 +1,12 @@
-placeholder
+Matrix:
+10 20 30 40
+50 60 70 80
+Row sums:
+Row 1: 100
+Row 2: 260
+Column sums:
+Column 1: 60
+Column 2: 80
+Column 3: 100
+Column 4: 120
+Maximum element: 80 at position (2, 4)

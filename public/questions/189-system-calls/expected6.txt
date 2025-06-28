@@ -1,0 +1,5 @@
+OPENED pedyaq.dat AS FD 3
+OPENED ufkggo.txt AS FD 4
+FD 3: pedyaq.dat (r)
+FD 4: ufkggo.txt (rw)
+WRITTEN 24 BYTES TO FD 4

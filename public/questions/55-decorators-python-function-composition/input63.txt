@@ -1,0 +1,74 @@
+-496
+72
+add 85
+multiply 13
+negate
+add -4
+multiply -17
+abs
+abs
+square
+add -311
+negate
+add 5
+add 645
+square
+negate
+negate
+add 610
+negate
+negate
+add 825
+square
+add -141
+square
+square
+square
+multiply -59
+abs
+square
+abs
+add 219
+multiply 50
+add 133
+add 783
+add 691
+negate
+add -903
+multiply -53
+add 240
+square
+square
+square
+multiply 30
+square
+negate
+abs
+add -696
+abs
+add -69
+multiply -2
+square
+square
+multiply -34
+multiply -3
+multiply 59
+square
+negate
+square
+multiply 95
+negate
+multiply 86
+add -541
+square
+add 370
+negate
+multiply 84
+add -964
+multiply 98
+add -661
+negate
+multiply -82
+negate
+add -976
+abs

@@ -1,0 +1,1 @@
+rectangle 600 600

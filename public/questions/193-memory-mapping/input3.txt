@@ -1,1 +1,6 @@
-placeholder
+3 512
+4
+read 0
+read 512
+read 1024
+read 1536

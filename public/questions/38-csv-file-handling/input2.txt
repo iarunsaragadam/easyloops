@@ -1,1 +1,5 @@
-placeholder
+3
+tokyo
+John,25,Tokyo
+Jane,30,TOKYO
+Mike,35,New York

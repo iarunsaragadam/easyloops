@@ -1,0 +1,1 @@
+20 | SQRT, SQRT, NEG, MUL 5, NEG, ABS

@@ -1,0 +1,9 @@
+/
+/
+File 'file_83_3.txt' created
+Directory 'dir_83_4' created
+dir_83_4 file_83_3.txt
+Directory 'dir_83_6' created
+1
+dir_83_4 dir_83_6 file_83_3.txt
+dir_83_4 dir_83_6 file_83_3.txt

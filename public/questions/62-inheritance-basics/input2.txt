@@ -1,1 +1,5 @@
-placeholder
+4
+rectangle 0.1 0.1
+circle 0.5
+triangle 1 1
+rectangle 10 10

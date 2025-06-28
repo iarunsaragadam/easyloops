@@ -1,0 +1,16 @@
+Processing events:
+Event 1: [P2] TYPE_0 at 769 - same_timestamp_0
+Event 2: [P2] TYPE_0 at 769 - same_timestamp_8
+Event 3: [P2] TYPE_1 at 769 - same_timestamp_5
+Event 4: [P2] TYPE_2 at 769 - same_timestamp_6
+Event 5: [P3] TYPE_3 at 769 - same_timestamp_3
+Event 6: [P5] TYPE_3 at 769 - same_timestamp_7
+Event 7: [P6] TYPE_1 at 769 - same_timestamp_1
+Event 8: [P7] TYPE_0 at 769 - same_timestamp_4
+Event 9: [P9] TYPE_2 at 769 - same_timestamp_2
+System state:
+Total events processed: 9
+TYPE_0: 3
+TYPE_1: 2
+TYPE_2: 2
+TYPE_3: 2

@@ -1,0 +1,8 @@
+7
+write file1.txt OyiBHT1rUv6
+write file1.txt fj6yaa
+read file1.txt
+read file1.txt
+append file1.txt h8Yi3syV14khB9
+write file1.txt U8
+write file1.txt Dr84JQxdz

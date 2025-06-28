@@ -1,1 +1,10 @@
-placeholder
+Size: 0
+Array: empty
+Error: Array is empty
+Added 5
+Element at index 0: 5
+Error: Index out of bounds
+Added -10
+Element at index 1: -10
+Removed -10
+Removed 5

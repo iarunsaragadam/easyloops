@@ -1,0 +1,4 @@
+OPENED test.txt AS FD 3
+CLOSED FD 3 (test.txt)
+ERROR: FD 3 NOT OPEN
+ERROR: FD 3 NOT OPEN

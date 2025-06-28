@@ -1,1 +1,5 @@
-placeholder
+Processing events:
+Event 1: [P5] TEST at 42 - single_event_test
+System state:
+Total events processed: 1
+TEST: 1

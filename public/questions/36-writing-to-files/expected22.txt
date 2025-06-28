@@ -1,0 +1,6 @@
+APPEND: file2.txt (11 total chars)
+WRITE: file2.txt (14 chars)
+WRITE: file1.txt (17 chars)
+WRITE: file1.txt (18 chars)
+APPEND: file2.txt (21 total chars)
+APPEND: file1.txt (37 total chars)

@@ -1,0 +1,7 @@
+HTTP/1.0 500 Internal Server Error
+Content-Type: image/jpeg
+Content-Length: 52
+Server: nginx/1.18.0
+
+Response body for test case 6
+Second line of content

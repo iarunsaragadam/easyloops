@@ -1,0 +1,61 @@
+60
+OPEN temp0.txt w
+WRITE 3 test0
+CLOSE 3
+OPEN temp1.txt w
+WRITE 4 test1
+CLOSE 4
+OPEN temp2.txt w
+WRITE 5 test2
+CLOSE 5
+OPEN temp3.txt w
+WRITE 6 test3
+CLOSE 6
+OPEN temp4.txt w
+WRITE 7 test4
+CLOSE 7
+OPEN temp5.txt w
+WRITE 8 test5
+CLOSE 8
+OPEN temp6.txt w
+WRITE 9 test6
+CLOSE 9
+OPEN temp7.txt w
+WRITE 10 test7
+CLOSE 10
+OPEN temp8.txt w
+WRITE 11 test8
+CLOSE 11
+OPEN temp9.txt w
+WRITE 12 test9
+CLOSE 12
+OPEN temp10.txt w
+WRITE 13 test10
+CLOSE 13
+OPEN temp11.txt w
+WRITE 14 test11
+CLOSE 14
+OPEN temp12.txt w
+WRITE 15 test12
+CLOSE 15
+OPEN temp13.txt w
+WRITE 16 test13
+CLOSE 16
+OPEN temp14.txt w
+WRITE 17 test14
+CLOSE 17
+OPEN temp15.txt w
+WRITE 18 test15
+CLOSE 18
+OPEN temp16.txt w
+WRITE 19 test16
+CLOSE 19
+OPEN temp17.txt w
+WRITE 20 test17
+CLOSE 20
+OPEN temp18.txt w
+WRITE 21 test18
+CLOSE 21
+OPEN temp19.txt w
+WRITE 22 test19
+CLOSE 22

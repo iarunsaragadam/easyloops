@@ -5,13 +5,523 @@
     "description": "Test Case 1"
   },
   {
+    "inputFile": "input10.txt",
+    "expectedFile": "expected10.txt",
+    "description": "Test Case 10"
+  },
+  {
+    "inputFile": "input100.txt",
+    "expectedFile": "expected100.txt",
+    "description": "Test Case 100"
+  },
+  {
+    "inputFile": "input101.txt",
+    "expectedFile": "expected101.txt",
+    "description": "Test Case 101"
+  },
+  {
+    "inputFile": "input102.txt",
+    "expectedFile": "expected102.txt",
+    "description": "Test Case 102"
+  },
+  {
+    "inputFile": "input103.txt",
+    "expectedFile": "expected103.txt",
+    "description": "Test Case 103"
+  },
+  {
+    "inputFile": "input104.txt",
+    "expectedFile": "expected104.txt",
+    "description": "Test Case 104"
+  },
+  {
+    "inputFile": "input105.txt",
+    "expectedFile": "expected105.txt",
+    "description": "Test Case 105"
+  },
+  {
+    "inputFile": "input11.txt",
+    "expectedFile": "expected11.txt",
+    "description": "Test Case 11"
+  },
+  {
+    "inputFile": "input12.txt",
+    "expectedFile": "expected12.txt",
+    "description": "Test Case 12"
+  },
+  {
+    "inputFile": "input13.txt",
+    "expectedFile": "expected13.txt",
+    "description": "Test Case 13"
+  },
+  {
+    "inputFile": "input14.txt",
+    "expectedFile": "expected14.txt",
+    "description": "Test Case 14"
+  },
+  {
+    "inputFile": "input15.txt",
+    "expectedFile": "expected15.txt",
+    "description": "Test Case 15"
+  },
+  {
+    "inputFile": "input16.txt",
+    "expectedFile": "expected16.txt",
+    "description": "Test Case 16"
+  },
+  {
+    "inputFile": "input17.txt",
+    "expectedFile": "expected17.txt",
+    "description": "Test Case 17"
+  },
+  {
+    "inputFile": "input18.txt",
+    "expectedFile": "expected18.txt",
+    "description": "Test Case 18"
+  },
+  {
+    "inputFile": "input19.txt",
+    "expectedFile": "expected19.txt",
+    "description": "Test Case 19"
+  },
+  {
     "inputFile": "input2.txt",
     "expectedFile": "expected2.txt",
     "description": "Test Case 2"
   },
   {
+    "inputFile": "input20.txt",
+    "expectedFile": "expected20.txt",
+    "description": "Test Case 20"
+  },
+  {
+    "inputFile": "input21.txt",
+    "expectedFile": "expected21.txt",
+    "description": "Test Case 21"
+  },
+  {
+    "inputFile": "input22.txt",
+    "expectedFile": "expected22.txt",
+    "description": "Test Case 22"
+  },
+  {
+    "inputFile": "input23.txt",
+    "expectedFile": "expected23.txt",
+    "description": "Test Case 23"
+  },
+  {
+    "inputFile": "input24.txt",
+    "expectedFile": "expected24.txt",
+    "description": "Test Case 24"
+  },
+  {
+    "inputFile": "input25.txt",
+    "expectedFile": "expected25.txt",
+    "description": "Test Case 25"
+  },
+  {
+    "inputFile": "input26.txt",
+    "expectedFile": "expected26.txt",
+    "description": "Test Case 26"
+  },
+  {
+    "inputFile": "input27.txt",
+    "expectedFile": "expected27.txt",
+    "description": "Test Case 27"
+  },
+  {
+    "inputFile": "input28.txt",
+    "expectedFile": "expected28.txt",
+    "description": "Test Case 28"
+  },
+  {
+    "inputFile": "input29.txt",
+    "expectedFile": "expected29.txt",
+    "description": "Test Case 29"
+  },
+  {
     "inputFile": "input3.txt",
     "expectedFile": "expected3.txt",
     "description": "Test Case 3"
+  },
+  {
+    "inputFile": "input30.txt",
+    "expectedFile": "expected30.txt",
+    "description": "Test Case 30"
+  },
+  {
+    "inputFile": "input31.txt",
+    "expectedFile": "expected31.txt",
+    "description": "Test Case 31"
+  },
+  {
+    "inputFile": "input32.txt",
+    "expectedFile": "expected32.txt",
+    "description": "Test Case 32"
+  },
+  {
+    "inputFile": "input33.txt",
+    "expectedFile": "expected33.txt",
+    "description": "Test Case 33"
+  },
+  {
+    "inputFile": "input34.txt",
+    "expectedFile": "expected34.txt",
+    "description": "Test Case 34"
+  },
+  {
+    "inputFile": "input35.txt",
+    "expectedFile": "expected35.txt",
+    "description": "Test Case 35"
+  },
+  {
+    "inputFile": "input36.txt",
+    "expectedFile": "expected36.txt",
+    "description": "Test Case 36"
+  },
+  {
+    "inputFile": "input37.txt",
+    "expectedFile": "expected37.txt",
+    "description": "Test Case 37"
+  },
+  {
+    "inputFile": "input38.txt",
+    "expectedFile": "expected38.txt",
+    "description": "Test Case 38"
+  },
+  {
+    "inputFile": "input39.txt",
+    "expectedFile": "expected39.txt",
+    "description": "Test Case 39"
+  },
+  {
+    "inputFile": "input4.txt",
+    "expectedFile": "expected4.txt",
+    "description": "Test Case 4"
+  },
+  {
+    "inputFile": "input40.txt",
+    "expectedFile": "expected40.txt",
+    "description": "Test Case 40"
+  },
+  {
+    "inputFile": "input41.txt",
+    "expectedFile": "expected41.txt",
+    "description": "Test Case 41"
+  },
+  {
+    "inputFile": "input42.txt",
+    "expectedFile": "expected42.txt",
+    "description": "Test Case 42"
+  },
+  {
+    "inputFile": "input43.txt",
+    "expectedFile": "expected43.txt",
+    "description": "Test Case 43"
+  },
+  {
+    "inputFile": "input44.txt",
+    "expectedFile": "expected44.txt",
+    "description": "Test Case 44"
+  },
+  {
+    "inputFile": "input45.txt",
+    "expectedFile": "expected45.txt",
+    "description": "Test Case 45"
+  },
+  {
+    "inputFile": "input46.txt",
+    "expectedFile": "expected46.txt",
+    "description": "Test Case 46"
+  },
+  {
+    "inputFile": "input47.txt",
+    "expectedFile": "expected47.txt",
+    "description": "Test Case 47"
+  },
+  {
+    "inputFile": "input48.txt",
+    "expectedFile": "expected48.txt",
+    "description": "Test Case 48"
+  },
+  {
+    "inputFile": "input49.txt",
+    "expectedFile": "expected49.txt",
+    "description": "Test Case 49"
+  },
+  {
+    "inputFile": "input5.txt",
+    "expectedFile": "expected5.txt",
+    "description": "Test Case 5"
+  },
+  {
+    "inputFile": "input50.txt",
+    "expectedFile": "expected50.txt",
+    "description": "Test Case 50"
+  },
+  {
+    "inputFile": "input51.txt",
+    "expectedFile": "expected51.txt",
+    "description": "Test Case 51"
+  },
+  {
+    "inputFile": "input52.txt",
+    "expectedFile": "expected52.txt",
+    "description": "Test Case 52"
+  },
+  {
+    "inputFile": "input53.txt",
+    "expectedFile": "expected53.txt",
+    "description": "Test Case 53"
+  },
+  {
+    "inputFile": "input54.txt",
+    "expectedFile": "expected54.txt",
+    "description": "Test Case 54"
+  },
+  {
+    "inputFile": "input55.txt",
+    "expectedFile": "expected55.txt",
+    "description": "Test Case 55"
+  },
+  {
+    "inputFile": "input56.txt",
+    "expectedFile": "expected56.txt",
+    "description": "Test Case 56"
+  },
+  {
+    "inputFile": "input57.txt",
+    "expectedFile": "expected57.txt",
+    "description": "Test Case 57"
+  },
+  {
+    "inputFile": "input58.txt",
+    "expectedFile": "expected58.txt",
+    "description": "Test Case 58"
+  },
+  {
+    "inputFile": "input59.txt",
+    "expectedFile": "expected59.txt",
+    "description": "Test Case 59"
+  },
+  {
+    "inputFile": "input6.txt",
+    "expectedFile": "expected6.txt",
+    "description": "Test Case 6"
+  },
+  {
+    "inputFile": "input60.txt",
+    "expectedFile": "expected60.txt",
+    "description": "Test Case 60"
+  },
+  {
+    "inputFile": "input61.txt",
+    "expectedFile": "expected61.txt",
+    "description": "Test Case 61"
+  },
+  {
+    "inputFile": "input62.txt",
+    "expectedFile": "expected62.txt",
+    "description": "Test Case 62"
+  },
+  {
+    "inputFile": "input63.txt",
+    "expectedFile": "expected63.txt",
+    "description": "Test Case 63"
+  },
+  {
+    "inputFile": "input64.txt",
+    "expectedFile": "expected64.txt",
+    "description": "Test Case 64"
+  },
+  {
+    "inputFile": "input65.txt",
+    "expectedFile": "expected65.txt",
+    "description": "Test Case 65"
+  },
+  {
+    "inputFile": "input66.txt",
+    "expectedFile": "expected66.txt",
+    "description": "Test Case 66"
+  },
+  {
+    "inputFile": "input67.txt",
+    "expectedFile": "expected67.txt",
+    "description": "Test Case 67"
+  },
+  {
+    "inputFile": "input68.txt",
+    "expectedFile": "expected68.txt",
+    "description": "Test Case 68"
+  },
+  {
+    "inputFile": "input69.txt",
+    "expectedFile": "expected69.txt",
+    "description": "Test Case 69"
+  },
+  {
+    "inputFile": "input7.txt",
+    "expectedFile": "expected7.txt",
+    "description": "Test Case 7"
+  },
+  {
+    "inputFile": "input70.txt",
+    "expectedFile": "expected70.txt",
+    "description": "Test Case 70"
+  },
+  {
+    "inputFile": "input71.txt",
+    "expectedFile": "expected71.txt",
+    "description": "Test Case 71"
+  },
+  {
+    "inputFile": "input72.txt",
+    "expectedFile": "expected72.txt",
+    "description": "Test Case 72"
+  },
+  {
+    "inputFile": "input73.txt",
+    "expectedFile": "expected73.txt",
+    "description": "Test Case 73"
+  },
+  {
+    "inputFile": "input74.txt",
+    "expectedFile": "expected74.txt",
+    "description": "Test Case 74"
+  },
+  {
+    "inputFile": "input75.txt",
+    "expectedFile": "expected75.txt",
+    "description": "Test Case 75"
+  },
+  {
+    "inputFile": "input76.txt",
+    "expectedFile": "expected76.txt",
+    "description": "Test Case 76"
+  },
+  {
+    "inputFile": "input77.txt",
+    "expectedFile": "expected77.txt",
+    "description": "Test Case 77"
+  },
+  {
+    "inputFile": "input78.txt",
+    "expectedFile": "expected78.txt",
+    "description": "Test Case 78"
+  },
+  {
+    "inputFile": "input79.txt",
+    "expectedFile": "expected79.txt",
+    "description": "Test Case 79"
+  },
+  {
+    "inputFile": "input8.txt",
+    "expectedFile": "expected8.txt",
+    "description": "Test Case 8"
+  },
+  {
+    "inputFile": "input80.txt",
+    "expectedFile": "expected80.txt",
+    "description": "Test Case 80"
+  },
+  {
+    "inputFile": "input81.txt",
+    "expectedFile": "expected81.txt",
+    "description": "Test Case 81"
+  },
+  {
+    "inputFile": "input82.txt",
+    "expectedFile": "expected82.txt",
+    "description": "Test Case 82"
+  },
+  {
+    "inputFile": "input83.txt",
+    "expectedFile": "expected83.txt",
+    "description": "Test Case 83"
+  },
+  {
+    "inputFile": "input84.txt",
+    "expectedFile": "expected84.txt",
+    "description": "Test Case 84"
+  },
+  {
+    "inputFile": "input85.txt",
+    "expectedFile": "expected85.txt",
+    "description": "Test Case 85"
+  },
+  {
+    "inputFile": "input86.txt",
+    "expectedFile": "expected86.txt",
+    "description": "Test Case 86"
+  },
+  {
+    "inputFile": "input87.txt",
+    "expectedFile": "expected87.txt",
+    "description": "Test Case 87"
+  },
+  {
+    "inputFile": "input88.txt",
+    "expectedFile": "expected88.txt",
+    "description": "Test Case 88"
+  },
+  {
+    "inputFile": "input89.txt",
+    "expectedFile": "expected89.txt",
+    "description": "Test Case 89"
+  },
+  {
+    "inputFile": "input9.txt",
+    "expectedFile": "expected9.txt",
+    "description": "Test Case 9"
+  },
+  {
+    "inputFile": "input90.txt",
+    "expectedFile": "expected90.txt",
+    "description": "Test Case 90"
+  },
+  {
+    "inputFile": "input91.txt",
+    "expectedFile": "expected91.txt",
+    "description": "Test Case 91"
+  },
+  {
+    "inputFile": "input92.txt",
+    "expectedFile": "expected92.txt",
+    "description": "Test Case 92"
+  },
+  {
+    "inputFile": "input93.txt",
+    "expectedFile": "expected93.txt",
+    "description": "Test Case 93"
+  },
+  {
+    "inputFile": "input94.txt",
+    "expectedFile": "expected94.txt",
+    "description": "Test Case 94"
+  },
+  {
+    "inputFile": "input95.txt",
+    "expectedFile": "expected95.txt",
+    "description": "Test Case 95"
+  },
+  {
+    "inputFile": "input96.txt",
+    "expectedFile": "expected96.txt",
+    "description": "Test Case 96"
+  },
+  {
+    "inputFile": "input97.txt",
+    "expectedFile": "expected97.txt",
+    "description": "Test Case 97"
+  },
+  {
+    "inputFile": "input98.txt",
+    "expectedFile": "expected98.txt",
+    "description": "Test Case 98"
+  },
+  {
+    "inputFile": "input99.txt",
+    "expectedFile": "expected99.txt",
+    "description": "Test Case 99"
   }
 ]

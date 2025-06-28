@@ -1,0 +1,4 @@
+CREATE: m910c3f8.data
+CREATE: mfkt6gz.cfg
+WRITE: ox72.cfg (45 chars)
+READ: up0f.txt = FILE_NOT_FOUND

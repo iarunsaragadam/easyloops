@@ -1,0 +1,3 @@
+Created Motorcycle E6
+Vehicle E6 started. Engine started: V4 engine
+Fuel cost for 1 miles: $0.0

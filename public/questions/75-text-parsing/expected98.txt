@@ -1,0 +1,30 @@
+LOG LEVEL SUMMARY:
+DEBUG: 11
+ERROR: 18
+INFO: 9
+WARN: 8
+
+ERROR ENTRIES:
+[2023-12-01 10:00:00] Complex scenario message 0 with special chars: @#$%^&*()
+[2023-12-01 10:16:00] Complex scenario message 4 with special chars: @#$%^&*()
+[2023-12-01 10:16:00] Complex scenario message 8 with special chars: @#$%^&*()
+[2023-12-01 10:19:00] Complex scenario message 19 with special chars: @#$%^&*()
+[2023-12-01 10:25:00] Complex scenario message 5 with special chars: @#$%^&*()
+[2023-12-01 10:30:00] Complex scenario message 10 with special chars: @#$%^&*()
+[2023-12-01 10:35:00] Complex scenario message 7 with special chars: @#$%^&*()
+[2023-12-01 10:40:00] Complex scenario message 20 with special chars: @#$%^&*()
+[2023-12-01 10:54:00] Complex scenario message 27 with special chars: @#$%^&*()
+[2023-12-01 11:00:00] Complex scenario message 15 with special chars: @#$%^&*()
+[2023-12-01 11:09:00] Complex scenario message 23 with special chars: @#$%^&*()
+[2023-12-01 11:16:00] Complex scenario message 38 with special chars: @#$%^&*()
+[2023-12-01 11:20:00] Complex scenario message 16 with special chars: @#$%^&*()
+[2023-12-01 11:20:00] Complex scenario message 40 with special chars: @#$%^&*()
+[2023-12-01 11:33:00] Complex scenario message 31 with special chars: @#$%^&*()
+[2023-12-01 12:28:00] Complex scenario message 37 with special chars: @#$%^&*()
+[2023-12-01 13:40:00] Complex scenario message 44 with special chars: @#$%^&*()
+[2023-12-01 13:45:00] Complex scenario message 45 with special chars: @#$%^&*()
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-01 10:00:00
+Last entry: 2023-12-01 13:45:00
+Total entries: 46

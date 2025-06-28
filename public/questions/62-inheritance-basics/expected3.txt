@@ -1,1 +1,5 @@
-placeholder
+Rectangle: 20000.00
+Circle: 7853.98
+Triangle: 4800.00
+Rectangle: 500449.95
+Circle: 31415.93

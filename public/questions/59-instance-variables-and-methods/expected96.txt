@@ -1,0 +1,22 @@
+Account ACC001 created for User0
+Account ACC002 created for User1
+Account ACC003 created for User2
+Account ACC004 created for User3
+Account ACC005 created for User4
+Balance for account ACC004: 1833.00
+Transferred 113.00 from ACC003 to ACC005
+Balance for account ACC001: 431.00
+Insufficient funds or invalid amount
+Transferred 411.00 from ACC004 to ACC002
+Deposited 452.00 to account ACC002
+Account: ACC002, Owner: User1, Balance: 1838.00
+Account: ACC001, Owner: User0, Balance: 431.00
+Account: ACC003, Owner: User2, Balance: 283.00
+Deposited 303.00 to account ACC001
+Deposited 471.00 to account ACC005
+Deposited 129.00 to account ACC004
+Account: ACC004, Owner: User3, Balance: 1551.00
+Deposited 409.00 to account ACC004
+Balance for account ACC004: 1960.00
+Insufficient funds or invalid amount
+Deposited 208.00 to account ACC003

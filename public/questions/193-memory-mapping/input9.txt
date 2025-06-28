@@ -1,0 +1,7 @@
+7 512
+5
+write 4998
+read 6650
+write 3128
+read 6704
+read 9241

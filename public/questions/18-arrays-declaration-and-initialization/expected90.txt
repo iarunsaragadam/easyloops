@@ -1,0 +1,5 @@
+Array size: 12
+Array elements: [188, 183, 168, 104, 87, 71, 40, 15, 15, -17, -72, -125]
+First element: 188
+Last element: -125
+Array sum: 657

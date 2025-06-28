@@ -1,1 +1,6 @@
-placeholder
+apple
+banana
+apple
+cherry
+banana
+date

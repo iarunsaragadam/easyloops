@@ -1,0 +1,8 @@
+Account ACC001 created for Alice
+Account ACC002 created for Alice
+Withdrew 306.00 from account ACC001
+Account: ACC001, Owner: Alice, Balance: 937.00
+Withdrew 453.00 from account ACC001
+Balance for account ACC002: 1838.00
+Balance for account ACC002: 1838.00
+Account: ACC002, Owner: Alice, Balance: 1838.00

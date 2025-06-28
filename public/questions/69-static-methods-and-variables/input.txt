@@ -1,1 +1,8 @@
-placeholder
+7
+CREATE Alice 85
+CREATE Bob 90
+STATS
+STUDENT Alice
+CREATE Charlie 78
+STATS
+STUDENT Bob

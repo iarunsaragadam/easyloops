@@ -1,0 +1,7 @@
+Processing events:
+Event 1: [P1] SYSTEM at 50 - event2
+Event 2: [P1] SYSTEM at 100 - event1
+Event 3: [P1] SYSTEM at 150 - event3
+System state:
+Total events processed: 3
+SYSTEM: 3

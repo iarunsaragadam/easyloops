@@ -1,0 +1,5 @@
+Array size: 8
+Array elements: [5, 5, 5, 5, 5, 5, 5, 5]
+First element: 5
+Last element: 5
+Array sum: 40

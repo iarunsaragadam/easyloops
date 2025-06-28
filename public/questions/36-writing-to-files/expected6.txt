@@ -1,0 +1,4 @@
+READ: file1.txt = FILE_NOT_FOUND
+READ: file1.txt = FILE_NOT_FOUND
+APPEND: file1.txt (2 total chars)
+READ: file1.txt = zH

@@ -1,0 +1,4 @@
+Account ACC001 created for User1
+Insufficient funds or invalid amount
+Account not found
+Account: ACC001, Owner: User1, Balance: 200.00

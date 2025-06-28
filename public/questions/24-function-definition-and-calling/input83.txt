@@ -1,0 +1,1 @@
+rectangle 800 800

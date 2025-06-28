@@ -1,0 +1,13 @@
+12
+94 8 EDGE same_priority_0
+71 8 TEST same_priority_1
+345 8 TEST same_priority_2
+322 8 TEST same_priority_3
+304 8 TEST same_priority_4
+119 8 EDGE same_priority_5
+265 8 EDGE same_priority_6
+31 8 TEST same_priority_7
+458 8 EDGE same_priority_8
+349 8 EDGE same_priority_9
+80 8 TEST same_priority_10
+98 8 TEST same_priority_11

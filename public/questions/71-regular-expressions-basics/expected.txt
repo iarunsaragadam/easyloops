@@ -1,1 +1,3 @@
-placeholder
+support@example.com
+sales@company.org
+business-dev@startup.io

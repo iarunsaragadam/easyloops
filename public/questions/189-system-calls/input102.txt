@@ -1,0 +1,30 @@
+29
+OPEN complex20_0.txt rw
+OPEN complex20_1.txt r
+OPEN complex20_2.txt rw
+OPEN complex20_3.txt w
+WRITE 5 data90
+READ 5 18
+LIST
+LIST
+READ 5 20
+READ 5 14
+WRITE 5 data34
+LIST
+READ 3 17
+READ 5 8
+WRITE 5 data100
+LIST
+LIST
+READ 3 7
+WRITE 3 data58
+WRITE 6 data42
+LIST
+LIST
+LIST
+READ 4 1
+WRITE 3 data75
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6

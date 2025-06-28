@@ -1,0 +1,15 @@
+LOG LEVEL SUMMARY:
+DEBUG: 3
+ERROR: 3
+INFO: 4
+WARN: 2
+
+ERROR ENTRIES:
+[2023-12-07 10:00:00] Backup completed
+[2023-12-07 10:11:00] System maintenance
+[2023-12-07 10:36:00] Database connected
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-07 10:00:00
+Last entry: 2023-12-07 11:40:00
+Total entries: 12

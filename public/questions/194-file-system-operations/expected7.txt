@@ -1,0 +1,5 @@
+
+Directory 'dir1' created
+File 'file1' created
+dir1 file1
+

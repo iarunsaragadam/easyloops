@@ -1,0 +1,6 @@
+-8
+4
+abs
+square
+negate
+abs

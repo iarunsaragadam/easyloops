@@ -1,0 +1,19 @@
+18
+mkdir dir_95_0
+mkdir dir_95_1
+count files
+touch file_95_3.txt
+ls
+cd ..
+mkdir dir_95_6
+count files
+count files
+mkdir dir_95_9
+mkdir dir_95_10
+count files
+pwd
+touch file_95_13.txt
+ls
+cd dir_95_0
+pwd
+ls

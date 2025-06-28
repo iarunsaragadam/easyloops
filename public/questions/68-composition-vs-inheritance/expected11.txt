@@ -1,0 +1,4 @@
+Created Car C11
+Vehicle C11 started. Engine started: V4 engine
+C11: 2021 Chevrolet Car (running)
+Fuel cost for 61 miles: $8.4

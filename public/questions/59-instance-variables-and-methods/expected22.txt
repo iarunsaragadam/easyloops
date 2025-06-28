@@ -1,0 +1,5 @@
+Account ACC001 created for Diana
+Account ACC002 created for Charlie
+Balance for account ACC001: 1907.00
+Deposited 190.00 to account ACC002
+Deposited 181.00 to account ACC002

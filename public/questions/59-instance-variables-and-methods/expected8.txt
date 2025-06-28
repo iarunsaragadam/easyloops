@@ -1,0 +1,5 @@
+Account ACC001 created for Frank
+Account ACC002 created for Diana
+Balance for account ACC002: 1313.00
+Withdrew 178.00 from account ACC001
+Account: ACC002, Owner: Diana, Balance: 1313.00

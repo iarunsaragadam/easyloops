@@ -1,0 +1,9 @@
+OPENED twn.dat AS FD 3
+OPENED rbs.log AS FD 4
+OPENED ykr.txt AS FD 5
+FD 3: twn.dat (r)
+FD 4: rbs.log (r)
+FD 5: ykr.txt (w)
+CLOSED FD 3 (twn.dat)
+CLOSED FD 4 (rbs.log)
+CLOSED FD 5 (ykr.txt)

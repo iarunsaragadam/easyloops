@@ -1,0 +1,5 @@
+Processing events:
+Event 1: [P1] SYSTEM at 100 - This is a very long data string with spaces and punctuation!
+System state:
+Total events processed: 1
+SYSTEM: 1

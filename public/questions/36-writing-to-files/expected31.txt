@@ -1,0 +1,3 @@
+WRITE: empty.txt (0 chars)
+APPEND: empty.txt (0 total chars)
+READ: empty.txt =

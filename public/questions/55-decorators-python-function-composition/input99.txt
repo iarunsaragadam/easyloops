@@ -1,0 +1,38 @@
+3859
+36
+add -23
+negate
+square
+multiply -97
+add 512
+abs
+add 457
+multiply -24
+abs
+negate
+multiply 85
+multiply -79
+add 45
+multiply 35
+negate
+negate
+add -399
+negate
+abs
+add 428
+add -730
+negate
+multiply 44
+negate
+add 664
+negate
+square
+abs
+abs
+abs
+multiply 13
+abs
+abs
+square
+abs
+abs

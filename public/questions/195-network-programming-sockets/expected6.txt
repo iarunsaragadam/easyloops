@@ -1,0 +1,32 @@
+POOL_CREATED 20
+CONNECTED client1 1
+CONNECTED client2 2
+CONNECTED client3 3
+CONNECTED client4 4
+CONNECTED client5 5
+CONNECTED client6 6
+CONNECTED client7 7
+CONNECTED client8 8
+CONNECTED client9 9
+CONNECTED client10 10
+CONNECTED client11 11
+CONNECTED client12 12
+CONNECTED client13 13
+CONNECTED client14 14
+CONNECTED client15 15
+CONNECTED client16 16
+CONNECTED client17 17
+CONNECTED client18 18
+CONNECTED client19 19
+CONNECTED client20 20
+REJECTED client21
+REJECTED client22
+REJECTED client23
+REJECTED client24
+REJECTED client25
+ACTIVE 20 AVAILABLE 0
+CONNECTIONS 1:client1 2:client2 3:client3 4:client4 5:client5 6:client6 7:client7 8:client8 9:client9 10:client10 11:client11 12:client12 13:client13 14:client14 15:client15 16:client16 17:client17 18:client18 19:client19 20:client20
+DISCONNECTED client1 1
+DISCONNECTED client2 2
+DISCONNECTED client3 3
+ACTIVE 17 AVAILABLE 3

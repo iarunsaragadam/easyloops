@@ -1,0 +1,90 @@
+Created Motorcycle P20V0
+Created Truck P20V1
+Created Car P20V2
+Created Truck P20V3
+Created Motorcycle P20V4
+Created Motorcycle P20V5
+Created Car P20V6
+Created Car P20V7
+Created Truck P20V8
+Created Truck P20V9
+Created Truck P20V10
+Created Car P20V11
+Created Car P20V12
+Created Car P20V13
+Created Truck P20V14
+Created Motorcycle P20V15
+Created Car P20V16
+Created Motorcycle P20V17
+Created Car P20V18
+Created Truck P20V19
+Created Truck P20V20
+Created Truck P20V21
+Created Truck P20V22
+Created Motorcycle P20V23
+Created Car P20V24
+Created Motorcycle P20V25
+Created Truck P20V26
+Created Truck P20V27
+Created Motorcycle P20V28
+Created Truck P20V29
+Created Car P20V30
+Created Motorcycle P20V31
+Created Truck P20V32
+Created Motorcycle P20V33
+Created Car P20V34
+Created Motorcycle P20V35
+Created Motorcycle P20V36
+Created Car P20V37
+Created Truck P20V38
+Created Motorcycle P20V39
+Created Car P20V40
+Created Truck P20V41
+Created Car P20V42
+Created Truck P20V43
+Created Car P20V44
+Created Truck P20V45
+Created Motorcycle P20V46
+Created Truck P20V47
+Created Car P20V48
+Created Truck P20V49
+Created Truck P20V50
+Created Car P20V51
+Created Car P20V52
+Created Motorcycle P20V53
+Created Motorcycle P20V54
+Created Truck P20V55
+Created Motorcycle P20V56
+Created Car P20V57
+Created Motorcycle P20V58
+Created Motorcycle P20V59
+Vehicle P20V0 started. Engine started: V4 engine
+P20V0: 2006 Ford Motorcycle (running)
+Fuel cost for 125 miles: $0.5
+Vehicle P20V2 started. Engine started: V6 engine
+P20V2: 2021 Ford Car (running)
+Fuel cost for 148 miles: $24.7
+Vehicle P20V4 started. Engine started: Electric engine
+P20V4: 2013 BMW Motorcycle (running)
+Fuel cost for 499 miles: $13.9
+Vehicle P20V6 started. Engine started: V4 engine
+P20V6: 2006 Ford Car (running)
+Fuel cost for 270 miles: $1.5
+Vehicle P20V8 started. Engine started: Electric engine
+P20V8: 2005 Honda Truck (running)
+Fuel cost for 320 miles: $19.1
+Vehicle P20V10 started. Engine started: Electric engine
+P20V10: 2017 Honda Truck (running)
+Fuel cost for 252 miles: $14.2
+Vehicle P20V12 started. Engine started: V6 engine
+P20V12: 2021 BMW Car (running)
+Fuel cost for 449 miles: $97.8
+Vehicle P20V14 started. Engine started: Electric engine
+P20V14: 2004 Toyota Truck (running)
+Fuel cost for 162 miles: $8.2
+Vehicle P20V16 started. Engine started: V4 engine
+P20V16: 2025 Yamaha Car (running)
+Fuel cost for 373 miles: $52.6
+Vehicle P20V18 started. Engine started: Electric engine
+P20V18: 2012 Ford Car (running)
+Fuel cost for 175 miles: $6.2

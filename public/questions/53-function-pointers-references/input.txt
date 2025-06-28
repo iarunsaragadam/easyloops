@@ -1,1 +1,6 @@
-placeholder
+5
+ADD 10 5
+SUB 20 8
+MUL 7 6
+DIV 15 3
+POW 2 4

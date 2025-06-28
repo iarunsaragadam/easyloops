@@ -1,0 +1,9 @@
+[2023-12-02 10:00:00] INFO: Performance degraded
+[2023-12-02 10:09:00] DEBUG: Request processed
+[2023-12-02 10:12:00] WARN: Backup completed
+[2023-12-02 10:27:00] INFO: Memory allocation failed
+[2023-12-02 10:36:00] WARN: Connection timeout
+[2023-12-02 10:35:00] DEBUG: Request processed
+[2023-12-02 10:30:00] INFO: Application started
+[2023-12-02 10:49:00] WARN: Application started
+[2023-12-02 10:48:00] ERROR: Performance degraded

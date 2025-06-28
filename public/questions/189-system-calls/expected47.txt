@@ -1,0 +1,4 @@
+OPENED test.txt AS FD 3
+WRITTEN 5 BYTES TO FD 3
+READ: small
+CLOSED FD 3 (test.txt)

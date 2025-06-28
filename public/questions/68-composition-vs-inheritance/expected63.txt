@@ -1,0 +1,56 @@
+Created Motorcycle P3V0
+Created Motorcycle P3V1
+Created Motorcycle P3V2
+Created Truck P3V3
+Created Motorcycle P3V4
+Created Truck P3V5
+Created Car P3V6
+Created Motorcycle P3V7
+Created Truck P3V8
+Created Motorcycle P3V9
+Created Truck P3V10
+Created Motorcycle P3V11
+Created Car P3V12
+Created Motorcycle P3V13
+Created Car P3V14
+Created Truck P3V15
+Created Car P3V16
+Created Motorcycle P3V17
+Created Truck P3V18
+Created Motorcycle P3V19
+Created Truck P3V20
+Created Car P3V21
+Created Truck P3V22
+Created Truck P3V23
+Created Car P3V24
+Created Motorcycle P3V25
+Vehicle P3V0 started. Engine started: V8 engine
+P3V0: 2018 Honda Motorcycle (running)
+Fuel cost for 195 miles: $88.9
+Vehicle P3V2 started. Engine started: V4 engine
+P3V2: 2006 Ford Motorcycle (running)
+Fuel cost for 238 miles: $1.1
+Vehicle P3V4 started. Engine started: V6 engine
+P3V4: 2002 Toyota Motorcycle (running)
+Fuel cost for 337 miles: $2.0
+Vehicle P3V6 started. Engine started: Electric engine
+P3V6: 2011 Toyota Car (running)
+Fuel cost for 436 miles: $17.1
+Vehicle P3V8 started. Engine started: V8 engine
+P3V8: 2002 Ford Truck (running)
+Fuel cost for 183 miles: $180.8
+Vehicle P3V10 started. Engine started: Electric engine
+P3V10: 2007 Honda Truck (running)
+Fuel cost for 277 miles: $0.5
+Vehicle P3V12 started. Engine started: Electric engine
+P3V12: 2018 Toyota Car (running)
+Fuel cost for 100 miles: $3.9
+Vehicle P3V14 started. Engine started: V4 engine
+P3V14: 2004 Toyota Car (running)
+Fuel cost for 445 miles: $2.2
+Vehicle P3V16 started. Engine started: Electric engine
+P3V16: 2015 BMW Car (running)
+Fuel cost for 460 miles: $18.8
+Vehicle P3V18 started. Engine started: Electric engine
+P3V18: 2013 Ford Truck (running)
+Fuel cost for 418 miles: $24.4

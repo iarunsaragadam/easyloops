@@ -1,0 +1,23 @@
+/
+Directory 'home' created
+Directory 'home/user' created
+Directory 'home/user/documents' created
+Directory 'home/user/downloads' created
+File 'home/user/documents/readme.txt' created
+File 'home/user/documents/notes.md' created
+Changed to /home/user
+/home/user
+documents downloads
+notes.md readme.txt
+/home/user/documents/readme.txt
+2
+Changed to /home/user/downloads
+File 'file1.zip' created
+File 'file2.zip' created
+Changed to /home/user
+4
+4
+Removed 'downloads/file1.zip'
+3
+Changed to /
+3

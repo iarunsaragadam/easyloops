@@ -1,0 +1,66 @@
+Created Motorcycle P8V0
+Created Motorcycle P8V1
+Created Motorcycle P8V2
+Created Truck P8V3
+Created Truck P8V4
+Created Truck P8V5
+Created Car P8V6
+Created Truck P8V7
+Created Car P8V8
+Created Truck P8V9
+Created Motorcycle P8V10
+Created Motorcycle P8V11
+Created Truck P8V12
+Created Car P8V13
+Created Truck P8V14
+Created Motorcycle P8V15
+Created Truck P8V16
+Created Truck P8V17
+Created Car P8V18
+Created Motorcycle P8V19
+Created Truck P8V20
+Created Motorcycle P8V21
+Created Truck P8V22
+Created Truck P8V23
+Created Motorcycle P8V24
+Created Motorcycle P8V25
+Created Car P8V26
+Created Motorcycle P8V27
+Created Truck P8V28
+Created Car P8V29
+Created Car P8V30
+Created Motorcycle P8V31
+Created Car P8V32
+Created Car P8V33
+Created Truck P8V34
+Created Motorcycle P8V35
+Vehicle P8V0 started. Engine started: V6 engine
+P8V0: 2001 Yamaha Motorcycle (running)
+Fuel cost for 400 miles: $118.4
+Vehicle P8V2 started. Engine started: V8 engine
+P8V2: 2010 Yamaha Motorcycle (running)
+Fuel cost for 282 miles: $93.2
+Vehicle P8V4 started. Engine started: V8 engine
+P8V4: 2018 Ford Truck (running)
+Fuel cost for 420 miles: $382.2
+Vehicle P8V6 started. Engine started: V8 engine
+P8V6: 2010 BMW Car (running)
+Fuel cost for 198 miles: $71.7
+Vehicle P8V8 started. Engine started: V8 engine
+P8V8: 2018 Ford Car (running)
+Fuel cost for 223 miles: $87.7
+Vehicle P8V10 started. Engine started: Electric engine
+P8V10: 2010 Toyota Motorcycle (running)
+Fuel cost for 485 miles: $11.5
+Vehicle P8V12 started. Engine started: V4 engine
+P8V12: 2007 Toyota Truck (running)
+Fuel cost for 354 miles: $122.3
+Vehicle P8V14 started. Engine started: V8 engine
+P8V14: 2004 Toyota Truck (running)
+Fuel cost for 109 miles: $2.1
+Vehicle P8V16 started. Engine started: V8 engine
+P8V16: 2015 Ford Truck (running)
+Fuel cost for 385 miles: $12.0
+Vehicle P8V18 started. Engine started: V8 engine
+P8V18: 2001 Honda Car (running)
+Fuel cost for 493 miles: $130.0

@@ -1,0 +1,6 @@
+Created Motorcycle E30
+Vehicle E30 started. Engine started: V6 engine
+Vehicle E30 is already running
+Vehicle E30 stopped. Engine stopped: V6 engine
+Vehicle E30 is already stopped
+E30: 2002 Toyota Motorcycle (stopped)

@@ -1,0 +1,17 @@
+0
+File 'file_77_1.txt' created
+Directory 'dir_77_3' created
+Directory 'dir_77_4' created
+dir_77_3 dir_77_4 file_77_1.txt
+/
+1
+Directory 'dir_77_8' created
+File 'file_77_9.txt' created
+3
+dir_77_3 dir_77_4 dir_77_8 file_77_1.txt file_77_9.txt
+Directory 'dir_77_12' created
+dir_77_12 dir_77_3 dir_77_4 dir_77_8 file_77_1.txt file_77_9.txt
+/
+dir_77_12 dir_77_3 dir_77_4 dir_77_8 file_77_1.txt file_77_9.txt
+4
+2

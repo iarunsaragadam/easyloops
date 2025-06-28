@@ -1,0 +1,76 @@
+Created Car P13V0
+Created Car P13V1
+Created Car P13V2
+Created Car P13V3
+Created Car P13V4
+Created Car P13V5
+Created Motorcycle P13V6
+Created Car P13V7
+Created Truck P13V8
+Created Car P13V9
+Created Motorcycle P13V10
+Created Motorcycle P13V11
+Created Car P13V12
+Created Motorcycle P13V13
+Created Car P13V14
+Created Motorcycle P13V15
+Created Motorcycle P13V16
+Created Truck P13V17
+Created Motorcycle P13V18
+Created Motorcycle P13V19
+Created Motorcycle P13V20
+Created Motorcycle P13V21
+Created Car P13V22
+Created Car P13V23
+Created Truck P13V24
+Created Car P13V25
+Created Motorcycle P13V26
+Created Truck P13V27
+Created Car P13V28
+Created Truck P13V29
+Created Motorcycle P13V30
+Created Motorcycle P13V31
+Created Motorcycle P13V32
+Created Motorcycle P13V33
+Created Car P13V34
+Created Car P13V35
+Created Car P13V36
+Created Car P13V37
+Created Car P13V38
+Created Truck P13V39
+Created Truck P13V40
+Created Motorcycle P13V41
+Created Car P13V42
+Created Car P13V43
+Created Truck P13V44
+Created Car P13V45
+Vehicle P13V0 started. Engine started: V6 engine
+P13V0: 2007 BMW Car (running)
+Fuel cost for 245 miles: $55.4
+Vehicle P13V2 started. Engine started: V4 engine
+P13V2: 2009 Ford Car (running)
+Fuel cost for 481 miles: $111.9
+Vehicle P13V4 started. Engine started: Electric engine
+P13V4: 2019 Honda Car (running)
+Fuel cost for 363 miles: $13.7
+Vehicle P13V6 started. Engine started: V6 engine
+P13V6: 2006 Honda Motorcycle (running)
+Fuel cost for 170 miles: $38.8
+Vehicle P13V8 started. Engine started: V4 engine
+P13V8: 2004 Toyota Truck (running)
+Fuel cost for 281 miles: $65.8
+Vehicle P13V10 started. Engine started: V8 engine
+P13V10: 2006 Yamaha Motorcycle (running)
+Fuel cost for 249 miles: $104.6
+Vehicle P13V12 started. Engine started: V8 engine
+P13V12: 2017 Honda Car (running)
+Fuel cost for 332 miles: $7.2
+Vehicle P13V14 started. Engine started: Electric engine
+P13V14: 2001 Toyota Car (running)
+Fuel cost for 232 miles: $0.3
+Vehicle P13V16 started. Engine started: V6 engine
+P13V16: 2009 Ford Motorcycle (running)
+Fuel cost for 347 miles: $48.1
+Vehicle P13V18 started. Engine started: V6 engine
+P13V18: 2003 Toyota Motorcycle (running)
+Fuel cost for 404 miles: $1.8

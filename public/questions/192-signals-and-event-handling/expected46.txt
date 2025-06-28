@@ -1,0 +1,14 @@
+Processing events:
+Event 1: [P1] TYPE_0 at 0 - data_0
+Event 2: [P1] TYPE_2 at 50 - data_5
+Event 3: [P2] TYPE_1 at 10 - data_1
+Event 4: [P2] TYPE_0 at 60 - data_6
+Event 5: [P3] TYPE_2 at 20 - data_2
+Event 6: [P3] TYPE_1 at 70 - data_7
+Event 7: [P4] TYPE_0 at 30 - data_3
+Event 8: [P5] TYPE_1 at 40 - data_4
+System state:
+Total events processed: 8
+TYPE_0: 3
+TYPE_1: 3
+TYPE_2: 2

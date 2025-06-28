@@ -1,6 +1,0 @@
-Addition: 8 + 2 = 10
-Subtraction: 8 - 2 = 6
-Multiplication: 8 * 2 = 16
-Division: 8 / 2 = 4.00
-Modulus: 8 % 2 = 0
-Exponentiation: 8 ** 2 = 64

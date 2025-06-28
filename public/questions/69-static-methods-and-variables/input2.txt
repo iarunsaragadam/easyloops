@@ -1,1 +1,9 @@
-placeholder
+8
+STATS
+CREATE John 100
+STATS
+STUDENT John
+STUDENT NotFound
+CREATE Jane 0
+STATS
+UPDATE Missing 50

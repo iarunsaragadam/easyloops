@@ -1,0 +1,6 @@
+Concatenation: Hello + World = HelloWorld
+Length of first string: 5
+Length of second string: 5
+Uppercase: HELLO
+Lowercase: world
+Substring from index 2: llo

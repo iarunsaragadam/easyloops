@@ -1,0 +1,4 @@
+3
+READ 134 5
+WRITE 134 data
+CLOSE 134

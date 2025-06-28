@@ -1,0 +1,1461 @@
+OPENED perf0.txt AS FD 3
+OPENED perf1.txt AS FD 4
+OPENED perf2.txt AS FD 5
+OPENED perf3.txt AS FD 6
+OPENED perf4.txt AS FD 7
+OPENED perf5.txt AS FD 8
+OPENED perf6.txt AS FD 9
+OPENED perf7.txt AS FD 10
+OPENED perf8.txt AS FD 11
+OPENED perf9.txt AS FD 12
+WRITTEN 95 BYTES TO FD 3
+EOF
+EOF
+EOF
+EOF
+WRITTEN 77 BYTES TO FD 8
+EOF
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+EOF
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+EOF
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+EOF
+EOF
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+EOF
+WRITTEN 56 BYTES TO FD 10
+WRITTEN 85 BYTES TO FD 11
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 90 BYTES TO FD 3
+WRITTEN 37 BYTES TO FD 4
+EOF
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxx
+EOF
+READ: xxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxx
+WRITTEN 71 BYTES TO FD 12
+WRITTEN 50 BYTES TO FD 3
+READ: xxxxxxxxxxxxxxxxx
+WRITTEN 75 BYTES TO FD 5
+EOF
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 46 BYTES TO FD 8
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 32 BYTES TO FD 3
+WRITTEN 79 BYTES TO FD 4
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 53 BYTES TO FD 6
+WRITTEN 48 BYTES TO FD 7
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 65 BYTES TO FD 9
+WRITTEN 42 BYTES TO FD 10
+WRITTEN 46 BYTES TO FD 11
+READ: xxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 37 BYTES TO FD 4
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 15 BYTES TO FD 6
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxx
+WRITTEN 79 BYTES TO FD 12
+READ: xxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxx
+WRITTEN 27 BYTES TO FD 5
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 58 BYTES TO FD 7
+READ: x
+WRITTEN 80 BYTES TO FD 9
+WRITTEN 49 BYTES TO FD 10
+WRITTEN 42 BYTES TO FD 11
+WRITTEN 58 BYTES TO FD 12
+READ: xxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxx
+WRITTEN 17 BYTES TO FD 5
+WRITTEN 45 BYTES TO FD 6
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 23 BYTES TO FD 9
+READ: xxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 84 BYTES TO FD 12
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 100 BYTES TO FD 7
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 83 BYTES TO FD 9
+WRITTEN 39 BYTES TO FD 10
+READ: xxxxxx
+WRITTEN 33 BYTES TO FD 12
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 79 BYTES TO FD 4
+WRITTEN 47 BYTES TO FD 5
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxx
+WRITTEN 59 BYTES TO FD 10
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 18 BYTES TO FD 3
+WRITTEN 59 BYTES TO FD 4
+READ: xxxxxxxxxxxxxx
+WRITTEN 96 BYTES TO FD 6
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 63 BYTES TO FD 8
+READ: xxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 12 BYTES TO FD 10
+WRITTEN 87 BYTES TO FD 11
+WRITTEN 94 BYTES TO FD 12
+READ: xxxxxxxxxx
+READ: xxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxx
+WRITTEN 11 BYTES TO FD 6
+WRITTEN 94 BYTES TO FD 7
+WRITTEN 42 BYTES TO FD 8
+READ: xxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxx
+READ: xxxxxxxxxxxxxxxxxxxxx
+WRITTEN 13 BYTES TO FD 7
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 20 BYTES TO FD 11
+READ: xxxxxxxxx
+READ: x
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 73 BYTES TO FD 6
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: x
+WRITTEN 78 BYTES TO FD 9
+READ: xxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 37 BYTES TO FD 5
+READ: xxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 82 BYTES TO FD 8
+READ: xxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 39 BYTES TO FD 11
+WRITTEN 78 BYTES TO FD 12
+READ: xxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxx
+WRITTEN 53 BYTES TO FD 5
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 95 BYTES TO FD 9
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 80 BYTES TO FD 11
+WRITTEN 42 BYTES TO FD 12
+WRITTEN 55 BYTES TO FD 3
+READ: xxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxx
+READ: x
+WRITTEN 71 BYTES TO FD 8
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 78 BYTES TO FD 12
+READ: xxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 27 BYTES TO FD 6
+READ: xxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 10 BYTES TO FD 9
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxx
+READ: xx
+WRITTEN 65 BYTES TO FD 9
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 71 BYTES TO FD 11
+READ: xxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 33 BYTES TO FD 3
+WRITTEN 36 BYTES TO FD 4
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 63 BYTES TO FD 7
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 84 BYTES TO FD 10
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 81 BYTES TO FD 12
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 34 BYTES TO FD 5
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 63 BYTES TO FD 7
+READ: xxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 65 BYTES TO FD 12
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 59 BYTES TO FD 5
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 86 BYTES TO FD 7
+WRITTEN 67 BYTES TO FD 8
+WRITTEN 75 BYTES TO FD 9
+WRITTEN 49 BYTES TO FD 10
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 39 BYTES TO FD 4
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 49 BYTES TO FD 7
+READ: x
+READ: xxxxxxxx
+READ: xxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 39 BYTES TO FD 4
+READ: xxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 20 BYTES TO FD 8
+WRITTEN 79 BYTES TO FD 9
+READ: xxxxx
+WRITTEN 87 BYTES TO FD 11
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxx
+WRITTEN 45 BYTES TO FD 4
+WRITTEN 72 BYTES TO FD 5
+READ: xxxxxxxx
+WRITTEN 100 BYTES TO FD 7
+READ: xxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 85 BYTES TO FD 5
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 39 BYTES TO FD 8
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 75 BYTES TO FD 5
+WRITTEN 26 BYTES TO FD 6
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 10 BYTES TO FD 11
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 63 BYTES TO FD 4
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 72 BYTES TO FD 8
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 74 BYTES TO FD 6
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 61 BYTES TO FD 8
+READ: xxxxxxxxxxxxxxxxxx
+WRITTEN 64 BYTES TO FD 10
+WRITTEN 12 BYTES TO FD 11
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 77 BYTES TO FD 3
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 21 BYTES TO FD 9
+WRITTEN 23 BYTES TO FD 10
+WRITTEN 82 BYTES TO FD 11
+READ: xxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxx
+WRITTEN 48 BYTES TO FD 7
+WRITTEN 73 BYTES TO FD 8
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 92 BYTES TO FD 12
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 23 BYTES TO FD 5
+WRITTEN 38 BYTES TO FD 6
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 83 BYTES TO FD 8
+WRITTEN 25 BYTES TO FD 9
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 37 BYTES TO FD 11
+WRITTEN 53 BYTES TO FD 12
+READ: xxxxxxxxxxxxxxxxxxxx
+READ: xxxx
+WRITTEN 78 BYTES TO FD 5
+WRITTEN 68 BYTES TO FD 6
+WRITTEN 35 BYTES TO FD 7
+WRITTEN 68 BYTES TO FD 8
+WRITTEN 66 BYTES TO FD 9
+WRITTEN 26 BYTES TO FD 10
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 47 BYTES TO FD 3
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 18 BYTES TO FD 6
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 31 BYTES TO FD 8
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 58 BYTES TO FD 10
+WRITTEN 73 BYTES TO FD 11
+WRITTEN 41 BYTES TO FD 12
+WRITTEN 28 BYTES TO FD 3
+WRITTEN 37 BYTES TO FD 4
+WRITTEN 57 BYTES TO FD 5
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 37 BYTES TO FD 9
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 57 BYTES TO FD 4
+WRITTEN 17 BYTES TO FD 5
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 15 BYTES TO FD 7
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 100 BYTES TO FD 11
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 63 BYTES TO FD 3
+WRITTEN 52 BYTES TO FD 4
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+READ: xxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 93 BYTES TO FD 12
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 84 BYTES TO FD 4
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 88 BYTES TO FD 6
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+WRITTEN 100 BYTES TO FD 8
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 13 BYTES TO FD 11
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 30 BYTES TO FD 3
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+READ: xxxxxxxxxx
+WRITTEN 67 BYTES TO FD 6
+FD 3: perf0.txt (rw)
+FD 4: perf1.txt (rw)
+FD 5: perf2.txt (rw)
+FD 6: perf3.txt (rw)
+FD 7: perf4.txt (rw)
+FD 8: perf5.txt (rw)
+FD 9: perf6.txt (rw)
+FD 10: perf7.txt (rw)
+FD 11: perf8.txt (rw)
+FD 12: perf9.txt (rw)
+WRITTEN 23 BYTES TO FD 8
+READ: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+CLOSED FD 3 (perf0.txt)
+CLOSED FD 4 (perf1.txt)
+CLOSED FD 5 (perf2.txt)
+CLOSED FD 6 (perf3.txt)
+CLOSED FD 7 (perf4.txt)
+CLOSED FD 8 (perf5.txt)
+CLOSED FD 9 (perf6.txt)
+CLOSED FD 10 (perf7.txt)
+CLOSED FD 11 (perf8.txt)
+CLOSED FD 12 (perf9.txt)

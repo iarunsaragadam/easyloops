@@ -1,0 +1,13 @@
+12
+OPEN read1.txt r
+OPEN write1.txt w
+OPEN readwrite1.txt rw
+READ 3 5
+WRITE 4 hello
+READ 5 3
+WRITE 5 world
+LIST
+CLOSE 3
+CLOSE 4
+CLOSE 5
+LIST

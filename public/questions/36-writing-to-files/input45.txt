@@ -1,0 +1,5 @@
+4
+read 5k2.data
+append clp1.ini
+read 29czkg.cfg
+append o4cd.data WFqZ

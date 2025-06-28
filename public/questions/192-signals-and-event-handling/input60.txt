@@ -1,0 +1,9 @@
+8
+833 1 TYPE_0 same_timestamp_0
+833 5 TYPE_1 same_timestamp_1
+833 1 TYPE_2 same_timestamp_2
+833 1 TYPE_3 same_timestamp_3
+833 3 TYPE_0 same_timestamp_4
+833 5 TYPE_1 same_timestamp_5
+833 7 TYPE_2 same_timestamp_6
+833 3 TYPE_3 same_timestamp_7

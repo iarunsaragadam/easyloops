@@ -1,0 +1,5 @@
+CREATE 2
+CONNECT client1
+CREATE 4
+CONNECT new_client
+STATUS

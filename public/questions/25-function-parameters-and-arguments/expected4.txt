@@ -1,0 +1,2 @@
+Function called: calculate('add', 0, 10)
+Result: 10

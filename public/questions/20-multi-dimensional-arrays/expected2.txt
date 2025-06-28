@@ -1,1 +1,7 @@
-placeholder
+Matrix:
+42
+Row sums:
+Row 1: 42
+Column sums:
+Column 1: 42
+Maximum element: 42 at position (1, 1)

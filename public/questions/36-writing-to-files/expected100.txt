@@ -1,0 +1,14 @@
+CREATE: complex2.txt
+READ: complex0.txt = FILE_NOT_FOUND
+READ: complex0.txt = FILE_NOT_FOUND
+CREATE: complex1.txt
+READ: complex2.txt =
+READ: complex1.txt =
+APPEND: complex2.txt (37 total chars)
+WRITE: complex0.txt (45 chars)
+APPEND: complex0.txt (60 total chars)
+READ: complex1.txt =
+APPEND: complex2.txt (61 total chars)
+APPEND: complex1.txt (27 total chars)
+READ: complex2.txt = wK0zxcx6B9QHhmnBaE9oGDahPkGMkdU7HIcdJzFNR7tE4Zq8rkQ 64C1np7HI
+CREATE: complex1.txt

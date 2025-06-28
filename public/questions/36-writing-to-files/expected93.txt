@@ -1,0 +1,11 @@
+APPEND: complex2.txt (21 total chars)
+WRITE: complex3.txt (14 chars)
+CREATE: complex3.txt
+CREATE: complex2.txt
+READ: complex6.txt = FILE_NOT_FOUND
+WRITE: complex5.txt (15 chars)
+READ: complex1.txt = FILE_NOT_FOUND
+CREATE: complex0.txt
+READ: complex5.txt = jL5xSZ3n8i UNso
+APPEND: complex2.txt (68 total chars)
+CREATE: complex7.txt

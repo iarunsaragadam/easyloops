@@ -1,0 +1,4 @@
+[2023-12-01 10:00:00] ERROR: Edge case test message 0
+[2023-12-01 10:13:00] INFO: Edge case test message 1
+[2023-12-01 10:16:00] ERROR: Edge case test message 2
+[2023-12-01 10:54:00] ERROR: Edge case test message 3

@@ -1,0 +1,4 @@
+Number: 0
+Sign: zero
+Parity: even
+Classification: zero even number

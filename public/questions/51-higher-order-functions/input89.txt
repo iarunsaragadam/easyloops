@@ -1,0 +1,1 @@
+-2 | NEG, POW 3, ADD -2, POW 2, MUL 4, SQRT

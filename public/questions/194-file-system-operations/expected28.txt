@@ -1,0 +1,6 @@
+cd: no such file or directory: nonexistent
+ls: cannot access 'nonexistent': No such file or directory
+rm: cannot remove 'nonexistent': No such file or directory
+Directory 'a' created
+File 'a/b' created
+cd: not a directory: a/b

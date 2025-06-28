@@ -1,0 +1,6 @@
+OPENED ogvqjzvt.dat AS FD 3
+OPENED ozr.log AS FD 4
+OPENED ptqfs.log AS FD 5
+OPENED mypcqr.log AS FD 6
+CLOSED FD 3 (ogvqjzvt.dat)
+CLOSED FD 4 (ozr.log)

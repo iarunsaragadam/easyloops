@@ -1,0 +1,5 @@
+Duplicates: 1 2 4 8 16 32 64 128 256 512
+Naive Time: 0.017ms
+Optimized Time: 0.005ms
+Faster: Optimized
+Speedup: 3.72x

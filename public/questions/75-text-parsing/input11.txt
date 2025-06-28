@@ -1,0 +1,6 @@
+[2023-12-12 10:00:00] ERROR: System maintenance
+[2023-12-12 10:02:00] INFO: User logged in
+[2023-12-12 10:02:00] DEBUG: Disk space low
+[2023-12-12 10:30:00] DEBUG: Service unavailable
+[2023-12-12 10:12:00] DEBUG: Authentication failed
+[2023-12-12 10:15:00] INFO: Application started

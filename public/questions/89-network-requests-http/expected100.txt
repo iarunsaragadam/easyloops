@@ -1,0 +1,9 @@
+body_length=36
+body_lines=1
+content_type=text/plain
+header_count=2
+http_version=1.1
+server=TeapotServer/1.0
+status_category=Client Error
+status_code=418
+status_message=I'm a teapot

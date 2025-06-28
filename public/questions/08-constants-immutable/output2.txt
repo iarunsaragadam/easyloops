@@ -1,0 +1,4 @@
+Radius: 3.0
+PI constant : 3.14159
+Circumference: 18.84954
+Area: 28.274309999999996

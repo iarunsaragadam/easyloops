@@ -1,0 +1,21 @@
+Directory 'level_0' created
+Directory 'level_1' created
+Directory 'level_0/sub_1' created
+Directory 'level_2' created
+Directory 'level_1/sub_2' created
+Directory 'level_3' created
+Directory 'level_2/sub_3' created
+Directory 'level_4' created
+Directory 'level_3/sub_4' created
+Directory 'level_5' created
+Directory 'level_4/sub_5' created
+Directory 'level_6' created
+Directory 'level_5/sub_6' created
+Directory 'level_7' created
+Directory 'level_6/sub_7' created
+Directory 'level_8' created
+Directory 'level_7/sub_8' created
+Directory 'level_9' created
+Directory 'level_8/sub_9' created
+19
+0

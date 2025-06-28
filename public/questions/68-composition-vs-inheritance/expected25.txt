@@ -1,0 +1,4 @@
+Created Motorcycle M25
+Vehicle M25 started. Engine started: V8 engine
+M25: 2019 Toyota Motorcycle (running)
+Fuel cost for 151 miles: $0.7

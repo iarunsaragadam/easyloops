@@ -1,0 +1,4 @@
+3
+create k9pe.data
+read xlyaepd.cfg
+append bx2p8yij87.txt

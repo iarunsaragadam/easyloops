@@ -1,0 +1,7 @@
+HTTP/2.0 401 Unauthorized
+Content-Type: image/png
+Content-Length: 53
+Server: OpenResty/1.19.9.1
+
+Response body for test case 23
+Second line of content

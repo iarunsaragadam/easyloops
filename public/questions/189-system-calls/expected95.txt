@@ -1,0 +1,62 @@
+OPENED complex13_0.txt AS FD 3
+OPENED complex13_1.txt AS FD 4
+OPENED complex13_2.txt AS FD 5
+OPENED complex13_3.txt AS FD 6
+OPENED complex13_4.txt AS FD 7
+OPENED complex13_5.txt AS FD 8
+FD 3: complex13_0.txt (w)
+FD 4: complex13_1.txt (w)
+FD 5: complex13_2.txt (r)
+FD 6: complex13_3.txt (r)
+FD 7: complex13_4.txt (w)
+FD 8: complex13_5.txt (w)
+WRITTEN 6 BYTES TO FD 3
+WRITTEN 6 BYTES TO FD 7
+EOF
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex13_0.txt (w)
+FD 4: complex13_1.txt (w)
+FD 5: complex13_2.txt (r)
+FD 6: complex13_3.txt (r)
+FD 7: complex13_4.txt (w)
+FD 8: complex13_5.txt (w)
+FD 3: complex13_0.txt (w)
+FD 4: complex13_1.txt (w)
+FD 5: complex13_2.txt (r)
+FD 6: complex13_3.txt (r)
+FD 7: complex13_4.txt (w)
+FD 8: complex13_5.txt (w)
+FD 3: complex13_0.txt (w)
+FD 4: complex13_1.txt (w)
+FD 5: complex13_2.txt (r)
+FD 6: complex13_3.txt (r)
+FD 7: complex13_4.txt (w)
+FD 8: complex13_5.txt (w)
+WRITTEN 6 BYTES TO FD 8
+FD 3: complex13_0.txt (w)
+FD 4: complex13_1.txt (w)
+FD 5: complex13_2.txt (r)
+FD 6: complex13_3.txt (r)
+FD 7: complex13_4.txt (w)
+FD 8: complex13_5.txt (w)
+WRITTEN 5 BYTES TO FD 7
+EOF
+WRITTEN 6 BYTES TO FD 8
+FD 3: complex13_0.txt (w)
+FD 4: complex13_1.txt (w)
+FD 5: complex13_2.txt (r)
+FD 6: complex13_3.txt (r)
+FD 7: complex13_4.txt (w)
+FD 8: complex13_5.txt (w)
+FD 3: complex13_0.txt (w)
+FD 4: complex13_1.txt (w)
+FD 5: complex13_2.txt (r)
+FD 6: complex13_3.txt (r)
+FD 7: complex13_4.txt (w)
+FD 8: complex13_5.txt (w)
+CLOSED FD 3 (complex13_0.txt)
+CLOSED FD 4 (complex13_1.txt)
+CLOSED FD 5 (complex13_2.txt)
+CLOSED FD 6 (complex13_3.txt)
+CLOSED FD 7 (complex13_4.txt)
+CLOSED FD 8 (complex13_5.txt)

@@ -1,1 +1,6 @@
-placeholder
+Total: 3, Sum: 247, Average: 82.33
+Total: 3, Sum: 267, Average: 89.00
+Alex: 95
+Total: 3, Sum: 273, Average: 91.00
+Total: 4, Sum: 349, Average: 87.25
+Dana: 76

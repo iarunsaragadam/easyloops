@@ -1,0 +1,82 @@
+OPENED complex17_0.txt AS FD 3
+OPENED complex17_1.txt AS FD 4
+OPENED complex17_2.txt AS FD 5
+OPENED complex17_3.txt AS FD 6
+OPENED complex17_4.txt AS FD 7
+EOF
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+EOF
+EOF
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+EOF
+EOF
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+WRITTEN 6 BYTES TO FD 7
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+EOF
+EOF
+WRITTEN 6 BYTES TO FD 7
+EOF
+WRITTEN 5 BYTES TO FD 7
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+EOF
+EOF
+EOF
+EOF
+EOF
+EOF
+EOF
+EOF
+EOF
+EOF
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+WRITTEN 6 BYTES TO FD 3
+FD 3: complex17_0.txt (rw)
+FD 4: complex17_1.txt (r)
+FD 5: complex17_2.txt (r)
+FD 6: complex17_3.txt (r)
+FD 7: complex17_4.txt (w)
+CLOSED FD 3 (complex17_0.txt)
+CLOSED FD 4 (complex17_1.txt)
+CLOSED FD 5 (complex17_2.txt)
+CLOSED FD 6 (complex17_3.txt)
+CLOSED FD 7 (complex17_4.txt)

@@ -1,0 +1,14 @@
+13
+332 3 TYPE_0 same_timestamp_0
+332 7 TYPE_1 same_timestamp_1
+332 8 TYPE_2 same_timestamp_2
+332 10 TYPE_3 same_timestamp_3
+332 9 TYPE_0 same_timestamp_4
+332 10 TYPE_1 same_timestamp_5
+332 4 TYPE_2 same_timestamp_6
+332 4 TYPE_3 same_timestamp_7
+332 7 TYPE_0 same_timestamp_8
+332 7 TYPE_1 same_timestamp_9
+332 5 TYPE_2 same_timestamp_10
+332 10 TYPE_3 same_timestamp_11
+332 1 TYPE_0 same_timestamp_12

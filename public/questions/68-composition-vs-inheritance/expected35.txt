@@ -1,0 +1,2 @@
+Created Car LD1
+Fuel cost for 1000 miles: $140.0

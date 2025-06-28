@@ -1,0 +1,2 @@
+WRITE: special.txt (14 chars)
+READ: special.txt = Hello@#$%^&*()

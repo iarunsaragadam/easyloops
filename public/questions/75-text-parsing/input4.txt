@@ -1,0 +1,5 @@
+[2023-12-05 10:00:00] DEBUG: Connection timeout
+[2023-12-05 10:09:00] ERROR: Backup completed
+[2023-12-05 10:18:00] WARN: Security alert
+[2023-12-05 10:27:00] WARN: Authentication failed
+[2023-12-05 10:36:00] DEBUG: Backup completed

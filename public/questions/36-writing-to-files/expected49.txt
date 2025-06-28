@@ -1,0 +1,5 @@
+CREATE: tn25.cfg
+WRITE: z8mq.ini (44 chars)
+READ: q4gig.data = FILE_NOT_FOUND
+CREATE: pa7uehmutl.log
+READ: bnmrf43tud.txt = FILE_NOT_FOUND

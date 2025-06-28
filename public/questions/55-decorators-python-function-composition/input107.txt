@@ -1,0 +1,26 @@
+-9999
+24
+multiply -67
+square
+add 77
+add -57
+abs
+abs
+add 114
+multiply 77
+square
+square
+multiply -83
+abs
+square
+multiply 63
+abs
+negate
+abs
+multiply 71
+multiply -71
+abs
+add -502
+abs
+abs
+abs

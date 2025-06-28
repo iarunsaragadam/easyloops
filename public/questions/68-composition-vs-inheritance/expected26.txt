@@ -1,0 +1,4 @@
+Created Truck T26
+Vehicle T26 started. Engine started: Electric engine
+T26: 2020 Ford Truck (running)
+Fuel cost for 154 miles: $0.3

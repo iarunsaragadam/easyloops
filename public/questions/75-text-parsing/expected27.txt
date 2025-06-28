@@ -1,0 +1,15 @@
+LOG LEVEL SUMMARY:
+DEBUG: 4
+ERROR: 4
+INFO: 3
+
+ERROR ENTRIES:
+[2023-12-28 10:12:00] Request processed
+[2023-12-28 10:20:00] Configuration loaded
+[2023-12-28 10:50:00] Cache updated
+[2023-12-28 11:40:00] Authentication failed
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-28 10:00:00
+Last entry: 2023-12-28 11:40:00
+Total entries: 11

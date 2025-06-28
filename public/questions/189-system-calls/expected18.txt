@@ -1,0 +1,14 @@
+OPENED flotiu.txt AS FD 3
+OPENED skml.txt AS FD 4
+OPENED gvemxejb.dat AS FD 5
+OPENED ucfh.tmp AS FD 6
+OPENED xhaplgrm.dat AS FD 7
+WRITTEN 10 BYTES TO FD 6
+FD 3: flotiu.txt (w)
+FD 4: skml.txt (rw)
+FD 5: gvemxejb.dat (rw)
+FD 6: ucfh.tmp (w)
+FD 7: xhaplgrm.dat (w)
+CLOSED FD 3 (flotiu.txt)
+CLOSED FD 4 (skml.txt)
+CLOSED FD 5 (gvemxejb.dat)

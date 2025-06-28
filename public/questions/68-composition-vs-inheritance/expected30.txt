@@ -1,0 +1,4 @@
+Created Motorcycle M30
+Vehicle M30 started. Engine started: Electric engine
+M30: 2018 Nissan Motorcycle (running)
+Fuel cost for 71 miles: $0.1

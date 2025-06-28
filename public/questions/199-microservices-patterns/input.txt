@@ -1,1 +1,6 @@
-placeholder
+4 4
+auth payment 10
+payment inventory 15
+inventory order 20
+auth user-service 25
+auth order

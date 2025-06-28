@@ -1,0 +1,4 @@
+Created Car C20
+Vehicle C20 started. Engine started: V6 engine
+C20: 2021 Nissan Car (running)
+Fuel cost for 177 miles: $1.4

@@ -1,0 +1,4 @@
+Created Truck T10
+Vehicle T10 started. Engine started: V6 engine
+T10: 2019 Honda Truck (running)
+Fuel cost for 144 miles: $2.1

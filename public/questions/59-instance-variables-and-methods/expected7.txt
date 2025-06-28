@@ -1,0 +1,8 @@
+Account ACC001 created for Alice
+Account ACC002 created for Jack
+Deposited 403.00 to account ACC002
+Deposited 335.00 to account ACC001
+Withdrew 182.00 from account ACC002
+Balance for account ACC001: 933.00
+Withdrew 162.00 from account ACC002
+Balance for account ACC001: 933.00

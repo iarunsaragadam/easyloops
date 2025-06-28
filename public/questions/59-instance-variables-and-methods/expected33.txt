@@ -1,0 +1,4 @@
+Account ACC001 created for Charlie
+Deposited 0.01 to account ACC001
+Withdrew 500000.00 from account ACC001
+Balance for account ACC001: 500000.00

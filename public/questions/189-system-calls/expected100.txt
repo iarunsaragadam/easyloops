@@ -1,0 +1,45 @@
+OPENED complex18_0.txt AS FD 3
+OPENED complex18_1.txt AS FD 4
+OPENED complex18_2.txt AS FD 5
+OPENED complex18_3.txt AS FD 6
+OPENED complex18_4.txt AS FD 7
+OPENED complex18_5.txt AS FD 8
+WRITTEN 5 BYTES TO FD 6
+FD 3: complex18_0.txt (r)
+FD 4: complex18_1.txt (r)
+FD 5: complex18_2.txt (rw)
+FD 6: complex18_3.txt (rw)
+FD 7: complex18_4.txt (r)
+FD 8: complex18_5.txt (rw)
+FD 3: complex18_0.txt (r)
+FD 4: complex18_1.txt (r)
+FD 5: complex18_2.txt (rw)
+FD 6: complex18_3.txt (rw)
+FD 7: complex18_4.txt (r)
+FD 8: complex18_5.txt (rw)
+FD 3: complex18_0.txt (r)
+FD 4: complex18_1.txt (r)
+FD 5: complex18_2.txt (rw)
+FD 6: complex18_3.txt (rw)
+FD 7: complex18_4.txt (r)
+FD 8: complex18_5.txt (rw)
+EOF
+FD 3: complex18_0.txt (r)
+FD 4: complex18_1.txt (r)
+FD 5: complex18_2.txt (rw)
+FD 6: complex18_3.txt (rw)
+FD 7: complex18_4.txt (r)
+FD 8: complex18_5.txt (rw)
+EOF
+WRITTEN 6 BYTES TO FD 6
+EOF
+WRITTEN 5 BYTES TO FD 5
+WRITTEN 6 BYTES TO FD 5
+WRITTEN 6 BYTES TO FD 5
+WRITTEN 6 BYTES TO FD 8
+CLOSED FD 3 (complex18_0.txt)
+CLOSED FD 4 (complex18_1.txt)
+CLOSED FD 5 (complex18_2.txt)
+CLOSED FD 6 (complex18_3.txt)
+CLOSED FD 7 (complex18_4.txt)
+CLOSED FD 8 (complex18_5.txt)

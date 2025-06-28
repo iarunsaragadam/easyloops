@@ -1,0 +1,27 @@
+2771
+25
+add -879
+add -9
+square
+abs
+negate
+add -729
+abs
+multiply 93
+negate
+multiply -31
+add 876
+abs
+abs
+negate
+square
+abs
+multiply -35
+negate
+square
+negate
+square
+multiply -89
+abs
+multiply 66
+add -612

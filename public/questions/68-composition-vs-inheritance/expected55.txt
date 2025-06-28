@@ -1,0 +1,6 @@
+Created Car E25
+Vehicle E25 started. Engine started: Electric engine
+Vehicle E25 is already running
+Vehicle E25 stopped. Engine stopped: Electric engine
+Vehicle E25 is already stopped
+E25: 2001 Toyota Car (stopped)

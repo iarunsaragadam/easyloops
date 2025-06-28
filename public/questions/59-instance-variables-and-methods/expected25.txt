@@ -1,0 +1,7 @@
+Account ACC001 created for Grace
+Deposited 479.00 to account ACC001
+Balance for account ACC001: 1580.00
+Deposited 210.00 to account ACC001
+Withdrew 334.00 from account ACC001
+Withdrew 255.00 from account ACC001
+Balance for account ACC001: 1201.00

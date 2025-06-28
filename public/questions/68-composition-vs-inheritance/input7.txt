@@ -1,0 +1,4 @@
+CREATE Car C7 Nissan 2020 Electric 219 electric
+START C7
+INFO C7
+FUEL_COST C7 186

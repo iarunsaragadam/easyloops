@@ -1,0 +1,4 @@
+READ: 5k2.data = FILE_NOT_FOUND
+APPEND: clp1.ini (0 total chars)
+READ: 29czkg.cfg = FILE_NOT_FOUND
+APPEND: o4cd.data (4 total chars)

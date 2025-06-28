@@ -1,0 +1,96 @@
+Created Motorcycle P23V0
+Created Truck P23V1
+Created Truck P23V2
+Created Car P23V3
+Created Car P23V4
+Created Motorcycle P23V5
+Created Car P23V6
+Created Motorcycle P23V7
+Created Motorcycle P23V8
+Created Motorcycle P23V9
+Created Car P23V10
+Created Truck P23V11
+Created Car P23V12
+Created Motorcycle P23V13
+Created Motorcycle P23V14
+Created Truck P23V15
+Created Car P23V16
+Created Motorcycle P23V17
+Created Car P23V18
+Created Car P23V19
+Created Car P23V20
+Created Truck P23V21
+Created Motorcycle P23V22
+Created Car P23V23
+Created Car P23V24
+Created Motorcycle P23V25
+Created Truck P23V26
+Created Truck P23V27
+Created Truck P23V28
+Created Truck P23V29
+Created Motorcycle P23V30
+Created Car P23V31
+Created Motorcycle P23V32
+Created Motorcycle P23V33
+Created Truck P23V34
+Created Truck P23V35
+Created Car P23V36
+Created Truck P23V37
+Created Car P23V38
+Created Truck P23V39
+Created Truck P23V40
+Created Motorcycle P23V41
+Created Motorcycle P23V42
+Created Truck P23V43
+Created Car P23V44
+Created Truck P23V45
+Created Truck P23V46
+Created Motorcycle P23V47
+Created Truck P23V48
+Created Truck P23V49
+Created Car P23V50
+Created Car P23V51
+Created Car P23V52
+Created Motorcycle P23V53
+Created Motorcycle P23V54
+Created Motorcycle P23V55
+Created Motorcycle P23V56
+Created Truck P23V57
+Created Truck P23V58
+Created Car P23V59
+Created Car P23V60
+Created Motorcycle P23V61
+Created Motorcycle P23V62
+Created Motorcycle P23V63
+Created Motorcycle P23V64
+Created Car P23V65
+Vehicle P23V0 started. Engine started: V6 engine
+P23V0: 2024 Honda Motorcycle (running)
+Fuel cost for 244 miles: $32.0
+Vehicle P23V2 started. Engine started: V8 engine
+P23V2: 2011 Honda Truck (running)
+Fuel cost for 453 miles: $6.9
+Vehicle P23V4 started. Engine started: Electric engine
+P23V4: 2006 Toyota Car (running)
+Fuel cost for 393 miles: $0.5
+Vehicle P23V6 started. Engine started: Electric engine
+P23V6: 2000 Toyota Car (running)
+Fuel cost for 435 miles: $14.3
+Vehicle P23V8 started. Engine started: V6 engine
+P23V8: 2025 Yamaha Motorcycle (running)
+Fuel cost for 217 miles: $1.2
+Vehicle P23V10 started. Engine started: Electric engine
+P23V10: 2015 Yamaha Car (running)
+Fuel cost for 155 miles: $5.5
+Vehicle P23V12 started. Engine started: Electric engine
+P23V12: 2002 Yamaha Car (running)
+Fuel cost for 351 miles: $0.5
+Vehicle P23V14 started. Engine started: V4 engine
+P23V14: 2017 Toyota Motorcycle (running)
+Fuel cost for 232 miles: $21.6
+Vehicle P23V16 started. Engine started: V4 engine
+P23V16: 2007 Honda Car (running)
+Fuel cost for 364 miles: $102.1
+Vehicle P23V18 started. Engine started: V4 engine
+P23V18: 2016 Ford Car (running)
+Fuel cost for 391 miles: $84.9

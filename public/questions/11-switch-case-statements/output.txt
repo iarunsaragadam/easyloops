@@ -1,0 +1,4 @@
+First number: 10
+Operator: +
+Second number: 5
+Result: 10 + 5 = 15

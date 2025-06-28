@@ -1,0 +1,6 @@
+5
+pwd
+ls
+ls
+ls
+count files

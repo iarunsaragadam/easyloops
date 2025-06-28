@@ -1,0 +1,8 @@
+Concatenation: Code + Test = CodeTest
+Length of first string: 4
+Length of second string: 4
+Uppercase: CODE
+Lowercase: test
+Substring from index 2: de
+Substring from index 3: e
+Substring from index 1: ode

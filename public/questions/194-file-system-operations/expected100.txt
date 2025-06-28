@@ -1,0 +1,9 @@
+Directory 'abs_test' created
+Changed to /abs_test
+Directory 'rel_sub' created
+File 'rel_sub/file.txt' created
+Changed to /
+file.txt
+1
+Changed to /abs_test/rel_sub
+/abs_test/rel_sub

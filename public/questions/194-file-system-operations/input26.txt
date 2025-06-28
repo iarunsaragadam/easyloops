@@ -1,0 +1,7 @@
+6
+mkdir empty
+ls empty
+cd empty
+ls
+cd ..
+rm empty

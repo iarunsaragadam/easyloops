@@ -1,0 +1,10 @@
+Directory 'test_81' created
+Directory 'test_81/sub1' created
+Directory 'test_81/sub2' created
+File 'test_81/file1.txt' created
+File 'test_81/sub1/file2.txt' created
+file1.txt sub1 sub2
+/test_81/sub1/file2.txt
+Removed 'test_81/sub1/file2.txt'
+Removed 'test_81/sub1'
+1

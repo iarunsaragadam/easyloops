@@ -1,0 +1,7 @@
+/
+Directory 'dir_15_0' created
+Directory 'dir_15_1' created
+Directory 'dir_15_2' created
+File 'file_15_3.txt' created
+File 'file_15_4.txt' created
+2

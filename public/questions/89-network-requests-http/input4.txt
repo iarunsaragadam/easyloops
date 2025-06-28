@@ -1,0 +1,7 @@
+HTTP/1.1 403 Forbidden
+Content-Type: text/css
+Content-Length: 52
+Server: Caddy/2.4.6
+
+Response body for test case 4
+Second line of content

@@ -1,0 +1,5 @@
+-27
+3
+add 89
+negate
+add 981

@@ -1,0 +1,4 @@
+OPENED eym.tmp AS FD 3
+OPENED bhy.log AS FD 4
+FD 3: eym.tmp (r)
+FD 4: bhy.log (r)

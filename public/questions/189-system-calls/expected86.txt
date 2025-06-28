@@ -1,0 +1,40 @@
+OPENED complex4_0.txt AS FD 3
+OPENED complex4_1.txt AS FD 4
+EOF
+WRITTEN 6 BYTES TO FD 4
+EOF
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+EOF
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+WRITTEN 6 BYTES TO FD 4
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+EOF
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+WRITTEN 5 BYTES TO FD 4
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex4_0.txt (r)
+FD 4: complex4_1.txt (w)
+CLOSED FD 3 (complex4_0.txt)
+CLOSED FD 4 (complex4_1.txt)

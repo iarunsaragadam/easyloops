@@ -1,0 +1,112 @@
+OPENED complex22_0.txt AS FD 3
+OPENED complex22_1.txt AS FD 4
+OPENED complex22_2.txt AS FD 5
+OPENED complex22_3.txt AS FD 6
+OPENED complex22_4.txt AS FD 7
+OPENED complex22_5.txt AS FD 8
+OPENED complex22_6.txt AS FD 9
+WRITTEN 6 BYTES TO FD 7
+READ: data26
+EOF
+EOF
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+READ: d
+EOF
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+EOF
+WRITTEN 5 BYTES TO FD 4
+WRITTEN 6 BYTES TO FD 7
+EOF
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+EOF
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+EOF
+READ: dat
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+EOF
+WRITTEN 5 BYTES TO FD 7
+EOF
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+EOF
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+READ: data26d
+READ: data26data
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+FD 3: complex22_0.txt (r)
+FD 4: complex22_1.txt (rw)
+FD 5: complex22_2.txt (r)
+FD 6: complex22_3.txt (w)
+FD 7: complex22_4.txt (rw)
+FD 8: complex22_5.txt (r)
+FD 9: complex22_6.txt (r)
+EOF
+CLOSED FD 3 (complex22_0.txt)
+CLOSED FD 4 (complex22_1.txt)
+CLOSED FD 5 (complex22_2.txt)
+CLOSED FD 6 (complex22_3.txt)
+CLOSED FD 7 (complex22_4.txt)
+CLOSED FD 8 (complex22_5.txt)
+CLOSED FD 9 (complex22_6.txt)

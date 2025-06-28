@@ -1,0 +1,10 @@
+9
+OPEN apewvasr.dat rw
+OPEN apx.log rw
+OPEN hxzikbo.dat r
+LIST
+WRITE 3 data test code example
+LIST
+CLOSE 3
+CLOSE 4
+CLOSE 5

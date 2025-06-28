@@ -1,0 +1,25 @@
+READ: complex2.txt = FILE_NOT_FOUND
+CREATE: complex0.txt
+CREATE: complex1.txt
+WRITE: complex2.txt (9 chars)
+APPEND: complex1.txt (47 total chars)
+READ: complex0.txt =
+WRITE: complex2.txt (8 chars)
+APPEND: complex0.txt (10 total chars)
+WRITE: complex0.txt (43 chars)
+APPEND: complex1.txt (81 total chars)
+READ: complex0.txt = FQaMXxrxTvXuDJMBsEBV4T2pZFzaexMq5mGxN7K3a63
+CREATE: complex0.txt
+CREATE: complex2.txt
+CREATE: complex1.txt
+APPEND: complex1.txt (95 total chars)
+WRITE: complex1.txt (50 chars)
+READ: complex1.txt = NjEs1sdKRzb GY8vGUILrV2hpwnu94EGWkcIa8KnbfNRn1cfCr
+READ: complex0.txt = FQaMXxrxTvXuDJMBsEBV4T2pZFzaexMq5mGxN7K3a63
+WRITE: complex2.txt (19 chars)
+READ: complex1.txt = NjEs1sdKRzb GY8vGUILrV2hpwnu94EGWkcIa8KnbfNRn1cfCr
+READ: complex1.txt = NjEs1sdKRzb GY8vGUILrV2hpwnu94EGWkcIa8KnbfNRn1cfCr
+READ: complex1.txt = NjEs1sdKRzb GY8vGUILrV2hpwnu94EGWkcIa8KnbfNRn1cfCr
+CREATE: complex0.txt
+APPEND: complex0.txt (58 total chars)
+READ: complex0.txt = FQaMXxrxTvXuDJMBsEBV4T2pZFzaexMq5mGxN7K3a63gTAKG5DN4D2Aq4I

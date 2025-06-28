@@ -1,0 +1,1 @@
+50 | MUL 4, ADD 100, SQRT

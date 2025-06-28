@@ -1,0 +1,6 @@
+WRITE: file1.txt (8 chars)
+WRITE: file2.txt (8 chars)
+READ: file1.txt = Content1
+READ: file2.txt = Content2
+APPEND: file1.txt (13 total chars)
+READ: file1.txt = Content1Extra

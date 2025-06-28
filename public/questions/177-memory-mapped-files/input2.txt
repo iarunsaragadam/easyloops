@@ -1,1 +1,6 @@
-placeholder
+5
+4
+READ 0 5
+READ 3 3
+WRITE 10 50
+SUM -1 2

@@ -1,0 +1,5 @@
+[2023-12-27 10:00:00] ERROR: Disk space low
+[2023-12-27 10:09:00] DEBUG: Application started
+[2023-12-27 10:08:00] ERROR: System maintenance
+[2023-12-27 10:09:00] WARN: Connection timeout
+[2023-12-27 10:40:00] INFO: Service unavailable

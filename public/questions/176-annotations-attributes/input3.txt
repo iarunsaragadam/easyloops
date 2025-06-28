@@ -1,1 +1,6 @@
-placeholder
+1
+@classmethod
+@property
+@cache
+def advanced_method(self, data: Union[str, int], callback: Callable[[int], bool] = lambda x: True, timeout: float = 1.0) -> Tuple[bool, str]:
+    pass

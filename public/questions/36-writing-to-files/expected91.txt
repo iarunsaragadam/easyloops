@@ -1,0 +1,5 @@
+WRITE: data.txt (5 chars)
+APPEND: data.txt (11 total chars)
+WRITE: data.txt (5 chars)
+APPEND: data.txt (11 total chars)
+READ: data.txt = ThirdFourth

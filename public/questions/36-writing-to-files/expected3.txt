@@ -1,1 +1,3 @@
-placeholder
+CREATE: config.ini
+WRITE: config.ini (18 chars)
+READ: config.ini = database=localhost

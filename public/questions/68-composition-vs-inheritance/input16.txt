@@ -1,0 +1,4 @@
+CREATE Motorcycle M16 Ford 2020 Electric 166 diesel
+START M16
+INFO M16
+FUEL_COST M16 136

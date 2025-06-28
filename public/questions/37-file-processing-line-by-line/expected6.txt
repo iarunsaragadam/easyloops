@@ -1,0 +1,4 @@
+Line 1: 0 words, 3 characters
+Line 2: 0 words, 2 characters
+Line 3: 0 words, 5 characters
+Total: 3 lines, 0 words, 10 characters

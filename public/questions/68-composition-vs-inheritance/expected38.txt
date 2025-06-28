@@ -1,0 +1,3 @@
+Created Car E8
+Vehicle E8 started. Engine started: V4 engine
+Fuel cost for 1 miles: $0.7

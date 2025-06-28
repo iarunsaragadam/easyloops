@@ -1,0 +1,8 @@
+LOG LEVEL SUMMARY:
+DEBUG: 1
+INFO: 1
+
+TIME SPAN ANALYSIS:
+First entry: 1900-01-01 00:00:00
+Last entry: 2099-12-31 23:59:59
+Total entries: 2

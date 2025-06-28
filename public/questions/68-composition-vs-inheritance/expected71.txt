@@ -1,0 +1,72 @@
+Created Car P11V0
+Created Car P11V1
+Created Car P11V2
+Created Truck P11V3
+Created Truck P11V4
+Created Car P11V5
+Created Car P11V6
+Created Motorcycle P11V7
+Created Motorcycle P11V8
+Created Motorcycle P11V9
+Created Car P11V10
+Created Truck P11V11
+Created Car P11V12
+Created Motorcycle P11V13
+Created Motorcycle P11V14
+Created Car P11V15
+Created Truck P11V16
+Created Car P11V17
+Created Truck P11V18
+Created Motorcycle P11V19
+Created Motorcycle P11V20
+Created Motorcycle P11V21
+Created Truck P11V22
+Created Motorcycle P11V23
+Created Motorcycle P11V24
+Created Truck P11V25
+Created Motorcycle P11V26
+Created Truck P11V27
+Created Car P11V28
+Created Motorcycle P11V29
+Created Motorcycle P11V30
+Created Car P11V31
+Created Truck P11V32
+Created Car P11V33
+Created Truck P11V34
+Created Truck P11V35
+Created Motorcycle P11V36
+Created Truck P11V37
+Created Motorcycle P11V38
+Created Motorcycle P11V39
+Created Motorcycle P11V40
+Created Motorcycle P11V41
+Vehicle P11V0 started. Engine started: Electric engine
+P11V0: 2008 BMW Car (running)
+Fuel cost for 377 miles: $15.8
+Vehicle P11V2 started. Engine started: Electric engine
+P11V2: 2007 Yamaha Car (running)
+Fuel cost for 200 miles: $7.3
+Vehicle P11V4 started. Engine started: V8 engine
+P11V4: 2001 Toyota Truck (running)
+Fuel cost for 466 miles: $7.5
+Vehicle P11V6 started. Engine started: V6 engine
+P11V6: 2021 Honda Car (running)
+Fuel cost for 255 miles: $1.4
+Vehicle P11V8 started. Engine started: V8 engine
+P11V8: 2003 Ford Motorcycle (running)
+Fuel cost for 303 miles: $111.4
+Vehicle P11V10 started. Engine started: V8 engine
+P11V10: 2020 Toyota Car (running)
+Fuel cost for 227 miles: $143.0
+Vehicle P11V12 started. Engine started: V4 engine
+P11V12: 2017 Honda Car (running)
+Fuel cost for 489 miles: $2.3
+Vehicle P11V14 started. Engine started: V8 engine
+P11V14: 2010 Toyota Motorcycle (running)
+Fuel cost for 318 miles: $4.6
+Vehicle P11V16 started. Engine started: V8 engine
+P11V16: 2020 Toyota Truck (running)
+Fuel cost for 457 miles: $14.3
+Vehicle P11V18 started. Engine started: V4 engine
+P11V18: 2024 Toyota Truck (running)
+Fuel cost for 424 miles: $2.6

@@ -1,0 +1,4 @@
+Number: 42
+Sign: positive
+Parity: even
+Classification: positive even number

@@ -1,0 +1,33 @@
+-455
+31
+add 391
+add 397
+square
+abs
+negate
+add 611
+abs
+negate
+add -329
+square
+multiply -27
+add 213
+add 19
+negate
+add 275
+abs
+square
+abs
+add 499
+negate
+negate
+negate
+abs
+add 216
+square
+abs
+multiply -95
+add -626
+negate
+add -13
+abs

@@ -1,0 +1,27 @@
+POOL_CREATED 15
+CONNECTED user_1 1
+CONNECTED user_2 2
+CONNECTED user_3 3
+CONNECTED user_4 4
+CONNECTED user_5 5
+CONNECTED user_6 6
+CONNECTED user_7 7
+CONNECTED user_8 8
+CONNECTED user_9 9
+CONNECTED user_10 10
+CONNECTED user_11 11
+CONNECTED user_12 12
+CONNECTED user_13 13
+CONNECTED user_14 14
+CONNECTED user_15 15
+REJECTED user_16
+REJECTED user_17
+REJECTED user_18
+ACTIVE 15 AVAILABLE 0
+CONNECTIONS 1:user_1 2:user_2 3:user_3 4:user_4 5:user_5 6:user_6 7:user_7 8:user_8 9:user_9 10:user_10 11:user_11 12:user_12 13:user_13 14:user_14 15:user_15
+DISCONNECTED user_1 1
+DISCONNECTED user_2 2
+DISCONNECTED user_3 3
+ACTIVE 12 AVAILABLE 3
+CONNECTED new_client_5 16
+CONNECTIONS 4:user_4 5:user_5 6:user_6 7:user_7 8:user_8 9:user_9 10:user_10 11:user_11 12:user_12 13:user_13 14:user_14 15:user_15 16:new_client_5

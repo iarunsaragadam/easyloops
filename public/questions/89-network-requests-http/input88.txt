@@ -1,0 +1,19 @@
+HTTP/1.1 501 Not Implemented
+Content-Type: application/json; charset=utf-8
+Cache-Control: no-cache, no-store, must-revalidate
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Server: Custom-Server/2.0 (Linux)
+Date: Wed, 01 Jan 2024 12:00:00 GMT
+Connection: keep-alive
+
+{
+  "status": 501,
+  "message": "Not Implemented",
+  "timestamp": "2024-01-01T12:00:00Z",
+  "data": {
+    "test_case": 88,
+    "category": "Server Error"
+  }
+}

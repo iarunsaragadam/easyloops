@@ -1,1 +1,11 @@
-placeholder
+Processing events:
+Event 1: [P1] SYSTEM at 50 - startup_complete
+Event 2: [P1] SYSTEM at 75 - file_loaded
+Event 3: [P2] NETWORK at 100 - packet_received
+Event 4: [P2] NETWORK at 200 - connection_lost
+Event 5: [P3] USER at 150 - button_clicked
+System state:
+Total events processed: 5
+NETWORK: 2
+SYSTEM: 2
+USER: 1

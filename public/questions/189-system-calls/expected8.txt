@@ -1,0 +1,6 @@
+OPENED fvlolav.dat AS FD 3
+OPENED umtotz.dat AS FD 4
+FD 3: fvlolav.dat (rw)
+FD 4: umtotz.dat (w)
+WRITTEN 9 BYTES TO FD 4
+CLOSED FD 3 (fvlolav.dat)

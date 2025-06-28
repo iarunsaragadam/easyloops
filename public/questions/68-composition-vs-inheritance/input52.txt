@@ -1,0 +1,3 @@
+CREATE Motorcycle E22 Honda 2030 V4 50 gasoline
+START E22
+FUEL_COST E22 1

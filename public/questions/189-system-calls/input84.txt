@@ -1,0 +1,49 @@
+48
+OPEN complex2_0.txt rw
+OPEN complex2_1.txt rw
+OPEN complex2_2.txt w
+OPEN complex2_3.txt w
+OPEN complex2_4.txt w
+OPEN complex2_5.txt rw
+OPEN complex2_6.txt r
+OPEN complex2_7.txt rw
+READ 10 9
+LIST
+WRITE 6 data69
+READ 4 5
+LIST
+LIST
+WRITE 8 data34
+LIST
+LIST
+READ 10 9
+READ 8 7
+LIST
+LIST
+WRITE 7 data2
+LIST
+LIST
+WRITE 7 data72
+LIST
+READ 4 8
+WRITE 5 data68
+WRITE 5 data28
+WRITE 8 data21
+WRITE 3 data17
+WRITE 3 data13
+WRITE 6 data4
+WRITE 5 data32
+WRITE 8 data22
+READ 9 8
+WRITE 6 data83
+LIST
+WRITE 10 data37
+READ 10 12
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6
+CLOSE 7
+CLOSE 8
+CLOSE 9
+CLOSE 10

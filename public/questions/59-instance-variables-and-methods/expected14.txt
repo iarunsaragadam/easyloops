@@ -1,0 +1,6 @@
+Account ACC001 created for Bob
+Withdrew 394.00 from account ACC001
+Balance for account ACC001: 673.00
+Account: ACC001, Owner: Bob, Balance: 673.00
+Account: ACC001, Owner: Bob, Balance: 673.00
+Deposited 310.00 to account ACC001

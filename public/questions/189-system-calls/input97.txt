@@ -1,0 +1,35 @@
+34
+OPEN complex15_0.txt rw
+OPEN complex15_1.txt rw
+OPEN complex15_2.txt w
+OPEN complex15_3.txt r
+OPEN complex15_4.txt w
+OPEN complex15_5.txt r
+OPEN complex15_6.txt w
+OPEN complex15_7.txt r
+LIST
+WRITE 7 data78
+READ 10 11
+READ 8 19
+READ 3 10
+LIST
+READ 8 5
+READ 6 8
+WRITE 7 data26
+WRITE 5 data46
+WRITE 3 data64
+READ 6 17
+READ 10 15
+READ 6 2
+WRITE 7 data67
+WRITE 5 data75
+LIST
+READ 6 19
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6
+CLOSE 7
+CLOSE 8
+CLOSE 9
+CLOSE 10

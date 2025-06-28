@@ -1,0 +1,3 @@
+OPENED empty.txt AS FD 3
+EOF
+CLOSED FD 3 (empty.txt)

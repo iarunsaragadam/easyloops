@@ -1,0 +1,16 @@
+15
+read complex3.txt
+append complex4.txt ZrAtFmEuKbOrQTfUvGTUVYJ21afypS7DTxpACCDPddkVzqjA
+read complex0.txt
+append complex1.txt 3X 1juuMze1S3qzC8h9bOqwRIJEhdJBZ
+read complex0.txt
+write complex3.txt ekQG9kmQ9O0ajLDpOuBZ04Msu
+read complex2.txt
+create complex1.txt
+append complex0.txt LpE1Tpvivr31iqvzEg4VIBDR7vHsLA5G82
+write complex4.txt VfOqXi SPoZR2n4EOsKGIMkrCJS5aeNFQ4stNhFhWIbxeTC
+read complex4.txt
+write complex2.txt HZR TiEhi1JLHc35uq9vri46LysIcK1
+read complex1.txt
+append complex0.txt 2qGMJvnqvjHRq2
+create complex4.txt

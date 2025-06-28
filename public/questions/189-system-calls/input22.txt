@@ -1,0 +1,4 @@
+3
+OPEN eym.tmp r
+OPEN bhy.log r
+LIST

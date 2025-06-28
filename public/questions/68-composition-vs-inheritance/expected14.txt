@@ -1,0 +1,4 @@
+Created Motorcycle M14
+Vehicle M14 started. Engine started: V8 engine
+M14: 2020 Honda Motorcycle (running)
+Fuel cost for 71 miles: $23.5

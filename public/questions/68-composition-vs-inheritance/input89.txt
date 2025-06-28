@@ -1,0 +1,108 @@
+CREATE Motorcycle P29V0 Honda 2016 Electric 164 diesel
+CREATE Car P29V1 Toyota 2015 V6 310 diesel
+CREATE Motorcycle P29V2 BMW 2011 Electric 182 electric
+CREATE Motorcycle P29V3 BMW 2019 V8 396 electric
+CREATE Car P29V4 BMW 2004 V4 228 diesel
+CREATE Motorcycle P29V5 Ford 2010 Electric 226 diesel
+CREATE Car P29V6 Honda 2000 Electric 240 gasoline
+CREATE Car P29V7 Honda 2022 V4 105 gasoline
+CREATE Motorcycle P29V8 BMW 2025 Electric 110 electric
+CREATE Car P29V9 BMW 2006 V8 314 electric
+CREATE Motorcycle P29V10 Yamaha 2017 V4 118 electric
+CREATE Car P29V11 Yamaha 2015 V4 332 electric
+CREATE Motorcycle P29V12 BMW 2010 V4 89 diesel
+CREATE Truck P29V13 Yamaha 2014 V8 370 diesel
+CREATE Motorcycle P29V14 Toyota 2015 V8 332 diesel
+CREATE Truck P29V15 Yamaha 2013 Electric 353 gasoline
+CREATE Motorcycle P29V16 Honda 2017 V4 111 diesel
+CREATE Truck P29V17 Toyota 2012 V6 373 gasoline
+CREATE Car P29V18 Honda 2003 V4 226 diesel
+CREATE Motorcycle P29V19 Ford 2023 Electric 354 gasoline
+CREATE Truck P29V20 BMW 2012 Electric 297 electric
+CREATE Motorcycle P29V21 Toyota 2023 V8 98 electric
+CREATE Truck P29V22 BMW 2018 V4 139 gasoline
+CREATE Car P29V23 BMW 2025 Electric 216 electric
+CREATE Car P29V24 BMW 2020 Electric 389 diesel
+CREATE Motorcycle P29V25 Yamaha 2025 V8 207 gasoline
+CREATE Truck P29V26 Yamaha 2017 V4 303 electric
+CREATE Truck P29V27 Toyota 2007 V6 165 diesel
+CREATE Truck P29V28 Toyota 2022 V8 106 diesel
+CREATE Car P29V29 Ford 2016 Electric 154 diesel
+CREATE Motorcycle P29V30 Ford 2025 V8 331 gasoline
+CREATE Car P29V31 Honda 2011 V4 197 electric
+CREATE Motorcycle P29V32 Honda 2012 V4 171 gasoline
+CREATE Motorcycle P29V33 Toyota 2006 V4 307 electric
+CREATE Car P29V34 Honda 2007 V4 343 gasoline
+CREATE Motorcycle P29V35 BMW 2006 V8 330 diesel
+CREATE Truck P29V36 Ford 2005 V4 228 diesel
+CREATE Car P29V37 Toyota 2009 V4 187 gasoline
+CREATE Car P29V38 Honda 2001 V4 128 diesel
+CREATE Truck P29V39 Toyota 2000 V8 169 diesel
+CREATE Car P29V40 Yamaha 2005 V6 400 electric
+CREATE Truck P29V41 Toyota 2001 Electric 389 gasoline
+CREATE Car P29V42 Honda 2000 V6 336 diesel
+CREATE Truck P29V43 BMW 2023 V4 237 electric
+CREATE Truck P29V44 BMW 2012 V8 84 diesel
+CREATE Car P29V45 Yamaha 2007 Electric 195 electric
+CREATE Car P29V46 Ford 2025 V8 101 gasoline
+CREATE Motorcycle P29V47 Ford 2006 V6 177 diesel
+CREATE Car P29V48 BMW 2018 V8 327 diesel
+CREATE Motorcycle P29V49 Ford 2021 Electric 249 gasoline
+CREATE Motorcycle P29V50 Toyota 2015 V6 338 electric
+CREATE Motorcycle P29V51 Toyota 2006 V4 394 gasoline
+CREATE Truck P29V52 Yamaha 2001 V4 156 diesel
+CREATE Truck P29V53 Honda 2019 V4 250 diesel
+CREATE Car P29V54 Honda 2002 V4 271 gasoline
+CREATE Car P29V55 Ford 2007 V4 369 gasoline
+CREATE Motorcycle P29V56 Yamaha 2021 Electric 228 diesel
+CREATE Car P29V57 BMW 2022 V6 176 gasoline
+CREATE Motorcycle P29V58 Ford 2023 V6 220 diesel
+CREATE Motorcycle P29V59 BMW 2024 Electric 387 electric
+CREATE Truck P29V60 Yamaha 2001 V8 249 gasoline
+CREATE Motorcycle P29V61 Toyota 2021 Electric 159 electric
+CREATE Truck P29V62 BMW 2022 V4 177 gasoline
+CREATE Truck P29V63 Yamaha 2002 Electric 140 gasoline
+CREATE Truck P29V64 Yamaha 2002 Electric 117 diesel
+CREATE Truck P29V65 Ford 2013 V6 119 electric
+CREATE Motorcycle P29V66 Yamaha 2005 Electric 249 electric
+CREATE Car P29V67 Ford 2004 V4 340 electric
+CREATE Motorcycle P29V68 Toyota 2024 V4 397 diesel
+CREATE Motorcycle P29V69 Ford 2007 V4 92 gasoline
+CREATE Car P29V70 Ford 2020 V4 289 diesel
+CREATE Motorcycle P29V71 BMW 2018 V4 303 diesel
+CREATE Car P29V72 Yamaha 2000 V8 315 electric
+CREATE Car P29V73 Honda 2009 V8 141 gasoline
+CREATE Motorcycle P29V74 BMW 2021 Electric 154 diesel
+CREATE Motorcycle P29V75 BMW 2018 V4 96 diesel
+CREATE Truck P29V76 Ford 2012 V6 305 electric
+CREATE Motorcycle P29V77 Honda 2012 V8 222 electric
+START P29V0
+INFO P29V0
+FUEL_COST P29V0 480
+START P29V2
+INFO P29V2
+FUEL_COST P29V2 335
+START P29V4
+INFO P29V4
+FUEL_COST P29V4 444
+START P29V6
+INFO P29V6
+FUEL_COST P29V6 388
+START P29V8
+INFO P29V8
+FUEL_COST P29V8 421
+START P29V10
+INFO P29V10
+FUEL_COST P29V10 359
+START P29V12
+INFO P29V12
+FUEL_COST P29V12 289
+START P29V14
+INFO P29V14
+FUEL_COST P29V14 288
+START P29V16
+INFO P29V16
+FUEL_COST P29V16 239
+START P29V18
+INFO P29V18
+FUEL_COST P29V18 427

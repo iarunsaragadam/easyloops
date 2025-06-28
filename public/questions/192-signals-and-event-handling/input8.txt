@@ -1,0 +1,5 @@
+4
+50 2 HTTP request
+75 1 DB query
+100 3 CACHE miss
+125 1 LOG info

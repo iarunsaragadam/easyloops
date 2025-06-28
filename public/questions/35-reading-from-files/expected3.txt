@@ -1,1 +1,9 @@
-placeholder
+algorithm
+code
+data
+database
+learning
+programming
+questions
+structure
+Unique words: 8

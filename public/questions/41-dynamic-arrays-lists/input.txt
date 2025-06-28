@@ -1,1 +1,9 @@
-placeholder
+8
+ADD 10
+ADD 20
+SIZE
+PRINT
+GET 1
+REMOVE
+SIZE
+PRINT

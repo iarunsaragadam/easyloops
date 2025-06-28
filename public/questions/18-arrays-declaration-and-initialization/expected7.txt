@@ -1,0 +1,5 @@
+Array size: 7
+Array elements: [1, 2, 3, 4, 5, 6, 7]
+First element: 1
+Last element: 7
+Array sum: 28

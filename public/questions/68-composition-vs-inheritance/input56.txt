@@ -1,0 +1,3 @@
+CREATE Motorcycle E26 Honda 2030 V4 50 gasoline
+START E26
+FUEL_COST E26 1000

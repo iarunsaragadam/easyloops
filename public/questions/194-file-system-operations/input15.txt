@@ -1,0 +1,8 @@
+7
+pwd
+mkdir dir_15_0
+mkdir dir_15_1
+mkdir dir_15_2
+touch file_15_3.txt
+touch file_15_4.txt
+count files

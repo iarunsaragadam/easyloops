@@ -1,1 +1,3 @@
-placeholder
+Area: 20.00 Perimeter: 18.00
+Area: 28.27 Perimeter: 18.85
+Area: 6.00 Perimeter: 12.00

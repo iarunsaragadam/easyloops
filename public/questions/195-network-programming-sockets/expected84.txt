@@ -1,0 +1,240 @@
+POOL_CREATED 100
+CONNECTED perf_client_1 1
+CONNECTED perf_client_2 2
+CONNECTED perf_client_3 3
+CONNECTED perf_client_4 4
+CONNECTED perf_client_5 5
+CONNECTED perf_client_6 6
+CONNECTED perf_client_7 7
+CONNECTED perf_client_8 8
+CONNECTED perf_client_9 9
+CONNECTED perf_client_10 10
+CONNECTED perf_client_11 11
+CONNECTED perf_client_12 12
+CONNECTED perf_client_13 13
+CONNECTED perf_client_14 14
+CONNECTED perf_client_15 15
+CONNECTED perf_client_16 16
+CONNECTED perf_client_17 17
+CONNECTED perf_client_18 18
+CONNECTED perf_client_19 19
+CONNECTED perf_client_20 20
+CONNECTED perf_client_21 21
+CONNECTED perf_client_22 22
+CONNECTED perf_client_23 23
+CONNECTED perf_client_24 24
+CONNECTED perf_client_25 25
+CONNECTED perf_client_26 26
+CONNECTED perf_client_27 27
+CONNECTED perf_client_28 28
+CONNECTED perf_client_29 29
+CONNECTED perf_client_30 30
+CONNECTED perf_client_31 31
+CONNECTED perf_client_32 32
+CONNECTED perf_client_33 33
+CONNECTED perf_client_34 34
+CONNECTED perf_client_35 35
+CONNECTED perf_client_36 36
+CONNECTED perf_client_37 37
+CONNECTED perf_client_38 38
+CONNECTED perf_client_39 39
+CONNECTED perf_client_40 40
+CONNECTED perf_client_41 41
+CONNECTED perf_client_42 42
+CONNECTED perf_client_43 43
+CONNECTED perf_client_44 44
+CONNECTED perf_client_45 45
+CONNECTED perf_client_46 46
+CONNECTED perf_client_47 47
+CONNECTED perf_client_48 48
+CONNECTED perf_client_49 49
+CONNECTED perf_client_50 50
+CONNECTED perf_client_51 51
+CONNECTED perf_client_52 52
+CONNECTED perf_client_53 53
+CONNECTED perf_client_54 54
+CONNECTED perf_client_55 55
+CONNECTED perf_client_56 56
+CONNECTED perf_client_57 57
+CONNECTED perf_client_58 58
+CONNECTED perf_client_59 59
+CONNECTED perf_client_60 60
+CONNECTED perf_client_61 61
+CONNECTED perf_client_62 62
+CONNECTED perf_client_63 63
+CONNECTED perf_client_64 64
+CONNECTED perf_client_65 65
+CONNECTED perf_client_66 66
+CONNECTED perf_client_67 67
+CONNECTED perf_client_68 68
+CONNECTED perf_client_69 69
+CONNECTED perf_client_70 70
+CONNECTED perf_client_71 71
+CONNECTED perf_client_72 72
+CONNECTED perf_client_73 73
+CONNECTED perf_client_74 74
+CONNECTED perf_client_75 75
+CONNECTED perf_client_76 76
+CONNECTED perf_client_77 77
+CONNECTED perf_client_78 78
+CONNECTED perf_client_79 79
+CONNECTED perf_client_80 80
+CONNECTED perf_client_81 81
+CONNECTED perf_client_82 82
+CONNECTED perf_client_83 83
+CONNECTED perf_client_84 84
+CONNECTED perf_client_85 85
+CONNECTED perf_client_86 86
+CONNECTED perf_client_87 87
+CONNECTED perf_client_88 88
+CONNECTED perf_client_89 89
+CONNECTED perf_client_90 90
+CONNECTED perf_client_91 91
+CONNECTED perf_client_92 92
+CONNECTED perf_client_93 93
+CONNECTED perf_client_94 94
+CONNECTED perf_client_95 95
+CONNECTED perf_client_96 96
+CONNECTED perf_client_97 97
+CONNECTED perf_client_98 98
+CONNECTED perf_client_99 99
+CONNECTED perf_client_100 100
+ACTIVE 100 AVAILABLE 0
+REJECTED perf_client_101
+REJECTED perf_client_102
+REJECTED perf_client_103
+REJECTED perf_client_104
+REJECTED perf_client_105
+REJECTED perf_client_106
+REJECTED perf_client_107
+REJECTED perf_client_108
+REJECTED perf_client_109
+REJECTED perf_client_110
+REJECTED perf_client_111
+REJECTED perf_client_112
+REJECTED perf_client_113
+REJECTED perf_client_114
+REJECTED perf_client_115
+REJECTED perf_client_116
+REJECTED perf_client_117
+REJECTED perf_client_118
+REJECTED perf_client_119
+REJECTED perf_client_120
+REJECTED perf_client_121
+REJECTED perf_client_122
+REJECTED perf_client_123
+REJECTED perf_client_124
+REJECTED perf_client_125
+REJECTED perf_client_126
+REJECTED perf_client_127
+REJECTED perf_client_128
+REJECTED perf_client_129
+REJECTED perf_client_130
+REJECTED perf_client_131
+REJECTED perf_client_132
+REJECTED perf_client_133
+REJECTED perf_client_134
+REJECTED perf_client_135
+REJECTED perf_client_136
+REJECTED perf_client_137
+REJECTED perf_client_138
+REJECTED perf_client_139
+REJECTED perf_client_140
+REJECTED perf_client_141
+REJECTED perf_client_142
+REJECTED perf_client_143
+REJECTED perf_client_144
+REJECTED perf_client_145
+REJECTED perf_client_146
+REJECTED perf_client_147
+REJECTED perf_client_148
+REJECTED perf_client_149
+REJECTED perf_client_150
+REJECTED perf_client_151
+REJECTED perf_client_152
+REJECTED perf_client_153
+REJECTED perf_client_154
+REJECTED perf_client_155
+REJECTED perf_client_156
+REJECTED perf_client_157
+REJECTED perf_client_158
+REJECTED perf_client_159
+REJECTED perf_client_160
+REJECTED perf_client_161
+REJECTED perf_client_162
+REJECTED perf_client_163
+REJECTED perf_client_164
+REJECTED perf_client_165
+REJECTED perf_client_166
+REJECTED perf_client_167
+REJECTED perf_client_168
+REJECTED perf_client_169
+REJECTED perf_client_170
+REJECTED perf_client_171
+REJECTED perf_client_172
+REJECTED perf_client_173
+REJECTED perf_client_174
+REJECTED perf_client_175
+REJECTED perf_client_176
+REJECTED perf_client_177
+REJECTED perf_client_178
+REJECTED perf_client_179
+REJECTED perf_client_180
+REJECTED perf_client_181
+REJECTED perf_client_182
+REJECTED perf_client_183
+REJECTED perf_client_184
+REJECTED perf_client_185
+REJECTED perf_client_186
+REJECTED perf_client_187
+REJECTED perf_client_188
+REJECTED perf_client_189
+REJECTED perf_client_190
+REJECTED perf_client_191
+REJECTED perf_client_192
+REJECTED perf_client_193
+REJECTED perf_client_194
+REJECTED perf_client_195
+REJECTED perf_client_196
+REJECTED perf_client_197
+REJECTED perf_client_198
+REJECTED perf_client_199
+REJECTED perf_client_200
+ACTIVE 100 AVAILABLE 0
+CONNECTIONS 1:perf_client_1 2:perf_client_2 3:perf_client_3 4:perf_client_4 5:perf_client_5 6:perf_client_6 7:perf_client_7 8:perf_client_8 9:perf_client_9 10:perf_client_10 11:perf_client_11 12:perf_client_12 13:perf_client_13 14:perf_client_14 15:perf_client_15 16:perf_client_16 17:perf_client_17 18:perf_client_18 19:perf_client_19 20:perf_client_20 21:perf_client_21 22:perf_client_22 23:perf_client_23 24:perf_client_24 25:perf_client_25 26:perf_client_26 27:perf_client_27 28:perf_client_28 29:perf_client_29 30:perf_client_30 31:perf_client_31 32:perf_client_32 33:perf_client_33 34:perf_client_34 35:perf_client_35 36:perf_client_36 37:perf_client_37 38:perf_client_38 39:perf_client_39 40:perf_client_40 41:perf_client_41 42:perf_client_42 43:perf_client_43 44:perf_client_44 45:perf_client_45 46:perf_client_46 47:perf_client_47 48:perf_client_48 49:perf_client_49 50:perf_client_50 51:perf_client_51 52:perf_client_52 53:perf_client_53 54:perf_client_54 55:perf_client_55 56:perf_client_56 57:perf_client_57 58:perf_client_58 59:perf_client_59 60:perf_client_60 61:perf_client_61 62:perf_client_62 63:perf_client_63 64:perf_client_64 65:perf_client_65 66:perf_client_66 67:perf_client_67 68:perf_client_68 69:perf_client_69 70:perf_client_70 71:perf_client_71 72:perf_client_72 73:perf_client_73 74:perf_client_74 75:perf_client_75 76:perf_client_76 77:perf_client_77 78:perf_client_78 79:perf_client_79 80:perf_client_80 81:perf_client_81 82:perf_client_82 83:perf_client_83 84:perf_client_84 85:perf_client_85 86:perf_client_86 87:perf_client_87 88:perf_client_88 89:perf_client_89 90:perf_client_90 91:perf_client_91 92:perf_client_92 93:perf_client_93 94:perf_client_94 95:perf_client_95 96:perf_client_96 97:perf_client_97 98:perf_client_98 99:perf_client_99 100:perf_client_100
+DISCONNECTED perf_client_1 1
+DISCONNECTED perf_client_4 4
+DISCONNECTED perf_client_7 7
+DISCONNECTED perf_client_10 10
+DISCONNECTED perf_client_13 13
+DISCONNECTED perf_client_16 16
+DISCONNECTED perf_client_19 19
+DISCONNECTED perf_client_22 22
+DISCONNECTED perf_client_25 25
+DISCONNECTED perf_client_28 28
+DISCONNECTED perf_client_31 31
+DISCONNECTED perf_client_34 34
+DISCONNECTED perf_client_37 37
+DISCONNECTED perf_client_40 40
+DISCONNECTED perf_client_43 43
+DISCONNECTED perf_client_46 46
+DISCONNECTED perf_client_49 49
+DISCONNECTED perf_client_52 52
+DISCONNECTED perf_client_55 55
+DISCONNECTED perf_client_58 58
+DISCONNECTED perf_client_61 61
+DISCONNECTED perf_client_64 64
+DISCONNECTED perf_client_67 67
+DISCONNECTED perf_client_70 70
+DISCONNECTED perf_client_73 73
+DISCONNECTED perf_client_76 76
+DISCONNECTED perf_client_79 79
+DISCONNECTED perf_client_82 82
+DISCONNECTED perf_client_85 85
+DISCONNECTED perf_client_88 88
+DISCONNECTED perf_client_91 91
+DISCONNECTED perf_client_94 94
+DISCONNECTED perf_client_97 97
+ACTIVE 67 AVAILABLE 33
+CLEANED 67
+ACTIVE 0 AVAILABLE 100

@@ -1,0 +1,5 @@
+Array size: 23
+Array elements: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45]
+First element: 1
+Last element: 45
+Array sum: 529

@@ -1,0 +1,6 @@
+5
+read file2.txt
+append file2.txt DA
+append file1.txt eds
+write file1.txt cSqyY
+read file1.txt

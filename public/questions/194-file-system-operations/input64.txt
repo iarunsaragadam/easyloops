@@ -1,0 +1,16 @@
+15
+pwd
+mkdir perf_dir_64_1
+pwd
+ls
+mkdir perf_dir_64_4
+touch perf_file_64_5.txt
+ls
+touch perf_file_64_7.txt
+mkdir perf_dir_64_8
+pwd
+ls
+touch perf_file_64_11.txt
+mkdir perf_dir_64_12
+pwd
+pwd

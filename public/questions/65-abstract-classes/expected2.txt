@@ -1,1 +1,1 @@
-placeholder
+Area: 3.14 Perimeter: 6.28

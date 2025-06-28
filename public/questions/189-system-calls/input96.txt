@@ -1,0 +1,13 @@
+12
+OPEN complex14_0.txt w
+OPEN complex14_1.txt w
+WRITE 3 data35
+WRITE 3 data26
+LIST
+WRITE 3 data70
+WRITE 3 data61
+WRITE 4 data87
+LIST
+LIST
+CLOSE 3
+CLOSE 4

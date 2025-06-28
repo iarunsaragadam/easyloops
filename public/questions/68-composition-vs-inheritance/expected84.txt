@@ -1,0 +1,98 @@
+Created Truck P24V0
+Created Car P24V1
+Created Truck P24V2
+Created Car P24V3
+Created Motorcycle P24V4
+Created Car P24V5
+Created Motorcycle P24V6
+Created Motorcycle P24V7
+Created Car P24V8
+Created Car P24V9
+Created Motorcycle P24V10
+Created Car P24V11
+Created Truck P24V12
+Created Truck P24V13
+Created Motorcycle P24V14
+Created Car P24V15
+Created Truck P24V16
+Created Motorcycle P24V17
+Created Truck P24V18
+Created Motorcycle P24V19
+Created Motorcycle P24V20
+Created Motorcycle P24V21
+Created Motorcycle P24V22
+Created Car P24V23
+Created Truck P24V24
+Created Motorcycle P24V25
+Created Motorcycle P24V26
+Created Truck P24V27
+Created Truck P24V28
+Created Truck P24V29
+Created Car P24V30
+Created Car P24V31
+Created Car P24V32
+Created Motorcycle P24V33
+Created Motorcycle P24V34
+Created Car P24V35
+Created Motorcycle P24V36
+Created Car P24V37
+Created Car P24V38
+Created Truck P24V39
+Created Motorcycle P24V40
+Created Car P24V41
+Created Motorcycle P24V42
+Created Motorcycle P24V43
+Created Motorcycle P24V44
+Created Motorcycle P24V45
+Created Truck P24V46
+Created Car P24V47
+Created Car P24V48
+Created Motorcycle P24V49
+Created Truck P24V50
+Created Car P24V51
+Created Truck P24V52
+Created Car P24V53
+Created Truck P24V54
+Created Car P24V55
+Created Motorcycle P24V56
+Created Motorcycle P24V57
+Created Car P24V58
+Created Motorcycle P24V59
+Created Truck P24V60
+Created Truck P24V61
+Created Truck P24V62
+Created Truck P24V63
+Created Car P24V64
+Created Motorcycle P24V65
+Created Truck P24V66
+Created Motorcycle P24V67
+Vehicle P24V0 started. Engine started: V6 engine
+P24V0: 2006 Honda Truck (running)
+Fuel cost for 312 miles: $81.8
+Vehicle P24V2 started. Engine started: V6 engine
+P24V2: 2022 Ford Truck (running)
+Fuel cost for 216 miles: $3.1
+Vehicle P24V4 started. Engine started: Electric engine
+P24V4: 2024 Ford Motorcycle (running)
+Fuel cost for 399 miles: $0.4
+Vehicle P24V6 started. Engine started: V6 engine
+P24V6: 2023 BMW Motorcycle (running)
+Fuel cost for 358 miles: $57.5
+Vehicle P24V8 started. Engine started: V6 engine
+P24V8: 2019 Yamaha Car (running)
+Fuel cost for 465 miles: $4.8
+Vehicle P24V10 started. Engine started: V6 engine
+P24V10: 2014 Toyota Motorcycle (running)
+Fuel cost for 258 miles: $29.3
+Vehicle P24V12 started. Engine started: Electric engine
+P24V12: 2019 Toyota Truck (running)
+Fuel cost for 209 miles: $11.3
+Vehicle P24V14 started. Engine started: Electric engine
+P24V14: 2007 BMW Motorcycle (running)
+Fuel cost for 474 miles: $12.8
+Vehicle P24V16 started. Engine started: V4 engine
+P24V16: 2024 Honda Truck (running)
+Fuel cost for 311 miles: $3.4
+Vehicle P24V18 started. Engine started: V6 engine
+P24V18: 2021 Honda Truck (running)
+Fuel cost for 141 miles: $56.6

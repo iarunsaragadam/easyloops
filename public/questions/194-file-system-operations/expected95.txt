@@ -1,0 +1,18 @@
+Directory 'dir_95_0' created
+Directory 'dir_95_1' created
+0
+File 'file_95_3.txt' created
+dir_95_0 dir_95_1 file_95_3.txt
+Changed to /
+Directory 'dir_95_6' created
+1
+1
+Directory 'dir_95_9' created
+Directory 'dir_95_10' created
+1
+/
+File 'file_95_13.txt' created
+dir_95_0 dir_95_1 dir_95_10 dir_95_6 dir_95_9 file_95_13.txt file_95_3.txt
+Changed to /dir_95_0
+/dir_95_0
+

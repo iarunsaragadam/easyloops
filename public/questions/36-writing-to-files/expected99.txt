@@ -1,0 +1,15 @@
+READ: complex4.txt = FILE_NOT_FOUND
+WRITE: complex0.txt (50 chars)
+READ: complex4.txt = FILE_NOT_FOUND
+APPEND: complex6.txt (44 total chars)
+WRITE: complex0.txt (39 chars)
+WRITE: complex1.txt (40 chars)
+APPEND: complex4.txt (14 total chars)
+APPEND: complex5.txt (31 total chars)
+READ: complex1.txt = TQHih12bDHW1GlQYMBB4OZQI92roLpP3thaYqo4F
+READ: complex0.txt = DBGV7IEPJPgiG7vRlCMJvvp8p10jhrQs3jPRyjr
+WRITE: complex2.txt (49 chars)
+WRITE: complex6.txt (12 chars)
+WRITE: complex2.txt (7 chars)
+CREATE: complex4.txt
+APPEND: complex0.txt (62 total chars)

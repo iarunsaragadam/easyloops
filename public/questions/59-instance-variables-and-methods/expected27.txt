@@ -1,0 +1,7 @@
+Account ACC001 created for Charlie
+Deposited 322.00 to account ACC001
+Deposited 310.00 to account ACC001
+Account: ACC001, Owner: Charlie, Balance: 936.00
+Balance for account ACC001: 936.00
+Deposited 139.00 to account ACC001
+Deposited 366.00 to account ACC001

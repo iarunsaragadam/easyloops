@@ -1,1 +1,5 @@
-placeholder
+Global counter after adding -50: 50
+Local function returned: 35, global counter unchanged: 50
+Global counter after adding 10: 60
+Global counter after modification: 40
+Local function returned: 110, global counter unchanged: 40

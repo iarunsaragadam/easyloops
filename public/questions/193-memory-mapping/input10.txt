@@ -1,0 +1,20 @@
+3 2048
+18
+write 9286
+write 4565
+write 7131
+read 421
+write 2820
+read 9234
+write 539
+read 10121
+write 7418
+write 496
+write 259
+read 5552
+write 5955
+read 2477
+read 9167
+read 9436
+read 318
+read 9908

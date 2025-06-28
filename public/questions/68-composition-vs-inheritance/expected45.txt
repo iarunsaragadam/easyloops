@@ -1,0 +1,6 @@
+Created Motorcycle E15
+Vehicle E15 started. Engine started: V8 engine
+Vehicle E15 is already running
+Vehicle E15 stopped. Engine stopped: V8 engine
+Vehicle E15 is already stopped
+E15: 2021 Ford Motorcycle (stopped)

@@ -1,0 +1,1 @@
+1 | POW 6, SQRT, SQRT, SQRT

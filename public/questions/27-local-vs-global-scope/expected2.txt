@@ -1,1 +1,3 @@
-placeholder
+Global counter set to: 10
+Local function returned: 15, global counter unchanged: 10
+Global counter after modification: 13

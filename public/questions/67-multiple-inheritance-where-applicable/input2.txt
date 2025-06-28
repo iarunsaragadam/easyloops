@@ -1,1 +1,9 @@
-placeholder
+8
+CREATE Person p1 John
+CREATE Worker w1 Jane Developer
+CREATE Student s1 Jim Stanford
+CREATE WorkingStudent ws1 Jill Analyst Yale
+CALL p1 get_info
+CALL w1 get_info
+CALL s1 get_info
+CALL ws1 get_info

@@ -1,0 +1,92 @@
+OPENED complex6_0.txt AS FD 3
+OPENED complex6_1.txt AS FD 4
+OPENED complex6_2.txt AS FD 5
+OPENED complex6_3.txt AS FD 6
+OPENED complex6_4.txt AS FD 7
+EOF
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+EOF
+WRITTEN 6 BYTES TO FD 6
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+WRITTEN 6 BYTES TO FD 3
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+EOF
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+EOF
+WRITTEN 6 BYTES TO FD 4
+WRITTEN 6 BYTES TO FD 6
+EOF
+READ: d
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+READ: data
+WRITTEN 6 BYTES TO FD 6
+READ: data89
+WRITTEN 6 BYTES TO FD 3
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+READ: d
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+EOF
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+FD 3: complex6_0.txt (rw)
+FD 4: complex6_1.txt (w)
+FD 5: complex6_2.txt (r)
+FD 6: complex6_3.txt (rw)
+FD 7: complex6_4.txt (r)
+CLOSED FD 3 (complex6_0.txt)
+CLOSED FD 4 (complex6_1.txt)
+CLOSED FD 5 (complex6_2.txt)
+CLOSED FD 6 (complex6_3.txt)
+CLOSED FD 7 (complex6_4.txt)

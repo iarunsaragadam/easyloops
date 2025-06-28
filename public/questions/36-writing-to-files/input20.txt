@@ -1,0 +1,3 @@
+2
+read file1.txt
+write file1.txt p6XMYaECSuYpZB

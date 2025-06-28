@@ -1,0 +1,2 @@
+Function called: calculate('subtract', 5, 8)
+Result: -3

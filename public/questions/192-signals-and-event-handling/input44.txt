@@ -1,0 +1,11 @@
+10
+0 1 REPEATED occurrence_0
+5 2 REPEATED occurrence_1
+10 3 REPEATED occurrence_2
+15 1 REPEATED occurrence_3
+20 2 REPEATED occurrence_4
+25 3 REPEATED occurrence_5
+30 1 REPEATED occurrence_6
+35 2 REPEATED occurrence_7
+40 3 REPEATED occurrence_8
+45 1 REPEATED occurrence_9

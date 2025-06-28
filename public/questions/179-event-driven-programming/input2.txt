@@ -1,1 +1,3 @@
-placeholder
+2
+100 alice LOGIN
+100 alice LOGOUT

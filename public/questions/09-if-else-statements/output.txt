@@ -1,0 +1,4 @@
+Number: -15
+Sign: negative
+Parity: odd
+Classification: negative odd number

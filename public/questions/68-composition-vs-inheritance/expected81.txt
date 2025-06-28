@@ -1,0 +1,92 @@
+Created Motorcycle P21V0
+Created Truck P21V1
+Created Truck P21V2
+Created Car P21V3
+Created Truck P21V4
+Created Car P21V5
+Created Motorcycle P21V6
+Created Truck P21V7
+Created Car P21V8
+Created Car P21V9
+Created Truck P21V10
+Created Motorcycle P21V11
+Created Truck P21V12
+Created Motorcycle P21V13
+Created Car P21V14
+Created Motorcycle P21V15
+Created Car P21V16
+Created Motorcycle P21V17
+Created Car P21V18
+Created Truck P21V19
+Created Motorcycle P21V20
+Created Truck P21V21
+Created Car P21V22
+Created Motorcycle P21V23
+Created Truck P21V24
+Created Truck P21V25
+Created Motorcycle P21V26
+Created Car P21V27
+Created Car P21V28
+Created Motorcycle P21V29
+Created Motorcycle P21V30
+Created Truck P21V31
+Created Truck P21V32
+Created Car P21V33
+Created Motorcycle P21V34
+Created Motorcycle P21V35
+Created Motorcycle P21V36
+Created Truck P21V37
+Created Motorcycle P21V38
+Created Truck P21V39
+Created Car P21V40
+Created Car P21V41
+Created Car P21V42
+Created Car P21V43
+Created Car P21V44
+Created Motorcycle P21V45
+Created Motorcycle P21V46
+Created Motorcycle P21V47
+Created Car P21V48
+Created Car P21V49
+Created Car P21V50
+Created Truck P21V51
+Created Truck P21V52
+Created Truck P21V53
+Created Truck P21V54
+Created Truck P21V55
+Created Truck P21V56
+Created Truck P21V57
+Created Truck P21V58
+Created Motorcycle P21V59
+Created Car P21V60
+Created Car P21V61
+Vehicle P21V0 started. Engine started: V8 engine
+P21V0: 2024 Ford Motorcycle (running)
+Fuel cost for 405 miles: $124.1
+Vehicle P21V2 started. Engine started: V6 engine
+P21V2: 2003 Yamaha Truck (running)
+Fuel cost for 237 miles: $82.9
+Vehicle P21V4 started. Engine started: Electric engine
+P21V4: 2018 Ford Truck (running)
+Fuel cost for 310 miles: $15.1
+Vehicle P21V6 started. Engine started: V6 engine
+P21V6: 2009 Ford Motorcycle (running)
+Fuel cost for 254 miles: $2.2
+Vehicle P21V8 started. Engine started: V6 engine
+P21V8: 2017 Toyota Car (running)
+Fuel cost for 295 miles: $84.4
+Vehicle P21V10 started. Engine started: V8 engine
+P21V10: 2008 Honda Truck (running)
+Fuel cost for 344 miles: $10.8
+Vehicle P21V12 started. Engine started: V6 engine
+P21V12: 2018 Ford Truck (running)
+Fuel cost for 422 miles: $124.7
+Vehicle P21V14 started. Engine started: Electric engine
+P21V14: 2004 Ford Car (running)
+Fuel cost for 252 miles: $10.0
+Vehicle P21V16 started. Engine started: V4 engine
+P21V16: 2023 Ford Car (running)
+Fuel cost for 267 miles: $54.6
+Vehicle P21V18 started. Engine started: Electric engine
+P21V18: 2017 BMW Car (running)
+Fuel cost for 497 miles: $17.9

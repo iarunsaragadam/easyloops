@@ -1,0 +1,6 @@
+Line 1: 0 words, 0 characters
+Line 2: 2 words, 13 characters
+Line 3: 5 words, 28 characters
+Line 4: 0 words, 0 characters
+Line 5: 0 words, 0 characters
+Total: 5 lines, 7 words, 41 characters

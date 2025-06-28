@@ -1,0 +1,7 @@
+HTTP/1.1 403 Forbidden
+Content-Type: application/javascript
+Content-Length: 53
+Server: Apache/2.4.41
+
+Response body for test case 13
+Second line of content

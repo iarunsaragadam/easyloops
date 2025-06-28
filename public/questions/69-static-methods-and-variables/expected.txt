@@ -1,1 +1,4 @@
-placeholder
+Total: 2, Sum: 175, Average: 87.50
+Alice: 85
+Total: 3, Sum: 253, Average: 84.33
+Bob: 90

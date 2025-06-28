@@ -1,0 +1,8 @@
+Directory 'level_0' created
+Directory 'level_0/level_1' created
+Directory 'level_0/level_1/level_2' created
+Directory 'level_0/level_1/level_2/level_3' created
+Directory 'level_0/level_1/level_2/level_3/level_4' created
+Changed to /level_0/level_1/level_2/level_3/level_4
+/level_0/level_1/level_2/level_3/level_4
+Changed to /

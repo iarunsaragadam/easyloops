@@ -1,0 +1,14 @@
+LOG LEVEL SUMMARY:
+DEBUG: 1
+ERROR: 2
+INFO: 1
+WARN: 3
+
+ERROR ENTRIES:
+[2023-12-01 10:40:00] Edge case test message 5
+[2023-12-01 12:54:00] Edge case test message 6
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-01 10:00:00
+Last entry: 2023-12-01 12:54:00
+Total entries: 7

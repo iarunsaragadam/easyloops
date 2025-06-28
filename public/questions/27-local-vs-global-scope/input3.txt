@@ -1,1 +1,7 @@
-placeholder
+100
+5
+global_add -50
+local_function 25
+global_add 10
+modify_global -20
+local_function 100

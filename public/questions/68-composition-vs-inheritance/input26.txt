@@ -1,0 +1,4 @@
+CREATE Truck T26 Ford 2020 Electric 104 electric
+START T26
+INFO T26
+FUEL_COST T26 154

@@ -1,0 +1,7 @@
+HTTP/2.0 401 Unauthorized
+Content-Type: image/jpeg
+Content-Length: 53
+Server: IIS/10.0
+
+Response body for test case 14
+Second line of content

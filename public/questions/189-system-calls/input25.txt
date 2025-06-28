@@ -1,0 +1,7 @@
+6
+OPEN frbvlh.dat w
+LIST
+WRITE 3 file hello call file data
+WRITE 3 programming code
+WRITE 3 hello example programming
+CLOSE 3

@@ -1,1 +1,6 @@
-placeholder
+4
+Paris
+John,25,London
+Jane,30,Berlin
+Mike,35,Madrid
+Sarah,40,Rome

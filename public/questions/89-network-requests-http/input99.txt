@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Content-Type: text/plain
+
+GET /api HTTP/1.1
+Host: example.com
+Authorization: Bearer token
+
+This looks like a request but it's response body!

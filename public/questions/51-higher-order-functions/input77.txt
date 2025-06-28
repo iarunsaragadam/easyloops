@@ -1,0 +1,1 @@
+18 | NEG, MUL -2, MUL 3, NEG, SQRT, ABS, POW 2, POW 2

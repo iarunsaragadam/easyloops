@@ -1,1 +1,11 @@
-placeholder
+Directory 'a' created
+Directory 'a/b' created
+Directory 'a/b/c' created
+Changed to /a/b
+/a/b
+Changed to /a
+/a
+Changed to /a/b/c
+/a/b/c
+Changed to /
+/

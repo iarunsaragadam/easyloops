@@ -1,0 +1,12 @@
+11
+OPEN jnnh.tmp r
+OPEN ltjm.tmp rw
+OPEN apyukbzz.log rw
+OPEN rqec.tmp r
+OPEN ncrllj.log r
+WRITE 4 data programming code
+LIST
+WRITE 4 code
+CLOSE 3
+CLOSE 4
+CLOSE 5

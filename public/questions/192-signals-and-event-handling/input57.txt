@@ -1,0 +1,6 @@
+5
+867 10 TYPE_0 same_timestamp_0
+867 8 TYPE_1 same_timestamp_1
+867 7 TYPE_2 same_timestamp_2
+867 6 TYPE_3 same_timestamp_3
+867 5 TYPE_0 same_timestamp_4

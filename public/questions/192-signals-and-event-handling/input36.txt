@@ -1,0 +1,6 @@
+5
+100 1 TYPE_0 data_0
+100 2 TYPE_1 data_1
+100 3 TYPE_2 data_2
+100 4 TYPE_3 data_3
+100 5 TYPE_4 data_4

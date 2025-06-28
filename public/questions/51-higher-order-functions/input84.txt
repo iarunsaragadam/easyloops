@@ -1,0 +1,1 @@
+8 | SQRT, ABS, NEG, ABS

@@ -1,0 +1,22 @@
+3 512
+20
+read 4383
+read 7146
+write 7758
+read 5260
+write 7827
+read 909
+read 5906
+read 6482
+read 2147
+write 6839
+write 5810
+read 7018
+write 3371
+read 7404
+read 3617
+read 4419
+write 1125
+read 2208
+write 467
+read 5835

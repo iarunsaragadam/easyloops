@@ -1,0 +1,7 @@
+-32
+5
+negate
+negate
+negate
+abs
+multiply -94

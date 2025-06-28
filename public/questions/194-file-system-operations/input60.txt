@@ -1,0 +1,17 @@
+16
+touch perf_file_60_0.txt
+ls
+pwd
+ls
+mkdir perf_dir_60_4
+touch perf_file_60_5.txt
+pwd
+ls
+ls
+ls
+mkdir perf_dir_60_10
+ls
+mkdir perf_dir_60_12
+touch perf_file_60_13.txt
+mkdir perf_dir_60_14
+pwd

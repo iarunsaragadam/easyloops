@@ -1,0 +1,4 @@
+Account ACC001 created for Diana
+Deposited 0.01 to account ACC001
+Withdrew 0.01 from account ACC001
+Balance for account ACC001: 100.00

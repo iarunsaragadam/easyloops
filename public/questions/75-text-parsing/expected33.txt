@@ -1,0 +1,12 @@
+LOG LEVEL SUMMARY:
+ERROR: 3
+
+ERROR ENTRIES:
+[2023-12-01 10:00:00] Critical system failure
+[2023-12-01 10:00:30] Database connection lost
+[2023-12-01 10:01:00] Service unavailable
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-01 10:00:00
+Last entry: 2023-12-01 10:01:00
+Total entries: 3

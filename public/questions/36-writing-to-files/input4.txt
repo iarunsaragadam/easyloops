@@ -1,0 +1,7 @@
+6
+write file1.txt Content1
+write file2.txt Content2
+read file1.txt
+read file2.txt
+append file1.txt Extra
+read file1.txt

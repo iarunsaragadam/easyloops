@@ -1,0 +1,5 @@
+Array size: 10
+Array elements: [159, 142, 92, 88, 32, 2, -102, -151, -174, -181]
+First element: 159
+Last element: -181
+Array sum: -93

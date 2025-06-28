@@ -1,0 +1,8 @@
+7
+touch temp.txt
+mkdir temp_dir
+ls
+rm temp.txt
+ls
+rm temp_dir
+ls

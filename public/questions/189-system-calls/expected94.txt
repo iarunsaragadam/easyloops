@@ -1,0 +1,99 @@
+OPENED complex12_0.txt AS FD 3
+OPENED complex12_1.txt AS FD 4
+OPENED complex12_2.txt AS FD 5
+OPENED complex12_3.txt AS FD 6
+OPENED complex12_4.txt AS FD 7
+OPENED complex12_5.txt AS FD 8
+EOF
+EOF
+EOF
+WRITTEN 6 BYTES TO FD 4
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+WRITTEN 6 BYTES TO FD 3
+WRITTEN 5 BYTES TO FD 6
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+EOF
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+EOF
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+EOF
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+READ: data5
+WRITTEN 6 BYTES TO FD 4
+EOF
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+WRITTEN 6 BYTES TO FD 6
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+READ: data5data28
+EOF
+EOF
+FD 3: complex12_0.txt (rw)
+FD 4: complex12_1.txt (rw)
+FD 5: complex12_2.txt (r)
+FD 6: complex12_3.txt (rw)
+FD 7: complex12_4.txt (r)
+FD 8: complex12_5.txt (rw)
+WRITTEN 6 BYTES TO FD 8
+READ: data7
+READ: data46
+WRITTEN 6 BYTES TO FD 8
+WRITTEN 5 BYTES TO FD 3
+CLOSED FD 3 (complex12_0.txt)
+CLOSED FD 4 (complex12_1.txt)
+CLOSED FD 5 (complex12_2.txt)
+CLOSED FD 6 (complex12_3.txt)
+CLOSED FD 7 (complex12_4.txt)
+CLOSED FD 8 (complex12_5.txt)

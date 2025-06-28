@@ -1,0 +1,5 @@
+APPEND: 8ag5lyu.cfg (28 total chars)
+CREATE: dog.data
+CREATE: m0f.log
+CREATE: injoqucg7q.txt
+WRITE: oi9bz.log (86 chars)

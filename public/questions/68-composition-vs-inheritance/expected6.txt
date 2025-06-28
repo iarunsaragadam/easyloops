@@ -1,0 +1,4 @@
+Created Car C6
+Vehicle C6 started. Engine started: Electric engine
+C6: 2023 Chevrolet Car (running)
+Fuel cost for 112 miles: $4.0

@@ -1,0 +1,7 @@
+Processing events:
+Event 1: [P4] SYSTEM at 221 - event_0_data
+Event 2: [P5] NETWORK at 589 - event_1_data
+System state:
+Total events processed: 2
+NETWORK: 1
+SYSTEM: 1

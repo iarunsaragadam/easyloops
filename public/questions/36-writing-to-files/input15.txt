@@ -1,0 +1,11 @@
+10
+read file2.txt
+append file1.txt OwsVax1
+append file2.txt pkyGYE8AqQg7sM6sS
+append file1.txt hwzeVDNM1E9bxilisj
+append file2.txt ZJfKBye2Sl7dDB
+append file1.txt yV8gZDrTvjSwkR
+append file2.txt WoX22Rn7JHdRvYtOY 
+append file1.txt GGIyYO
+write file1.txt SZjBMSqAD
+append file1.txt lL7NiURf

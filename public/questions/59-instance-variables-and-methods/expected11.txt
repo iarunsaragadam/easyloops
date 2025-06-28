@@ -1,0 +1,3 @@
+Account ACC001 created for Jack
+Balance for account ACC001: 153.00
+Deposited 440.00 to account ACC001

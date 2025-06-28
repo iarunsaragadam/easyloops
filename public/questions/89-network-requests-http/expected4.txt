@@ -1,0 +1,10 @@
+body_length=52
+body_lines=2
+content_length=52
+content_type=text/css
+header_count=3
+http_version=1.1
+server=Caddy/2.4.6
+status_category=Client Error
+status_code=403
+status_message=Forbidden

@@ -1,0 +1,3 @@
+Created Car E28
+Vehicle E28 started. Engine started: V8 engine
+Fuel cost for 1000 miles: $6.2

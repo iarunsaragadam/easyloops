@@ -1,1 +1,1 @@
-placeholder
+empty_test_file.txt

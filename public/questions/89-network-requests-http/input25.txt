@@ -1,0 +1,7 @@
+HTTP/1.1 502 Bad Gateway
+Content-Type: text/plain
+Content-Length: 53
+Server: Apache/2.4.41
+
+Response body for test case 25
+Second line of content

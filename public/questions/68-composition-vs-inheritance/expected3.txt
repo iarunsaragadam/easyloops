@@ -1,1 +1,4 @@
-placeholder
+Created Motorcycle M1
+Vehicle M1 started. Engine started: V4 engine
+M1: 2021 Honda Motorcycle (running)
+Fuel cost for 100 miles: $8.4

@@ -1,1 +1,7 @@
-placeholder
+Circle: Area=346.36, Perimeter=65.97
+Rectangle: Area=107.19, Perimeter=42.00
+Triangle: Area=84.00, Perimeter=42.00
+Circle: Area=19.63, Perimeter=15.71
+Rectangle: Area=25.00, Perimeter=20.00
+Total Area: 582.18
+Total Perimeter: 185.68

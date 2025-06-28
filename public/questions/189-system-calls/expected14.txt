@@ -1,0 +1,9 @@
+OPENED bmiszmej.txt AS FD 3
+OPENED frq.tmp AS FD 4
+OPENED ixbuc.tmp AS FD 5
+OPENED ogzg.log AS FD 6
+OPENED pla.dat AS FD 7
+CLOSED FD 3 (bmiszmej.txt)
+CLOSED FD 4 (frq.tmp)
+CLOSED FD 5 (ixbuc.tmp)
+CLOSED FD 6 (ogzg.log)

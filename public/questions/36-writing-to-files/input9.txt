@@ -1,0 +1,6 @@
+5
+write file1.txt j 9i50zqyI
+write file1.txt 9AsyhfkPS9w0DyP
+read file1.txt
+write file1.txt 3 DAXwfuAiA
+read file1.txt

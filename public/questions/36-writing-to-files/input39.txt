@@ -1,0 +1,5 @@
+4
+read m0ku6kn7v0.cfg
+append fmq.data FDqH9IWdPN1 QdzrvU22
+create 0ay7r5n0f.txt
+write sieqj6wi8i.cfg

@@ -1,0 +1,5 @@
+0
+3
+add 5
+multiply 0
+add 100

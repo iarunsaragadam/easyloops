@@ -1,1 +1,5 @@
-placeholder
+name: Alice Smith
+id: 12345
+add_grade: success
+gpa: 85.0
+verify_key: success

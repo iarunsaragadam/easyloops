@@ -1,0 +1,18 @@
+-1018
+16
+add -115
+add -393
+abs
+abs
+multiply -7
+multiply -76
+add 569
+square
+multiply 79
+add -412
+multiply -6
+add 314
+abs
+abs
+add 386
+negate

@@ -1,0 +1,10 @@
+body_length=52
+body_lines=2
+content_length=52
+content_type=image/jpeg
+header_count=3
+http_version=1.0
+server=nginx/1.18.0
+status_category=Server Error
+status_code=500
+status_message=Internal Server Error

@@ -1,0 +1,7 @@
+[2023-12-13 10:00:00] ERROR: Security alert
+[2023-12-13 10:10:00] WARN: Performance degraded
+[2023-12-13 10:10:00] WARN: Performance degraded
+[2023-12-13 10:30:00] ERROR: User logged in
+[2023-12-13 10:32:00] ERROR: Disk space low
+[2023-12-13 10:05:00] INFO: Database connected
+[2023-12-13 11:00:00] INFO: System maintenance

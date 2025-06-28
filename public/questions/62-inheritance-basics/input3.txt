@@ -1,1 +1,6 @@
-placeholder
+5
+rectangle 100 200
+circle 50
+triangle 80 120
+rectangle 999.9 500.5
+circle 100

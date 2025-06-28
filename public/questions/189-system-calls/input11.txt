@@ -1,0 +1,5 @@
+4
+OPEN hkwalokn.txt w
+LIST
+LIST
+LIST

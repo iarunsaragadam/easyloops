@@ -1,1 +1,9 @@
-placeholder
+Employee Report
+==================================================
+Name                ID       Salary   Dept  
+--------------------------------------------------
+Employee One    001001    45,000.25    HR   
+Employee Two    001002    55,000.50    IT   
+Employee Three  001003    65,000.75 FINANCE 
+Employee Four   001004    35,000.00  ADMIN  
+Employee Five   001005    85,000.99   TECH  

@@ -1,1 +1,8 @@
-placeholder
+7
+PUT alpha data1 KEEP
+PUT beta data2
+PUT gamma data3 KEEP
+KEYS
+GET alpha
+GET beta
+GET gamma

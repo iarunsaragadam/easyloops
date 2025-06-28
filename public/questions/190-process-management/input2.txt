@@ -1,1 +1,2 @@
-placeholder
+1 SJF
+SOLO 5 10 1

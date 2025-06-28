@@ -1,0 +1,84 @@
+Created Motorcycle P17V0
+Created Truck P17V1
+Created Car P17V2
+Created Motorcycle P17V3
+Created Car P17V4
+Created Car P17V5
+Created Truck P17V6
+Created Motorcycle P17V7
+Created Motorcycle P17V8
+Created Car P17V9
+Created Motorcycle P17V10
+Created Motorcycle P17V11
+Created Motorcycle P17V12
+Created Truck P17V13
+Created Truck P17V14
+Created Car P17V15
+Created Motorcycle P17V16
+Created Motorcycle P17V17
+Created Car P17V18
+Created Car P17V19
+Created Car P17V20
+Created Car P17V21
+Created Motorcycle P17V22
+Created Car P17V23
+Created Truck P17V24
+Created Truck P17V25
+Created Motorcycle P17V26
+Created Truck P17V27
+Created Motorcycle P17V28
+Created Car P17V29
+Created Truck P17V30
+Created Truck P17V31
+Created Car P17V32
+Created Motorcycle P17V33
+Created Car P17V34
+Created Car P17V35
+Created Motorcycle P17V36
+Created Car P17V37
+Created Truck P17V38
+Created Car P17V39
+Created Car P17V40
+Created Truck P17V41
+Created Truck P17V42
+Created Motorcycle P17V43
+Created Car P17V44
+Created Car P17V45
+Created Motorcycle P17V46
+Created Truck P17V47
+Created Truck P17V48
+Created Truck P17V49
+Created Truck P17V50
+Created Truck P17V51
+Created Truck P17V52
+Created Truck P17V53
+Vehicle P17V0 started. Engine started: V8 engine
+P17V0: 2020 Ford Motorcycle (running)
+Fuel cost for 458 miles: $89.0
+Vehicle P17V2 started. Engine started: V4 engine
+P17V2: 2009 Honda Car (running)
+Fuel cost for 434 miles: $69.8
+Vehicle P17V4 started. Engine started: V8 engine
+P17V4: 2006 Honda Car (running)
+Fuel cost for 229 miles: $52.4
+Vehicle P17V6 started. Engine started: V4 engine
+P17V6: 2006 Honda Truck (running)
+Fuel cost for 361 miles: $99.2
+Vehicle P17V8 started. Engine started: Electric engine
+P17V8: 2024 Yamaha Motorcycle (running)
+Fuel cost for 249 miles: $0.2
+Vehicle P17V10 started. Engine started: V6 engine
+P17V10: 2006 BMW Motorcycle (running)
+Fuel cost for 311 miles: $1.2
+Vehicle P17V12 started. Engine started: V4 engine
+P17V12: 2017 Honda Motorcycle (running)
+Fuel cost for 493 miles: $43.7
+Vehicle P17V14 started. Engine started: V4 engine
+P17V14: 2007 Yamaha Truck (running)
+Fuel cost for 271 miles: $54.3
+Vehicle P17V16 started. Engine started: Electric engine
+P17V16: 2025 Honda Motorcycle (running)
+Fuel cost for 313 miles: $8.2
+Vehicle P17V18 started. Engine started: V8 engine
+P17V18: 2006 Honda Car (running)
+Fuel cost for 278 miles: $1.9

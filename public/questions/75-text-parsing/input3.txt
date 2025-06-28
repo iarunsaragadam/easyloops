@@ -1,1 +1,4 @@
-placeholder
+[2023-12-03 10:00:00] WARN: Test case 3 warning
+[2023-12-03 10:01:00] INFO: Information for test 3
+[2023-12-03 10:02:00] ERROR: Critical error in test 3
+[2023-12-03 10:03:00] DEBUG: Debug trace for test 3

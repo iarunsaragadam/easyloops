@@ -1,0 +1,11 @@
+10
+pwd
+mkdir dir_13_0
+mkdir dir_13_1
+mkdir dir_13_2
+ls
+ls
+cd ..
+mkdir dir_13_6
+touch file_13_7.txt
+count files

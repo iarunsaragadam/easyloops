@@ -1,0 +1,5 @@
+4
+append zmke7il56.data
+read jgs.cfg
+create qwk.log
+read brotxbqgol.ini

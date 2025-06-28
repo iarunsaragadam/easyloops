@@ -1,1 +1,7 @@
-placeholder
+2
+@decorator
+def hello(name: str) -> str:
+    pass
+---
+def add_numbers(x: int, y: int = 5) -> int:
+    return x + y

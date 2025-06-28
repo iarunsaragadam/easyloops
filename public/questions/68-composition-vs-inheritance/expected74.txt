@@ -1,0 +1,78 @@
+Created Truck P14V0
+Created Truck P14V1
+Created Car P14V2
+Created Car P14V3
+Created Motorcycle P14V4
+Created Car P14V5
+Created Truck P14V6
+Created Truck P14V7
+Created Car P14V8
+Created Motorcycle P14V9
+Created Truck P14V10
+Created Car P14V11
+Created Truck P14V12
+Created Motorcycle P14V13
+Created Car P14V14
+Created Truck P14V15
+Created Car P14V16
+Created Car P14V17
+Created Car P14V18
+Created Car P14V19
+Created Car P14V20
+Created Motorcycle P14V21
+Created Truck P14V22
+Created Motorcycle P14V23
+Created Motorcycle P14V24
+Created Motorcycle P14V25
+Created Car P14V26
+Created Car P14V27
+Created Motorcycle P14V28
+Created Motorcycle P14V29
+Created Car P14V30
+Created Motorcycle P14V31
+Created Car P14V32
+Created Truck P14V33
+Created Car P14V34
+Created Truck P14V35
+Created Car P14V36
+Created Motorcycle P14V37
+Created Truck P14V38
+Created Car P14V39
+Created Truck P14V40
+Created Truck P14V41
+Created Car P14V42
+Created Truck P14V43
+Created Truck P14V44
+Created Motorcycle P14V45
+Created Car P14V46
+Created Motorcycle P14V47
+Vehicle P14V0 started. Engine started: Electric engine
+P14V0: 2013 Yamaha Truck (running)
+Fuel cost for 206 miles: $0.4
+Vehicle P14V2 started. Engine started: V4 engine
+P14V2: 2000 Honda Car (running)
+Fuel cost for 187 miles: $1.2
+Vehicle P14V4 started. Engine started: Electric engine
+P14V4: 2008 Ford Motorcycle (running)
+Fuel cost for 166 miles: $4.1
+Vehicle P14V6 started. Engine started: V8 engine
+P14V6: 2008 Toyota Truck (running)
+Fuel cost for 144 miles: $4.5
+Vehicle P14V8 started. Engine started: V6 engine
+P14V8: 2018 BMW Car (running)
+Fuel cost for 140 miles: $70.0
+Vehicle P14V10 started. Engine started: V6 engine
+P14V10: 2022 Ford Truck (running)
+Fuel cost for 379 miles: $7.7
+Vehicle P14V12 started. Engine started: V6 engine
+P14V12: 2009 Honda Truck (running)
+Fuel cost for 364 miles: $2.7
+Vehicle P14V14 started. Engine started: V4 engine
+P14V14: 2002 Toyota Car (running)
+Fuel cost for 332 miles: $46.3
+Vehicle P14V16 started. Engine started: V4 engine
+P14V16: 2000 Honda Car (running)
+Fuel cost for 401 miles: $54.9
+Vehicle P14V18 started. Engine started: Electric engine
+P14V18: 2006 Yamaha Car (running)
+Fuel cost for 422 miles: $0.5

@@ -1,1 +1,12 @@
-placeholder
+Carol Davis
+99999
+student
+8
+name
+id
+add_grade 95
+add_grade 105
+add_grade 78
+add_grade 92
+gpa
+verify_key wrong_key

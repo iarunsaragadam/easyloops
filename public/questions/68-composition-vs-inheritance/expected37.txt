@@ -1,0 +1,3 @@
+Created Motorcycle E7
+Vehicle E7 started. Engine started: V6 engine
+Fuel cost for 1000 miles: $3.2

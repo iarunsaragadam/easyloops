@@ -1,0 +1,53 @@
+OPENED complex20_0.txt AS FD 3
+OPENED complex20_1.txt AS FD 4
+OPENED complex20_2.txt AS FD 5
+OPENED complex20_3.txt AS FD 6
+WRITTEN 6 BYTES TO FD 5
+READ: data90
+FD 3: complex20_0.txt (rw)
+FD 4: complex20_1.txt (r)
+FD 5: complex20_2.txt (rw)
+FD 6: complex20_3.txt (w)
+FD 3: complex20_0.txt (rw)
+FD 4: complex20_1.txt (r)
+FD 5: complex20_2.txt (rw)
+FD 6: complex20_3.txt (w)
+READ: data90
+READ: data90
+WRITTEN 6 BYTES TO FD 5
+FD 3: complex20_0.txt (rw)
+FD 4: complex20_1.txt (r)
+FD 5: complex20_2.txt (rw)
+FD 6: complex20_3.txt (w)
+EOF
+READ: data90da
+WRITTEN 7 BYTES TO FD 5
+FD 3: complex20_0.txt (rw)
+FD 4: complex20_1.txt (r)
+FD 5: complex20_2.txt (rw)
+FD 6: complex20_3.txt (w)
+FD 3: complex20_0.txt (rw)
+FD 4: complex20_1.txt (r)
+FD 5: complex20_2.txt (rw)
+FD 6: complex20_3.txt (w)
+EOF
+WRITTEN 6 BYTES TO FD 3
+WRITTEN 6 BYTES TO FD 6
+FD 3: complex20_0.txt (rw)
+FD 4: complex20_1.txt (r)
+FD 5: complex20_2.txt (rw)
+FD 6: complex20_3.txt (w)
+FD 3: complex20_0.txt (rw)
+FD 4: complex20_1.txt (r)
+FD 5: complex20_2.txt (rw)
+FD 6: complex20_3.txt (w)
+FD 3: complex20_0.txt (rw)
+FD 4: complex20_1.txt (r)
+FD 5: complex20_2.txt (rw)
+FD 6: complex20_3.txt (w)
+EOF
+WRITTEN 6 BYTES TO FD 3
+CLOSED FD 3 (complex20_0.txt)
+CLOSED FD 4 (complex20_1.txt)
+CLOSED FD 5 (complex20_2.txt)
+CLOSED FD 6 (complex20_3.txt)

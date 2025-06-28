@@ -1,0 +1,8 @@
+[2023-12-08 10:00:00] DEBUG: Disk space low
+[2023-12-08 10:05:00] ERROR: Performance degraded
+[2023-12-08 10:16:00] ERROR: Configuration loaded
+[2023-12-08 10:27:00] DEBUG: Application started
+[2023-12-08 10:28:00] DEBUG: Performance degraded
+[2023-12-08 10:20:00] INFO: Connection timeout
+[2023-12-08 10:48:00] ERROR: Application started
+[2023-12-08 11:03:00] DEBUG: Performance degraded

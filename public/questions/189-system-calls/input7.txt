@@ -1,0 +1,10 @@
+9
+OPEN hpspcxn.tmp rw
+OPEN fszt.dat w
+OPEN fpiz.dat w
+LIST
+WRITE 3 call data
+WRITE 3 world file data test
+CLOSE 3
+CLOSE 4
+CLOSE 5

@@ -1,0 +1,4 @@
+CREATE Car C15 Nissan 2020 Electric 226 electric
+START C15
+INFO C15
+FUEL_COST C15 142

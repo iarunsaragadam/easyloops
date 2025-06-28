@@ -1,0 +1,6 @@
+Processing events:
+Event 1: [P3] SYSTEM at 418 - event_1_data
+Event 2: [P3] SYSTEM at 902 - event_0_data
+System state:
+Total events processed: 2
+SYSTEM: 2

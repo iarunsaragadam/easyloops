@@ -1,0 +1,5 @@
+Array size: 1
+Array elements: [42]
+First element: 42
+Last element: 42
+Array sum: 42

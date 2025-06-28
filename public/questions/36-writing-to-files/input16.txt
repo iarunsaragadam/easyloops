@@ -1,0 +1,7 @@
+6
+read file1.txt
+append file2.txt mwAyE6x 6SHz7RC
+write file1.txt 40
+append file1.txt bGAWMYVc
+write file1.txt R8tLx14M
+append file2.txt wS4yQ9TRZnXrYAUbdy

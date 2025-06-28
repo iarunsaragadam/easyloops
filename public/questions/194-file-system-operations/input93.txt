@@ -1,0 +1,11 @@
+10
+mkdir test_93
+mkdir test_93/sub1
+mkdir test_93/sub2
+touch test_93/file1.txt
+touch test_93/sub1/file2.txt
+ls test_93
+find file2.txt
+rm test_93/sub1/file2.txt
+rm test_93/sub1
+count files

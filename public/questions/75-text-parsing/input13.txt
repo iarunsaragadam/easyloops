@@ -1,0 +1,5 @@
+[2023-12-14 10:00:00] ERROR: Disk space low
+[2023-12-14 10:10:00] WARN: Security alert
+[2023-12-14 10:08:00] DEBUG: Cache updated
+[2023-12-14 10:18:00] ERROR: Application started
+[2023-12-14 10:20:00] INFO: Connection timeout

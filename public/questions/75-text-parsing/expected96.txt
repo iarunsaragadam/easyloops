@@ -1,0 +1,17 @@
+LOG LEVEL SUMMARY:
+DEBUG: 7
+ERROR: 5
+INFO: 10
+WARN: 5
+
+ERROR ENTRIES:
+[2023-12-01 10:12:00] Complex scenario message 12 with special chars: @#$%^&*()
+[2023-12-01 10:25:00] Complex scenario message 5 with special chars: @#$%^&*()
+[2023-12-01 10:48:00] Complex scenario message 16 with special chars: @#$%^&*()
+[2023-12-01 11:12:00] Complex scenario message 24 with special chars: @#$%^&*()
+[2023-12-01 12:05:00] Complex scenario message 25 with special chars: @#$%^&*()
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-01 10:00:00
+Last entry: 2023-12-01 12:10:00
+Total entries: 27

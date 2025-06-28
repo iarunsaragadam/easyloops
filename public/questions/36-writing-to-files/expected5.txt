@@ -1,0 +1,1 @@
+WRITE: single.txt (5 chars)

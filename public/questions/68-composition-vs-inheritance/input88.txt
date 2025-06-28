@@ -1,0 +1,106 @@
+CREATE Truck P28V0 Honda 2021 Electric 206 electric
+CREATE Motorcycle P28V1 Ford 2007 V4 271 electric
+CREATE Motorcycle P28V2 BMW 2021 Electric 85 diesel
+CREATE Car P28V3 Ford 2017 V8 321 electric
+CREATE Motorcycle P28V4 Yamaha 2002 V6 294 gasoline
+CREATE Car P28V5 Toyota 2004 V6 259 diesel
+CREATE Motorcycle P28V6 Toyota 2005 V6 353 electric
+CREATE Car P28V7 Toyota 2015 V4 392 diesel
+CREATE Truck P28V8 Toyota 2010 V4 89 gasoline
+CREATE Truck P28V9 Yamaha 2006 V6 298 electric
+CREATE Truck P28V10 Honda 2008 Electric 156 gasoline
+CREATE Truck P28V11 Yamaha 2021 V4 319 gasoline
+CREATE Car P28V12 Yamaha 2004 V8 224 electric
+CREATE Car P28V13 Yamaha 2009 V8 251 diesel
+CREATE Truck P28V14 Ford 2007 V4 107 diesel
+CREATE Truck P28V15 Yamaha 2022 V8 305 electric
+CREATE Truck P28V16 Honda 2004 V8 144 gasoline
+CREATE Car P28V17 Honda 2012 V6 186 diesel
+CREATE Car P28V18 Ford 2009 V4 282 gasoline
+CREATE Motorcycle P28V19 Ford 2002 Electric 159 electric
+CREATE Truck P28V20 Toyota 2020 V6 293 electric
+CREATE Truck P28V21 Ford 2019 V8 136 diesel
+CREATE Truck P28V22 Ford 2003 Electric 271 gasoline
+CREATE Motorcycle P28V23 Yamaha 2006 V4 258 diesel
+CREATE Car P28V24 Yamaha 2004 V8 213 electric
+CREATE Car P28V25 BMW 2024 V4 388 diesel
+CREATE Truck P28V26 Honda 2011 V4 357 diesel
+CREATE Truck P28V27 Honda 2003 V8 195 electric
+CREATE Motorcycle P28V28 BMW 2000 V8 395 electric
+CREATE Motorcycle P28V29 Ford 2009 Electric 103 electric
+CREATE Car P28V30 Yamaha 2001 V4 217 gasoline
+CREATE Truck P28V31 Yamaha 2021 V4 266 diesel
+CREATE Motorcycle P28V32 Toyota 2005 V4 175 diesel
+CREATE Motorcycle P28V33 Ford 2004 V6 160 electric
+CREATE Motorcycle P28V34 BMW 2003 V6 90 gasoline
+CREATE Truck P28V35 Ford 2000 V6 398 electric
+CREATE Truck P28V36 Toyota 2016 V4 93 gasoline
+CREATE Truck P28V37 Toyota 2003 Electric 336 diesel
+CREATE Motorcycle P28V38 Yamaha 2023 Electric 366 diesel
+CREATE Car P28V39 Toyota 2012 V8 174 diesel
+CREATE Truck P28V40 Ford 2024 V8 258 diesel
+CREATE Truck P28V41 Ford 2009 V8 299 electric
+CREATE Truck P28V42 Yamaha 2024 Electric 199 diesel
+CREATE Motorcycle P28V43 Toyota 2006 V4 104 electric
+CREATE Car P28V44 Honda 2016 V4 247 gasoline
+CREATE Truck P28V45 Ford 2000 V4 371 electric
+CREATE Car P28V46 Honda 2006 Electric 238 gasoline
+CREATE Car P28V47 Ford 2009 V8 238 gasoline
+CREATE Car P28V48 Honda 2023 Electric 203 electric
+CREATE Motorcycle P28V49 Toyota 2024 V8 127 diesel
+CREATE Truck P28V50 Yamaha 2000 Electric 187 diesel
+CREATE Truck P28V51 Yamaha 2014 V4 104 gasoline
+CREATE Truck P28V52 Toyota 2016 Electric 375 electric
+CREATE Motorcycle P28V53 BMW 2025 V4 298 electric
+CREATE Car P28V54 Yamaha 2000 Electric 181 gasoline
+CREATE Motorcycle P28V55 BMW 2013 Electric 298 electric
+CREATE Car P28V56 Ford 2000 Electric 224 diesel
+CREATE Motorcycle P28V57 BMW 2022 V8 317 electric
+CREATE Motorcycle P28V58 Honda 2020 V6 93 gasoline
+CREATE Truck P28V59 Yamaha 2018 Electric 108 diesel
+CREATE Motorcycle P28V60 Toyota 2007 Electric 318 electric
+CREATE Car P28V61 Honda 2016 V6 276 gasoline
+CREATE Motorcycle P28V62 Yamaha 2003 Electric 259 diesel
+CREATE Car P28V63 Toyota 2010 V6 121 diesel
+CREATE Car P28V64 Yamaha 2007 Electric 251 electric
+CREATE Car P28V65 Ford 2018 Electric 147 gasoline
+CREATE Motorcycle P28V66 Ford 2020 V6 371 diesel
+CREATE Motorcycle P28V67 Honda 2022 V4 222 electric
+CREATE Motorcycle P28V68 BMW 2009 V6 348 electric
+CREATE Motorcycle P28V69 Ford 2015 V8 127 diesel
+CREATE Motorcycle P28V70 Yamaha 2019 V4 173 electric
+CREATE Car P28V71 BMW 2015 Electric 196 diesel
+CREATE Truck P28V72 Honda 2004 V8 237 diesel
+CREATE Truck P28V73 Toyota 2009 V6 256 electric
+CREATE Truck P28V74 Toyota 2016 V4 180 electric
+CREATE Truck P28V75 BMW 2003 V4 398 diesel
+START P28V0
+INFO P28V0
+FUEL_COST P28V0 106
+START P28V2
+INFO P28V2
+FUEL_COST P28V2 101
+START P28V4
+INFO P28V4
+FUEL_COST P28V4 457
+START P28V6
+INFO P28V6
+FUEL_COST P28V6 319
+START P28V8
+INFO P28V8
+FUEL_COST P28V8 486
+START P28V10
+INFO P28V10
+FUEL_COST P28V10 129
+START P28V12
+INFO P28V12
+FUEL_COST P28V12 450
+START P28V14
+INFO P28V14
+FUEL_COST P28V14 206
+START P28V16
+INFO P28V16
+FUEL_COST P28V16 456
+START P28V18
+INFO P28V18
+FUEL_COST P28V18 132

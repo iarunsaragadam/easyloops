@@ -1,0 +1,6 @@
+Account ACC001 created for Ivy
+Balance for account ACC001: 930.00
+Deposited 290.00 to account ACC001
+Account: ACC001, Owner: Ivy, Balance: 1220.00
+Account: ACC001, Owner: Ivy, Balance: 1220.00
+Deposited 296.00 to account ACC001

@@ -1,0 +1,110 @@
+Created Car P30V0
+Created Motorcycle P30V1
+Created Car P30V2
+Created Motorcycle P30V3
+Created Truck P30V4
+Created Truck P30V5
+Created Truck P30V6
+Created Motorcycle P30V7
+Created Car P30V8
+Created Car P30V9
+Created Motorcycle P30V10
+Created Truck P30V11
+Created Truck P30V12
+Created Car P30V13
+Created Motorcycle P30V14
+Created Motorcycle P30V15
+Created Motorcycle P30V16
+Created Truck P30V17
+Created Car P30V18
+Created Car P30V19
+Created Motorcycle P30V20
+Created Car P30V21
+Created Car P30V22
+Created Truck P30V23
+Created Car P30V24
+Created Motorcycle P30V25
+Created Motorcycle P30V26
+Created Truck P30V27
+Created Truck P30V28
+Created Motorcycle P30V29
+Created Truck P30V30
+Created Car P30V31
+Created Motorcycle P30V32
+Created Motorcycle P30V33
+Created Car P30V34
+Created Motorcycle P30V35
+Created Motorcycle P30V36
+Created Truck P30V37
+Created Motorcycle P30V38
+Created Car P30V39
+Created Motorcycle P30V40
+Created Truck P30V41
+Created Motorcycle P30V42
+Created Motorcycle P30V43
+Created Truck P30V44
+Created Motorcycle P30V45
+Created Car P30V46
+Created Car P30V47
+Created Truck P30V48
+Created Truck P30V49
+Created Motorcycle P30V50
+Created Car P30V51
+Created Car P30V52
+Created Truck P30V53
+Created Truck P30V54
+Created Motorcycle P30V55
+Created Car P30V56
+Created Motorcycle P30V57
+Created Motorcycle P30V58
+Created Car P30V59
+Created Motorcycle P30V60
+Created Truck P30V61
+Created Motorcycle P30V62
+Created Car P30V63
+Created Motorcycle P30V64
+Created Motorcycle P30V65
+Created Truck P30V66
+Created Motorcycle P30V67
+Created Car P30V68
+Created Truck P30V69
+Created Truck P30V70
+Created Truck P30V71
+Created Motorcycle P30V72
+Created Truck P30V73
+Created Motorcycle P30V74
+Created Car P30V75
+Created Car P30V76
+Created Truck P30V77
+Created Motorcycle P30V78
+Created Truck P30V79
+Vehicle P30V0 started. Engine started: V6 engine
+P30V0: 2005 BMW Car (running)
+Fuel cost for 200 miles: $33.1
+Vehicle P30V2 started. Engine started: V8 engine
+P30V2: 2016 Honda Car (running)
+Fuel cost for 134 miles: $31.9
+Vehicle P30V4 started. Engine started: V8 engine
+P30V4: 2002 Toyota Truck (running)
+Fuel cost for 236 miles: $195.3
+Vehicle P30V6 started. Engine started: Electric engine
+P30V6: 2022 Yamaha Truck (running)
+Fuel cost for 249 miles: $13.9
+Vehicle P30V8 started. Engine started: Electric engine
+P30V8: 2005 Yamaha Car (running)
+Fuel cost for 173 miles: $0.2
+Vehicle P30V10 started. Engine started: Electric engine
+P30V10: 2021 Ford Motorcycle (running)
+Fuel cost for 477 miles: $11.7
+Vehicle P30V12 started. Engine started: V6 engine
+P30V12: 2000 BMW Truck (running)
+Fuel cost for 223 miles: $181.2
+Vehicle P30V14 started. Engine started: V8 engine
+P30V14: 2005 Toyota Motorcycle (running)
+Fuel cost for 348 miles: $146.2
+Vehicle P30V16 started. Engine started: V4 engine
+P30V16: 2019 BMW Motorcycle (running)
+Fuel cost for 262 miles: $27.9
+Vehicle P30V18 started. Engine started: Electric engine
+P30V18: 2003 Ford Car (running)
+Fuel cost for 198 miles: $7.7

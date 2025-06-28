@@ -1,1 +1,4 @@
-placeholder
+3
+ASSIGN a 5
+ASSIGN b 10
+ASSIGN c 15

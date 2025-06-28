@@ -1,0 +1,6 @@
+5
+append 61u.cfg 6N ORKLxscQ43UDzuNlcKgtLMe42x4I5WffHXBeJHH5H
+append pqn.log
+read m0nzd.ini
+read spii.txt
+write 1nion8414.cfg Kg3d2I2vuY4XnBrjfRXGQ7TrSKOaizEgLYxeEVZmFlTWKo6Jv4aCJO6dISDVeUt7XC3bqHJiUCoqrviNFeH5NbkUCXwf53OL6

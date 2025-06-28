@@ -1,0 +1,82 @@
+Created Truck P16V0
+Created Car P16V1
+Created Truck P16V2
+Created Motorcycle P16V3
+Created Motorcycle P16V4
+Created Car P16V5
+Created Car P16V6
+Created Car P16V7
+Created Truck P16V8
+Created Car P16V9
+Created Motorcycle P16V10
+Created Car P16V11
+Created Truck P16V12
+Created Car P16V13
+Created Motorcycle P16V14
+Created Motorcycle P16V15
+Created Truck P16V16
+Created Motorcycle P16V17
+Created Motorcycle P16V18
+Created Car P16V19
+Created Car P16V20
+Created Truck P16V21
+Created Motorcycle P16V22
+Created Motorcycle P16V23
+Created Truck P16V24
+Created Motorcycle P16V25
+Created Car P16V26
+Created Truck P16V27
+Created Motorcycle P16V28
+Created Truck P16V29
+Created Motorcycle P16V30
+Created Truck P16V31
+Created Truck P16V32
+Created Car P16V33
+Created Motorcycle P16V34
+Created Car P16V35
+Created Car P16V36
+Created Car P16V37
+Created Motorcycle P16V38
+Created Motorcycle P16V39
+Created Motorcycle P16V40
+Created Motorcycle P16V41
+Created Truck P16V42
+Created Car P16V43
+Created Car P16V44
+Created Truck P16V45
+Created Motorcycle P16V46
+Created Car P16V47
+Created Motorcycle P16V48
+Created Car P16V49
+Created Car P16V50
+Created Motorcycle P16V51
+Vehicle P16V0 started. Engine started: Electric engine
+P16V0: 2002 BMW Truck (running)
+Fuel cost for 239 miles: $12.1
+Vehicle P16V2 started. Engine started: V4 engine
+P16V2: 2011 Ford Truck (running)
+Fuel cost for 369 miles: $3.1
+Vehicle P16V4 started. Engine started: V6 engine
+P16V4: 2000 Yamaha Motorcycle (running)
+Fuel cost for 146 miles: $15.5
+Vehicle P16V6 started. Engine started: V4 engine
+P16V6: 2021 Ford Car (running)
+Fuel cost for 161 miles: $28.4
+Vehicle P16V8 started. Engine started: V4 engine
+P16V8: 2008 Ford Truck (running)
+Fuel cost for 213 miles: $39.3
+Vehicle P16V10 started. Engine started: V8 engine
+P16V10: 2018 Toyota Motorcycle (running)
+Fuel cost for 326 miles: $148.7
+Vehicle P16V12 started. Engine started: Electric engine
+P16V12: 2025 Honda Truck (running)
+Fuel cost for 372 miles: $20.3
+Vehicle P16V14 started. Engine started: V4 engine
+P16V14: 2025 Ford Motorcycle (running)
+Fuel cost for 286 miles: $29.3
+Vehicle P16V16 started. Engine started: V6 engine
+P16V16: 2003 Toyota Truck (running)
+Fuel cost for 114 miles: $1.2
+Vehicle P16V18 started. Engine started: Electric engine
+P16V18: 2004 Ford Motorcycle (running)
+Fuel cost for 294 miles: $7.6

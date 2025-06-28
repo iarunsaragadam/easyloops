@@ -1,1 +1,4 @@
-placeholder
+OPENED file.txt AS FD 3
+WRITTEN 5 BYTES TO FD 3
+READ: hello
+CLOSED FD 3 (file.txt)

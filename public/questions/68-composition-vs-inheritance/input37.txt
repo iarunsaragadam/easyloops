@@ -1,0 +1,3 @@
+CREATE Motorcycle E7 BMW 2030 V6 50 electric
+START E7
+FUEL_COST E7 1000

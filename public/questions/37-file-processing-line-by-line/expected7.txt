@@ -1,0 +1,6 @@
+Line 1: 1 words, 1 characters
+Line 2: 1 words, 1 characters
+Line 3: 1 words, 1 characters
+Line 4: 1 words, 1 characters
+Line 5: 1 words, 1 characters
+Total: 5 lines, 5 words, 5 characters

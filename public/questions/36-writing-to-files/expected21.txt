@@ -1,0 +1,4 @@
+READ: file3.txt = FILE_NOT_FOUND
+WRITE: file1.txt (13 chars)
+READ: file2.txt = FILE_NOT_FOUND
+WRITE: file2.txt (7 chars)

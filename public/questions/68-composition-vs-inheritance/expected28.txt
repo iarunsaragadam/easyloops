@@ -1,0 +1,4 @@
+Created Car C28
+Vehicle C28 started. Engine started: V6 engine
+C28: 2015 Ford Car (running)
+Fuel cost for 134 miles: $1.2

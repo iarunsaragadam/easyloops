@@ -1,0 +1,59 @@
+9999
+57
+abs
+multiply -31
+negate
+add 721
+negate
+add -329
+multiply 53
+square
+square
+negate
+abs
+multiply -19
+multiply 57
+negate
+add -264
+square
+negate
+multiply 63
+square
+square
+square
+abs
+square
+multiply 59
+add -924
+negate
+multiply 46
+multiply 88
+multiply 19
+multiply -22
+add 461
+abs
+multiply 14
+square
+negate
+abs
+add -455
+square
+add -53
+multiply -5
+negate
+negate
+negate
+negate
+add 487
+abs
+abs
+abs
+add -13
+multiply -76
+abs
+square
+abs
+negate
+add -804
+abs
+negate

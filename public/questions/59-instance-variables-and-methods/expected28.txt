@@ -1,0 +1,6 @@
+Account ACC001 created for Grace
+Account ACC002 created for Jack
+Balance for account ACC001: 1166.00
+Account: ACC001, Owner: Grace, Balance: 1166.00
+Deposited 489.00 to account ACC002
+Account: ACC002, Owner: Jack, Balance: 2298.00

@@ -1,1 +1,1 @@
-placeholder
+-7 | ABS, ADD 3, POW 2, SQRT, NEG

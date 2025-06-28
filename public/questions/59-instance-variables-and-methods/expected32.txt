@@ -1,0 +1,4 @@
+Account ACC001 created for Bob
+Insufficient funds or invalid amount
+Account not found
+Balance for account ACC001: 500.00

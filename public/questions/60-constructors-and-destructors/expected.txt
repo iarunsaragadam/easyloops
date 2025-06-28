@@ -1,1 +1,6 @@
-placeholder
+Created Memory resource R1 with capacity 100
+Allocation successful
+Memory R1: 50/100 used
+Active: 1, Created: 1, Destroyed: 0
+Destroyed Memory resource R1
+Active: 0, Created: 1, Destroyed: 1

@@ -1,0 +1,7 @@
+6
+write file1.txt izaFVBsf1CclBmDd02
+write file2.txt O2GzdcFviJjMrnuMX
+read file2.txt
+append file3.txt EFhSZN4rlcPb6USUw
+write file1.txt H84F
+append file3.txt t3MbMgCYJfNp5JBY

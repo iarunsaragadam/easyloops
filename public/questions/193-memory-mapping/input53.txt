@@ -1,0 +1,14 @@
+5 512
+12
+read 6110
+read 9286
+read 6207
+write 500200180
+write 667776422
+read 19845
+write 17683
+read 1444427659
+write 6357
+write 9785
+write 16605
+read 13730333

@@ -1,0 +1,21 @@
+OPENED ootkzaqz.tmp AS FD 3
+OPENED mjbf.log AS FD 4
+OPENED xkbs.txt AS FD 5
+OPENED clnwx.tmp AS FD 6
+OPENED dgts.dat AS FD 7
+FD 3: ootkzaqz.tmp (w)
+FD 4: mjbf.log (w)
+FD 5: xkbs.txt (rw)
+FD 6: clnwx.tmp (r)
+FD 7: dgts.dat (rw)
+WRITTEN 26 BYTES TO FD 5
+WRITTEN 27 BYTES TO FD 4
+FD 3: ootkzaqz.tmp (w)
+FD 4: mjbf.log (w)
+FD 5: xkbs.txt (rw)
+FD 6: clnwx.tmp (r)
+FD 7: dgts.dat (rw)
+CLOSED FD 3 (ootkzaqz.tmp)
+CLOSED FD 4 (mjbf.log)
+CLOSED FD 5 (xkbs.txt)
+CLOSED FD 6 (clnwx.tmp)

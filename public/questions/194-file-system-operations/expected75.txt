@@ -1,0 +1,105 @@
+Directory 'size_test_0' created
+File 'size_test_0/file_0.txt' created
+File 'size_test_0/file_1.txt' created
+File 'size_test_0/file_2.txt' created
+File 'size_test_0/file_3.txt' created
+File 'size_test_0/file_4.txt' created
+Directory 'size_test_1' created
+File 'size_test_1/file_0.txt' created
+File 'size_test_1/file_1.txt' created
+File 'size_test_1/file_2.txt' created
+File 'size_test_1/file_3.txt' created
+File 'size_test_1/file_4.txt' created
+Directory 'size_test_2' created
+File 'size_test_2/file_0.txt' created
+File 'size_test_2/file_1.txt' created
+File 'size_test_2/file_2.txt' created
+File 'size_test_2/file_3.txt' created
+File 'size_test_2/file_4.txt' created
+Directory 'size_test_3' created
+File 'size_test_3/file_0.txt' created
+File 'size_test_3/file_1.txt' created
+File 'size_test_3/file_2.txt' created
+File 'size_test_3/file_3.txt' created
+File 'size_test_3/file_4.txt' created
+Directory 'size_test_4' created
+File 'size_test_4/file_0.txt' created
+File 'size_test_4/file_1.txt' created
+File 'size_test_4/file_2.txt' created
+File 'size_test_4/file_3.txt' created
+File 'size_test_4/file_4.txt' created
+Directory 'size_test_5' created
+File 'size_test_5/file_0.txt' created
+File 'size_test_5/file_1.txt' created
+File 'size_test_5/file_2.txt' created
+File 'size_test_5/file_3.txt' created
+File 'size_test_5/file_4.txt' created
+Directory 'size_test_6' created
+File 'size_test_6/file_0.txt' created
+File 'size_test_6/file_1.txt' created
+File 'size_test_6/file_2.txt' created
+File 'size_test_6/file_3.txt' created
+File 'size_test_6/file_4.txt' created
+Directory 'size_test_7' created
+File 'size_test_7/file_0.txt' created
+File 'size_test_7/file_1.txt' created
+File 'size_test_7/file_2.txt' created
+File 'size_test_7/file_3.txt' created
+File 'size_test_7/file_4.txt' created
+Directory 'size_test_8' created
+File 'size_test_8/file_0.txt' created
+File 'size_test_8/file_1.txt' created
+File 'size_test_8/file_2.txt' created
+File 'size_test_8/file_3.txt' created
+File 'size_test_8/file_4.txt' created
+Directory 'size_test_9' created
+File 'size_test_9/file_0.txt' created
+File 'size_test_9/file_1.txt' created
+File 'size_test_9/file_2.txt' created
+File 'size_test_9/file_3.txt' created
+File 'size_test_9/file_4.txt' created
+Directory 'size_test_10' created
+File 'size_test_10/file_0.txt' created
+File 'size_test_10/file_1.txt' created
+File 'size_test_10/file_2.txt' created
+File 'size_test_10/file_3.txt' created
+File 'size_test_10/file_4.txt' created
+Directory 'size_test_11' created
+File 'size_test_11/file_0.txt' created
+File 'size_test_11/file_1.txt' created
+File 'size_test_11/file_2.txt' created
+File 'size_test_11/file_3.txt' created
+File 'size_test_11/file_4.txt' created
+Directory 'size_test_12' created
+File 'size_test_12/file_0.txt' created
+File 'size_test_12/file_1.txt' created
+File 'size_test_12/file_2.txt' created
+File 'size_test_12/file_3.txt' created
+File 'size_test_12/file_4.txt' created
+Directory 'size_test_13' created
+File 'size_test_13/file_0.txt' created
+File 'size_test_13/file_1.txt' created
+File 'size_test_13/file_2.txt' created
+File 'size_test_13/file_3.txt' created
+File 'size_test_13/file_4.txt' created
+Directory 'size_test_14' created
+File 'size_test_14/file_0.txt' created
+File 'size_test_14/file_1.txt' created
+File 'size_test_14/file_2.txt' created
+File 'size_test_14/file_3.txt' created
+File 'size_test_14/file_4.txt' created
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5

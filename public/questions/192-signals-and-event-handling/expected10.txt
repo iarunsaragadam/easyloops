@@ -1,0 +1,7 @@
+Processing events:
+Event 1: [P1] MIN at 0 - min_timestamp
+Event 2: [P10] MAX at 1000000 - max_values
+System state:
+Total events processed: 2
+MAX: 1
+MIN: 1

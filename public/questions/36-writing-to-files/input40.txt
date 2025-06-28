@@ -1,0 +1,4 @@
+3
+append 7yci.cfg rO WmEgwHyKaKectF28WlyI0C8H6a4h 7cRp6
+read zsu.cfg
+append 9ambxqi.txt

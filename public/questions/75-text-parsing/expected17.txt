@@ -1,0 +1,13 @@
+LOG LEVEL SUMMARY:
+DEBUG: 2
+ERROR: 1
+INFO: 3
+WARN: 2
+
+ERROR ENTRIES:
+[2023-12-18 10:20:00] Configuration loaded
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-18 10:00:00
+Last entry: 2023-12-18 11:10:00
+Total entries: 8

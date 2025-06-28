@@ -1,0 +1,41 @@
+769
+39
+add 92
+add 352
+abs
+add -315
+square
+negate
+abs
+square
+add 169
+multiply 98
+multiply -83
+square
+negate
+abs
+add -71
+negate
+abs
+square
+multiply -28
+add -686
+abs
+add 936
+add -969
+negate
+add -596
+square
+square
+multiply 68
+negate
+negate
+abs
+negate
+multiply -35
+negate
+negate
+abs
+square
+multiply 14
+negate

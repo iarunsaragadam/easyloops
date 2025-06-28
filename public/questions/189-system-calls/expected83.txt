@@ -1,0 +1,26 @@
+OPENED complex1_0.txt AS FD 3
+OPENED complex1_1.txt AS FD 4
+OPENED complex1_2.txt AS FD 5
+EOF
+FD 3: complex1_0.txt (r)
+FD 4: complex1_1.txt (r)
+FD 5: complex1_2.txt (rw)
+FD 3: complex1_0.txt (r)
+FD 4: complex1_1.txt (r)
+FD 5: complex1_2.txt (rw)
+EOF
+FD 3: complex1_0.txt (r)
+FD 4: complex1_1.txt (r)
+FD 5: complex1_2.txt (rw)
+EOF
+WRITTEN 6 BYTES TO FD 5
+READ: data79
+EOF
+READ: data79
+EOF
+FD 3: complex1_0.txt (r)
+FD 4: complex1_1.txt (r)
+FD 5: complex1_2.txt (rw)
+CLOSED FD 3 (complex1_0.txt)
+CLOSED FD 4 (complex1_1.txt)
+CLOSED FD 5 (complex1_2.txt)

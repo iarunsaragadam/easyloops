@@ -1,0 +1,3 @@
+CREATE Truck E16 Toyota 2030 V4 50 gasoline
+START E16
+FUEL_COST E16 1

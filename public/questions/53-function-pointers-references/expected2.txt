@@ -1,1 +1,6 @@
-placeholder
+ERROR
+ERROR
+3.142857
+2
+INVALID
+0

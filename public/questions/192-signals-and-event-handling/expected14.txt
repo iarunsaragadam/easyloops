@@ -1,0 +1,8 @@
+Processing events:
+Event 1: [P3] CACHE at 285 - event_0_data
+Event 2: [P4] SYSTEM at 463 - event_2_data
+Event 3: [P4] SYSTEM at 845 - event_1_data
+System state:
+Total events processed: 3
+CACHE: 1
+SYSTEM: 2

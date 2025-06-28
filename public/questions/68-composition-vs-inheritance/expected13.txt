@@ -1,0 +1,4 @@
+Created Motorcycle M13
+Vehicle M13 started. Engine started: Electric engine
+M13: 2024 Ford Motorcycle (running)
+Fuel cost for 107 miles: $2.6

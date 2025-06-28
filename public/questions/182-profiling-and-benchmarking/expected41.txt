@@ -1,0 +1,5 @@
+Duplicates: -2 -1
+Naive Time: 0.005ms
+Optimized Time: 0.002ms
+Faster: Optimized
+Speedup: 1.97x

@@ -1,0 +1,5 @@
+4
+read file1.txt
+read file1.txt
+append file1.txt zH
+read file1.txt

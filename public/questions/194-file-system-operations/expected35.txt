@@ -1,0 +1,7 @@
+Directory 'test_dir' created
+File 'test_dir/file.txt' created
+file.txt
+/test_dir/file.txt
+1
+Removed 'test_dir/file.txt'
+Removed 'test_dir'

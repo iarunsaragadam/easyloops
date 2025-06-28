@@ -1,0 +1,13 @@
+Processing events:
+Event 1: [P1] TYPE_0 at 100 - data_0
+Event 2: [P2] TYPE_1 at 100 - data_1
+Event 3: [P3] TYPE_2 at 100 - data_2
+Event 4: [P4] TYPE_3 at 100 - data_3
+Event 5: [P5] TYPE_4 at 100 - data_4
+System state:
+Total events processed: 5
+TYPE_0: 1
+TYPE_1: 1
+TYPE_2: 1
+TYPE_3: 1
+TYPE_4: 1

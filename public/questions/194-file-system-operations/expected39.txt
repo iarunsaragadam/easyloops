@@ -1,0 +1,3 @@
+Directory 'parent' created
+Directory 'parent/child' created
+rm: cannot remove 'parent': Directory not empty

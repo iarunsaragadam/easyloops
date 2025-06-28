@@ -1,0 +1,6 @@
+Created Motorcycle E20
+Vehicle E20 started. Engine started: V4 engine
+Vehicle E20 is already running
+Vehicle E20 stopped. Engine stopped: V4 engine
+Vehicle E20 is already stopped
+E20: 2000 Yamaha Motorcycle (stopped)

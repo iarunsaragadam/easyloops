@@ -1,0 +1,6 @@
+WRITE: file1.txt (18 chars)
+WRITE: file2.txt (17 chars)
+READ: file2.txt = O2GzdcFviJjMrnuMX
+APPEND: file3.txt (17 total chars)
+WRITE: file1.txt (4 chars)
+APPEND: file3.txt (33 total chars)

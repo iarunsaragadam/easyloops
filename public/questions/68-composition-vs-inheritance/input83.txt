@@ -1,0 +1,96 @@
+CREATE Motorcycle P23V0 Honda 2024 V6 180 gasoline
+CREATE Truck P23V1 BMW 2014 Electric 353 gasoline
+CREATE Truck P23V2 Honda 2011 V8 193 electric
+CREATE Car P23V3 Honda 2025 V4 154 gasoline
+CREATE Car P23V4 Toyota 2006 Electric 290 electric
+CREATE Motorcycle P23V5 Ford 2012 V6 280 electric
+CREATE Car P23V6 Toyota 2000 Electric 81 gasoline
+CREATE Motorcycle P23V7 Toyota 2022 Electric 244 gasoline
+CREATE Motorcycle P23V8 Yamaha 2025 V6 243 electric
+CREATE Motorcycle P23V9 Toyota 2020 V4 304 gasoline
+CREATE Car P23V10 Yamaha 2015 Electric 235 gasoline
+CREATE Truck P23V11 Ford 2020 V6 233 electric
+CREATE Car P23V12 Yamaha 2002 Electric 204 electric
+CREATE Motorcycle P23V13 Ford 2007 V4 96 diesel
+CREATE Motorcycle P23V14 Toyota 2017 V4 149 gasoline
+CREATE Truck P23V15 Ford 2022 Electric 290 gasoline
+CREATE Car P23V16 Honda 2007 V4 356 diesel
+CREATE Motorcycle P23V17 BMW 2005 Electric 111 diesel
+CREATE Car P23V18 Ford 2016 V4 285 diesel
+CREATE Car P23V19 BMW 2015 Electric 338 gasoline
+CREATE Car P23V20 BMW 2018 V4 313 gasoline
+CREATE Truck P23V21 Ford 2013 V4 343 electric
+CREATE Motorcycle P23V22 Ford 2017 Electric 335 electric
+CREATE Car P23V23 BMW 2003 V4 94 electric
+CREATE Car P23V24 Toyota 2008 Electric 89 diesel
+CREATE Motorcycle P23V25 Ford 2019 V4 333 gasoline
+CREATE Truck P23V26 Yamaha 2011 V4 363 gasoline
+CREATE Truck P23V27 Toyota 2021 V8 188 diesel
+CREATE Truck P23V28 Honda 2019 V4 175 gasoline
+CREATE Truck P23V29 Honda 2013 Electric 344 diesel
+CREATE Motorcycle P23V30 Yamaha 2025 Electric 329 diesel
+CREATE Car P23V31 BMW 2006 V8 106 diesel
+CREATE Motorcycle P23V32 Honda 2012 V8 307 electric
+CREATE Motorcycle P23V33 Honda 2021 Electric 339 diesel
+CREATE Truck P23V34 Toyota 2011 V6 141 electric
+CREATE Truck P23V35 Honda 2002 V6 238 diesel
+CREATE Car P23V36 Toyota 2009 V4 327 diesel
+CREATE Truck P23V37 BMW 2024 V6 133 diesel
+CREATE Car P23V38 Ford 2012 V6 345 gasoline
+CREATE Truck P23V39 Honda 2016 Electric 368 electric
+CREATE Truck P23V40 Ford 2015 Electric 118 electric
+CREATE Motorcycle P23V41 BMW 2025 V6 85 diesel
+CREATE Motorcycle P23V42 Ford 2001 V4 226 diesel
+CREATE Truck P23V43 Toyota 2011 V6 263 electric
+CREATE Car P23V44 Honda 2018 Electric 275 electric
+CREATE Truck P23V45 Toyota 2019 V8 99 gasoline
+CREATE Truck P23V46 Yamaha 2017 V4 294 diesel
+CREATE Motorcycle P23V47 Yamaha 2007 V4 273 diesel
+CREATE Truck P23V48 BMW 2001 V8 360 gasoline
+CREATE Truck P23V49 Honda 2005 Electric 381 electric
+CREATE Car P23V50 Yamaha 2005 Electric 310 electric
+CREATE Car P23V51 Honda 2021 V6 176 diesel
+CREATE Car P23V52 Yamaha 2017 Electric 187 electric
+CREATE Motorcycle P23V53 Ford 2000 Electric 367 electric
+CREATE Motorcycle P23V54 Toyota 2013 V6 181 gasoline
+CREATE Motorcycle P23V55 Toyota 2014 V8 99 electric
+CREATE Motorcycle P23V56 Honda 2004 V6 377 diesel
+CREATE Truck P23V57 Ford 2020 V4 198 gasoline
+CREATE Truck P23V58 Toyota 2013 V8 86 electric
+CREATE Car P23V59 Toyota 2003 V4 354 gasoline
+CREATE Car P23V60 Yamaha 2006 V8 96 gasoline
+CREATE Motorcycle P23V61 Ford 2009 V6 162 diesel
+CREATE Motorcycle P23V62 BMW 2009 Electric 85 electric
+CREATE Motorcycle P23V63 BMW 2013 V6 200 diesel
+CREATE Motorcycle P23V64 Toyota 2010 V6 295 gasoline
+CREATE Car P23V65 Yamaha 2001 V4 345 diesel
+START P23V0
+INFO P23V0
+FUEL_COST P23V0 244
+START P23V2
+INFO P23V2
+FUEL_COST P23V2 453
+START P23V4
+INFO P23V4
+FUEL_COST P23V4 393
+START P23V6
+INFO P23V6
+FUEL_COST P23V6 435
+START P23V8
+INFO P23V8
+FUEL_COST P23V8 217
+START P23V10
+INFO P23V10
+FUEL_COST P23V10 155
+START P23V12
+INFO P23V12
+FUEL_COST P23V12 351
+START P23V14
+INFO P23V14
+FUEL_COST P23V14 232
+START P23V16
+INFO P23V16
+FUEL_COST P23V16 364
+START P23V18
+INFO P23V18
+FUEL_COST P23V18 391

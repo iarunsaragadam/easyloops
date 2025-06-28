@@ -1,0 +1,6 @@
+5
+OPEN log.txt w
+WRITE 3 first
+WRITE 3 second
+WRITE 3 third
+CLOSE 3

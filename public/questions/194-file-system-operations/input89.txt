@@ -1,0 +1,17 @@
+16
+pwd
+mkdir dir_89_1
+pwd
+count directories
+cd /
+ls
+touch file_89_6.txt
+pwd
+pwd
+mkdir dir_89_9
+cd dir_89_9
+touch file_89_11.txt
+mkdir dir_89_12
+pwd
+touch file_89_14.txt
+cd /

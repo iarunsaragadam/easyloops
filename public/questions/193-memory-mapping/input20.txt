@@ -1,0 +1,7 @@
+7 2048
+5
+read 4180
+read 5540
+read 8316
+write 10158
+read 25

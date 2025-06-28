@@ -1,0 +1,14 @@
+Processing events:
+Event 1: [P1] NETWORK at 318 - event_6_data
+Event 2: [P2] SYSTEM at 248 - event_5_data
+Event 3: [P2] CACHE at 966 - event_2_data
+Event 4: [P4] DATABASE at 2 - event_4_data
+Event 5: [P4] NETWORK at 182 - event_3_data
+Event 6: [P5] DATABASE at 717 - event_1_data
+Event 7: [P5] CACHE at 847 - event_0_data
+System state:
+Total events processed: 7
+CACHE: 2
+DATABASE: 2
+NETWORK: 2
+SYSTEM: 1

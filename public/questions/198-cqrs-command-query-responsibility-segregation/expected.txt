@@ -1,1 +1,5 @@
-placeholder
+EVENT_ADDED:1
+EVENT_ADDED:2
+1:alice:1000
+1
+1:user_login:alice|2:user_logout:alice

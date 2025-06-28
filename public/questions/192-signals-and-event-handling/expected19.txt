@@ -1,0 +1,15 @@
+Processing events:
+Event 1: [P3] SYSTEM at 25 - event_3_data
+Event 2: [P3] CACHE at 294 - event_7_data
+Event 3: [P3] DATABASE at 306 - event_1_data
+Event 4: [P3] CACHE at 653 - event_6_data
+Event 5: [P4] USER at 222 - event_4_data
+Event 6: [P5] USER at 772 - event_2_data
+Event 7: [P5] SYSTEM at 819 - event_5_data
+Event 8: [P5] CACHE at 972 - event_0_data
+System state:
+Total events processed: 8
+CACHE: 3
+DATABASE: 1
+SYSTEM: 2
+USER: 2

@@ -1,0 +1,15 @@
+Processing events:
+Event 1: [P1] TYPE_0 at 833 - same_timestamp_0
+Event 2: [P1] TYPE_2 at 833 - same_timestamp_2
+Event 3: [P1] TYPE_3 at 833 - same_timestamp_3
+Event 4: [P3] TYPE_0 at 833 - same_timestamp_4
+Event 5: [P3] TYPE_3 at 833 - same_timestamp_7
+Event 6: [P5] TYPE_1 at 833 - same_timestamp_1
+Event 7: [P5] TYPE_1 at 833 - same_timestamp_5
+Event 8: [P7] TYPE_2 at 833 - same_timestamp_6
+System state:
+Total events processed: 8
+TYPE_0: 2
+TYPE_1: 2
+TYPE_2: 2
+TYPE_3: 2

@@ -1,0 +1,7 @@
+6
+append file2.txt lYwd3yFvJMH
+write file2.txt sdZvN91ZRkpjxm
+write file1.txt RzSjDf3zYI0ZilwHT
+write file1.txt djfFvMxnoiet6hwMeN
+append file2.txt XIPdmMH
+append file1.txt vl6DUF7NarDXJJ9oLep

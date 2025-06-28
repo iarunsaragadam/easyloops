@@ -1,0 +1,59 @@
+58
+create perf1.txt
+write perf7.txt VZHWGQui3bOVOP
+create perf1.txt
+write perf7.txt 9iWa3epCM6WXmW9i crOLAQ2xYh
+read perf6.txt
+create perf3.txt
+read perf1.txt
+read perf5.txt
+create perf2.txt
+create perf2.txt
+write perf1.txt th
+create perf4.txt
+create perf5.txt
+read perf6.txt
+read perf5.txt
+write perf3.txt glQ
+append perf4.txt c9JzrSSq8SW
+create perf4.txt
+create perf6.txt
+append perf3.txt 6YF8tCmx
+append perf2.txt r9f xeFzpR4IscSlSdPuaUpyX28n
+read perf7.txt
+write perf1.txt cjXn6WkcreXhwANiHlHKUEOWXroG
+append perf5.txt 2Nc9Y7h4690
+append perf2.txt DRHyqcK
+read perf1.txt
+write perf6.txt eME lHt1y8rHZ
+write perf4.txt rjU3rW79zM
+read perf5.txt
+write perf1.txt oPPqfFjph22vEELKtxoo
+append perf6.txt tDPeObtE0mfTV6cKedeAupgLtbN7
+write perf3.txt Z7AzsvD1lYFB
+append perf4.txt OYjasrL04VfXn8gNE4WcRH N
+read perf5.txt
+write perf0.txt 9tXr
+create perf6.txt
+append perf2.txt jUXGIJZ8lS0g MsV5I
+append perf6.txt A
+append perf5.txt oIFe1lPpBD1ANgVodecv4n36Rti1
+read perf6.txt
+create perf3.txt
+read perf5.txt
+read perf2.txt
+create perf5.txt
+read perf7.txt
+create perf2.txt
+read perf0.txt
+read perf6.txt
+read perf3.txt
+write perf3.txt Jg77rgkoe65Wbqur2
+create perf3.txt
+read perf5.txt
+create perf3.txt
+append perf1.txt SChs0BGE1C 4mJs0E1KR5ee
+write perf4.txt 8
+read perf3.txt
+create perf2.txt
+read perf3.txt

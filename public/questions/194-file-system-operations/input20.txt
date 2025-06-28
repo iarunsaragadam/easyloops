@@ -1,0 +1,11 @@
+10
+pwd
+touch file_20_0.txt
+ls
+mkdir dir_20_2
+ls
+touch file_20_4.txt
+mkdir dir_20_5
+cd ..
+touch file_20_7.txt
+count files

@@ -1,0 +1,61 @@
+Directory 'search_0' created
+File 'search_0/target.txt' created
+Directory 'search_1' created
+File 'search_1/target.txt' created
+Directory 'search_2' created
+File 'search_2/target.txt' created
+Directory 'search_3' created
+File 'search_3/target.txt' created
+Directory 'search_4' created
+File 'search_4/target.txt' created
+Directory 'search_5' created
+File 'search_5/target.txt' created
+Directory 'search_6' created
+File 'search_6/target.txt' created
+Directory 'search_7' created
+File 'search_7/target.txt' created
+Directory 'search_8' created
+File 'search_8/target.txt' created
+Directory 'search_9' created
+File 'search_9/target.txt' created
+Directory 'search_10' created
+File 'search_10/target.txt' created
+Directory 'search_11' created
+File 'search_11/target.txt' created
+Directory 'search_12' created
+File 'search_12/target.txt' created
+Directory 'search_13' created
+File 'search_13/target.txt' created
+Directory 'search_14' created
+File 'search_14/target.txt' created
+Directory 'search_15' created
+File 'search_15/target.txt' created
+Directory 'search_16' created
+File 'search_16/target.txt' created
+Directory 'search_17' created
+File 'search_17/target.txt' created
+Directory 'search_18' created
+File 'search_18/target.txt' created
+Directory 'search_19' created
+File 'search_19/target.txt' created
+/search_0/target.txt
+/search_1/target.txt
+/search_10/target.txt
+/search_11/target.txt
+/search_12/target.txt
+/search_13/target.txt
+/search_14/target.txt
+/search_15/target.txt
+/search_16/target.txt
+/search_17/target.txt
+/search_18/target.txt
+/search_19/target.txt
+/search_2/target.txt
+/search_3/target.txt
+/search_4/target.txt
+/search_5/target.txt
+/search_6/target.txt
+/search_7/target.txt
+/search_8/target.txt
+/search_9/target.txt
+20

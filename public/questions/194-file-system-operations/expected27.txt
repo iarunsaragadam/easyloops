@@ -1,0 +1,5 @@
+/
+Changed to /
+/
+
+rm: cannot remove '/': No such file or directory

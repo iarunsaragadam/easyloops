@@ -1,0 +1,5 @@
+Account ACC001 created for John
+Deposited 500.00 to account ACC001
+Withdrew 200.00 from account ACC001
+Balance for account ACC001: 1300.00
+Account: ACC001, Owner: John, Balance: 1300.00

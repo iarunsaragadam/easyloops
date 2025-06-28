@@ -1,0 +1,27 @@
+26
+OPEN complex24_0.txt w
+OPEN complex24_1.txt rw
+OPEN complex24_2.txt w
+OPEN complex24_3.txt w
+OPEN complex24_4.txt r
+OPEN complex24_5.txt r
+OPEN complex24_6.txt r
+OPEN complex24_7.txt r
+READ 8 6
+READ 7 3
+READ 4 11
+READ 9 1
+READ 7 8
+WRITE 3 data17
+WRITE 5 data33
+READ 8 5
+WRITE 3 data65
+LIST
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6
+CLOSE 7
+CLOSE 8
+CLOSE 9
+CLOSE 10

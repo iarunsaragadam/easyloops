@@ -1,0 +1,1 @@
+3 | ABS, ABS, MUL 3, NEG, MUL 2, ABS, NEG, NEG

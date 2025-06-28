@@ -1,1 +1,2 @@
-placeholder
+Function called: calculate('multiply', 6, 9)
+Result: 54

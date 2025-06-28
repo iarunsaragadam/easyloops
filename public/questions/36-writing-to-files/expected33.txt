@@ -1,0 +1,2 @@
+CREATE: newfile.txt
+READ: newfile.txt =

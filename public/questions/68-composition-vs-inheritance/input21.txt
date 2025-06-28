@@ -1,0 +1,4 @@
+CREATE Motorcycle M21 Yamaha 2024 V4 153 diesel
+START M21
+INFO M21
+FUEL_COST M21 71

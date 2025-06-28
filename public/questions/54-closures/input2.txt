@@ -1,1 +1,11 @@
-placeholder
+10
+CREATE ACCUMULATOR acc1 10
+CALL acc1 5
+CALL acc1 -3
+CREATE COUNTER cnt1 1
+CALL cnt1 1
+CALL acc1 2
+RESET acc1
+CALL acc1 0
+CREATE MULTIPLIER mult1 -2
+CALL mult1 3

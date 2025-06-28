@@ -1,0 +1,7 @@
+6 1024
+5
+write 6265
+read 6216
+read 2177
+write 2967
+write 10002

@@ -1,0 +1,7 @@
+Directory 'src' created
+File 'src/main.py' created
+Directory 'docs' created
+File 'docs/main.md' created
+/src/main.py
+/docs/main.md
+No files or directories named 'nonexistent' found

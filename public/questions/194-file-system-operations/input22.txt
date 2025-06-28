@@ -1,0 +1,11 @@
+10
+pwd
+touch file_22_0.txt
+cd ..
+cd ..
+ls
+cd ..
+cd ..
+mkdir dir_22_6
+mkdir dir_22_7
+count files

@@ -1,0 +1,14 @@
+LOG LEVEL SUMMARY:
+DEBUG: 4
+ERROR: 2
+INFO: 4
+WARN: 3
+
+ERROR ENTRIES:
+[2023-12-10 10:18:00] Memory allocation failed
+[2023-12-10 11:39:00] Backup completed
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-10 10:00:00
+Last entry: 2023-12-10 11:39:00
+Total entries: 13

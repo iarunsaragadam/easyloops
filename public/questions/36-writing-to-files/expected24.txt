@@ -1,0 +1,1 @@
+WRITE: file1.txt (16 chars)

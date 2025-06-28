@@ -1,1 +1,79 @@
-placeholder
+Added 0
+Added 1
+Added 2
+Added 3
+Added 4
+Added 5
+Added 6
+Added 7
+Added 8
+Added 9
+Added 10
+Added 11
+Added 12
+Added 13
+Added 14
+Added 15
+Added 16
+Added 17
+Added 18
+Added 19
+Added 20
+Added 21
+Added 22
+Added 23
+Added 24
+Added 25
+Added 26
+Added 27
+Added 28
+Added 29
+Added 30
+Added 31
+Added 32
+Added 33
+Added 34
+Added 35
+Added 36
+Added 37
+Added 38
+Added 39
+Added 40
+Added 41
+Added 42
+Added 43
+Added 44
+Added 45
+Added 46
+Added 47
+Added 48
+Added 49
+Size: 50
+Element at index 0: 0
+Element at index 25: 25
+Element at index 49: 49
+Removed 49
+Removed 48
+Removed 47
+Removed 46
+Removed 45
+Removed 44
+Removed 43
+Removed 42
+Removed 41
+Removed 40
+Size: 40
+Array: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39
+Added 100
+Added 101
+Added 102
+Added 103
+Added 104
+Added 105
+Added 106
+Added 107
+Added 108
+Added 109
+Size: 50
+Element at index 45: 105
+Array: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 100 101 102 103 104 105 106 107 108 109

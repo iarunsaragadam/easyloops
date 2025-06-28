@@ -1,1 +1,7 @@
-placeholder
+CREATE 10
+CONNECT client1
+CONNECT client2
+CONNECT client3
+STATUS
+CLEANUP
+STATUS

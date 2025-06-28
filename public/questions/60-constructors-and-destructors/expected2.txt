@@ -1,1 +1,12 @@
-placeholder
+Created Processor resource CPU1 with capacity 4
+Created Memory resource MEM1 with capacity 1024
+Allocation failed
+Allocation successful
+Allocation successful
+Processor CPU1: 2/4 used
+Memory MEM1: 512/1024 used
+Deallocation successful
+Deallocation failed
+Active: 2, Created: 2, Destroyed: 0
+Destroyed Processor resource CPU1
+Destroyed Memory resource MEM1

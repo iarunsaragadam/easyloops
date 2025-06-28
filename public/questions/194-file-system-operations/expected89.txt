@@ -1,0 +1,16 @@
+/
+Directory 'dir_89_1' created
+/
+1
+Changed to /
+dir_89_1
+File 'file_89_6.txt' created
+/
+/
+Directory 'dir_89_9' created
+Changed to /dir_89_9
+File 'file_89_11.txt' created
+Directory 'dir_89_12' created
+/dir_89_9
+File 'file_89_14.txt' created
+Changed to /

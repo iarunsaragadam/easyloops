@@ -1,1 +1,4 @@
-placeholder
+4 2
+auth payment 10
+inventory order 20
+auth inventory

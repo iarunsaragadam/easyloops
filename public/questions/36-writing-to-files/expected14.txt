@@ -1,0 +1,5 @@
+READ: file2.txt = FILE_NOT_FOUND
+APPEND: file2.txt (2 total chars)
+APPEND: file1.txt (3 total chars)
+WRITE: file1.txt (5 chars)
+READ: file1.txt = cSqyY

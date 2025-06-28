@@ -1,0 +1,7 @@
+3
+5
+negate
+multiply -20
+abs
+add -484
+abs

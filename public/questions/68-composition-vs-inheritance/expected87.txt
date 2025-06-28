@@ -1,0 +1,104 @@
+Created Car P27V0
+Created Truck P27V1
+Created Truck P27V2
+Created Truck P27V3
+Created Truck P27V4
+Created Truck P27V5
+Created Car P27V6
+Created Motorcycle P27V7
+Created Car P27V8
+Created Motorcycle P27V9
+Created Motorcycle P27V10
+Created Car P27V11
+Created Motorcycle P27V12
+Created Truck P27V13
+Created Truck P27V14
+Created Motorcycle P27V15
+Created Truck P27V16
+Created Car P27V17
+Created Motorcycle P27V18
+Created Motorcycle P27V19
+Created Truck P27V20
+Created Car P27V21
+Created Truck P27V22
+Created Motorcycle P27V23
+Created Car P27V24
+Created Truck P27V25
+Created Motorcycle P27V26
+Created Motorcycle P27V27
+Created Car P27V28
+Created Car P27V29
+Created Car P27V30
+Created Motorcycle P27V31
+Created Truck P27V32
+Created Motorcycle P27V33
+Created Truck P27V34
+Created Motorcycle P27V35
+Created Truck P27V36
+Created Car P27V37
+Created Truck P27V38
+Created Motorcycle P27V39
+Created Motorcycle P27V40
+Created Truck P27V41
+Created Car P27V42
+Created Truck P27V43
+Created Car P27V44
+Created Truck P27V45
+Created Truck P27V46
+Created Motorcycle P27V47
+Created Car P27V48
+Created Motorcycle P27V49
+Created Car P27V50
+Created Motorcycle P27V51
+Created Motorcycle P27V52
+Created Motorcycle P27V53
+Created Motorcycle P27V54
+Created Truck P27V55
+Created Truck P27V56
+Created Car P27V57
+Created Motorcycle P27V58
+Created Truck P27V59
+Created Truck P27V60
+Created Car P27V61
+Created Motorcycle P27V62
+Created Motorcycle P27V63
+Created Motorcycle P27V64
+Created Truck P27V65
+Created Motorcycle P27V66
+Created Truck P27V67
+Created Car P27V68
+Created Motorcycle P27V69
+Created Car P27V70
+Created Motorcycle P27V71
+Created Truck P27V72
+Created Motorcycle P27V73
+Vehicle P27V0 started. Engine started: V8 engine
+P27V0: 2004 BMW Car (running)
+Fuel cost for 276 miles: $67.7
+Vehicle P27V2 started. Engine started: V4 engine
+P27V2: 2023 Yamaha Truck (running)
+Fuel cost for 465 miles: $155.0
+Vehicle P27V4 started. Engine started: Electric engine
+P27V4: 2024 Yamaha Truck (running)
+Fuel cost for 414 miles: $25.1
+Vehicle P27V6 started. Engine started: V8 engine
+P27V6: 2002 Toyota Car (running)
+Fuel cost for 223 miles: $2.1
+Vehicle P27V8 started. Engine started: V6 engine
+P27V8: 2020 Ford Car (running)
+Fuel cost for 106 miles: $21.7
+Vehicle P27V10 started. Engine started: V6 engine
+P27V10: 2009 Toyota Motorcycle (running)
+Fuel cost for 243 miles: $30.7
+Vehicle P27V12 started. Engine started: Electric engine
+P27V12: 2002 BMW Motorcycle (running)
+Fuel cost for 331 miles: $8.3
+Vehicle P27V14 started. Engine started: V8 engine
+P27V14: 2012 Ford Truck (running)
+Fuel cost for 458 miles: $452.5
+Vehicle P27V16 started. Engine started: Electric engine
+P27V16: 2013 Ford Truck (running)
+Fuel cost for 369 miles: $19.2
+Vehicle P27V18 started. Engine started: Electric engine
+P27V18: 2020 Honda Motorcycle (running)
+Fuel cost for 401 miles: $0.3

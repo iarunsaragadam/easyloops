@@ -13,5 +13,15 @@
     "inputFile": "input3.txt",
     "expectedFile": "expected3.txt",
     "description": "Test Case 3"
+  },
+  {
+    "inputFile": "input4.txt",
+    "expectedFile": "expected4.txt",
+    "description": "Test Case 4"
+  },
+  {
+    "inputFile": "input5.txt",
+    "expectedFile": "expected5.txt",
+    "description": "Test Case 5"
   }
 ]

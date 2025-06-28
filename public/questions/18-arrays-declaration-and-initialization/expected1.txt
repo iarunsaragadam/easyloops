@@ -1,0 +1,5 @@
+Array size: 1
+Array elements: [1]
+First element: 1
+Last element: 1
+Array sum: 1

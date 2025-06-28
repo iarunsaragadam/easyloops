@@ -1,0 +1,8 @@
+7
+pwd
+mkdir dir_16_0
+mkdir dir_16_1
+touch file_16_2.txt
+ls
+ls
+count files

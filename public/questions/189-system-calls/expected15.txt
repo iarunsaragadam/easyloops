@@ -1,0 +1,3 @@
+OPENED eazrjxll.dat AS FD 3
+FD 3: eazrjxll.dat (w)
+CLOSED FD 3 (eazrjxll.dat)

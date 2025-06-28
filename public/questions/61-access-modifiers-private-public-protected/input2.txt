@@ -1,1 +1,10 @@
-placeholder
+Bob Johnson
+T001
+teacher
+6
+name
+id
+add_grade 92
+add_grade 88
+gpa
+verify_key key_T001

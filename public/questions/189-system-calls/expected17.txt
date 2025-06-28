@@ -1,0 +1,18 @@
+OPENED qttl.tmp AS FD 3
+OPENED wdr.log AS FD 4
+OPENED yaziz.txt AS FD 5
+OPENED yuivgcli.dat AS FD 6
+OPENED jifyvj.txt AS FD 7
+WRITTEN 30 BYTES TO FD 7
+WRITTEN 5 BYTES TO FD 7
+WRITTEN 17 BYTES TO FD 4
+FD 3: qttl.tmp (rw)
+FD 4: wdr.log (rw)
+FD 5: yaziz.txt (w)
+FD 6: yuivgcli.dat (r)
+FD 7: jifyvj.txt (rw)
+CLOSED FD 3 (qttl.tmp)
+CLOSED FD 4 (wdr.log)
+CLOSED FD 5 (yaziz.txt)
+CLOSED FD 6 (yuivgcli.dat)
+CLOSED FD 7 (jifyvj.txt)

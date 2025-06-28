@@ -1,0 +1,6 @@
+5
+create tn25.cfg
+write z8mq.ini V0Hh3UBUySTO fpPTa1BDgaPtmzX4biPJ620g7K8f8xe
+read q4gig.data
+create pa7uehmutl.log
+read bnmrf43tud.txt

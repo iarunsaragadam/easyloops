@@ -1,0 +1,4 @@
+3
+OPEN test.txt w
+CLOSE 3
+CLOSE 3

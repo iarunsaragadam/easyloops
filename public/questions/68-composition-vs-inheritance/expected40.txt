@@ -1,0 +1,6 @@
+Created Car E10
+Vehicle E10 started. Engine started: V6 engine
+Vehicle E10 is already running
+Vehicle E10 stopped. Engine stopped: V6 engine
+Vehicle E10 is already stopped
+E10: 2013 BMW Car (stopped)

@@ -1,1 +1,5 @@
-placeholder
+10
+3
+READ 2 4
+WRITE 5 100 101
+SUM 0 10

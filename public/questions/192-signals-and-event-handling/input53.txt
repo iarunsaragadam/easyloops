@@ -1,0 +1,11 @@
+10
+103 4 TYPE_0 same_timestamp_0
+103 2 TYPE_1 same_timestamp_1
+103 7 TYPE_2 same_timestamp_2
+103 7 TYPE_3 same_timestamp_3
+103 7 TYPE_0 same_timestamp_4
+103 7 TYPE_1 same_timestamp_5
+103 9 TYPE_2 same_timestamp_6
+103 3 TYPE_3 same_timestamp_7
+103 2 TYPE_0 same_timestamp_8
+103 3 TYPE_1 same_timestamp_9

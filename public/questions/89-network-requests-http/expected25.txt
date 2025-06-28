@@ -1,0 +1,10 @@
+body_length=53
+body_lines=2
+content_length=53
+content_type=text/plain
+header_count=3
+http_version=1.1
+server=Apache/2.4.41
+status_category=Server Error
+status_code=502
+status_message=Bad Gateway

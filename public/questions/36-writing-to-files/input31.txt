@@ -1,0 +1,4 @@
+3
+write empty.txt
+append empty.txt
+read empty.txt

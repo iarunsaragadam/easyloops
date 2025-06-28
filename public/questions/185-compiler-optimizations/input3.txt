@@ -1,1 +1,11 @@
-placeholder
+10
+ASSIGN a 1
+ASSIGN b 2
+ASSIGN c 3
+ASSIGN d 4
+ASSIGN e 5
+PRINT a
+USE b c
+ASSIGN f 6
+ASSIGN g 7
+PRINT d

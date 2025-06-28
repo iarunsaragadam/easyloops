@@ -1,0 +1,5 @@
+Line 1: 3 words, 14 characters
+Line 2: 3 words, 19 characters
+Line 3: 2 words, 12 characters
+Line 4: 0 words, 0 characters
+Total: 4 lines, 8 words, 45 characters

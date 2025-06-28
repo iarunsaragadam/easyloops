@@ -1,0 +1,5 @@
+4
+read file3.txt
+write file1.txt Cs37OEuQw6Er0
+read file2.txt
+write file2.txt RnfYyx4

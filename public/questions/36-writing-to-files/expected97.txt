@@ -1,0 +1,29 @@
+APPEND: complex5.txt (6 total chars)
+CREATE: complex4.txt
+APPEND: complex5.txt (36 total chars)
+WRITE: complex4.txt (30 chars)
+WRITE: complex4.txt (34 chars)
+CREATE: complex1.txt
+WRITE: complex2.txt (10 chars)
+APPEND: complex2.txt (21 total chars)
+WRITE: complex6.txt (21 chars)
+CREATE: complex6.txt
+READ: complex2.txt = CMJyFvfq40FfrKMhIkT9u
+WRITE: complex4.txt (10 chars)
+READ: complex1.txt =
+READ: complex1.txt =
+CREATE: complex4.txt
+WRITE: complex6.txt (10 chars)
+CREATE: complex2.txt
+READ: complex0.txt = FILE_NOT_FOUND
+WRITE: complex5.txt (41 chars)
+APPEND: complex3.txt (31 total chars)
+CREATE: complex4.txt
+WRITE: complex1.txt (20 chars)
+WRITE: complex1.txt (15 chars)
+WRITE: complex1.txt (46 chars)
+CREATE: complex6.txt
+CREATE: complex0.txt
+CREATE: complex5.txt
+WRITE: complex5.txt (27 chars)
+APPEND: complex5.txt (74 total chars)

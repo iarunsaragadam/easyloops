@@ -1,0 +1,14 @@
+13
+OPEN ootkzaqz.tmp w
+OPEN mjbf.log w
+OPEN xkbs.txt rw
+OPEN clnwx.tmp r
+OPEN dgts.dat rw
+LIST
+WRITE 5 call call call programming
+WRITE 4 data data hello programming
+LIST
+CLOSE 3
+CLOSE 4
+CLOSE 5
+CLOSE 6

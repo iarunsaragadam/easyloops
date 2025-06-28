@@ -1,0 +1,37 @@
+-236
+35
+square
+add 694
+multiply 59
+abs
+square
+square
+add -599
+abs
+square
+negate
+negate
+multiply -54
+negate
+square
+negate
+multiply -24
+multiply 37
+abs
+square
+negate
+negate
+abs
+multiply -4
+negate
+multiply 64
+negate
+abs
+negate
+abs
+abs
+multiply 38
+square
+abs
+add 711
+multiply -79

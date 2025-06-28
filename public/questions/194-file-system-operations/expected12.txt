@@ -1,0 +1,6 @@
+/
+
+File 'file_12_2.txt' created
+File 'file_12_3.txt' created
+file_12_2.txt file_12_3.txt
+2

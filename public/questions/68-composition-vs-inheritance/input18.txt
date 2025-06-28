@@ -1,0 +1,4 @@
+CREATE Car C18 Nissan 2015 Electric 206 diesel
+START C18
+INFO C18
+FUEL_COST C18 177

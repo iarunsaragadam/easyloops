@@ -1,0 +1,12 @@
+LOG LEVEL SUMMARY:
+ERROR: 1
+INFO: 1
+WARN: 1
+
+ERROR ENTRIES:
+[2023-12-31 23:59:59] End of year error
+
+TIME SPAN ANALYSIS:
+First entry: 2023-01-01 00:00:00
+Last entry: 2023-12-31 23:59:59
+Total entries: 3

@@ -1,1 +1,9 @@
-placeholder
+8
+CREATE COUNTER cnt1 0
+CALL cnt1 5
+CALL cnt1 3
+CREATE MULTIPLIER mult1 4
+CALL mult1 5
+RESET cnt1
+CALL cnt1 2
+CALL mult1 7

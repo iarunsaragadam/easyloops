@@ -1,0 +1,11 @@
+OPENED hpspcxn.tmp AS FD 3
+OPENED fszt.dat AS FD 4
+OPENED fpiz.dat AS FD 5
+FD 3: hpspcxn.tmp (rw)
+FD 4: fszt.dat (w)
+FD 5: fpiz.dat (w)
+WRITTEN 9 BYTES TO FD 3
+WRITTEN 20 BYTES TO FD 3
+CLOSED FD 3 (hpspcxn.tmp)
+CLOSED FD 4 (fszt.dat)
+CLOSED FD 5 (fpiz.dat)

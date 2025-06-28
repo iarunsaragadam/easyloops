@@ -1,0 +1,5 @@
+[2023-12-24 10:00:00] ERROR: Performance degraded
+[2023-12-24 10:04:00] INFO: Service unavailable
+[2023-12-24 10:08:00] DEBUG: Request processed
+[2023-12-24 10:27:00] DEBUG: Service unavailable
+[2023-12-24 10:32:00] INFO: Connection timeout

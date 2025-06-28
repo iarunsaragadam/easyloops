@@ -1,0 +1,17 @@
+4 512
+15
+write 19224
+write 9404
+read 8550
+write 12377
+read 20152
+write 17463
+write 8405
+read 8331
+read 14807
+read 17760
+read 11716
+read 18108
+read 7624
+write 12267
+read 19307

@@ -1,0 +1,3 @@
+Created Truck E9
+Vehicle E9 started. Engine started: Electric engine
+Fuel cost for 1 miles: $0.0

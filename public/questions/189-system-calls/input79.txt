@@ -1,0 +1,16 @@
+15
+OPEN file1.txt rw
+OPEN file2.txt rw
+WRITE 3 data1
+WRITE 4 data2
+READ 3 5
+READ 4 5
+WRITE 3 more1
+WRITE 4 more2
+LIST
+READ 3 10
+READ 4 10
+CLOSE 3
+LIST
+CLOSE 4
+LIST

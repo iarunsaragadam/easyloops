@@ -1,0 +1,12 @@
+Processing events:
+Event 1: [P5] TYPE_0 at 867 - same_timestamp_4
+Event 2: [P6] TYPE_3 at 867 - same_timestamp_3
+Event 3: [P7] TYPE_2 at 867 - same_timestamp_2
+Event 4: [P8] TYPE_1 at 867 - same_timestamp_1
+Event 5: [P10] TYPE_0 at 867 - same_timestamp_0
+System state:
+Total events processed: 5
+TYPE_0: 2
+TYPE_1: 1
+TYPE_2: 1
+TYPE_3: 1

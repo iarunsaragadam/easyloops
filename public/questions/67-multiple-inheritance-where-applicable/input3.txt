@@ -1,1 +1,13 @@
-placeholder
+12
+CREATE Person p1 Alice
+CREATE Worker w1 Bob Manager
+CREATE Student s1 Carol Harvard
+CREATE WorkingStudent ws1 David Engineer MIT
+CALL w1 work
+CALL s1 study
+CALL ws1 work
+CALL ws1 study
+CALL ws1 introduce
+MRO Person
+MRO Worker
+MRO Student

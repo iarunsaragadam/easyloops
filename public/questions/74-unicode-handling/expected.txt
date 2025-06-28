@@ -1,1 +1,7 @@
-placeholder
+ASCII Letters: 10
+ASCII Digits: 3
+Unicode Letters: 2
+Unicode Digits: 0
+Symbols: 1
+Emojis: 0
+Other: 2

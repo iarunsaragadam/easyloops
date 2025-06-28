@@ -1,0 +1,7 @@
+HTTP/1.0 404 Not Found
+Content-Type: text/css
+Content-Length: 53
+Server: nginx/1.18.0
+
+Response body for test case 12
+Second line of content

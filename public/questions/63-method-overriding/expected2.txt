@@ -1,1 +1,2 @@
-placeholder
+Max says: Woof! Woof!
+I am Max, a dog

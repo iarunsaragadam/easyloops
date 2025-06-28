@@ -1,0 +1,4 @@
+CREATE Motorcycle M19 Nissan 2024 V6 135 gasoline
+START M19
+INFO M19
+FUEL_COST M19 82

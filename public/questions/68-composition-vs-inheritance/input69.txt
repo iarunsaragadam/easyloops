@@ -1,0 +1,68 @@
+CREATE Car P9V0 Honda 2003 V6 140 gasoline
+CREATE Car P9V1 Honda 2009 V4 212 electric
+CREATE Motorcycle P9V2 Yamaha 2002 Electric 106 gasoline
+CREATE Motorcycle P9V3 Ford 2009 V4 353 diesel
+CREATE Motorcycle P9V4 Ford 2001 Electric 197 electric
+CREATE Car P9V5 Toyota 2020 Electric 357 diesel
+CREATE Truck P9V6 Toyota 2005 V4 371 diesel
+CREATE Truck P9V7 Toyota 2015 V8 246 gasoline
+CREATE Car P9V8 Honda 2004 V4 249 diesel
+CREATE Motorcycle P9V9 BMW 2016 V4 259 electric
+CREATE Truck P9V10 BMW 2019 V8 213 electric
+CREATE Truck P9V11 Yamaha 2015 Electric 351 gasoline
+CREATE Car P9V12 Yamaha 2024 Electric 82 electric
+CREATE Car P9V13 BMW 2005 V4 337 diesel
+CREATE Car P9V14 Ford 2014 Electric 89 electric
+CREATE Motorcycle P9V15 Yamaha 2016 V6 357 diesel
+CREATE Car P9V16 Ford 2005 Electric 360 gasoline
+CREATE Car P9V17 BMW 2005 V4 153 gasoline
+CREATE Motorcycle P9V18 Yamaha 2024 V4 335 electric
+CREATE Car P9V19 Honda 2007 Electric 290 electric
+CREATE Car P9V20 Ford 2017 V4 240 diesel
+CREATE Motorcycle P9V21 Toyota 2011 V6 383 gasoline
+CREATE Truck P9V22 Yamaha 2003 V6 283 electric
+CREATE Car P9V23 Yamaha 2007 Electric 267 gasoline
+CREATE Motorcycle P9V24 Toyota 2003 V4 113 gasoline
+CREATE Motorcycle P9V25 Honda 2017 V4 172 diesel
+CREATE Motorcycle P9V26 BMW 2008 V4 176 diesel
+CREATE Truck P9V27 Toyota 2021 V8 369 gasoline
+CREATE Truck P9V28 Toyota 2012 Electric 100 electric
+CREATE Car P9V29 Yamaha 2008 V8 261 electric
+CREATE Truck P9V30 Toyota 2009 V4 161 diesel
+CREATE Truck P9V31 Yamaha 2018 Electric 319 electric
+CREATE Motorcycle P9V32 Honda 2017 V4 81 diesel
+CREATE Truck P9V33 Toyota 2009 Electric 180 gasoline
+CREATE Truck P9V34 Toyota 2006 V4 188 diesel
+CREATE Truck P9V35 Yamaha 2004 V6 381 electric
+CREATE Truck P9V36 BMW 2016 Electric 191 diesel
+CREATE Motorcycle P9V37 Ford 2009 V6 84 electric
+START P9V0
+INFO P9V0
+FUEL_COST P9V0 301
+START P9V2
+INFO P9V2
+FUEL_COST P9V2 141
+START P9V4
+INFO P9V4
+FUEL_COST P9V4 460
+START P9V6
+INFO P9V6
+FUEL_COST P9V6 333
+START P9V8
+INFO P9V8
+FUEL_COST P9V8 435
+START P9V10
+INFO P9V10
+FUEL_COST P9V10 485
+START P9V12
+INFO P9V12
+FUEL_COST P9V12 121
+START P9V14
+INFO P9V14
+FUEL_COST P9V14 454
+START P9V16
+INFO P9V16
+FUEL_COST P9V16 469
+START P9V18
+INFO P9V18
+FUEL_COST P9V18 239

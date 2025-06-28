@@ -1,0 +1,2 @@
+READ: file1.txt = FILE_NOT_FOUND
+WRITE: file1.txt (14 chars)

@@ -1,1 +1,1 @@
-placeholder
+add_two_int(10, 5) = 15

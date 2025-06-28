@@ -1,0 +1,7 @@
+6
+write file1.txt JgFhRzjkuJc44
+write file1.txt R3
+read file1.txt
+read file3.txt
+write file1.txt LW5
+write file1.txt OT8d3dVvIRs

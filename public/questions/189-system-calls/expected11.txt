@@ -1,0 +1,4 @@
+OPENED hkwalokn.txt AS FD 3
+FD 3: hkwalokn.txt (w)
+FD 3: hkwalokn.txt (w)
+FD 3: hkwalokn.txt (w)

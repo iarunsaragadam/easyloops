@@ -1,0 +1,66 @@
+OPENED complex5_0.txt AS FD 3
+OPENED complex5_1.txt AS FD 4
+OPENED complex5_2.txt AS FD 5
+EOF
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+WRITTEN 6 BYTES TO FD 4
+EOF
+EOF
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+WRITTEN 6 BYTES TO FD 3
+READ: data48
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+WRITTEN 6 BYTES TO FD 3
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+WRITTEN 6 BYTES TO FD 3
+WRITTEN 6 BYTES TO FD 4
+EOF
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+WRITTEN 6 BYTES TO FD 4
+READ: data74
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+WRITTEN 6 BYTES TO FD 3
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+READ: data74data9
+WRITTEN 6 BYTES TO FD 4
+READ: data48d
+READ: data48data41dat
+FD 3: complex5_0.txt (rw)
+FD 4: complex5_1.txt (rw)
+FD 5: complex5_2.txt (r)
+READ: dat
+CLOSED FD 3 (complex5_0.txt)
+CLOSED FD 4 (complex5_1.txt)
+CLOSED FD 5 (complex5_2.txt)

@@ -1,0 +1,18 @@
+8 1024
+16
+write 7946
+read 2292
+write 1064
+read 8915
+write 8052
+write 4700
+write 9639
+write 6451
+write 9675
+read 4119
+read 2137
+read 1230
+write 2643
+read 3629
+write 5735
+write 1949

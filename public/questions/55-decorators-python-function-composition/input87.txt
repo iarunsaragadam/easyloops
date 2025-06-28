@@ -1,0 +1,25 @@
+-4124
+23
+multiply -19
+square
+square
+add -686
+abs
+add 878
+square
+add 316
+abs
+add -381
+add 528
+square
+negate
+add -874
+negate
+negate
+abs
+multiply -18
+square
+square
+abs
+add 953
+abs

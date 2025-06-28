@@ -1,0 +1,5 @@
+Array size: 6
+Array elements: [1, 2, 3, 4, 5, 6]
+First element: 1
+Last element: 6
+Array sum: 21

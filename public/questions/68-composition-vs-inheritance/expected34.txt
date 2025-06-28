@@ -1,0 +1,6 @@
+Created Car LP1
+Created Motorcycle LP2
+Vehicle LP1 started. Engine started: V4 engine
+Vehicle LP2 started. Engine started: V4 engine
+Fuel cost for 300 miles: $34.4
+Fuel cost for 300 miles: $23.3

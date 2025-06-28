@@ -1,1 +1,10 @@
-placeholder
+0016:R:001:Hello
+OK
+0015:R:002:PONG
+OK
+0021:R:003:1234567890
+OK
+0019:R:004:World123
+OK
+ERROR: Unknown command
+ERROR: Session in error state

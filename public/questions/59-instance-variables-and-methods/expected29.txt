@@ -1,0 +1,7 @@
+Account ACC001 created for Eve
+Account ACC002 created for Alice
+Deposited 247.00 to account ACC001
+Account: ACC001, Owner: Eve, Balance: 1516.00
+Account: ACC002, Owner: Alice, Balance: 1149.00
+Account: ACC001, Owner: Eve, Balance: 1516.00
+Balance for account ACC001: 1516.00

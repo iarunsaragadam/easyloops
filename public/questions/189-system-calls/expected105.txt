@@ -1,0 +1,38 @@
+OPENED complex23_0.txt AS FD 3
+OPENED complex23_1.txt AS FD 4
+OPENED complex23_2.txt AS FD 5
+FD 3: complex23_0.txt (r)
+FD 4: complex23_1.txt (r)
+FD 5: complex23_2.txt (w)
+FD 3: complex23_0.txt (r)
+FD 4: complex23_1.txt (r)
+FD 5: complex23_2.txt (w)
+EOF
+EOF
+FD 3: complex23_0.txt (r)
+FD 4: complex23_1.txt (r)
+FD 5: complex23_2.txt (w)
+EOF
+FD 3: complex23_0.txt (r)
+FD 4: complex23_1.txt (r)
+FD 5: complex23_2.txt (w)
+FD 3: complex23_0.txt (r)
+FD 4: complex23_1.txt (r)
+FD 5: complex23_2.txt (w)
+FD 3: complex23_0.txt (r)
+FD 4: complex23_1.txt (r)
+FD 5: complex23_2.txt (w)
+FD 3: complex23_0.txt (r)
+FD 4: complex23_1.txt (r)
+FD 5: complex23_2.txt (w)
+WRITTEN 6 BYTES TO FD 5
+FD 3: complex23_0.txt (r)
+FD 4: complex23_1.txt (r)
+FD 5: complex23_2.txt (w)
+FD 3: complex23_0.txt (r)
+FD 4: complex23_1.txt (r)
+FD 5: complex23_2.txt (w)
+EOF
+CLOSED FD 3 (complex23_0.txt)
+CLOSED FD 4 (complex23_1.txt)
+CLOSED FD 5 (complex23_2.txt)

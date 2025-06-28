@@ -1,0 +1,7 @@
+32
+5
+negate
+add 496
+abs
+negate
+negate

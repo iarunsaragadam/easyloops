@@ -1,0 +1,10 @@
+body_length=53
+body_lines=2
+content_length=53
+content_type=application/javascript
+header_count=3
+http_version=1.1
+server=Apache/2.4.41
+status_category=Client Error
+status_code=403
+status_message=Forbidden

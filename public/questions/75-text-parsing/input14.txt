@@ -1,0 +1,5 @@
+[2023-12-15 10:00:00] INFO: Configuration loaded
+[2023-12-15 10:03:00] DEBUG: Database connected
+[2023-12-15 10:10:00] WARN: Security alert
+[2023-12-15 10:27:00] ERROR: Configuration loaded
+[2023-12-15 10:12:00] DEBUG: User logged in

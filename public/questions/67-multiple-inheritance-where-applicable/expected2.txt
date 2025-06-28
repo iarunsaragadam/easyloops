@@ -1,1 +1,4 @@
-placeholder
+Person: John
+Worker: Jane, Job: Developer
+Student: Jim, School: Stanford
+WorkingStudent: Jill, Job: Analyst, School: Yale

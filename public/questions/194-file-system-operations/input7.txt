@@ -1,0 +1,6 @@
+5
+ls
+mkdir dir1
+touch file1
+ls
+ls dir1

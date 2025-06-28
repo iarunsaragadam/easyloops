@@ -1,0 +1,8 @@
+LOG LEVEL SUMMARY:
+INFO: 3
+WARN: 1
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-01 10:00:00
+Last entry: 2023-12-01 10:38:00
+Total entries: 4

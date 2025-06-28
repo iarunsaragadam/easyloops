@@ -1,0 +1,7 @@
+Integer variable: -2147483648
+String variable: A
+Boolean variable: false
+Float variable: 0.0
+Character variable: Z
+Updated integer variable: 2147483647
+Late-initialized variable: DataStructures

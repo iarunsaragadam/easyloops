@@ -1,0 +1,13 @@
+LOG LEVEL SUMMARY:
+ERROR: 2
+INFO: 3
+WARN: 4
+
+ERROR ENTRIES:
+[2023-12-17 10:00:00] Request processed
+[2023-12-17 10:28:00] Service unavailable
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-17 10:00:00
+Last entry: 2023-12-17 10:35:00
+Total entries: 9

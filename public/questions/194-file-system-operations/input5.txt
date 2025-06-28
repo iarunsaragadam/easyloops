@@ -1,0 +1,5 @@
+4
+mkdir test
+ls
+mkdir test/sub
+ls test

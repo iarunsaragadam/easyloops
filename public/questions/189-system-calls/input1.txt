@@ -1,0 +1,3 @@
+2
+OPEN test.txt r
+CLOSE 3

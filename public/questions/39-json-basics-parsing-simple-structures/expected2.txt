@@ -1,1 +1,3 @@
-placeholder
+Name: Bob
+Age: 0
+City: Unknown

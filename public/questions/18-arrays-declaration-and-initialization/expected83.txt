@@ -1,0 +1,5 @@
+Array size: 6
+Array elements: [-280, -234, -176, 114, 422, 432]
+First element: -280
+Last element: 432
+Array sum: 278

@@ -1,0 +1,11 @@
+10
+OPEN bsnegps.txt w
+OPEN pkgesgzp.tmp w
+LIST
+WRITE 4 file file code test
+LIST
+LIST
+WRITE 4 system system world file
+WRITE 3 call
+WRITE 3 data file code data
+CLOSE 3

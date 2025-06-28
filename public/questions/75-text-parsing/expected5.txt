@@ -1,0 +1,14 @@
+LOG LEVEL SUMMARY:
+DEBUG: 2
+ERROR: 2
+INFO: 2
+WARN: 1
+
+ERROR ENTRIES:
+[2023-12-06 10:03:00] Service unavailable
+[2023-12-06 10:28:00] Configuration loaded
+
+TIME SPAN ANALYSIS:
+First entry: 2023-12-06 10:00:00
+Last entry: 2023-12-06 10:45:00
+Total entries: 7

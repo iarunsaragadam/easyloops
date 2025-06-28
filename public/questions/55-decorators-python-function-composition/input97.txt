@@ -1,0 +1,17 @@
+-2305
+15
+multiply -26
+negate
+multiply 34
+multiply -67
+negate
+square
+add -343
+multiply 45
+multiply 89
+add 449
+negate
+add -114
+negate
+multiply -14
+multiply -11

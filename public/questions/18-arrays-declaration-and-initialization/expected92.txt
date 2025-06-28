@@ -1,0 +1,5 @@
+Array size: 23
+Array elements: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 597, 584, 181, 765, 946, 711, 657]
+First element: 1
+Last element: 657
+Array sum: 7024

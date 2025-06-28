@@ -1,0 +1,14 @@
+Directory 'perf_dir_68_0' created
+perf_dir_68_0
+File 'perf_file_68_2.txt' created
+Directory 'perf_dir_68_3' created
+/
+/
+Directory 'perf_dir_68_6' created
+perf_dir_68_0 perf_dir_68_3 perf_dir_68_6 perf_file_68_2.txt
+File 'perf_file_68_8.txt' created
+Directory 'perf_dir_68_9' created
+/
+Directory 'perf_dir_68_11' created
+perf_dir_68_0 perf_dir_68_11 perf_dir_68_3 perf_dir_68_6 perf_dir_68_9 perf_file_68_2.txt perf_file_68_8.txt
+perf_dir_68_0 perf_dir_68_11 perf_dir_68_3 perf_dir_68_6 perf_dir_68_9 perf_file_68_2.txt perf_file_68_8.txt

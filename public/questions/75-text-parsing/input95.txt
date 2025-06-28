@@ -1,0 +1,4 @@
+[2023-12-01 10:00:00] info: lowercase info
+        [2023-12-01 10:00:01] WARN: uppercase warn
+        [2023-12-01 10:00:02] Error: mixed case error
+        [2023-12-01 10:00:03] DEBUG: standard debug

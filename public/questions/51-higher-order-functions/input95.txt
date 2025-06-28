@@ -1,0 +1,1 @@
+4 | SQRT, POW 1, ABS, ABS, MUL -1

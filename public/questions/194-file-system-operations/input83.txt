@@ -1,0 +1,10 @@
+9
+pwd
+pwd
+touch file_83_3.txt
+mkdir dir_83_4
+ls
+mkdir dir_83_6
+count files
+ls
+ls

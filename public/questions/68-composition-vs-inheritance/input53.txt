@@ -1,0 +1,3 @@
+CREATE Motorcycle E23 Toyota 1900 Electric 500 electric
+START E23
+FUEL_COST E23 1000

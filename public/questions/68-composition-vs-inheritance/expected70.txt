@@ -1,0 +1,70 @@
+Created Car P10V0
+Created Car P10V1
+Created Car P10V2
+Created Truck P10V3
+Created Car P10V4
+Created Motorcycle P10V5
+Created Car P10V6
+Created Car P10V7
+Created Truck P10V8
+Created Truck P10V9
+Created Motorcycle P10V10
+Created Motorcycle P10V11
+Created Car P10V12
+Created Car P10V13
+Created Motorcycle P10V14
+Created Motorcycle P10V15
+Created Motorcycle P10V16
+Created Motorcycle P10V17
+Created Motorcycle P10V18
+Created Truck P10V19
+Created Car P10V20
+Created Truck P10V21
+Created Truck P10V22
+Created Car P10V23
+Created Car P10V24
+Created Motorcycle P10V25
+Created Motorcycle P10V26
+Created Car P10V27
+Created Truck P10V28
+Created Car P10V29
+Created Motorcycle P10V30
+Created Motorcycle P10V31
+Created Motorcycle P10V32
+Created Truck P10V33
+Created Motorcycle P10V34
+Created Car P10V35
+Created Car P10V36
+Created Car P10V37
+Created Motorcycle P10V38
+Created Car P10V39
+Vehicle P10V0 started. Engine started: Electric engine
+P10V0: 2022 Honda Car (running)
+Fuel cost for 444 miles: $16.0
+Vehicle P10V2 started. Engine started: Electric engine
+P10V2: 2015 Ford Car (running)
+Fuel cost for 152 miles: $5.7
+Vehicle P10V4 started. Engine started: V8 engine
+P10V4: 2021 Honda Car (running)
+Fuel cost for 185 miles: $3.1
+Vehicle P10V6 started. Engine started: V8 engine
+P10V6: 2002 Yamaha Car (running)
+Fuel cost for 152 miles: $96.3
+Vehicle P10V8 started. Engine started: V6 engine
+P10V8: 2016 Ford Truck (running)
+Fuel cost for 488 miles: $323.6
+Vehicle P10V10 started. Engine started: V6 engine
+P10V10: 2012 Toyota Motorcycle (running)
+Fuel cost for 460 miles: $3.0
+Vehicle P10V12 started. Engine started: V8 engine
+P10V12: 2024 Ford Car (running)
+Fuel cost for 436 miles: $147.7
+Vehicle P10V14 started. Engine started: V8 engine
+P10V14: 2023 Toyota Motorcycle (running)
+Fuel cost for 116 miles: $43.1
+Vehicle P10V16 started. Engine started: Electric engine
+P10V16: 2018 Ford Motorcycle (running)
+Fuel cost for 189 miles: $5.2
+Vehicle P10V18 started. Engine started: Electric engine
+P10V18: 2014 Honda Motorcycle (running)
+Fuel cost for 261 miles: $7.4

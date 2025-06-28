@@ -1,0 +1,6 @@
+5
+OPEN data.txt rw
+WRITE 3 abcdefghij
+READ 3 3
+READ 3 4
+CLOSE 3

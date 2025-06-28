@@ -1,0 +1,4 @@
+Account ACC001 created for User7
+Deposited 0.01 to account ACC001
+Withdrew 482640.00 from account ACC001
+Balance for account ACC001: 482642.00

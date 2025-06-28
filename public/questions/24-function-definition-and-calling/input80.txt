@@ -1,0 +1,1 @@
+rectangle 700 700

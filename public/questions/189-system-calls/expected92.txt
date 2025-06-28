@@ -1,0 +1,75 @@
+OPENED complex10_0.txt AS FD 3
+OPENED complex10_1.txt AS FD 4
+OPENED complex10_2.txt AS FD 5
+OPENED complex10_3.txt AS FD 6
+OPENED complex10_4.txt AS FD 7
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+EOF
+WRITTEN 6 BYTES TO FD 4
+EOF
+WRITTEN 6 BYTES TO FD 7
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+EOF
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+EOF
+WRITTEN 6 BYTES TO FD 5
+EOF
+EOF
+EOF
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+EOF
+WRITTEN 6 BYTES TO FD 5
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+EOF
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+READ: data10data25
+WRITTEN 6 BYTES TO FD 7
+FD 3: complex10_0.txt (r)
+FD 4: complex10_1.txt (w)
+FD 5: complex10_2.txt (rw)
+FD 6: complex10_3.txt (r)
+FD 7: complex10_4.txt (w)
+CLOSED FD 3 (complex10_0.txt)
+CLOSED FD 4 (complex10_1.txt)
+CLOSED FD 5 (complex10_2.txt)
+CLOSED FD 6 (complex10_3.txt)
+CLOSED FD 7 (complex10_4.txt)

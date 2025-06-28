@@ -1,0 +1,21 @@
+Account ACC001 created for User0
+Account ACC002 created for User1
+Account ACC003 created for User2
+One or both accounts not found
+Deposited 380.00 to account ACC001
+Account not found
+Insufficient funds or invalid amount
+Withdrew 274.00 from account ACC001
+Deposited 343.00 to account ACC001
+Withdrew 226.00 from account ACC003
+Transferred 483.00 from ACC001 to ACC003
+Deposited 374.00 to account ACC003
+Withdrew 102.00 from account ACC003
+Balance for account ACC003: 1524.00
+Withdrew 163.00 from account ACC002
+Account: ACC003, Owner: User2, Balance: 1524.00
+Withdrew 280.00 from account ACC002
+Withdrew 63.00 from account ACC003
+Transferred 157.00 from ACC003 to ACC002
+Transferred 157.00 from ACC002 to ACC001
+Account: ACC003, Owner: User2, Balance: 1304.00

@@ -1,1 +1,7 @@
-placeholder
+6
+100 alice LOGIN
+120 bob LOGIN
+150 alice LOGOUT
+180 charlie LOGIN
+200 bob LOGOUT
+220 charlie LOGOUT

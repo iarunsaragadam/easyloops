@@ -1,0 +1,5 @@
+Array size: 8
+Array elements: [1, 1, 1, 1, 1, 1, 1, 1]
+First element: 1
+Last element: 1
+Array sum: 8

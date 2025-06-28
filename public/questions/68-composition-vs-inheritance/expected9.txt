@@ -1,0 +1,4 @@
+Created Motorcycle M9
+Vehicle M9 started. Engine started: V4 engine
+M9: 2015 BMW Motorcycle (running)
+Fuel cost for 135 miles: $17.5

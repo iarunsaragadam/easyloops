@@ -1,1 +1,6 @@
-placeholder
+5
+PUT item1 data1 KEEP
+PUT item2 data2
+GET item1
+GET item2
+SIZE

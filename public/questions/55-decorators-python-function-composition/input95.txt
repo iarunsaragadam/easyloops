@@ -1,0 +1,31 @@
+418
+29
+square
+square
+square
+add 190
+abs
+abs
+multiply -64
+add -939
+abs
+negate
+negate
+negate
+abs
+multiply 58
+multiply -75
+add -873
+negate
+add -271
+negate
+square
+negate
+negate
+add 941
+abs
+add -611
+add 265
+square
+abs
+negate

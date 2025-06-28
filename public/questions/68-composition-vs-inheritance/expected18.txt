@@ -1,0 +1,4 @@
+Created Car C18
+Vehicle C18 started. Engine started: Electric engine
+C18: 2015 Nissan Car (running)
+Fuel cost for 177 miles: $6.8

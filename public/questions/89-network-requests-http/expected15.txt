@@ -1,0 +1,10 @@
+body_length=53
+body_lines=2
+content_length=53
+content_type=image/png
+header_count=3
+http_version=1.0
+server=lighttpd/1.4.55
+status_category=Server Error
+status_code=500
+status_message=Internal Server Error

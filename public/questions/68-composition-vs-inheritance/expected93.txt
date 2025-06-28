@@ -1,0 +1,78 @@
+Created Car F3V0
+Created Truck F3V1
+Created Motorcycle F3V2
+Created Car F3V3
+Created Truck F3V4
+Created Motorcycle F3V5
+Created Car F3V6
+Created Truck F3V7
+Created Motorcycle F3V8
+Created Car F3V9
+Created Truck F3V10
+Created Motorcycle F3V11
+Created Car F3V12
+Created Truck F3V13
+Created Motorcycle F3V14
+Created Car F3V15
+Created Truck F3V16
+Created Motorcycle F3V17
+Vehicle F3V0 started. Engine started: V4 engine
+F3V0: 2015 Toyota Car (running)
+Fuel cost for 100 miles: $12.6
+Vehicle F3V0 stopped. Engine stopped: V4 engine
+Vehicle F3V1 started. Engine started: V6 engine
+Fuel cost for 55 miles: $14.2
+F3V1: 2016 Ford Truck (running)
+F3V2: 2017 Honda Motorcycle (stopped)
+Vehicle F3V2 started. Engine started: V8 engine
+Fuel cost for 240 miles: $1.3
+Vehicle F3V3 started. Engine started: Electric engine
+F3V3: 2018 BMW Car (running)
+Fuel cost for 130 miles: $4.4
+Vehicle F3V3 stopped. Engine stopped: Electric engine
+Vehicle F3V4 started. Engine started: V4 engine
+Fuel cost for 70 miles: $15.7
+F3V4: 2019 Yamaha Truck (running)
+F3V5: 2020 Tesla Motorcycle (stopped)
+Vehicle F3V5 started. Engine started: V6 engine
+Fuel cost for 300 miles: $1.3
+Vehicle F3V6 started. Engine started: V8 engine
+F3V6: 2021 Rivian Car (running)
+Fuel cost for 160 miles: $48.0
+Vehicle F3V6 stopped. Engine stopped: V8 engine
+Vehicle F3V7 started. Engine started: Electric engine
+Fuel cost for 85 miles: $4.7
+F3V7: 2022 Toyota Truck (running)
+F3V8: 2023 Ford Motorcycle (stopped)
+Vehicle F3V8 started. Engine started: V4 engine
+Fuel cost for 360 miles: $1.4
+Vehicle F3V9 started. Engine started: V6 engine
+F3V9: 2024 Honda Car (running)
+Fuel cost for 190 miles: $45.2
+Vehicle F3V9 stopped. Engine stopped: V6 engine
+Vehicle F3V10 started. Engine started: V8 engine
+Fuel cost for 100 miles: $65.9
+F3V10: 2015 BMW Truck (running)
+F3V11: 2016 Yamaha Motorcycle (stopped)
+Vehicle F3V11 started. Engine started: Electric engine
+Fuel cost for 420 miles: $0.4
+Vehicle F3V12 started. Engine started: V4 engine
+F3V12: 2017 Tesla Car (running)
+Fuel cost for 220 miles: $43.3
+Vehicle F3V12 stopped. Engine stopped: V4 engine
+Vehicle F3V13 started. Engine started: V6 engine
+Fuel cost for 115 miles: $55.4
+F3V13: 2018 Rivian Truck (running)
+F3V14: 2019 Toyota Motorcycle (stopped)
+Vehicle F3V14 started. Engine started: V8 engine
+Fuel cost for 480 miles: $6.9
+Vehicle F3V15 started. Engine started: Electric engine
+F3V15: 2020 Ford Car (running)
+Fuel cost for 250 miles: $9.4
+Vehicle F3V15 stopped. Engine stopped: Electric engine
+Vehicle F3V16 started. Engine started: V4 engine
+Fuel cost for 130 miles: $49.4
+F3V16: 2021 Honda Truck (running)
+F3V17: 2022 BMW Motorcycle (stopped)
+Vehicle F3V17 started. Engine started: V6 engine
+Fuel cost for 540 miles: $5.3

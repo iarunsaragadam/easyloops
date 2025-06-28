@@ -1,0 +1,5 @@
+Directory 'home' created
+Changed to /home
+/home
+Changed to /
+/

@@ -1,1 +1,4 @@
-placeholder
+CREATE Truck T1 Ford 2019 V8 300 diesel
+START T1
+INFO T1
+FUEL_COST T1 100
