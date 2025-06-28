@@ -49,6 +49,7 @@ export const FIREBASE_CONFIG = {
 // This should be moved to Firebase Firestore for production
 export const AUTHORIZED_GO_USERS = [
   "arun@elloloop.com",
+  "arun88m@gmail.com",
   "admin@easyloops.com",
   "developer@easyloops.com",
   // Add more authorized emails here
