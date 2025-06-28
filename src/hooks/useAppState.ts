@@ -7,12 +7,39 @@ import { DEFAULT_CODE, DEFAULT_QUESTION_ID } from "@/constants";
 export const useAppState = () => {
   const [appState, setAppState] = useState<AppState>({
     pythonCode: DEFAULT_CODE,
+    goCode: `package main
+
+import (
+	"fmt"
+	"os"
+	"bufio"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	
+	// Read the number of rows
+	scanner.Scan()
+	n, _ := strconv.Atoi(scanner.Text())
+	
+	// Outer loop: iterate through rows (1 to n)
+	for i := 1; i <= n; i++ {
+		// Inner loop: print stars for current row
+		for j := 0; j < i; j++ {
+			fmt.Print("*")
+		}
+		fmt.Println() // Move to next line after each row
+	}
+}`,
     output: "",
     testResults: [],
     isRunning: false,
     currentQuestion: null,
     availableQuestions: [],
     selectedQuestionId: DEFAULT_QUESTION_ID,
+    selectedLanguage: "python",
     isLoadingQuestion: false,
   });
 
@@ -62,8 +89,16 @@ export const useAppState = () => {
     router.push(`/?q=${questionId}`);
   };
 
+  const handleLanguageChange = (language: string) => {
+    setAppState((prev) => ({ ...prev, selectedLanguage: language }));
+  };
+
   const setPythonCode = (code: string) => {
     setAppState((prev) => ({ ...prev, pythonCode: code }));
+  };
+
+  const setGoCode = (code: string) => {
+    setAppState((prev) => ({ ...prev, goCode: code }));
   };
 
   const setOutput = (output: string) => {
@@ -81,7 +116,9 @@ export const useAppState = () => {
   return {
     appState,
     handleQuestionChange,
+    handleLanguageChange,
     setPythonCode,
+    setGoCode,
     setOutput,
     setTestResults,
     setIsRunning,

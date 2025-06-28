@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "error-stack-parser": "^2.1.4",
+    "firebase": "^10.7.1",
     "marked": "^16.0.0",
     "monaco-editor": "^0.52.2",
     "next": "15.3.4",

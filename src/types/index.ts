@@ -84,11 +84,13 @@ export interface LayoutState {
 
 export interface AppState {
   pythonCode: string;
+  goCode: string;
   output: string;
   testResults: TestResult[];
   isRunning: boolean;
   currentQuestion: Question | null;
   availableQuestions: string[];
   selectedQuestionId: string;
+  selectedLanguage: string;
   isLoadingQuestion: boolean;
 }

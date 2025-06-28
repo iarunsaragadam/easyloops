@@ -32,6 +32,24 @@ export const DEFAULT_QUESTION_ID = "01-variable-declaration";
 
 export const SUPPORTED_LANGUAGES = [
   { value: "python", label: "Python3" },
-  { value: "javascript", label: "JavaScript" },
-  { value: "java", label: "Java" },
+  { value: "go", label: "Go" },
 ] as const;
+
+// Firebase configuration for elloloop-easyloops project
+export const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyA32EoTmr7nRaq26rDBbIjPNDxOMX5g0B8",
+  authDomain: "elloloop-easyloops.firebaseapp.com",
+  projectId: "elloloop-easyloops",
+  storageBucket: "elloloop-easyloops.firebasestorage.app",
+  messagingSenderId: "785642431768",
+  appId: "1:785642431768:web:289ffa24f524cc5849ea6d",
+};
+
+// Hardcoded email addresses that can access Go language
+// This should be moved to Firebase Firestore for production
+export const AUTHORIZED_GO_USERS = [
+  "arun@elloloop.com",
+  "admin@easyloops.com",
+  "developer@easyloops.com",
+  // Add more authorized emails here
+];
