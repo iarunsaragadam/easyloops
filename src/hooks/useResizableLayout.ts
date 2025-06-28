@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { LayoutState } from "@/types";
 import { LAYOUT_CONSTANTS } from "@/constants";
 
@@ -26,7 +26,7 @@ export const useResizableLayout = (
     e.preventDefault();
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = useCallback((e: MouseEvent) => {
     if (layoutState.isDraggingHorizontal && containerRef.current) {
       const containerRect = containerRef.current.getBoundingClientRect();
       const newLeftWidth =
@@ -54,15 +54,15 @@ export const useResizableLayout = (
         testResultsHeight: constrainedHeight,
       }));
     }
-  };
+  }, [layoutState.isDraggingHorizontal, layoutState.isDraggingVertical]);
 
-  const handleMouseUp = () => {
+  const handleMouseUp = useCallback(() => {
     setLayoutState((prev) => ({
       ...prev,
       isDraggingHorizontal: false,
       isDraggingVertical: false,
     }));
-  };
+  }, []);
 
   useEffect(() => {
     if (layoutState.isDraggingHorizontal || layoutState.isDraggingVertical) {
@@ -85,7 +85,7 @@ export const useResizableLayout = (
       document.body.style.cursor = "";
       document.body.style.userSelect = "";
     };
-  }, [layoutState.isDraggingHorizontal, layoutState.isDraggingVertical]);
+  }, [layoutState.isDraggingHorizontal, layoutState.isDraggingVertical, handleMouseMove, handleMouseUp]);
 
   return {
     layoutState,
