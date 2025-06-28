@@ -45,12 +45,9 @@ export const FIREBASE_CONFIG = {
   appId: "1:785642431768:web:289ffa24f524cc5849ea6d",
 };
 
-// Hardcoded email addresses that can access Go language
-// This should be moved to Firebase Firestore for production
-export const AUTHORIZED_GO_USERS = [
-  "arun@elloloop.com",
-  "arun88m@gmail.com",
-  "admin@easyloops.com",
-  "developer@easyloops.com",
-  // Add more authorized emails here
-];
+// Backend configuration
+export const BACKEND_CONFIG = {
+  URL: process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001",
+  HEALTH_CHECK: "/health",
+  GO_EXECUTION: "/api/execute/go",
+};

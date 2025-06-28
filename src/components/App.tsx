@@ -34,7 +34,7 @@ const App: React.FC = () => {
 
     try {
       const codeToExecute = appState.selectedLanguage === 'go' ? appState.goCode : appState.pythonCode;
-      const result = await executeCode(codeToExecute, appState.currentQuestion.testCases, appState.selectedLanguage);
+      const result = await executeCode(codeToExecute, appState.currentQuestion.testCases, appState.selectedLanguage, appState.selectedQuestionId);
       setOutput(result.output);
       setTestResults(result.testResults);
     } catch (error) {

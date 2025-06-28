@@ -11,16 +11,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   selectedLanguage,
   onLanguageChange,
 }) => {
-  const { user, loading, isAuthorizedForGo } = useAuth();
-
-  // Debug logging
-  console.log('LanguageSelector Debug:', {
-    user: user?.email,
-    loading,
-    isAuthorizedForGo,
-    SUPPORTED_LANGUAGES,
-    selectedLanguage
-  });
+  const { isAuthorizedForGo } = useAuth();
 
   // Filter languages based on user authorization
   const availableLanguages = SUPPORTED_LANGUAGES.filter(lang => {
@@ -29,8 +20,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
     }
     return true; // Python is always available
   });
-
-  console.log('Available languages:', availableLanguages);
 
   return (
     <div className="flex items-center space-x-2">
@@ -51,11 +40,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           Go requires authentication
         </div>
       )}
-      {/* Debug info */}
-      <div className="text-xs text-gray-500">
-        Auth: {loading ? 'Loading...' : user ? user.email : 'Not logged in'} | 
-        Go Access: {isAuthorizedForGo ? 'Yes' : 'No'}
-      </div>
     </div>
   );
 };

@@ -1,41 +1,65 @@
 import { TestCase, CodeExecutionResult } from "@/types";
 
+const BACKEND_URL =
+  process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
+
 export const useGoExecution = () => {
   const executeGoCode = async (
     code: string,
-    testCases: TestCase[]
+    testCases: TestCase[],
+    questionId: string,
+    authToken: string
   ): Promise<CodeExecutionResult> => {
-    // Mock Go execution - in a real implementation, this would send the code to a backend service
-    // that can compile and run Go code
+    try {
+      const response = await fetch(`${BACKEND_URL}/api/execute/go`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${authToken}`,
+        },
+        body: JSON.stringify({
+          code,
+          questionId,
+        }),
+      });
 
-    const output = `Go Code Execution (Mock)
-    
-Code to execute:
-${code}
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(
+          errorData.error || `HTTP ${response.status}: ${response.statusText}`
+        );
+      }
 
-Note: Go code execution requires a backend service with Go compiler.
-This is a mock implementation for demonstration purposes.
+      const result = await response.json();
 
-To implement real Go execution:
-1. Set up a backend service with Go compiler
-2. Send code to backend via API
-3. Compile and run Go code on server
-4. Return results to frontend
+      // Convert backend result to frontend format
+      const testResults = testCases.map((testCase) => ({
+        testCase: testCase.description,
+        expected: "Expected output from backend",
+        actual: result.error || result.output,
+        passed: !result.error && result.output.includes("Expected output"),
+        input: testCase.inputFile,
+      }));
 
-Test cases would be executed on the backend service.`;
-
-    const testResults = testCases.map((testCase) => ({
-      testCase: testCase.description,
-      expected: "Expected output from backend",
-      actual: "Mock Go execution - backend required",
-      passed: false,
-      input: testCase.inputFile,
-    }));
-
-    return {
-      output,
-      testResults,
-    };
+      return {
+        output: result.error ? `Error: ${result.error}` : result.output,
+        testResults,
+      };
+    } catch (error) {
+      console.error("Go execution error:", error);
+      return {
+        output: `Error: ${
+          error instanceof Error ? error.message : "Unknown error"
+        }`,
+        testResults: testCases.map((testCase) => ({
+          testCase: testCase.description,
+          expected: "Expected output",
+          actual: "Execution failed",
+          passed: false,
+          input: testCase.inputFile,
+        })),
+      };
+    }
   };
 
   return { executeGoCode };

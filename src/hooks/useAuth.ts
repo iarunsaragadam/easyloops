@@ -5,7 +5,6 @@ import {
   signOutUser,
   onAuthStateChange,
 } from "@/utils/firebase";
-import { AUTHORIZED_GO_USERS } from "@/constants";
 
 export interface AuthState {
   user: User | null;
@@ -22,9 +21,9 @@ export const useAuth = () => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChange((user) => {
-      const isAuthorizedForGo = user
-        ? AUTHORIZED_GO_USERS.includes(user.email || "")
-        : false;
+      // Authorization is now checked by the backend
+      // Frontend assumes any authenticated user can try to access Go
+      const isAuthorizedForGo = !!user;
 
       setAuthState({
         user,
