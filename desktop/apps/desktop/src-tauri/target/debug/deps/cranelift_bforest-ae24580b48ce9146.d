@@ -1,0 +1,10 @@
+/workspace/desktop/apps/desktop/src-tauri/target/debug/deps/libcranelift_bforest-ae24580b48ce9146.rmeta: /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/lib.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/map.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/node.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/path.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/pool.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/set.rs
+
+/workspace/desktop/apps/desktop/src-tauri/target/debug/deps/cranelift_bforest-ae24580b48ce9146.d: /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/lib.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/map.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/node.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/path.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/pool.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/set.rs
+
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/lib.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/map.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/node.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/path.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/pool.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/cranelift-bforest-0.103.0/src/set.rs:

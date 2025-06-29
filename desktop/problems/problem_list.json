@@ -1,7 +1,106 @@
 [
   {
-    "id": "sample-problem",
-    "title": "Sample Problem",
-    "difficulty": "easy"
+    "id": "hello-world",
+    "title": "Hello World",
+    "description": "Write a program that prints 'Hello, World!' to the standard output. This is the classic first program that every programmer writes when learning a new language.",
+    "difficulty": "Easy",
+    "test_cases": [
+      {
+        "input": "",
+        "expected_output": "Hello, World!"
+      }
+    ]
+  },
+  {
+    "id": "add-numbers",
+    "title": "Add Two Numbers",
+    "description": "Write a program that reads two integers from standard input and prints their sum. The input will be given as two integers separated by a space on a single line.",
+    "difficulty": "Easy",
+    "test_cases": [
+      {
+        "input": "5 3",
+        "expected_output": "8"
+      },
+      {
+        "input": "10 -2",
+        "expected_output": "8"
+      },
+      {
+        "input": "0 0",
+        "expected_output": "0"
+      }
+    ]
+  },
+  {
+    "id": "fibonacci",
+    "title": "Fibonacci Sequence",
+    "description": "Write a program that calculates the nth number in the Fibonacci sequence. The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding ones. Your program should read an integer n from standard input and output the nth Fibonacci number (0-indexed).",
+    "difficulty": "Medium",
+    "test_cases": [
+      {
+        "input": "0",
+        "expected_output": "0"
+      },
+      {
+        "input": "1",
+        "expected_output": "1"
+      },
+      {
+        "input": "5",
+        "expected_output": "5"
+      },
+      {
+        "input": "10",
+        "expected_output": "55"
+      }
+    ]
+  },
+  {
+    "id": "reverse-string",
+    "title": "Reverse String",
+    "description": "Write a program that reads a string from standard input and prints it in reverse order. The input string may contain spaces and special characters. Do not reverse individual words, but the entire string.",
+    "difficulty": "Easy",
+    "test_cases": [
+      {
+        "input": "hello",
+        "expected_output": "olleh"
+      },
+      {
+        "input": "Hello World",
+        "expected_output": "dlroW olleH"
+      },
+      {
+        "input": "12345",
+        "expected_output": "54321"
+      }
+    ]
+  },
+  {
+    "id": "prime-checker",
+    "title": "Prime Number Checker",
+    "description": "Write a program that determines whether a given positive integer is a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Your program should read an integer from standard input and output 'Prime' if it's prime, or 'Not Prime' if it's not.",
+    "difficulty": "Medium",
+    "test_cases": [
+      {
+        "input": "2",
+        "expected_output": "Prime"
+      },
+      {
+        "input": "4",
+        "expected_output": "Not Prime"
+      },
+      {
+        "input": "17",
+        "expected_output": "Prime"
+      },
+      {
+        "input": "25",
+        "expected_output": "Not Prime"
+      },
+      {
+        "input": "1",
+        "expected_output": "Not Prime"
+      }
+    ]
   }
 ]

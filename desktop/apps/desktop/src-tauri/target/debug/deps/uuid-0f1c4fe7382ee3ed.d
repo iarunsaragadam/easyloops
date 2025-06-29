@@ -1,0 +1,15 @@
+/workspace/desktop/apps/desktop/src-tauri/target/debug/deps/libuuid-0f1c4fe7382ee3ed.rmeta: /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/lib.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/builder.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/error.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/non_nil.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/parser.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/fmt.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/timestamp.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/v4.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/rng.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/external.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/macros.rs
+
+/workspace/desktop/apps/desktop/src-tauri/target/debug/deps/uuid-0f1c4fe7382ee3ed.d: /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/lib.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/builder.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/error.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/non_nil.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/parser.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/fmt.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/timestamp.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/v4.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/rng.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/external.rs /usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/macros.rs
+
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/lib.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/builder.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/error.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/non_nil.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/parser.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/fmt.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/timestamp.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/v4.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/rng.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/external.rs:
+/usr/local/cargo/registry/src/index.crates.io-6f17d22bba15001f/uuid-1.17.0/src/macros.rs:

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "hello-world",
+    "title": "Hello World",
+    "description": "Write a program that prints 'Hello, World!' to the console.",
+    "difficulty": "Easy",
+    "test_cases": [
+      {
+        "input": "",
+        "expected_output": "Hello, World!"
+      }
+    ]
+  },
+  {
+    "id": "add-two-numbers",
+    "title": "Add Two Numbers",
+    "description": "Write a program that reads two integers and prints their sum.",
+    "difficulty": "Easy",
+    "test_cases": [
+      {
+        "input": "3 5",
+        "expected_output": "8"
+      },
+      {
+        "input": "10 20",
+        "expected_output": "30"
+      },
+      {
+        "input": "-5 15",
+        "expected_output": "10"
+      }
+    ]
+  },
+  {
+    "id": "fibonacci-sequence",
+    "title": "Fibonacci Sequence",
+    "description": "Write a program that calculates the nth Fibonacci number.",
+    "difficulty": "Medium",
+    "test_cases": [
+      {
+        "input": "0",
+        "expected_output": "0"
+      },
+      {
+        "input": "1",
+        "expected_output": "1"
+      },
+      {
+        "input": "5",
+        "expected_output": "5"
+      },
+      {
+        "input": "10",
+        "expected_output": "55"
+      }
+    ]
+  },
+  {
+    "id": "reverse-string",
+    "title": "Reverse String",
+    "description": "Write a program that takes a string and returns it reversed.",
+    "difficulty": "Easy",
+    "test_cases": [
+      {
+        "input": "hello",
+        "expected_output": "olleh"
+      },
+      {
+        "input": "world",
+        "expected_output": "dlrow"
+      },
+      {
+        "input": "racecar",
+        "expected_output": "racecar"
+      }
+    ]
+  },
+  {
+    "id": "prime-checker",
+    "title": "Prime Number Checker",
+    "description": "Write a program that checks if a given number is prime.",
+    "difficulty": "Medium",
+    "test_cases": [
+      {
+        "input": "2",
+        "expected_output": "true"
+      },
+      {
+        "input": "17",
+        "expected_output": "true"
+      },
+      {
+        "input": "4",
+        "expected_output": "false"
+      },
+      {
+        "input": "15",
+        "expected_output": "false"
+      }
+    ]
+  }
+]
