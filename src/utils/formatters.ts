@@ -5,9 +5,9 @@
  */
 export const formatQuestionName = (id: string): string => {
   return id
-    .replace(/-/g, " ")
-    .replace(/\d+-/, "")
-    .replace(/\b\w/g, (l) => l.toUpperCase());
+    .replace(/^\d+-/, "")  // Remove number prefix first
+    .replace(/-/g, " ")    // Replace remaining dashes with spaces
+    .replace(/\b\w/g, (l) => l.toUpperCase()); // Capitalize words
 };
 
 /**

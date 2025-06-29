@@ -22,7 +22,9 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "node",
-      "react"
+      "react",
+      "jest",
+      "@testing-library/jest-dom"
     ],
     "plugins": [
       {

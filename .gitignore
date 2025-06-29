@@ -48,3 +48,20 @@ pglite-debug.log
 
 # Testcase manifests (do not ignore if you want to deploy them, but ignore local changes)
 public/questions/*/testcases.json
+
+# CI/CD related files
+.nyc_output
+*.lcov
+junit.xml
+test-results/
+coverage/
+.sonarqube/
+.lighthouse/
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
