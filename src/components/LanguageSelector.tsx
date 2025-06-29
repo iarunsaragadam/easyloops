@@ -13,13 +13,18 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
 }) => {
   const { isAuthorizedForGo } = useAuth();
 
+  // Languages that require authentication
+  const AUTH_REQUIRED_LANGUAGES = ['go', 'c', 'cpp', 'java', 'rust'];
+
   // Filter languages based on user authorization
   const availableLanguages = SUPPORTED_LANGUAGES.filter(lang => {
-    if (lang.value === 'go') {
+    if (AUTH_REQUIRED_LANGUAGES.includes(lang.value)) {
       return isAuthorizedForGo;
     }
-    return true; // Python is always available
+    return true; // Python and JavaScript are always available
   });
+
+  const isAuthRequired = AUTH_REQUIRED_LANGUAGES.includes(selectedLanguage as 'go' | 'c' | 'cpp' | 'java' | 'rust');
 
   return (
     <div className="flex items-center space-x-2">
@@ -35,9 +40,9 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           </option>
         ))}
       </select>
-      {selectedLanguage === 'go' && !isAuthorizedForGo && (
+      {isAuthRequired && !isAuthorizedForGo && (
         <div className="text-xs text-red-600">
-          Go requires authentication
+          {selectedLanguage.toUpperCase()} requires authentication
         </div>
       )}
     </div>

@@ -25,8 +25,8 @@ const RightPane: React.FC<RightPaneProps> = ({
         className="flex-1 min-h-0"
         style={{ 
           height: isMobile 
-            ? `calc(100% - ${Math.min(testResultsProps.height, 250)}px - 40px)` 
-            : `calc(100% - ${testResultsProps.height}px - 40px)`
+            ? `calc(100% - ${Math.min(testResultsProps.height || 0, 250)}px - 40px)` 
+            : `calc(100% - ${testResultsProps.height || 0}px - 40px)`
         }}
       >
         <CodeEditor {...codeEditorProps} />
@@ -43,7 +43,7 @@ const RightPane: React.FC<RightPaneProps> = ({
       {/* Test Results */}
       <TestResultsPanel 
         {...testResultsProps} 
-        height={isMobile ? Math.min(testResultsProps.height, 250) : testResultsProps.height}
+        height={isMobile ? Math.min(testResultsProps.height || 0, 250) : testResultsProps.height || 0}
       />
     </>
   );

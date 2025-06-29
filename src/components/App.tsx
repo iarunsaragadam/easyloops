@@ -17,6 +17,17 @@ const App: React.FC = () => {
   const { executeCode } = useCodeExecution(pyodideManager);
   const { isAuthorizedForGo } = useAuth();
 
+  // Force editor to update when language changes
+  const [editorKey, setEditorKey] = React.useState(0);
+
+  // Custom language change handler
+  const handleLanguageChangeWithUpdate = (language: string) => {
+    handleLanguageChange(language);
+    // Force editor to re-render
+    setEditorKey(prev => prev + 1);
+    console.log(`Language changed to ${language}, editor refreshed`);
+  };
+
   const handleRunCode = async () => {
     if (!appState.currentQuestion) {
       setOutput('No question selected');
@@ -34,7 +45,8 @@ const App: React.FC = () => {
 
     try {
       const codeToExecute = appState.selectedLanguage === 'go' ? appState.goCode : appState.pythonCode;
-      const result = await executeCode(codeToExecute, appState.currentQuestion.testCases, appState.selectedLanguage, appState.selectedQuestionId);
+      console.log('Executing code:', codeToExecute.substring(0, 100) + '...');
+      const result = await executeCode(codeToExecute, appState.currentQuestion.testCases, appState.selectedLanguage);
       setOutput(result.output);
       setTestResults(result.testResults);
     } catch (error) {
@@ -52,7 +64,10 @@ const App: React.FC = () => {
   };
 
   const handleCodeChange = (code: string) => {
-    if (appState.selectedLanguage === 'go') {
+    const language = appState.selectedLanguage;
+    console.log(`Updating ${language} code:`, code.substring(0, 100) + '...');
+    
+    if (language === 'go') {
       setGoCode(code);
     } else {
       setPythonCode(code);
@@ -60,7 +75,10 @@ const App: React.FC = () => {
   };
 
   const getCurrentCode = () => {
-    return appState.selectedLanguage === 'go' ? appState.goCode : appState.pythonCode;
+    const language = appState.selectedLanguage;
+    const code = language === 'go' ? appState.goCode : appState.pythonCode;
+    console.log(`Getting code for ${language}:`, code.substring(0, 100) + '...');
+    return code;
   };
 
   return (
@@ -71,7 +89,7 @@ const App: React.FC = () => {
         onQuestionChange={handleQuestionChange}
         isLoading={appState.isLoadingQuestion}
         selectedLanguage={appState.selectedLanguage}
-        onLanguageChange={handleLanguageChange}
+        onLanguageChange={handleLanguageChangeWithUpdate}
       />
 
       <MainLayout
@@ -87,6 +105,7 @@ const App: React.FC = () => {
         }
         rightPane={
           <RightPane
+            key={editorKey}
             codeEditorProps={{
               value: getCurrentCode(),
               onChange: handleCodeChange,

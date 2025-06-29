@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Go Execution with Input</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #0070f3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0051a8;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Go Execution with Input</h1>
+    
+    <div class="container">
+        <div class="column">
+            <h2>Go Code</h2>
+            <textarea id="code">package main
+
+import (
+	"fmt"
+	"bufio"
+	"os"
+	"strconv"
+)
+
+func main() {
+	scanner := bufio.NewScanner(os.Stdin)
+	
+	// Read the number of rows
+	scanner.Scan()
+	n, _ := strconv.Atoi(scanner.Text())
+	
+	// Outer loop: iterate through rows (1 to n)
+	for i := 1; i <= n; i++ {
+		// Inner loop: print stars for current row
+		for j := 0; j < i; j++ {
+			fmt.Print("*")
+		}
+		fmt.Println() // Move to next line after each row
+	}
+}</textarea>
+        </div>
+        <div class="column">
+            <h2>Input</h2>
+            <textarea id="input">5</textarea>
+            
+            <h2>Output</h2>
+            <pre id="output">Run the code to see output</pre>
+            
+            <button id="runBtn">Run Code</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('runBtn').addEventListener('click', async () => {
+            const code = document.getElementById('code').value;
+            const input = document.getElementById('input').value;
+            const outputElement = document.getElementById('output');
+            
+            outputElement.textContent = 'Running...';
+            
+            try {
+                const response = await fetch('/api/execute/go/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ code, input }),
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    outputElement.textContent = result.output || 'No output';
+                } else {
+                    outputElement.textContent = `Error: ${result.error || 'Unknown error'}`;
+                }
+            } catch (error) {
+                outputElement.textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -24,7 +24,7 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
             <p><strong>📝 How it works:</strong></p>
             <ul className="list-disc list-inside mt-2 space-y-1">
               <li>Each test case runs individually</li>
-              <li>You'll see exactly which test case failed and why</li>
+              <li>You&apos;ll see exactly which test case failed and why</li>
               <li>Compare expected vs actual output for each test</li>
             </ul>
           </div>
@@ -88,7 +88,7 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
         {/* Default state when no tests run */}
         {testResults.length === 0 && !output && (
           <div className="text-sm text-gray-500 text-center py-8">
-            Click "Run" to execute your code and see test results.
+            Click &quot;Run&quot; to execute your code and see test results.
           </div>
         )}
       </div>

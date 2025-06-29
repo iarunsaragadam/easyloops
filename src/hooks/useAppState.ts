@@ -14,7 +14,6 @@ import (
 	"os"
 	"bufio"
 	"strconv"
-	"strings"
 )
 
 func main() {
@@ -90,6 +89,7 @@ func main() {
   };
 
   const handleLanguageChange = (language: string) => {
+    console.log(`Language changed to: ${language}`);
     setAppState((prev) => ({ ...prev, selectedLanguage: language }));
   };
 

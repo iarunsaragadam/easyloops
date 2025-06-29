@@ -51,7 +51,7 @@ export interface CodeEditorProps {
 export interface TestResultsPanelProps {
   testResults: TestResult[];
   output: string;
-  height: number;
+  height?: number;
 }
 
 export interface QuestionSelectorProps {
