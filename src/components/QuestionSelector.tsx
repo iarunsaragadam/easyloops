@@ -9,12 +9,12 @@ const QuestionSelector: React.FC<QuestionSelectorProps> = ({
   isLoading = false
 }) => {
   return (
-    <div className="flex items-center space-x-2">
-      <span className="text-sm text-gray-600">Question:</span>
+    <div className="flex items-center space-x-2 w-full md:w-auto">
+      <span className="text-sm text-gray-600 whitespace-nowrap">Question:</span>
       <select 
         value={selectedQuestionId}
         onChange={(e) => onQuestionChange(e.target.value)}
-        className="text-sm border border-gray-300 rounded px-2 py-1 bg-white min-w-[200px]"
+        className="text-sm border border-gray-300 rounded px-2 py-1 bg-white flex-1 md:flex-none md:min-w-[200px] truncate max-w-[200px] md:max-w-none"
         disabled={availableQuestions.length === 0 || isLoading}
       >
         {availableQuestions.length === 0 || isLoading ? (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProblemDescriptionProps } from '@/types';
 import MarkdownRenderer from './MarkdownRenderer';
+import CollapsibleSection from './CollapsibleSection';
 
 const ProblemDescription: React.FC<ProblemDescriptionProps> = ({
   question,
@@ -23,18 +24,28 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({
   }
 
   return (
-    <div>
+    <div className="space-y-4">
+      {/* Question Header - Always visible */}
       <div className="mb-6">
-        <h2 className="text-lg font-semibold text-gray-900 mb-2">
+        <h2 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
           🏷️ {question.name}
         </h2>
         <div className="text-sm text-gray-600 mb-4">
           <span className="font-medium">ID:</span> {question.id}
         </div>
       </div>
-      <div className="prose prose-sm max-w-none">
-        <MarkdownRenderer content={question.description} />
-      </div>
+
+      {/* Collapsible Problem Description */}
+      <CollapsibleSection
+        title="Problem Description"
+        icon="📚"
+        defaultExpanded={true}
+        className="mb-4"
+      >
+        <div className="prose prose-sm max-w-none">
+          <MarkdownRenderer content={question.description} />
+        </div>
+      </CollapsibleSection>
     </div>
   );
 };
