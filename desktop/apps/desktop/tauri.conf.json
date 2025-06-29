@@ -1,0 +1,11 @@
+{
+  "tauri": {
+    "bundle": {
+      "identifier": "com.example.codequest",
+      "icon": ["icons/icon.png"]
+    },
+    "updater": {
+      "active": true
+    }
+  }
+}
