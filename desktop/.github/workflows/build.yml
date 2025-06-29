@@ -1,0 +1,97 @@
+name: 'Build CodeQuest Desktop'
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-tauri:
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [macos-latest, ubuntu-20.04, windows-latest]
+
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies (ubuntu only)
+        if: matrix.platform == 'ubuntu-20.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libayatana-appindicator3-dev librsvg2-dev
+
+      - name: Rust setup
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Rust cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: './desktop/apps/desktop/src-tauri -> target'
+
+      - name: Sync node version and setup cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+          cache-dependency-path: './desktop/apps/desktop/frontend/package-lock.json'
+
+      - name: Install frontend dependencies
+        run: |
+          cd desktop/apps/desktop/frontend
+          npm ci
+
+      - name: Build the app
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: './desktop/apps/desktop'
+          configPath: './desktop/apps/desktop/src-tauri/tauri.conf.json'
+          distPath: './desktop/apps/desktop/frontend/dist'
+          iconPath: './desktop/apps/desktop/src-tauri/icons/icon.png'
+
+  release:
+    needs: build-tauri
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: CodeQuest Desktop v${{ github.run_number }}
+          body: |
+            🚀 **CodeQuest Desktop Release v${{ github.run_number }}**
+            
+            ## What's New
+            - Automated build from latest main branch
+            - Cross-platform support (Windows, macOS, Linux)
+            
+            ## Downloads
+            - **Windows**: Download the `.exe` installer
+            - **macOS**: Download the `.dmg` installer  
+            - **Linux**: Download the `.AppImage` portable executable
+            
+            ## Installation
+            1. Download the appropriate file for your operating system
+            2. Run the installer (no admin rights required)
+            3. Launch CodeQuest and start solving problems!
+            
+            ---
+            
+            **Commit**: ${{ github.sha }}
+            **Build**: #${{ github.run_number }}
+          draft: false
+          prerelease: false

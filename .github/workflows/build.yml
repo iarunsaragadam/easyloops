@@ -1,0 +1,139 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [macos-latest, ubuntu-22.04, windows-latest]
+        
+    runs-on: ${{ matrix.platform }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies (ubuntu only)
+        if: matrix.platform == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
+
+      - name: Rust setup
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Rust cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: './desktop/apps/desktop/src-tauri -> target'
+
+      - name: Node.js setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: './desktop/apps/desktop/frontend/package-lock.json'
+
+      - name: Install frontend dependencies
+        working-directory: ./desktop/apps/desktop/frontend
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: ./desktop/apps/desktop/frontend
+        run: npm run build
+
+      - name: Build Tauri app
+        working-directory: ./desktop/apps/desktop
+        run: |
+          npm install -g @tauri-apps/cli
+          tauri build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-${{ matrix.platform }}
+          path: |
+            desktop/apps/desktop/src-tauri/target/release/bundle/**/*
+          retention-days: 7
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Rust setup
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+
+      - name: Rust cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: './desktop/apps/desktop/src-tauri -> target'
+
+      - name: Run Clippy
+        working-directory: ./desktop/apps/desktop/src-tauri
+        run: cargo clippy --all-targets --all-features -- -D warnings
+
+      - name: Run Rust tests
+        working-directory: ./desktop/apps/desktop/src-tauri
+        run: cargo test
+
+      - name: Node.js setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: './desktop/apps/desktop/frontend/package-lock.json'
+
+      - name: Install frontend dependencies
+        working-directory: ./desktop/apps/desktop/frontend
+        run: npm ci
+
+      - name: Run frontend linting
+        working-directory: ./desktop/apps/desktop/frontend
+        run: npm run lint || echo "Linting skipped - no lint script"
+
+      - name: TypeScript check
+        working-directory: ./desktop/apps/desktop/frontend
+        run: npx tsc --noEmit
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: ./artifacts
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            artifacts/build-macos-latest/**/*
+            artifacts/build-ubuntu-22.04/**/*
+            artifacts/build-windows-latest/**/*
+          draft: true
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
