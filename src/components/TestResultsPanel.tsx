@@ -4,14 +4,10 @@ import CollapsibleSection from './CollapsibleSection';
 
 const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
   testResults,
-  output,
-  height
+  output
 }) => {
   return (
-    <div 
-      className="bg-gray-50 border-t border-gray-200"
-      style={{ height: `${height}px` }}
-    >
+    <div className="bg-gray-50 border-t border-gray-200 h-full">
       <div className="p-4 h-full overflow-y-auto space-y-4">
         {/* Learning Mode Info */}
         <CollapsibleSection
