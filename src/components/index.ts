@@ -11,3 +11,5 @@ export { default as RightPane } from "./RightPane";
 export { default as TestResultsPanel } from "./TestResultsPanel";
 export { default as MarkdownRenderer } from "./MarkdownRenderer";
 export { default as MobileUsageTip } from "./MobileUsageTip";
+export { default as LanguageSelector } from "./LanguageSelector";
+export { default as AuthButton } from "./AuthButton";

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Code Execution Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            font-family: monospace;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #0070f3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0051b3;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .output {
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Go Code Execution Test</h1>
+    <p>Enter Go code below and click "Run" to execute it using the API.</p>
+    
+    <textarea id="codeInput">package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func main() {
+	rand.Seed(time.Now().UnixNano())
+	nums := make([]int, 10)
+	for i := range nums {
+		nums[i] = rand.Intn(100)
+	}
+	fmt.Println("Generated numbers:", nums)
+
+	sum := 0
+	for _, num := range nums {
+		sum += num
+	}
+	fmt.Printf("Sum: %d, Average: %.2f\n", sum, float64(sum)/float64(len(nums)))
+}</textarea>
+    
+    <div>
+        <button id="runButton">Run</button>
+    </div>
+    
+    <div class="output">
+        <h2>Output</h2>
+        <pre id="outputArea">// Output will appear here</pre>
+    </div>
+
+    <script>
+        document.getElementById('runButton').addEventListener('click', async () => {
+            const code = document.getElementById('codeInput').value;
+            const outputArea = document.getElementById('outputArea');
+            const runButton = document.getElementById('runButton');
+            
+            // Disable button during execution
+            runButton.disabled = true;
+            runButton.textContent = 'Running...';
+            outputArea.textContent = 'Executing...';
+            outputArea.className = '';
+            
+            try {
+                const response = await fetch('/api/execute/go/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ code }),
+                });
+                
+                const result = await response.json();
+                
+                if (result.error) {
+                    outputArea.textContent = `Error: ${result.error}`;
+                    outputArea.className = 'error';
+                } else {
+                    outputArea.textContent = result.output || 'No output';
+                }
+            } catch (error) {
+                outputArea.textContent = `Failed to execute: ${error.message}`;
+                outputArea.className = 'error';
+            } finally {
+                // Re-enable button
+                runButton.disabled = false;
+                runButton.textContent = 'Run';
+            }
+        });
+    </script>
+</body>
+</html> 

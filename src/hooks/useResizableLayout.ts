@@ -40,18 +40,19 @@ export const useResizableLayout = (
       setLayoutState((prev) => ({ ...prev, leftPaneWidth: constrainedWidth }));
     }
 
-    if (layoutState.isDraggingVertical && rightPaneRef.current) {
-      const rightPaneRect = rightPaneRef.current.getBoundingClientRect();
-      const newTestHeight = rightPaneRect.bottom - e.clientY;
-
-      // Constrain to reasonable bounds
-      const constrainedHeight = Math.max(
-        LAYOUT_CONSTANTS.MIN_TEST_RESULTS_HEIGHT,
-        Math.min(LAYOUT_CONSTANTS.MAX_TEST_RESULTS_HEIGHT, newTestHeight)
-      );
+    if (
+      layoutState.isDraggingVertical &&
+      rightPaneRef.current &&
+      containerRef.current
+    ) {
+      const containerRect = containerRef.current.getBoundingClientRect();
+      const newTestHeightPx = containerRect.bottom - e.clientY;
+      const totalHeight = containerRect.height;
+      let newTestHeightFrac = newTestHeightPx / totalHeight;
+      newTestHeightFrac = Math.max(0, Math.min(1, newTestHeightFrac));
       setLayoutState((prev) => ({
         ...prev,
-        testResultsHeight: constrainedHeight,
+        testResultsHeight: newTestHeightFrac,
       }));
     }
   };

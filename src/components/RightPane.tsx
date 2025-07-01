@@ -21,15 +21,15 @@ const RightPane: React.FC<RightPaneProps> = ({
   return (
     <>
       {/* Code Editor */}
-      <div 
-        className="flex-1 min-h-0"
-        style={{ 
-          height: isMobile 
-            ? `calc(100% - ${Math.min(testResultsProps.height, 250)}px - 40px)` 
-            : `calc(100% - ${testResultsProps.height}px - 40px)`
-        }}
+      <div
+        className="overflow-hidden"
+        style={{ height: `${100 - ((testResultsProps.height ?? 0.5) * 100)}%` }}
       >
-        <CodeEditor {...codeEditorProps} />
+        {(() => {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const { key, ...rest } = codeEditorProps as any;
+          return <CodeEditor key={key} {...rest} />;
+        })()}
       </div>
 
       {/* Vertical Draggable Divider - Show on desktop */}
@@ -41,10 +41,9 @@ const RightPane: React.FC<RightPaneProps> = ({
       )}
 
       {/* Test Results */}
-      <TestResultsPanel 
-        {...testResultsProps} 
-        height={isMobile ? Math.min(testResultsProps.height, 250) : testResultsProps.height}
-      />
+      <div style={{ height: `${(testResultsProps.height ?? 0.5) * 100}%` }}>
+        <TestResultsPanel {...testResultsProps} />
+      </div>
     </>
   );
 };
