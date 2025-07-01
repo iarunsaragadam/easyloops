@@ -14,23 +14,36 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   return (
     <div className="flex flex-col h-full">
       {/* Editor Header */}
-      <div className="border-b border-gray-200 px-4 py-2 flex items-center justify-between">
+      <div className="border-b border-gray-200 px-3 md:px-4 py-2 flex flex-col space-y-2 md:space-y-0 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center space-x-4">
           <span className="text-sm font-medium text-gray-700">💻 Code Editor</span>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 justify-end md:justify-start">
           <button
             onClick={onRun}
             disabled={isRunning}
-            className="px-3 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+            className="px-3 py-1.5 md:py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex-1 md:flex-none min-w-[80px]"
           >
-            {isRunning ? '⏳ Running...' : '✅ Run'}
+            {isRunning ? (
+              <span className="flex items-center justify-center">
+                <span className="hidden md:inline">⏳ Running...</span>
+                <span className="md:hidden">⏳ Run...</span>
+              </span>
+            ) : (
+              <span className="flex items-center justify-center">
+                <span className="hidden md:inline">✅ Run</span>
+                <span className="md:hidden">▶️</span>
+              </span>
+            )}
           </button>
           <button
             onClick={onSubmit}
-            className="px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors"
+            className="px-3 py-1.5 md:py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors flex-1 md:flex-none min-w-[80px]"
           >
-            📤 Submit
+            <span className="flex items-center justify-center">
+              <span className="hidden md:inline">📤 Submit</span>
+              <span className="md:hidden">📤</span>
+            </span>
           </button>
         </div>
       </div>

@@ -7,6 +7,7 @@ import Header from './Header';
 import MainLayout from './MainLayout';
 import RightPane from './RightPane';
 import ProblemDescription from './ProblemDescription';
+import MobileUsageTip from './MobileUsageTip';
 
 const App: React.FC = () => {
   const pyodideManager = usePyodide();
@@ -80,6 +81,9 @@ const App: React.FC = () => {
           />
         }
       />
+
+      {/* Mobile Usage Tip */}
+      <MobileUsageTip />
     </div>
   );
 };
