@@ -11,6 +11,7 @@ import { normalizeOutput } from "@/utils/formatters";
 export const usePyodide = (): PyodideManager => {
   const [pyodide, setPyodide] = useState<unknown>(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [loadingError, setLoadingError] = useState<string | null>(null);
 
   useEffect(() => {
     const initPyodide = async () => {
@@ -32,9 +33,14 @@ export const usePyodide = (): PyodideManager => {
 
         setPyodide(pyodideInstance);
         setIsLoaded(true);
+        setLoadingError(null);
+        console.log("✅ Pyodide loaded successfully");
       } catch (error) {
         console.error("Failed to initialize Pyodide:", error);
         setIsLoaded(false);
+        setLoadingError(
+          error instanceof Error ? error.message : "Unknown error"
+        );
       }
     };
 
@@ -133,5 +139,6 @@ sys.stdout = StringIO()
     pyodide,
     isLoaded,
     runCode,
+    loadingError,
   };
 };

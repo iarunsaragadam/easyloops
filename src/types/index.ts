@@ -69,6 +69,7 @@ export interface ProblemDescriptionProps {
 export interface PyodideManager {
   pyodide: unknown;
   isLoaded: boolean;
+  loadingError?: string | null;
   runCode: (
     code: string,
     testCases: TestCase[]

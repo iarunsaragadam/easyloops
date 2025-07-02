@@ -1,10 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AppState } from "@/types";
 import { loadQuestion, getAvailableQuestions } from "@/utils/questionLoader";
 import { DEFAULT_CODE, DEFAULT_QUESTION_ID } from "@/constants";
 
 export const useAppState = () => {
+  const loadingRef = useRef(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Get the initial question ID from URL or use default
+  const initialQuestionId = searchParams.get("q") || DEFAULT_QUESTION_ID;
+
   const [appState, setAppState] = useState<AppState>({
     pythonCode: DEFAULT_CODE,
     goCode: `package main
@@ -37,21 +44,24 @@ func main() {
     isRunning: false,
     currentQuestion: null,
     availableQuestions: [],
-    selectedQuestionId: DEFAULT_QUESTION_ID,
+    selectedQuestionId: initialQuestionId,
     selectedLanguage: "python",
     isLoadingQuestion: false,
   });
 
-  const router = useRouter();
-  const searchParams = useSearchParams();
-
-  // Initialize selected question from URL or default
+  // Update selected question when URL changes
   useEffect(() => {
     const questionFromUrl = searchParams.get("q");
-    if (questionFromUrl) {
-      setAppState((prev) => ({ ...prev, selectedQuestionId: questionFromUrl }));
+    if (questionFromUrl && questionFromUrl !== appState.selectedQuestionId) {
+      setAppState((prev) => ({
+        ...prev,
+        selectedQuestionId: questionFromUrl,
+        output: "", // Clear output when question changes
+        testResults: [], // Clear test results when question changes
+        isRunning: false, // Stop any running execution
+      }));
     }
-  }, [searchParams]);
+  }, [searchParams, appState.selectedQuestionId]);
 
   // Load available questions
   useEffect(() => {
@@ -62,7 +72,8 @@ func main() {
 
   // Load the selected question
   useEffect(() => {
-    if (appState.selectedQuestionId) {
+    if (appState.selectedQuestionId && !loadingRef.current) {
+      loadingRef.current = true;
       setAppState((prev) => ({ ...prev, isLoadingQuestion: true }));
       loadQuestion(appState.selectedQuestionId)
         .then((question) => {
@@ -71,6 +82,7 @@ func main() {
             currentQuestion: question,
             isLoadingQuestion: false,
           }));
+          loadingRef.current = false;
         })
         .catch((error) => {
           console.error("Error loading question:", error);
@@ -79,13 +91,23 @@ func main() {
             currentQuestion: null,
             isLoadingQuestion: false,
           }));
+          loadingRef.current = false;
         });
     }
   }, [appState.selectedQuestionId]);
 
   const handleQuestionChange = (questionId: string) => {
-    setAppState((prev) => ({ ...prev, selectedQuestionId: questionId }));
-    router.push(`/?q=${questionId}`);
+    // Only update if the question is actually different
+    if (questionId !== appState.selectedQuestionId) {
+      setAppState((prev) => ({
+        ...prev,
+        selectedQuestionId: questionId,
+        output: "", // Clear output when question changes
+        testResults: [], // Clear test results when question changes
+        isRunning: false, // Stop any running execution
+      }));
+      router.push(`/?q=${questionId}`);
+    }
   };
 
   const handleLanguageChange = (language: string) => {

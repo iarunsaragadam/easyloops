@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const { layoutState, containerRef, rightPaneRef, handleHorizontalMouseDown, handleVerticalMouseDown } = useResizableLayout();
   const { appState, handleQuestionChange, handleLanguageChange, setPythonCode, setGoCode, setOutput, setTestResults, setIsRunning } = useAppState();
   const { executeCode } = useCodeExecution(pyodideManager);
-  const { isAuthorizedForGo } = useAuth();
+  const { isAuthorizedForGo, user } = useAuth();
 
   // Force editor to update when language changes
   const [editorKey, setEditorKey] = React.useState(0);
@@ -29,30 +29,59 @@ const App: React.FC = () => {
   };
 
   const handleRunCode = async () => {
-    if (!appState.currentQuestion) {
-      setOutput('No question selected');
-      return;
-    }
-
-    // Check if user is authorized for Go language
-    if (appState.selectedLanguage === 'go' && !isAuthorizedForGo) {
-      setOutput('Error: Go language requires authentication. Please login with an authorized account.');
-      return;
-    }
-
-    setIsRunning(true);
-    setOutput('');
-
+    console.log('🚀 Run button clicked!');
+    
+    // Add a timeout to prevent infinite loops
+    const timeoutId = setTimeout(() => {
+      console.log('⏰ Timeout reached - execution taking too long');
+      setOutput('Execution timeout - taking too long');
+      setIsRunning(false);
+    }, 10000); // 10 second timeout
+    
     try {
+      console.log('Current state:', {
+        currentQuestion: appState.currentQuestion?.name,
+        selectedLanguage: appState.selectedLanguage,
+        isAuthorizedForGo,
+        user: user?.email
+      });
+
+      if (!appState.currentQuestion) {
+        console.log('❌ No question selected');
+        setOutput('No question selected');
+        clearTimeout(timeoutId);
+        return;
+      }
+
+      // Check if user is authorized for Go language
+      if (appState.selectedLanguage === 'go' && !isAuthorizedForGo) {
+        console.log('❌ User not authorized for Go');
+        setOutput('Error: Go language requires authentication. Please login with an authorized account.');
+        clearTimeout(timeoutId);
+        return;
+      }
+
+      console.log('✅ Starting code execution...');
+      setIsRunning(true);
+      setOutput('');
+
       const codeToExecute = appState.selectedLanguage === 'go' ? appState.goCode : appState.pythonCode;
-      console.log('Executing code:', codeToExecute.substring(0, 100) + '...');
+      console.log('📝 Executing code:', codeToExecute.substring(0, 100) + '...');
+      console.log('🧪 Test cases:', appState.currentQuestion.testCases.length);
+      
       const result = await executeCode(codeToExecute, appState.currentQuestion.testCases, appState.selectedLanguage);
+      console.log('✅ Execution completed:', result);
+      
+      clearTimeout(timeoutId);
       setOutput(result.output);
       setTestResults(result.testResults);
     } catch (error) {
+      console.error('❌ Execution failed:', error);
+      clearTimeout(timeoutId);
       setOutput(`Error: ${error}`);
       setTestResults([]);
     } finally {
+      console.log('🏁 Execution finished, setting isRunning to false');
       setIsRunning(false);
     }
   };
