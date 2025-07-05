@@ -126,11 +126,13 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
                       <label className="block text-xs font-medium text-gray-700 mb-1">
                         Actual Output:
                       </label>
-                      <pre className={`p-2 rounded text-xs border overflow-x-auto ${
-                        result.passed 
-                          ? 'bg-green-50 border-green-200' 
-                          : 'bg-red-50 border-red-200'
-                      }`}>
+                      <pre
+                        className={`p-2 rounded text-xs border overflow-x-auto ${
+                          result.passed
+                            ? 'bg-green-50 border-green-200'
+                            : 'bg-red-50 border-red-200'
+                        }`}
+                      >
                         {result.actual}
                       </pre>
                     </div>
@@ -142,7 +144,8 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
                           ❌ Test Failed
                         </h4>
                         <p className="text-xs text-red-700">
-                          The output doesn't match the expected result. Check your logic and try again.
+                          The output doesn&apos;t match the expected result.
+                          Check your logic and try again.
                         </p>
                       </div>
                     )}
