@@ -5,8 +5,9 @@ import { useAppState } from '@/features/question';
 import { useAuth } from '@/features/auth';
 import { Header, MainLayout, RightPane, MobileUsageTip } from '@/shared';
 import { ProblemDescription } from '@/features/question';
+import ThemeProvider from '@/shared/components/ThemeProvider';
 
-const App: React.FC = () => {
+const AppContent: React.FC = () => {
   const pyodideManager = usePyodide();
   const {
     layoutState,
@@ -140,7 +141,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="h-screen bg-gray-50 flex flex-col">
+    <div className="h-screen bg-gray-50 dark:bg-gray-900 flex flex-col transition-colors">
       <Header
         selectedQuestionId={appState.selectedQuestionId}
         availableQuestions={appState.availableQuestions}
@@ -186,6 +187,14 @@ const App: React.FC = () => {
       {/* Mobile Usage Tip */}
       <MobileUsageTip />
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 };
 
