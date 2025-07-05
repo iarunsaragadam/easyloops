@@ -5,7 +5,7 @@ import { useAppState } from '@/features/question';
 import { useAuth } from '@/features/auth';
 import { Header, MainLayout, RightPane, MobileUsageTip } from '@/shared';
 import { ProblemDescription } from '@/features/question';
-import { ThemeProvider } from '@/shared';
+import ThemeProvider from '@/shared/components/ThemeProvider';
 
 const AppContent: React.FC = () => {
   const pyodideManager = usePyodide();
