@@ -4,8 +4,8 @@ import { useWindowSize, DraggableDivider } from '@/shared';
 
 interface MainLayoutProps {
   layoutState: LayoutState;
-  containerRef: React.RefObject<HTMLDivElement | null>;
-  rightPaneRef: React.RefObject<HTMLDivElement | null>;
+  containerRef: React.RefObject<HTMLDivElement>;
+  rightPaneRef: React.RefObject<HTMLDivElement>;
   onHorizontalMouseDown: (e: React.MouseEvent) => void;
   leftPane: React.ReactNode;
   rightPane: React.ReactNode;
