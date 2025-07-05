@@ -1,12 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { AppState } from '@/shared/types';
-import { loadQuestion, getAvailableQuestions, loadCodeStub } from '@/shared/lib';
-import { SUPPORTED_LANGUAGES } from '@/shared/constants/languages';
+import {
+  loadQuestion,
+  getAvailableQuestions,
+  loadCodeStub,
+} from '@/shared/lib';
 import { DEFAULT_QUESTION_ID } from '@/shared/constants';
+import type { SupportedLanguage } from '@/shared/constants/languages';
 
 export const useAppState = () => {
   const loadingRef = useRef(false);
+  // Cache for loaded code stubs: { [language]: code }
   const codeStubsRef = useRef<Record<string, string>>({});
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -74,42 +79,41 @@ export const useAppState = () => {
     }
   }, [appState.selectedQuestionId]);
 
-  // Load code stubs when question changes
+  // Load code stub for the selected language when question or language changes
   useEffect(() => {
-    if (appState.selectedQuestionId) {
-      const loadCodeStubs = async () => {
+    const lang = appState.selectedLanguage;
+    if (appState.selectedQuestionId && lang) {
+      // If we already have the stub cached, use it
+      if (codeStubsRef.current[lang]) {
+        setAppState((prev) => ({
+          ...prev,
+          [`${lang}Code`]: codeStubsRef.current[lang],
+        }));
+        return;
+      }
+      // Otherwise, fetch it
+      const loadStub = async () => {
         try {
-          // Load code stubs for all supported languages
-          const supportedLanguages = SUPPORTED_LANGUAGES.map(lang => lang.value);
-          const codeStubs: Record<string, string> = {};
-          
-          // Load all stubs in parallel
-          const promises = supportedLanguages.map(async (language) => {
-            const stub = await loadCodeStub(appState.selectedQuestionId, language);
-            codeStubs[language] = stub;
-          });
-          
-          await Promise.all(promises);
-          
-          // Store stubs in ref for quick access
-          codeStubsRef.current = codeStubs;
-          
-          // Update the app state with the loaded stubs
+          const stub = await loadCodeStub(
+            appState.selectedQuestionId,
+            lang as SupportedLanguage
+          );
+          codeStubsRef.current[lang] = stub;
           setAppState((prev) => ({
             ...prev,
-            pythonCode: codeStubs.python || '',
-            goCode: codeStubs.go || '',
-            // Add other languages as needed
+            [`${lang}Code`]: stub,
           }));
-          
-          console.log('✅ Code stubs loaded for question:', appState.selectedQuestionId);
         } catch (error) {
-          console.error('Error loading code stubs:', error);
+          console.error('Error loading code stub:', error);
         }
       };
-      
-      loadCodeStubs();
+      loadStub();
     }
+  }, [appState.selectedQuestionId, appState.selectedLanguage]);
+
+  // Clear code stub cache when question changes
+  useEffect(() => {
+    codeStubsRef.current = {};
   }, [appState.selectedQuestionId]);
 
   const handleQuestionChange = (questionId: string) => {
@@ -134,19 +138,16 @@ export const useAppState = () => {
   // Get code for the currently selected language
   const getCurrentCode = () => {
     const language = appState.selectedLanguage;
-    
     // First check if we have a cached stub for this language
     if (codeStubsRef.current[language]) {
       return codeStubsRef.current[language];
     }
-    
     // Fall back to the state values (for backwards compatibility)
     if (language === 'python') {
       return appState.pythonCode;
     } else if (language === 'go') {
       return appState.goCode;
     }
-    
     return '';
   };
 
@@ -166,7 +167,6 @@ export const useAppState = () => {
   const setCodeForLanguage = (language: string, code: string) => {
     // Update cached stub
     codeStubsRef.current[language] = code;
-    
     // Update state for backwards compatibility
     if (language === 'python') {
       setPythonCode(code);

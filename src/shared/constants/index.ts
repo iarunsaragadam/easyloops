@@ -19,8 +19,8 @@ export const LAYOUT_CONSTANTS = {
 } as const;
 
 export const PYODIDE_CONFIG = {
-  CDN_URL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js',
-  INDEX_URL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/',
+  CDN_URL: 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js',
+  INDEX_URL: 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/',
 } as const;
 
 export const MONACO_CONFIG = {

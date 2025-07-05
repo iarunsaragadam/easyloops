@@ -12,23 +12,45 @@ export const usePyodide = (): PyodideManager => {
   const [pyodide, setPyodide] = useState<unknown>(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [loadingError, setLoadingError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const initPyodide = async () => {
+      if (isLoading) return; // Prevent multiple simultaneous loads
+
+      setIsLoading(true);
+      setLoadingError(null);
+
       try {
-        // @ts-expect-error: pyodide is loaded on window by CDN script
-        if (!window.loadPyodide) {
-          await new Promise((resolve) => {
+        // Check if Pyodide is already loaded
+        if ('loadPyodide' in window) {
+          console.log('Pyodide script already loaded, initializing...');
+        } else {
+          console.log('Loading Pyodide script...');
+          await new Promise<void>((resolve, reject) => {
             const script = document.createElement('script');
             script.src = PYODIDE_CONFIG.CDN_URL;
-            script.onload = resolve;
-            document.body.appendChild(script);
+            script.onload = () => resolve();
+            script.onerror = () =>
+              reject(new Error('Failed to load Pyodide script'));
+            document.head.appendChild(script);
           });
         }
 
-        // @ts-expect-error: pyodide is loaded on window by CDN script
-        const pyodideInstance = await window.loadPyodide({
+        // Wait a bit for the script to fully initialize
+        await new Promise((resolve) => setTimeout(resolve, 100));
+
+        // Initialize Pyodide
+        console.log('Initializing Pyodide...');
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const pyodideInstance = await (window as any).loadPyodide({
           indexURL: PYODIDE_CONFIG.INDEX_URL,
+          stdout: (text: string) => {
+            console.log('Pyodide stdout:', text);
+          },
+          stderr: (text: string) => {
+            console.warn('Pyodide stderr:', text);
+          },
         });
 
         setPyodide(pyodideInstance);
@@ -39,12 +61,17 @@ export const usePyodide = (): PyodideManager => {
         console.error('Failed to initialize Pyodide:', error);
         setIsLoaded(false);
         setLoadingError(
-          error instanceof Error ? error.message : 'Unknown error'
+          error instanceof Error
+            ? error.message
+            : 'Unknown error during Pyodide initialization'
         );
+      } finally {
+        setIsLoading(false);
       }
     };
 
     initPyodide();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const runCode = async (
@@ -118,6 +145,7 @@ sys.stdout = StringIO()
         // Add to overall output
         allOutputs.push(`Test Case ${i + 1}:\n${actual}`);
       } catch (error) {
+        console.error(`Error in test case ${i + 1}:`, error);
         results.push({
           testCase: testCase.description,
           expected: 'Error loading test case',
