@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -31,40 +33,40 @@ body {
   .monaco-editor .margin {
     width: 40px !important;
   }
-  
+
   /* Improve touch targets */
   button {
     min-height: 44px;
   }
-  
+
   select {
     min-height: 44px;
   }
-  
+
   /* Better spacing for mobile */
   .markdown-content {
     font-size: 0.9rem;
     line-height: 1.5;
   }
-  
+
   .markdown-content h1 {
     font-size: 1.5rem;
   }
-  
+
   .markdown-content h2 {
     font-size: 1.25rem;
   }
-  
+
   .markdown-content h3 {
     font-size: 1.125rem;
   }
-  
+
   .markdown-content pre {
     padding: 0.75rem;
     font-size: 0.8rem;
     overflow-x: auto;
   }
-  
+
   .markdown-content code {
     font-size: 0.8rem;
   }
