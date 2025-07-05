@@ -21,8 +21,12 @@ export const useTheme = () => {
 export const useThemeState = () => {
   const [theme, setTheme] = useState<Theme>('system');
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light');
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    // Mark as client-side after mount
+    setIsClient(true);
+
     // Get initial theme from localStorage
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme && ['light', 'dark', 'system'].includes(savedTheme)) {
@@ -31,6 +35,9 @@ export const useThemeState = () => {
   }, []);
 
   useEffect(() => {
+    // Only run on client-side
+    if (!isClient) return;
+
     const root = window.document.documentElement;
     const body = window.document.body;
 
@@ -41,8 +48,8 @@ export const useThemeState = () => {
     let effectiveTheme: 'light' | 'dark';
 
     if (theme === 'system') {
-      effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches 
-        ? 'dark' 
+      effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
         : 'light';
     } else {
       effectiveTheme = theme;
@@ -51,7 +58,7 @@ export const useThemeState = () => {
     // Apply theme classes
     root.classList.add(effectiveTheme);
     body.classList.add(effectiveTheme);
-    
+
     // Update CSS custom properties
     if (effectiveTheme === 'dark') {
       root.style.setProperty('--background', '#0a0a0a');
@@ -65,25 +72,28 @@ export const useThemeState = () => {
 
     // Save to localStorage
     localStorage.setItem('theme', theme);
-  }, [theme]);
+  }, [theme, isClient]);
 
   // Listen for system theme changes
   useEffect(() => {
+    // Only run on client-side
+    if (!isClient) return;
+
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    
+
     const handleChange = () => {
       if (theme === 'system') {
         const effectiveTheme = mediaQuery.matches ? 'dark' : 'light';
         setResolvedTheme(effectiveTheme);
-        
+
         const root = window.document.documentElement;
         const body = window.document.body;
-        
+
         root.classList.remove('light', 'dark');
         body.classList.remove('light', 'dark');
         root.classList.add(effectiveTheme);
         body.classList.add(effectiveTheme);
-        
+
         if (effectiveTheme === 'dark') {
           root.style.setProperty('--background', '#0a0a0a');
           root.style.setProperty('--foreground', '#ededed');
@@ -96,12 +106,12 @@ export const useThemeState = () => {
 
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [theme]);
+  }, [theme, isClient]);
 
   return {
     theme,
     setTheme,
-    resolvedTheme,
+    resolvedTheme: isClient ? resolvedTheme : 'light', // Return consistent value during SSR
   };
 };
 

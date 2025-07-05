@@ -19,8 +19,8 @@ export const LAYOUT_CONSTANTS = {
 } as const;
 
 export const PYODIDE_CONFIG = {
-  CDN_URL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js',
-  INDEX_URL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/',
+  CDN_URL: 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js',
+  INDEX_URL: 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/',
 } as const;
 
 export const MONACO_CONFIG = {
@@ -30,6 +30,8 @@ export const MONACO_CONFIG = {
 
 export const DEFAULT_QUESTION_ID = '01-variable-declaration';
 
+// Note: SUPPORTED_LANGUAGES is now imported from languages.ts
+// This is kept for backwards compatibility
 export const SUPPORTED_LANGUAGES = [
   { value: 'python', label: 'Python3' },
   { value: 'go', label: 'Go' },

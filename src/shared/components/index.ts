@@ -6,5 +6,3 @@ export { default as MainLayout } from './MainLayout';
 export { default as Header } from './Header';
 export { default as DebugPanel } from './DebugPanel';
 export { default as MobileUsageTip } from './MobileUsageTip';
-export { default as ThemeProvider } from './ThemeProvider';
-export { default as ThemeToggle } from './ThemeToggle';

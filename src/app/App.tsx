@@ -5,9 +5,8 @@ import { useAppState } from '@/features/question';
 import { useAuth } from '@/features/auth';
 import { Header, MainLayout, RightPane, MobileUsageTip } from '@/shared';
 import { ProblemDescription } from '@/features/question';
-import ThemeProvider from '@/shared/components/ThemeProvider';
 
-const AppContent: React.FC = () => {
+const App: React.FC = () => {
   const pyodideManager = usePyodide();
   const {
     layoutState,
@@ -20,8 +19,8 @@ const AppContent: React.FC = () => {
     appState,
     handleQuestionChange,
     handleLanguageChange,
-    setPythonCode,
-    setGoCode,
+    setCodeForLanguage,
+    getCurrentCode,
     setOutput,
     setTestResults,
     setIsRunning,
@@ -123,25 +122,12 @@ const AppContent: React.FC = () => {
     const language = appState.selectedLanguage;
     console.log(`Updating ${language} code:`, code.substring(0, 100) + '...');
 
-    if (language === 'go') {
-      setGoCode(code);
-    } else {
-      setPythonCode(code);
-    }
-  };
-
-  const getCurrentCode = () => {
-    const language = appState.selectedLanguage;
-    const code = language === 'go' ? appState.goCode : appState.pythonCode;
-    console.log(
-      `Getting code for ${language}:`,
-      code.substring(0, 100) + '...'
-    );
-    return code;
+    // Use the new generic function for any language
+    setCodeForLanguage(language, code);
   };
 
   return (
-    <div className="h-screen bg-gray-50 dark:bg-gray-900 flex flex-col transition-colors">
+    <div className="h-screen bg-gray-50 flex flex-col">
       <Header
         selectedQuestionId={appState.selectedQuestionId}
         availableQuestions={appState.availableQuestions}
@@ -187,14 +173,6 @@ const AppContent: React.FC = () => {
       {/* Mobile Usage Tip */}
       <MobileUsageTip />
     </div>
-  );
-};
-
-const App: React.FC = () => {
-  return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
   );
 };
 

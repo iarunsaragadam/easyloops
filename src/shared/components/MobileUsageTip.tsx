@@ -5,8 +5,12 @@ const MobileUsageTip: React.FC = () => {
   const { isMobile } = useWindowSize();
   const [isVisible, setIsVisible] = useState(false);
   const [hasBeenDismissed, setHasBeenDismissed] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    // Mark as client-side after mount
+    setIsClient(true);
+
     // Check if user has dismissed the tip before
     const dismissed = localStorage.getItem('mobile-tip-dismissed');
     if (dismissed) {
@@ -30,7 +34,8 @@ const MobileUsageTip: React.FC = () => {
     localStorage.setItem('mobile-tip-dismissed', 'true');
   };
 
-  if (!isMobile || !isVisible || hasBeenDismissed) {
+  // Don't render anything during SSR or if conditions aren't met
+  if (!isClient || !isMobile || !isVisible || hasBeenDismissed) {
     return null;
   }
 

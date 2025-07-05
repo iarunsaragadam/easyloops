@@ -7,13 +7,20 @@ interface WindowSize {
 }
 
 export const useWindowSize = (): WindowSize => {
+  // Use consistent initial values to prevent hydration mismatch
   const [windowSize, setWindowSize] = useState<WindowSize>({
-    width: typeof window !== 'undefined' ? window.innerWidth : 1024,
-    height: typeof window !== 'undefined' ? window.innerHeight : 768,
-    isMobile: typeof window !== 'undefined' ? window.innerWidth < 768 : false,
+    width: 1024, // Default desktop width
+    height: 768, // Default desktop height
+    isMobile: false, // Default to desktop
   });
 
+  // Track if we're on the client to prevent hydration issues
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
+    // Mark as client-side after mount
+    setIsClient(true);
+
     const handleResize = () => {
       setWindowSize({
         width: window.innerWidth,
@@ -31,6 +38,15 @@ export const useWindowSize = (): WindowSize => {
     // Remove event listener on cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Return consistent values during SSR, actual values after hydration
+  if (!isClient) {
+    return {
+      width: 1024,
+      height: 768,
+      isMobile: false,
+    };
+  }
 
   return windowSize;
 };
