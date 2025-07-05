@@ -1,19 +1,10 @@
 {
-  "hosting": [
-    {
-      "target": "easyloops",
-      "public": "out",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
+  "hosting": {
+    "site": "easyloops",
+    "public": "out",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "frameworksBackend": {
+      "region": "us-central1"
     }
-  ]
-} 
+  }
+}

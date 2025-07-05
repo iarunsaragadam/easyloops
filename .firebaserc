@@ -1,16 +1,5 @@
 {
   "projects": {
-    "default": "elloloop-easyloops",
-    "prod": "elloloop-easyloops"
-  },
-  "targets": {
-    "elloloop-easyloops": {
-      "hosting": {
-        "easyloops": [
-          "easyloops"
-        ]
-      }
-    }
-  },
-  "etags": {}
+    "default": "elloloop-easyloops"
+  }
 }

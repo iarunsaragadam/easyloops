@@ -1,17 +1,30 @@
-#!/bin/bash
+#!/bin/zsh
 
-# Check Node.js version
-REQUIRED_VERSION="20"
-CURRENT_VERSION=$(node -v | cut -d'v' -f2 | cut -d'.' -f1)
+# Script to verify the correct Node.js version is being used
+# Based on the .nvmrc file
 
-echo "🔍 Checking Node.js version..."
-echo "Current version: $(node -v)"
-echo "Required version: $REQUIRED_VERSION.x"
+# Get the required Node.js version from .nvmrc
+REQUIRED_NODE_VERSION=$(cat .nvmrc)
 
-if [ "$CURRENT_VERSION" -lt "$REQUIRED_VERSION" ]; then
-  echo "❌ Node.js version $REQUIRED_VERSION.x or higher is required"
-  echo "Please update Node.js to version $REQUIRED_VERSION.x or higher"
+# Get the current Node.js version (without the 'v' prefix)
+CURRENT_NODE_VERSION=$(node -v | sed 's/^v//')
+
+# Check if the current version matches the required version
+if [[ $CURRENT_NODE_VERSION != $REQUIRED_NODE_VERSION* ]]; then
+  echo "Warning: You are using Node.js $CURRENT_NODE_VERSION, but this project requires Node.js $REQUIRED_NODE_VERSION"
+  
+  # Check if nvm is available
+  if command -v nvm &> /dev/null; then
+    echo "Attempting to switch to the correct version using nvm..."
+    nvm use
+  elif command -v volta &> /dev/null; then
+    echo "You're using Volta. Run 'volta pin node@$REQUIRED_NODE_VERSION' to set the correct version."
+  else
+    echo "Please install Node.js $REQUIRED_NODE_VERSION to work on this project."
+    echo "We recommend using nvm (https://github.com/nvm-sh/nvm) or Volta (https://volta.sh/) to manage Node.js versions."
+  fi
+  
   exit 1
-fi
-
-echo "✅ Node.js version check passed!" 
+else
+  echo "✅ Using the correct Node.js version: $CURRENT_NODE_VERSION"
+fi 

@@ -1,0 +1,23 @@
+{
+  "defaultTarget": "firebase",
+  "targets": {
+    "firebase": true,
+    "aws-s3": false,
+    "vercel": false,
+    "github-pages": false,
+    "netlify": false
+  },
+  "environments": {
+    "production": {
+      "targets": {
+        "firebase": true,
+        "aws-s3": false
+      }
+    },
+    "staging": {
+      "targets": {
+        "vercel": false
+      }
+    }
+  }
+}

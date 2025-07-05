@@ -1,34 +1,23 @@
 #!/bin/bash
+# Script to run CI tasks locally in the same order as GitHub Actions
 
-# Run CI pipeline locally
-echo "🚀 Running CI pipeline locally..."
+# Set -e to exit immediately if any command fails
+set -e
 
-# Check Node.js version
-echo "🔍 Checking Node.js version..."
-npm run check-node || { echo "❌ Node.js version check failed"; exit 1; }
+# Set CI environment variable to true to simulate CI environment
+export CI=true
 
-# Install dependencies
-echo "📦 Installing dependencies..."
-npm ci || { echo "❌ Dependency installation failed"; exit 1; }
+echo "=== 🔍 Running lint checks ==="
+npm run lint
 
-# Run linting
-echo "🔍 Running linting..."
-npm run lint || { echo "❌ Linting failed"; exit 1; }
+echo "=== ⚙️ Running type checking ==="
+npm run typecheck
 
-# Run type checking
-echo "🔄 Running type checking..."
-npm run typecheck || { echo "❌ Type checking failed"; exit 1; }
+echo "=== 🧪 Running unit and integration tests ==="
+npm test
 
-# Run unit tests
-echo "🧪 Running unit tests..."
-npm test || { echo "❌ Unit tests failed"; exit 1; }
+echo "=== 🎭 Running E2E tests ==="
+npx playwright install --with-deps
+npm run test:e2e
 
-# Install Playwright browsers
-echo "🌐 Installing Playwright browsers..."
-npx playwright install --with-deps || { echo "❌ Playwright installation failed"; exit 1; }
-
-# Run E2E tests
-echo "🧪 Running E2E tests..."
-npm run test:e2e || { echo "❌ E2E tests failed"; exit 1; }
-
-echo "✅ CI pipeline completed successfully!" 
+echo "=== ✅ All tests passed successfully! ===" 

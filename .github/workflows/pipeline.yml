@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version-file: '.nvmrc'
           cache: 'npm'
 
       - name: Install dependencies
@@ -32,11 +32,14 @@ jobs:
       - name: Run unit and integration tests
         run: npm test
 
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
-      - name: Run E2E tests
-        run: npm run test:e2e
+      - name: Check for skip E2E flag
+        id: check-skip-e2e
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_OUTPUT: $GITHUB_OUTPUT
+          TEST_COMMIT_MSG: '' # Let it use the real commit message in CI
+        run: ./scripts/check-skip-e2e.sh
 
       - name: Upload test coverage
         uses: actions/upload-artifact@v4

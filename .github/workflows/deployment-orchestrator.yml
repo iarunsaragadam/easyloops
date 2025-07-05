@@ -1,0 +1,149 @@
+name: Deployment Orchestrator
+
+on:
+  workflow_run:
+    workflows: ['Pipeline']
+    branches: [main]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      deployTarget:
+        description: Deployment target
+        default: auto
+        type: choice
+        options:
+          - auto
+          - firebase
+          - aws-s3
+          - vercel
+          - github-pages
+          - netlify
+          - all
+      environment:
+        description: Deployment environment (deploy-config.json)
+        default: production
+        type: choice
+        options:
+          - production
+          - staging
+          - development
+
+env:
+  DEPLOY_TARGET_FIREBASE: ''
+  DEPLOY_TARGET_AWS_S3: ''
+  DEPLOY_TARGET_VERCEL: ''
+  DEPLOY_TARGET_GITHUB_PAGES: ''
+  DEPLOY_TARGET_NETLIFY: ''
+  DEPLOY_TARGET_OVERRIDE: ''
+
+jobs:
+  determine_target:
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    outputs:
+      targets: ${{ steps.set-targets.outputs.targets }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: set-targets
+        shell: bash
+        run: |
+          TARGETS=()
+
+          ############################
+          # 1. hard override (env)
+          ############################
+          if [[ -n "${{ env.DEPLOY_TARGET_OVERRIDE }}" ]]; then
+            INPUT="${{ env.DEPLOY_TARGET_OVERRIDE }}"
+          ############################
+          # 2. per-target env vars
+          ############################
+          elif [[ -n "${{ env.DEPLOY_TARGET_FIREBASE }}${{ env.DEPLOY_TARGET_AWS_S3 }}${{ env.DEPLOY_TARGET_VERCEL }}${{ env.DEPLOY_TARGET_GITHUB_PAGES }}${{ env.DEPLOY_TARGET_NETLIFY }}" ]]; then
+            [[ "${{ env.DEPLOY_TARGET_FIREBASE }}" == "true" ]] && TARGETS+=("firebase")
+            [[ "${{ env.DEPLOY_TARGET_AWS_S3 }}" == "true" ]] && TARGETS+=("aws-s3")
+            [[ "${{ env.DEPLOY_TARGET_VERCEL }}" == "true" ]] && TARGETS+=("vercel")
+            [[ "${{ env.DEPLOY_TARGET_GITHUB_PAGES }}" == "true" ]] && TARGETS+=("github-pages")
+            [[ "${{ env.DEPLOY_TARGET_NETLIFY }}" == "true" ]] && TARGETS+=("netlify")
+          ############################
+          # 3. manual input
+          ############################
+          elif [[ "${{ github.event.inputs.deployTarget }}" != "" && "${{ github.event.inputs.deployTarget }}" != "auto" ]]; then
+            INPUT="${{ github.event.inputs.deployTarget }}"
+          fi
+
+          if [[ -n "$INPUT" ]]; then
+            if [[ "$INPUT" == "all" ]]; then
+              TARGETS=(firebase aws-s3 vercel github-pages netlify)
+            else
+              TARGETS=("$INPUT")
+            fi
+          fi
+
+          ############################
+          # 4. config file or detection
+          ############################
+          if [[ ${#TARGETS[@]} -eq 0 ]]; then
+            if [[ -f deploy-config.json ]]; then
+              ENV="${{ github.event.inputs.environment || 'production' }}"
+              TARGETS=($(jq -r --arg env "$ENV" '
+                .environments[$env].targets // .targets
+                | to_entries[]
+                | select(.value == true)
+                | .key
+              ' deploy-config.json))
+            else
+              [[ -f firebase.json ]] && TARGETS+=("firebase")
+              [[ -f scripts/deploy-s3.js ]] && TARGETS+=("aws-s3")
+              [[ -f vercel.json || $(grep -c "\"deploy:vercel\"" package.json || true) -gt 0 ]] && TARGETS+=("vercel")
+              # github-pages or netlify rarely auto-detect, keep manual
+            fi
+          fi
+
+          # Fallback to all when nothing matches
+          [[ ${#TARGETS[@]} -eq 0 ]] && TARGETS=(firebase aws-s3 vercel github-pages netlify)
+
+          echo "targets=$(printf "%s\n" "${TARGETS[@]}" | jq -R . | jq -cs .)" >> "$GITHUB_OUTPUT"
+
+      - name: Show selected targets
+        run: |
+          echo "Selected targets: ${{ steps.set-targets.outputs.targets }}"
+
+  deploy-firebase:
+    if: ${{ contains(fromJson(needs.determine_target.outputs.targets), 'firebase') }}
+    needs: determine_target
+    uses: ./.github/workflows/deploy-firebase.yml
+    with:
+      ref: ${{ github.ref }}
+    secrets: inherit
+
+  deploy-aws-s3:
+    if: ${{ contains(fromJson(needs.determine_target.outputs.targets), 'aws-s3') }}
+    needs: determine_target
+    uses: ./.github/workflows/deploy-aws-s3.yml
+    with:
+      ref: ${{ github.ref }}
+    secrets: inherit
+
+  deploy-vercel:
+    if: ${{ contains(fromJson(needs.determine_target.outputs.targets), 'vercel') }}
+    needs: determine_target
+    uses: ./.github/workflows/deploy-vercel.yml
+    with:
+      ref: ${{ github.ref }}
+    secrets: inherit
+
+  deploy-github-pages:
+    if: ${{ contains(fromJson(needs.determine_target.outputs.targets), 'github-pages') }}
+    needs: determine_target
+    uses: ./.github/workflows/deploy-github-pages.yml
+    with:
+      ref: ${{ github.ref }}
+    secrets: inherit
+
+  deploy-netlify:
+    if: ${{ contains(fromJson(needs.determine_target.outputs.targets), 'netlify') }}
+    needs: determine_target
+    uses: ./.github/workflows/deploy-netlify.yml
+    with:
+      ref: ${{ github.ref }}
+    secrets: inherit
