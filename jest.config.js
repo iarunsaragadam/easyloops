@@ -6,10 +6,7 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^marked$': '<rootDir>/__mocks__/marked.js',
   },
-  testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.{ts,tsx}',
-    '<rootDir>/src/**/*.{test,spec}.{ts,tsx}',
-  ],
+  testMatch: ['<rootDir>/src/**/*.{test,spec}.{ts,tsx}'],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
     '!src/**/*.d.ts',

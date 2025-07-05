@@ -1,9 +1,9 @@
 import React from 'react';
 import { CodeEditorProps, TestResultsPanelProps } from '@/types';
 import { useWindowSize } from '@/hooks/useWindowSize';
-import CodeEditor from './CodeEditor';
-import TestResultsPanel from './TestResultsPanel';
-import DraggableDivider from './DraggableDivider';
+import CodeEditor from '../Editor/CodeEditor';
+import TestResultsPanel from '../Question/TestResultsPanel';
+import DraggableDivider from '../ui/DraggableDivider';
 
 interface RightPaneProps {
   codeEditorProps: CodeEditorProps;
@@ -14,7 +14,7 @@ interface RightPaneProps {
 const RightPane: React.FC<RightPaneProps> = ({
   codeEditorProps,
   testResultsProps,
-  onVerticalMouseDown
+  onVerticalMouseDown,
 }) => {
   const { isMobile } = useWindowSize();
 
@@ -23,7 +23,7 @@ const RightPane: React.FC<RightPaneProps> = ({
       {/* Code Editor */}
       <div
         className="overflow-hidden"
-        style={{ height: `${100 - ((testResultsProps.height ?? 0.5) * 100)}%` }}
+        style={{ height: `${100 - (testResultsProps.height ?? 0.5) * 100}%` }}
       >
         {(() => {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -48,4 +48,4 @@ const RightPane: React.FC<RightPaneProps> = ({
   );
 };
 
-export default RightPane; 
+export default RightPane;

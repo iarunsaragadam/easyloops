@@ -55,7 +55,10 @@ const MonacoEditor: React.FC<MonacoEditorProps> = ({
             editor.onDidChangeModelContent(() => {
               if (onChange) {
                 const newValue = editor.getValue();
-                console.log('Editor content changed:', newValue.substring(0, 100) + '...');
+                console.log(
+                  'Editor content changed:',
+                  newValue.substring(0, 100) + '...'
+                );
                 onChange(newValue);
               }
             });
@@ -92,7 +95,10 @@ const MonacoEditor: React.FC<MonacoEditorProps> = ({
   // Update value if it changes from outside
   useEffect(() => {
     if (editorRef.current && value !== editorRef.current.getValue()) {
-      console.log('Updating editor value from props:', value.substring(0, 100) + '...');
+      console.log(
+        'Updating editor value from props:',
+        value.substring(0, 100) + '...'
+      );
       editorRef.current.setValue(value);
     }
   }, [value]);
@@ -107,4 +113,4 @@ const MonacoEditor: React.FC<MonacoEditorProps> = ({
   return <div ref={containerRef} style={{ width: '100%', height: height }} />;
 };
 
-export default MonacoEditor; 
+export default MonacoEditor;

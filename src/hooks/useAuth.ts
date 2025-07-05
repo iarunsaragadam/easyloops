@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import { User } from "firebase/auth";
+import { useState, useEffect } from 'react';
+import { User } from 'firebase/auth';
 import {
   signInWithGoogle,
   signOutUser,
   onAuthStateChange,
-} from "@/utils/firebase";
+} from '@/lib/firebase';
 
 export interface AuthState {
   user: User | null;
@@ -39,7 +39,7 @@ export const useAuth = () => {
     try {
       await signInWithGoogle();
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error('Login failed:', error);
       throw error;
     }
   };
@@ -48,7 +48,7 @@ export const useAuth = () => {
     try {
       await signOutUser();
     } catch (error) {
-      console.error("Logout failed:", error);
+      console.error('Logout failed:', error);
       throw error;
     }
   };

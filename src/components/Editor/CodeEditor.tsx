@@ -9,14 +9,16 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   height = '100%',
   isRunning = false,
   onRun,
-  onSubmit
+  onSubmit,
 }) => {
   return (
     <div className="flex flex-col h-full">
       {/* Editor Header */}
       <div className="border-b border-gray-200 px-3 md:px-4 py-2 flex flex-col space-y-2 md:space-y-0 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center space-x-4">
-          <span className="text-sm font-medium text-gray-700">💻 Code Editor</span>
+          <span className="text-sm font-medium text-gray-700">
+            💻 Code Editor
+          </span>
         </div>
         <div className="flex items-center space-x-2 justify-end md:justify-start">
           <button
@@ -61,4 +63,4 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   );
 };
 
-export default CodeEditor; 
+export default CodeEditor;

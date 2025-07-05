@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import {
   PyodideManager,
   TestCase,
   CodeExecutionResult,
   TestResult,
-} from "@/types";
-import { PYODIDE_CONFIG } from "@/constants";
-import { normalizeOutput } from "@/utils/formatters";
+} from '@/types';
+import { PYODIDE_CONFIG } from '@/constants';
+import { normalizeOutput } from '@/lib/formatters';
 
 export const usePyodide = (): PyodideManager => {
   const [pyodide, setPyodide] = useState<unknown>(null);
@@ -19,7 +19,7 @@ export const usePyodide = (): PyodideManager => {
         // @ts-expect-error: pyodide is loaded on window by CDN script
         if (!window.loadPyodide) {
           await new Promise((resolve) => {
-            const script = document.createElement("script");
+            const script = document.createElement('script');
             script.src = PYODIDE_CONFIG.CDN_URL;
             script.onload = resolve;
             document.body.appendChild(script);
@@ -34,12 +34,12 @@ export const usePyodide = (): PyodideManager => {
         setPyodide(pyodideInstance);
         setIsLoaded(true);
         setLoadingError(null);
-        console.log("✅ Pyodide loaded successfully");
+        console.log('✅ Pyodide loaded successfully');
       } catch (error) {
-        console.error("Failed to initialize Pyodide:", error);
+        console.error('Failed to initialize Pyodide:', error);
         setIsLoaded(false);
         setLoadingError(
-          error instanceof Error ? error.message : "Unknown error"
+          error instanceof Error ? error.message : 'Unknown error'
         );
       }
     };
@@ -52,7 +52,7 @@ export const usePyodide = (): PyodideManager => {
     testCases: TestCase[]
   ): Promise<CodeExecutionResult> => {
     if (!pyodide || !isLoaded) {
-      throw new Error("Pyodide is not loaded");
+      throw new Error('Pyodide is not loaded');
     }
 
     const results: TestResult[] = [];
@@ -92,17 +92,17 @@ sys.stdout = StringIO()
         // Get the output for this test case
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const actualOutput = await (pyodide as any).runPythonAsync(
-          "sys.stdout.getvalue()"
+          'sys.stdout.getvalue()'
         );
 
         // Restore stdin/stdout
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         await (pyodide as any).runPythonAsync(
-          "sys.stdin = sys._stdin; sys.stdout = sys._stdout"
+          'sys.stdin = sys._stdin; sys.stdout = sys._stdout'
         );
 
         // Normalize outputs using utility function
-        const actual = actualOutput ? normalizeOutput(actualOutput) : "";
+        const actual = actualOutput ? normalizeOutput(actualOutput) : '';
         const expected = normalizeOutput(expectedText);
 
         const passed = actual === expected;
@@ -120,7 +120,7 @@ sys.stdout = StringIO()
       } catch (error) {
         results.push({
           testCase: testCase.description,
-          expected: "Error loading test case",
+          expected: 'Error loading test case',
           actual: `Error: ${error}`,
           passed: false,
         });
@@ -130,7 +130,7 @@ sys.stdout = StringIO()
     }
 
     return {
-      output: allOutputs.join("\n\n---\n\n") || "No output generated",
+      output: allOutputs.join('\n\n---\n\n') || 'No output generated',
       testResults: results,
     };
   };

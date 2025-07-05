@@ -15,9 +15,7 @@ const AuthButton: React.FC = () => {
   if (user) {
     return (
       <div className="flex items-center space-x-2">
-        <span className="text-sm text-gray-600">
-          {user.email}
-        </span>
+        <span className="text-sm text-gray-600">{user.email}</span>
         <button
           onClick={logout}
           className="px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700 transition-colors"
@@ -38,4 +36,4 @@ const AuthButton: React.FC = () => {
   );
 };
 
-export default AuthButton; 
+export default AuthButton;

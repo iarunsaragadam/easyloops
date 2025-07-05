@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
 import {
   getAuth,
   GoogleAuthProvider,
@@ -6,8 +6,8 @@ import {
   signOut,
   onAuthStateChanged,
   User,
-} from "firebase/auth";
-import { FIREBASE_CONFIG } from "@/constants";
+} from 'firebase/auth';
+import { FIREBASE_CONFIG } from '@/constants';
 
 // Initialize Firebase
 const app = initializeApp(FIREBASE_CONFIG);
@@ -24,7 +24,7 @@ export const signInWithGoogle = async () => {
     const result = await signInWithPopup(auth, googleProvider);
     return result.user;
   } catch (error) {
-    console.error("Error signing in with Google:", error);
+    console.error('Error signing in with Google:', error);
     throw error;
   }
 };
@@ -33,7 +33,7 @@ export const signOutUser = async () => {
   try {
     await signOut(auth);
   } catch (error) {
-    console.error("Error signing out:", error);
+    console.error('Error signing out:', error);
     throw error;
   }
 };

@@ -6,7 +6,10 @@ export type MarkdownRendererProps = {
   className?: string;
 };
 
-const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, className }) => {
+const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
+  content,
+  className,
+}) => {
   const html = React.useMemo(() => marked(content), [content]);
   return (
     <div

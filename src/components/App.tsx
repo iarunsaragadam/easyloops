@@ -4,10 +4,10 @@ import { useResizableLayout } from '@/hooks/useResizableLayout';
 import { useAppState } from '@/hooks/useAppState';
 import { useCodeExecution } from '@/hooks/useCodeExecution';
 import { useAuth } from '@/hooks/useAuth';
-import Header from './Header';
-import MainLayout from './MainLayout';
-import RightPane from './RightPane';
-import ProblemDescription from './ProblemDescription';
+import Header from './Layout/Header';
+import MainLayout from './Layout/MainLayout';
+import RightPane from './Layout/RightPane';
+import ProblemDescription from './Question/ProblemDescription';
 import MobileUsageTip from './MobileUsageTip';
 
 const App: React.FC = () => {

@@ -1,31 +1,35 @@
 import React from 'react';
 import { QuestionSelectorProps } from '@/types';
-import QuestionSelector from './QuestionSelector';
-import LanguageSelector from './LanguageSelector';
-import AuthButton from './AuthButton';
+import QuestionSelector from '../Question/QuestionSelector';
+import LanguageSelector from '../Auth/LanguageSelector';
+import AuthButton from '../Auth/AuthButton';
 
 interface HeaderProps extends QuestionSelectorProps {
   selectedLanguage: string;
   onLanguageChange: (language: string) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ 
-  selectedLanguage, 
-  onLanguageChange, 
-  ...questionSelectorProps 
+const Header: React.FC<HeaderProps> = ({
+  selectedLanguage,
+  onLanguageChange,
+  ...questionSelectorProps
 }) => {
   return (
     <div className="bg-white border-b border-gray-200 px-4 md:px-6 py-3 md:py-4">
       <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center justify-between md:justify-start md:space-x-4">
           <div className="flex items-center space-x-2 md:space-x-4">
-            <h1 className="text-lg md:text-xl font-semibold text-gray-900">🧠 EasyLoops</h1>
-            <span className="hidden sm:inline text-sm text-gray-500">Practice Problems</span>
+            <h1 className="text-lg md:text-xl font-semibold text-gray-900">
+              🧠 EasyLoops
+            </h1>
+            <span className="hidden sm:inline text-sm text-gray-500">
+              Practice Problems
+            </span>
           </div>
         </div>
         <div className="flex items-center space-x-4">
           <QuestionSelector {...questionSelectorProps} />
-          <LanguageSelector 
+          <LanguageSelector
             selectedLanguage={selectedLanguage}
             onLanguageChange={onLanguageChange}
           />
@@ -36,4 +40,4 @@ const Header: React.FC<HeaderProps> = ({
   );
 };
 
-export default Header; 
+export default Header;

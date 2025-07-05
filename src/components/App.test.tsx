@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import App from '../App';
+import App from './App';
 import * as usePyodideModule from '@/hooks/usePyodide';
 import * as useResizableLayoutModule from '@/hooks/useResizableLayout';
 import * as useAppStateModule from '@/hooks/useAppState';

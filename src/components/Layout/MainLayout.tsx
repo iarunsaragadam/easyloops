@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayoutState } from '@/types';
 import { useWindowSize } from '@/hooks/useWindowSize';
-import DraggableDivider from './DraggableDivider';
+import DraggableDivider from '../ui/DraggableDivider';
 
 interface MainLayoutProps {
   layoutState: LayoutState;
@@ -18,28 +18,28 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   rightPaneRef,
   onHorizontalMouseDown,
   leftPane,
-  rightPane
+  rightPane,
 }) => {
   const { isMobile } = useWindowSize();
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="flex-1 flex flex-col md:flex-row overflow-hidden"
-      style={{ cursor: layoutState.isDraggingHorizontal ? 'col-resize' : 'default' }}
+      style={{
+        cursor: layoutState.isDraggingHorizontal ? 'col-resize' : 'default',
+      }}
     >
       {/* Left Pane - Problem Description */}
-      <div 
+      <div
         className="bg-white border-b md:border-b-0 md:border-r border-gray-200 overflow-y-auto"
-        style={{ 
+        style={{
           width: isMobile ? '100%' : `${layoutState.leftPaneWidth}%`,
           height: isMobile ? '50vh' : 'auto',
-          minHeight: isMobile ? '300px' : 'auto'
+          minHeight: isMobile ? '300px' : 'auto',
         }}
       >
-        <div className="p-4 md:p-6">
-          {leftPane}
-        </div>
+        <div className="p-4 md:p-6">{leftPane}</div>
       </div>
 
       {/* Horizontal Draggable Divider - Hidden on mobile */}
@@ -51,13 +51,13 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       )}
 
       {/* Right Pane - Code Editor and Test Results */}
-      <div 
+      <div
         ref={rightPaneRef}
         className="bg-white flex flex-col flex-1"
-        style={{ 
+        style={{
           width: isMobile ? '100%' : `${100 - layoutState.leftPaneWidth}%`,
           height: isMobile ? '50vh' : 'auto',
-          minHeight: isMobile ? '300px' : 'auto'
+          minHeight: isMobile ? '300px' : 'auto',
         }}
       >
         {rightPane}
@@ -66,4 +66,4 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   );
 };
 
-export default MainLayout; 
+export default MainLayout;

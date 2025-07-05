@@ -5,8 +5,8 @@
  */
 export const formatQuestionName = (id: string): string => {
   return id
-    .replace(/-/g, " ")
-    .replace(/\d+-/, "")
+    .replace(/-/g, ' ')
+    .replace(/\d+-/, '')
     .replace(/\b\w/g, (l) => l.toUpperCase());
 };
 
@@ -16,5 +16,5 @@ export const formatQuestionName = (id: string): string => {
  * @returns Normalized text
  */
 export const normalizeOutput = (text: string): string => {
-  return text.trim().replace(/\r\n/g, "\n");
+  return text.trim().replace(/\r\n/g, '\n');
 };

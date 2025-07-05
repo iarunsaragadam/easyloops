@@ -4,23 +4,23 @@ import { DraggableDividerProps } from '@/types';
 const DraggableDivider: React.FC<DraggableDividerProps> = ({
   onMouseDown,
   orientation,
-  className = ''
+  className = '',
 }) => {
   const isHorizontal = orientation === 'horizontal';
-  
+
   return (
     <div
       className={`${
-        isHorizontal 
-          ? 'w-1 bg-gray-300 hover:bg-blue-500 cursor-col-resize' 
+        isHorizontal
+          ? 'w-1 bg-gray-300 hover:bg-blue-500 cursor-col-resize'
           : 'h-1 bg-gray-300 hover:bg-blue-500 cursor-row-resize'
       } flex items-center justify-center group ${className}`}
       onMouseDown={onMouseDown}
     >
-      <div 
+      <div
         className={`${
-          isHorizontal 
-            ? 'w-0.5 h-8 bg-gray-400 group-hover:bg-blue-400' 
+          isHorizontal
+            ? 'w-0.5 h-8 bg-gray-400 group-hover:bg-blue-400'
             : 'h-0.5 w-8 bg-gray-400 group-hover:bg-blue-400'
         } rounded-full`}
       />
@@ -28,4 +28,4 @@ const DraggableDivider: React.FC<DraggableDividerProps> = ({
   );
 };
 
-export default DraggableDivider; 
+export default DraggableDivider;

@@ -1,11 +1,11 @@
 import React from 'react';
 import { ProblemDescriptionProps } from '@/types';
-import MarkdownRenderer from './MarkdownRenderer';
-import CollapsibleSection from './CollapsibleSection';
+import MarkdownRenderer from '../ui/MarkdownRenderer';
+import CollapsibleSection from '../ui/CollapsibleSection';
 
 const ProblemDescription: React.FC<ProblemDescriptionProps> = ({
   question,
-  isLoading
+  isLoading,
 }) => {
   if (isLoading) {
     return (
@@ -50,4 +50,4 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({
   );
 };
 
-export default ProblemDescription; 
+export default ProblemDescription;

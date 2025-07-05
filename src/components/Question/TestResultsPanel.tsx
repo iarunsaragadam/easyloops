@@ -1,10 +1,10 @@
 import React from 'react';
 import { TestResultsPanelProps } from '@/types';
-import CollapsibleSection from './CollapsibleSection';
+import CollapsibleSection from '../ui/CollapsibleSection';
 
 const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
   testResults,
-  output
+  output,
 }) => {
   return (
     <div className="bg-gray-50 border-t border-gray-200 h-full">
@@ -17,7 +17,9 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
           className="mb-4"
         >
           <div className="text-sm text-blue-700">
-            <p><strong>📝 How it works:</strong></p>
+            <p>
+              <strong>📝 How it works:</strong>
+            </p>
             <ul className="list-disc list-inside mt-2 space-y-1">
               <li>Each test case runs individually</li>
               <li>You&apos;ll see exactly which test case failed and why</li>
@@ -25,7 +27,7 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
             </ul>
           </div>
         </CollapsibleSection>
-        
+
         {/* Output Section */}
         {output && (
           <CollapsibleSection
@@ -43,7 +45,7 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
         {/* Test Results Section */}
         {testResults.length > 0 && (
           <CollapsibleSection
-            title={`Test Results (${testResults.filter(r => r.passed).length}/${testResults.length} passed)`}
+            title={`Test Results (${testResults.filter((r) => r.passed).length}/${testResults.length} passed)`}
             icon="🧪"
             defaultExpanded={true}
           >
@@ -58,7 +60,9 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-700">{result.testCase}</span>
+                    <span className="text-sm font-medium text-gray-700">
+                      {result.testCase}
+                    </span>
                     <span
                       className={`px-2 py-1 rounded text-xs font-medium ${
                         result.passed
@@ -71,8 +75,18 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
                   </div>
                   {!result.passed && (
                     <div className="mt-2 text-sm space-y-1">
-                      <div>Expected: <pre className="bg-gray-100 px-1 rounded mt-1 text-xs">{result.expected}</pre></div>
-                      <div>Actual: <pre className="bg-gray-100 px-1 rounded mt-1 text-xs">{result.actual}</pre></div>
+                      <div>
+                        Expected:{' '}
+                        <pre className="bg-gray-100 px-1 rounded mt-1 text-xs">
+                          {result.expected}
+                        </pre>
+                      </div>
+                      <div>
+                        Actual:{' '}
+                        <pre className="bg-gray-100 px-1 rounded mt-1 text-xs">
+                          {result.actual}
+                        </pre>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -92,4 +106,4 @@ const TestResultsPanel: React.FC<TestResultsPanelProps> = ({
   );
 };
 
-export default TestResultsPanel; 
+export default TestResultsPanel;

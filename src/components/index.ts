@@ -1,15 +1,13 @@
-export { default as App } from "./App";
-export { default as CodeEditor } from "./CodeEditor";
-export { default as CollapsibleSection } from "./CollapsibleSection";
-export { default as DraggableDivider } from "./DraggableDivider";
-export { default as Header } from "./Header";
-export { default as MainLayout } from "./MainLayout";
-export { default as MonacoEditor } from "./MonacoEditor";
-export { default as ProblemDescription } from "./ProblemDescription";
-export { default as QuestionSelector } from "./QuestionSelector";
-export { default as RightPane } from "./RightPane";
-export { default as TestResultsPanel } from "./TestResultsPanel";
-export { default as MarkdownRenderer } from "./MarkdownRenderer";
-export { default as MobileUsageTip } from "./MobileUsageTip";
-export { default as LanguageSelector } from "./LanguageSelector";
-export { default as AuthButton } from "./AuthButton";
+// Main App component
+export { default as App } from './App';
+
+// Domain-specific exports
+export * from './Editor';
+export * from './Question';
+export * from './ui';
+export * from './Layout';
+export * from './Auth';
+
+// Standalone components
+export { default as MobileUsageTip } from './MobileUsageTip';
+export { default as DebugPanel } from './DebugPanel';
