@@ -2,15 +2,62 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { LayoutState } from '@/shared/types';
 import { LAYOUT_CONSTANTS } from '@/shared/constants';
 
+// Types for persisted layout state (excluding dragging states)
+interface PersistedLayoutState {
+  leftPaneWidth: number;
+  testResultsHeight: number;
+}
+
+// Helper functions for localStorage operations
+const saveLayoutState = (layoutState: PersistedLayoutState): void => {
+  try {
+    const serializedState = JSON.stringify(layoutState);
+    localStorage.setItem(LAYOUT_CONSTANTS.STORAGE_KEY, serializedState);
+  } catch (error) {
+    console.warn('Failed to save layout state to localStorage:', error);
+  }
+};
+
+const loadLayoutState = (): PersistedLayoutState | null => {
+  try {
+    const serializedState = localStorage.getItem(LAYOUT_CONSTANTS.STORAGE_KEY);
+    if (serializedState === null) {
+      return null;
+    }
+    const parsedState = JSON.parse(serializedState);
+    
+    // Validate the loaded state
+    if (
+      typeof parsedState.leftPaneWidth === 'number' &&
+      typeof parsedState.testResultsHeight === 'number' &&
+      parsedState.leftPaneWidth >= LAYOUT_CONSTANTS.MIN_LEFT_PANE_WIDTH &&
+      parsedState.leftPaneWidth <= LAYOUT_CONSTANTS.MAX_LEFT_PANE_WIDTH &&
+      parsedState.testResultsHeight >= LAYOUT_CONSTANTS.MIN_TEST_RESULTS_HEIGHT &&
+      parsedState.testResultsHeight <= 1
+    ) {
+      return parsedState;
+    }
+    
+    return null;
+  } catch (error) {
+    console.warn('Failed to load layout state from localStorage:', error);
+    return null;
+  }
+};
+
 export const useResizableLayout = (
   initialLeftWidth = LAYOUT_CONSTANTS.DEFAULT_LEFT_PANE_WIDTH,
   initialTestHeight = LAYOUT_CONSTANTS.DEFAULT_TEST_RESULTS_HEIGHT
 ) => {
-  const [layoutState, setLayoutState] = useState<LayoutState>({
-    leftPaneWidth: initialLeftWidth,
-    testResultsHeight: initialTestHeight,
-    isDraggingHorizontal: false,
-    isDraggingVertical: false,
+  // Initialize state with saved values if available
+  const [layoutState, setLayoutState] = useState<LayoutState>(() => {
+    const savedState = loadLayoutState();
+    return {
+      leftPaneWidth: savedState?.leftPaneWidth ?? initialLeftWidth,
+      testResultsHeight: savedState?.testResultsHeight ?? initialTestHeight,
+      isDraggingHorizontal: false,
+      isDraggingVertical: false,
+    };
   });
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -98,6 +145,15 @@ export const useResizableLayout = (
     handleMouseMove,
     handleMouseUp,
   ]);
+
+  // Save layout state to localStorage whenever it changes
+  useEffect(() => {
+    const persistedState: PersistedLayoutState = {
+      leftPaneWidth: layoutState.leftPaneWidth,
+      testResultsHeight: layoutState.testResultsHeight,
+    };
+    saveLayoutState(persistedState);
+  }, [layoutState.leftPaneWidth, layoutState.testResultsHeight]);
 
   return {
     layoutState,

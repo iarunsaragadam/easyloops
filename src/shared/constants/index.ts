@@ -16,6 +16,7 @@ export const LAYOUT_CONSTANTS = {
   MAX_LEFT_PANE_WIDTH: 80,
   MIN_TEST_RESULTS_HEIGHT: 0,
   MAX_TEST_RESULTS_HEIGHT: 400,
+  STORAGE_KEY: 'easyloops-layout-state',
 } as const;
 
 export const PYODIDE_CONFIG = {
