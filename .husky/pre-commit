@@ -1,0 +1,19 @@
+# Allow skipping hooks with SKIP_HOOKS environment variable
+if [ "$SKIP_HOOKS" = "1" ]; then
+  echo "⚠️ Skipping pre-commit hooks"
+  exit 0
+fi
+
+# Run lint-staged to check code quality of staged files
+echo "🔍 Running lint-staged..."
+npx lint-staged || { echo "❌ lint-staged failed"; exit 1; }
+
+# Run type checking across the project
+echo "🔄 Running type checking..."
+npm run typecheck || { echo "❌ Type checking failed"; exit 1; }
+
+# Run unit tests
+echo "🧪 Running tests..."
+npm test || { echo "❌ Tests failed"; exit 1; }
+
+echo "✅ Pre-commit checks passed!"

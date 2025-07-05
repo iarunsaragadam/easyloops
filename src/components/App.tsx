@@ -12,8 +12,23 @@ import MobileUsageTip from './MobileUsageTip';
 
 const App: React.FC = () => {
   const pyodideManager = usePyodide();
-  const { layoutState, containerRef, rightPaneRef, handleHorizontalMouseDown, handleVerticalMouseDown } = useResizableLayout();
-  const { appState, handleQuestionChange, handleLanguageChange, setPythonCode, setGoCode, setOutput, setTestResults, setIsRunning } = useAppState();
+  const {
+    layoutState,
+    containerRef,
+    rightPaneRef,
+    handleHorizontalMouseDown,
+    handleVerticalMouseDown,
+  } = useResizableLayout();
+  const {
+    appState,
+    handleQuestionChange,
+    handleLanguageChange,
+    setPythonCode,
+    setGoCode,
+    setOutput,
+    setTestResults,
+    setIsRunning,
+  } = useAppState();
   const { executeCode } = useCodeExecution(pyodideManager);
   const { isAuthorizedForGo, user } = useAuth();
 
@@ -24,26 +39,26 @@ const App: React.FC = () => {
   const handleLanguageChangeWithUpdate = (language: string) => {
     handleLanguageChange(language);
     // Force editor to re-render
-    setEditorKey(prev => prev + 1);
+    setEditorKey((prev) => prev + 1);
     console.log(`Language changed to ${language}, editor refreshed`);
   };
 
   const handleRunCode = async () => {
     console.log('🚀 Run button clicked!');
-    
+
     // Add a timeout to prevent infinite loops
     const timeoutId = setTimeout(() => {
       console.log('⏰ Timeout reached - execution taking too long');
       setOutput('Execution timeout - taking too long');
       setIsRunning(false);
     }, 10000); // 10 second timeout
-    
+
     try {
       console.log('Current state:', {
         currentQuestion: appState.currentQuestion?.name,
         selectedLanguage: appState.selectedLanguage,
         isAuthorizedForGo,
-        user: user?.email
+        user: user?.email,
       });
 
       if (!appState.currentQuestion) {
@@ -56,7 +71,9 @@ const App: React.FC = () => {
       // Check if user is authorized for Go language
       if (appState.selectedLanguage === 'go' && !isAuthorizedForGo) {
         console.log('❌ User not authorized for Go');
-        setOutput('Error: Go language requires authentication. Please login with an authorized account.');
+        setOutput(
+          'Error: Go language requires authentication. Please login with an authorized account.'
+        );
         clearTimeout(timeoutId);
         return;
       }
@@ -65,13 +82,23 @@ const App: React.FC = () => {
       setIsRunning(true);
       setOutput('');
 
-      const codeToExecute = appState.selectedLanguage === 'go' ? appState.goCode : appState.pythonCode;
-      console.log('📝 Executing code:', codeToExecute.substring(0, 100) + '...');
+      const codeToExecute =
+        appState.selectedLanguage === 'go'
+          ? appState.goCode
+          : appState.pythonCode;
+      console.log(
+        '📝 Executing code:',
+        codeToExecute.substring(0, 100) + '...'
+      );
       console.log('🧪 Test cases:', appState.currentQuestion.testCases.length);
-      
-      const result = await executeCode(codeToExecute, appState.currentQuestion.testCases, appState.selectedLanguage);
+
+      const result = await executeCode(
+        codeToExecute,
+        appState.currentQuestion.testCases,
+        appState.selectedLanguage
+      );
       console.log('✅ Execution completed:', result);
-      
+
       clearTimeout(timeoutId);
       setOutput(result.output);
       setTestResults(result.testResults);
@@ -88,14 +115,17 @@ const App: React.FC = () => {
 
   const handleSubmitCode = async () => {
     // TODO: Implement code submission
-    const codeToSubmit = appState.selectedLanguage === 'go' ? appState.goCode : appState.pythonCode;
+    const codeToSubmit =
+      appState.selectedLanguage === 'go'
+        ? appState.goCode
+        : appState.pythonCode;
     console.log('Submitting code:', codeToSubmit);
   };
 
   const handleCodeChange = (code: string) => {
     const language = appState.selectedLanguage;
     console.log(`Updating ${language} code:`, code.substring(0, 100) + '...');
-    
+
     if (language === 'go') {
       setGoCode(code);
     } else {
@@ -106,7 +136,10 @@ const App: React.FC = () => {
   const getCurrentCode = () => {
     const language = appState.selectedLanguage;
     const code = language === 'go' ? appState.goCode : appState.pythonCode;
-    console.log(`Getting code for ${language}:`, code.substring(0, 100) + '...');
+    console.log(
+      `Getting code for ${language}:`,
+      code.substring(0, 100) + '...'
+    );
     return code;
   };
 
@@ -142,12 +175,12 @@ const App: React.FC = () => {
               height: '100%',
               isRunning: appState.isRunning,
               onRun: handleRunCode,
-              onSubmit: handleSubmitCode
+              onSubmit: handleSubmitCode,
             }}
             testResultsProps={{
               testResults: appState.testResults,
               output: appState.output,
-              height: layoutState.testResultsHeight
+              height: layoutState.testResultsHeight,
             }}
             onVerticalMouseDown={handleVerticalMouseDown}
           />
@@ -160,4 +193,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App; 
+export default App;

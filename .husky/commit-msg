@@ -1,0 +1,20 @@
+# Allow skipping hooks with SKIP_HOOKS environment variable
+if [ "$SKIP_HOOKS" = "1" ]; then
+  echo "⚠️ Skipping commit-msg hook"
+  exit 0
+fi
+
+# Validate commit message format
+npx --no -- commitlint --edit $1 || { 
+  echo "❌ Commit message validation failed"
+  echo "ℹ️ Please follow the conventional commit format:"
+  echo "  type(scope): subject"
+  echo ""
+  echo "  Examples:"
+  echo "    feat(auth): add login functionality"
+  echo "    fix(api): handle null response"
+  echo "    docs: update README"
+  echo ""
+  echo "  Types: build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test"
+  exit 1; 
+} 

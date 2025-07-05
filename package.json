@@ -6,7 +6,31 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "# Testing scripts": "",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "test:all": "npm run lint && npm run typecheck && npm test && npm run test:e2e",
+    "# Build scripts": "",
+    "build:prod": "next build",
+    "build:analyze": "ANALYZE=true next build",
+    "# Deployment scripts": "",
+    "deploy:firebase": "firebase deploy --only hosting:easyloops-react",
+    "deploy:firebase:full": "npm run build:prod && npm run deploy:firebase",
+    "# CI/CD scripts": "",
+    "ci:test": "npm run lint && npm run typecheck && npm test && npm run test:e2e",
+    "ci:build": "npm run build:prod",
+    "ci:deploy": "npm run deploy:firebase",
+    "# Git hooks": "",
+    "prepare": "husky",
+    "check-node": "./scripts/check-node-version.sh",
+    "ci-local": "./scripts/run-ci-local.sh"
   },
   "dependencies": {
     "error-stack-parser": "^2.1.4",
@@ -22,14 +46,36 @@
     "unified": "^11.0.5"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.3.5",
+    "@playwright/test": "^1.53.2",
     "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
+    "husky": "^9.1.7",
+    "jest": "^30.0.3",
+    "jest-environment-jsdom": "^30.0.2",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4",
+    "ts-jest": "^29.4.0",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write"
+    ]
   }
 }
