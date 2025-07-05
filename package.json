@@ -21,7 +21,7 @@
     "build:prod": "next build",
     "build:analyze": "ANALYZE=true next build",
     "# Deployment scripts": "",
-    "deploy:firebase": "firebase deploy --only hosting:easyloops-react",
+    "deploy:firebase": "firebase deploy --only hosting:easyloops",
     "deploy:firebase:full": "npm run build:prod && npm run deploy:firebase",
     "# CI/CD scripts": "",
     "ci:test": "npm run lint && npm run typecheck && npm test && npm run test:e2e",
