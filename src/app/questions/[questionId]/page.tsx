@@ -2,10 +2,16 @@ import React, { Suspense } from 'react';
 import QuestionPage from './QuestionPage';
 import { getAvailableQuestions } from '@/shared/lib';
 
-export default function Page({ params }: { params: { questionId: string } }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ questionId: string }>;
+}) {
+  const { questionId } = await params;
+
   return (
     <Suspense fallback={<div>Loading question...</div>}>
-      <QuestionPage questionId={params.questionId} />
+      <QuestionPage questionId={questionId} />
     </Suspense>
   );
 }
