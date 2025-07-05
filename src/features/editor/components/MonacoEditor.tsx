@@ -24,13 +24,14 @@ const MonacoEditor: React.FC<MonacoEditorProps> = ({
   const editorRef = useRef<any>(null);
 
   useEffect(() => {
+    const currentContainer = containerRef.current;
     let script: HTMLScriptElement | null = null;
     // Monaco types are not available for CDN UMD loader, so we use 'any' here
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let editor: any = null;
     let resizeObserver: ResizeObserver | null = null;
 
-    if (typeof window !== 'undefined' && containerRef.current) {
+    if (typeof window !== 'undefined' && currentContainer) {
       script = document.createElement('script');
       script.src = MONACO_CONFIG.CDN_URL;
       script.onload = () => {
@@ -39,8 +40,8 @@ const MonacoEditor: React.FC<MonacoEditorProps> = ({
         // @ts-expect-error: Monaco loader is attached to window by CDN script
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         window.require(['vs/editor/editor.main'], (monaco: any) => {
-          if (containerRef.current) {
-            editor = monaco.editor.create(containerRef.current, {
+          if (currentContainer) {
+            editor = monaco.editor.create(currentContainer, {
               value,
               language,
               theme,
@@ -70,7 +71,7 @@ const MonacoEditor: React.FC<MonacoEditorProps> = ({
                 editor.layout();
               }
             });
-            resizeObserver.observe(containerRef.current);
+            resizeObserver.observe(currentContainer);
           }
         });
       };
@@ -84,13 +85,12 @@ const MonacoEditor: React.FC<MonacoEditorProps> = ({
       if (script && document.body.contains(script)) {
         document.body.removeChild(script);
       }
-      if (resizeObserver && containerRef.current) {
-        resizeObserver.unobserve(containerRef.current);
+      if (resizeObserver && currentContainer) {
+        resizeObserver.unobserve(currentContainer);
         resizeObserver.disconnect();
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [value, language, theme, onChange]);
 
   // Update value if it changes from outside
   useEffect(() => {

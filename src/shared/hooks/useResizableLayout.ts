@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { LayoutState } from '@/shared/types';
 import { LAYOUT_CONSTANTS } from '@/shared/constants';
 
@@ -16,54 +16,60 @@ export const useResizableLayout = (
   const containerRef = useRef<HTMLDivElement>(null);
   const rightPaneRef = useRef<HTMLDivElement>(null);
 
-  const handleHorizontalMouseDown = (e: React.MouseEvent) => {
+  const handleHorizontalMouseDown = useCallback((e: React.MouseEvent) => {
     setLayoutState((prev) => ({ ...prev, isDraggingHorizontal: true }));
     e.preventDefault();
-  };
+  }, []);
 
-  const handleVerticalMouseDown = (e: React.MouseEvent) => {
+  const handleVerticalMouseDown = useCallback((e: React.MouseEvent) => {
     setLayoutState((prev) => ({ ...prev, isDraggingVertical: true }));
     e.preventDefault();
-  };
+  }, []);
 
-  const handleMouseMove = (e: MouseEvent) => {
-    if (layoutState.isDraggingHorizontal && containerRef.current) {
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const newLeftWidth =
-        ((e.clientX - containerRect.left) / containerRect.width) * 100;
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (layoutState.isDraggingHorizontal && containerRef.current) {
+        const containerRect = containerRef.current.getBoundingClientRect();
+        const newLeftWidth =
+          ((e.clientX - containerRect.left) / containerRect.width) * 100;
 
-      // Constrain to reasonable bounds
-      const constrainedWidth = Math.max(
-        LAYOUT_CONSTANTS.MIN_LEFT_PANE_WIDTH,
-        Math.min(LAYOUT_CONSTANTS.MAX_LEFT_PANE_WIDTH, newLeftWidth)
-      );
-      setLayoutState((prev) => ({ ...prev, leftPaneWidth: constrainedWidth }));
-    }
+        // Constrain to reasonable bounds
+        const constrainedWidth = Math.max(
+          LAYOUT_CONSTANTS.MIN_LEFT_PANE_WIDTH,
+          Math.min(LAYOUT_CONSTANTS.MAX_LEFT_PANE_WIDTH, newLeftWidth)
+        );
+        setLayoutState((prev) => ({
+          ...prev,
+          leftPaneWidth: constrainedWidth,
+        }));
+      }
 
-    if (
-      layoutState.isDraggingVertical &&
-      rightPaneRef.current &&
-      containerRef.current
-    ) {
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const newTestHeightPx = containerRect.bottom - e.clientY;
-      const totalHeight = containerRect.height;
-      let newTestHeightFrac = newTestHeightPx / totalHeight;
-      newTestHeightFrac = Math.max(0, Math.min(1, newTestHeightFrac));
-      setLayoutState((prev) => ({
-        ...prev,
-        testResultsHeight: newTestHeightFrac,
-      }));
-    }
-  };
+      if (
+        layoutState.isDraggingVertical &&
+        rightPaneRef.current &&
+        containerRef.current
+      ) {
+        const containerRect = containerRef.current.getBoundingClientRect();
+        const newTestHeightPx = containerRect.bottom - e.clientY;
+        const totalHeight = containerRect.height;
+        let newTestHeightFrac = newTestHeightPx / totalHeight;
+        newTestHeightFrac = Math.max(0, Math.min(1, newTestHeightFrac));
+        setLayoutState((prev) => ({
+          ...prev,
+          testResultsHeight: newTestHeightFrac,
+        }));
+      }
+    },
+    [layoutState.isDraggingHorizontal, layoutState.isDraggingVertical]
+  );
 
-  const handleMouseUp = () => {
+  const handleMouseUp = useCallback(() => {
     setLayoutState((prev) => ({
       ...prev,
       isDraggingHorizontal: false,
       isDraggingVertical: false,
     }));
-  };
+  }, []);
 
   useEffect(() => {
     if (layoutState.isDraggingHorizontal || layoutState.isDraggingVertical) {
@@ -86,7 +92,12 @@ export const useResizableLayout = (
       document.body.style.cursor = '';
       document.body.style.userSelect = '';
     };
-  }, [layoutState.isDraggingHorizontal, layoutState.isDraggingVertical]);
+  }, [
+    layoutState.isDraggingHorizontal,
+    layoutState.isDraggingVertical,
+    handleMouseMove,
+    handleMouseUp,
+  ]);
 
   return {
     layoutState,
