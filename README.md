@@ -316,6 +316,41 @@ docker build -t easyloops-react .
 docker run -p 3000:3000 easyloops-react
 ```
 
+### macOS Desktop App (Tauri)
+
+The project includes a Tauri configuration for a native desktop build.
+
+#### Prerequisites for Tauri Development
+
+1. **Install Rust and Cargo** (Rust's package manager):
+
+   ```bash
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+   source "$HOME/.cargo/env"
+   ```
+
+2. **Verify installation**:
+
+   ```bash
+   rustc --version
+   cargo --version
+   rustup --version
+   ```
+
+3. **Install Xcode Command Line Tools** (macOS only):
+   ```bash
+   xcode-select --install
+   ```
+
+#### Running the Tauri App
+
+```bash
+npm run tauri:dev   # run the desktop app in development
+npm run tauri:build # build a `.app` bundle
+```
+
+**Note**: The first run may take several minutes as it downloads and compiles Rust dependencies.
+
 ### Environment Variables
 
 Required environment variables:

@@ -1,0 +1,76 @@
+name: Tauri Cross-Platform Release
+
+on:
+  push:
+    branches: [main, tauri-cross-platform-ci]
+  pull_request:
+    branches: [main, tauri-cross-platform-ci]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Tauri App
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Tauri CLI
+        run: npm install -g @tauri-apps/cli
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Tauri app
+        run: npm run tauri:build
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tauri-${{ matrix.os }}
+          path: |
+            src-tauri/target/release/bundle/**/*
+            !src-tauri/target/release/bundle/**/*.dSYM
+
+  release:
+    name: Create GitHub Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/tauri-cross-platform-ci'
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: tauri-macos-latest
+          path: macos
+      - uses: actions/download-artifact@v4
+        with:
+          name: tauri-ubuntu-latest
+          path: linux
+      - uses: actions/download-artifact@v4
+        with:
+          name: tauri-windows-latest
+          path: windows
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: tauri-auto-release-${{ github.head_ref || github.ref_name }}
+          name: 'Tauri Release ${{ github.head_ref || github.ref_name }}'
+          draft: false
+          prerelease: false
+          files: |
+            macos/**
+            linux/**
+            windows/**

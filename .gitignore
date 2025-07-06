@@ -8,6 +8,8 @@
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
+src-tauri/target
+src-tauri/gen
 !.yarn/versions
 
 # testing
