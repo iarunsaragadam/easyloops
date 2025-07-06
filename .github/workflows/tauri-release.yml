@@ -51,7 +51,6 @@ jobs:
             libssl-dev \
             libglib2.0-dev \
             pkg-config \
-            libappindicator3-dev \
             librsvg2-dev
 
       - name: Build Tauri app
