@@ -24,16 +24,16 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   return (
     <div
       ref={containerRef}
-      className="flex-1 flex flex-col md:flex-row overflow-hidden"
+      className="flex-1 flex flex-col md:flex-row overflow-hidden layout-container"
       style={{
         cursor: layoutState.isDraggingHorizontal ? 'col-resize' : 'default',
       }}
     >
       {/* Left Pane - Problem Description */}
       <div
-        className="bg-white border-b md:border-b-0 md:border-r border-gray-200 overflow-y-auto"
+        className="bg-white border-b md:border-b-0 md:border-r border-gray-200 overflow-y-auto left-pane"
         style={{
-          width: isMobile ? '100%' : `${layoutState.leftPaneWidth}%`,
+          width: isMobile ? '100%' : undefined,
           height: isMobile ? '50vh' : 'auto',
           minHeight: isMobile ? '300px' : 'auto',
         }}
@@ -52,9 +52,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       {/* Right Pane - Code Editor and Test Results */}
       <div
         ref={rightPaneRef}
-        className="bg-white flex flex-col flex-1"
+        className="bg-white flex flex-col flex-1 right-pane"
         style={{
-          width: isMobile ? '100%' : `${100 - layoutState.leftPaneWidth}%`,
+          width: isMobile ? '100%' : undefined,
           height: isMobile ? '50vh' : 'auto',
           minHeight: isMobile ? '300px' : 'auto',
         }}

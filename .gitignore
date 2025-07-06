@@ -48,3 +48,6 @@ pglite-debug.log
 
 # Testcase manifests (do not ignore if you want to deploy them, but ignore local changes)
 public/questions/*/testcases.json
+
+# Playwright and other test output
+/test-results/

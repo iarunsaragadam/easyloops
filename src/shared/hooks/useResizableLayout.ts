@@ -13,8 +13,8 @@ const saveLayoutState = (layoutState: PersistedLayoutState): void => {
   try {
     const serializedState = JSON.stringify(layoutState);
     localStorage.setItem(LAYOUT_CONSTANTS.STORAGE_KEY, serializedState);
-  } catch (error) {
-    console.warn('Failed to save layout state to localStorage:', error);
+  } catch {
+    // ignore
   }
 };
 
@@ -25,22 +25,24 @@ const loadLayoutState = (): PersistedLayoutState | null => {
       return null;
     }
     const parsedState = JSON.parse(serializedState);
-    
+
     // Validate the loaded state
-    if (
+    const isValid =
       typeof parsedState.leftPaneWidth === 'number' &&
       typeof parsedState.testResultsHeight === 'number' &&
       parsedState.leftPaneWidth >= LAYOUT_CONSTANTS.MIN_LEFT_PANE_WIDTH &&
       parsedState.leftPaneWidth <= LAYOUT_CONSTANTS.MAX_LEFT_PANE_WIDTH &&
-      parsedState.testResultsHeight >= LAYOUT_CONSTANTS.MIN_TEST_RESULTS_HEIGHT &&
-      parsedState.testResultsHeight <= 1
-    ) {
+      parsedState.testResultsHeight >=
+        LAYOUT_CONSTANTS.MIN_TEST_RESULTS_HEIGHT &&
+      parsedState.testResultsHeight <= LAYOUT_CONSTANTS.MAX_TEST_RESULTS_HEIGHT;
+
+    if (isValid) {
       return parsedState;
+    } else {
+      return null;
     }
-    
-    return null;
-  } catch (error) {
-    console.warn('Failed to load layout state from localStorage:', error);
+  } catch {
+    // ignore
     return null;
   }
 };
@@ -49,33 +51,67 @@ export const useResizableLayout = (
   initialLeftWidth = LAYOUT_CONSTANTS.DEFAULT_LEFT_PANE_WIDTH,
   initialTestHeight = LAYOUT_CONSTANTS.DEFAULT_TEST_RESULTS_HEIGHT
 ) => {
-  // Initialize state with saved values if available
-  const [layoutState, setLayoutState] = useState<LayoutState>(() => {
-    const savedState = loadLayoutState();
-    return {
-      leftPaneWidth: savedState?.leftPaneWidth ?? initialLeftWidth,
-      testResultsHeight: savedState?.testResultsHeight ?? initialTestHeight,
-      isDraggingHorizontal: false,
-      isDraggingVertical: false,
-    };
-  });
+  // Track if we're on the client to prevent hydration issues
+  const [isClient, setIsClient] = useState(false);
+
+  // State for dragging interactions only
+  const [isDraggingHorizontal, setIsDraggingHorizontal] = useState(false);
+  const [isDraggingVertical, setIsDraggingVertical] = useState(false);
+
+  // Track layout changes to trigger saves
+  const [layoutVersion, setLayoutVersion] = useState(0);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const rightPaneRef = useRef<HTMLDivElement>(null);
 
+  // CSS variable management functions
+  const setCSSVariable = useCallback((name: string, value: string): void => {
+    if (containerRef.current) {
+      containerRef.current.style.setProperty(name, value);
+      // Increment layout version to trigger save
+      setLayoutVersion((prev) => prev + 1);
+    }
+  }, []);
+
+  const getCSSVariable = useCallback((name: string): string => {
+    if (containerRef.current) {
+      return getComputedStyle(containerRef.current).getPropertyValue(name);
+    }
+    return '';
+  }, []);
+
+  // Initialize CSS variables and load saved state
+  useEffect(() => {
+    setIsClient(true);
+
+    // Set initial CSS variables
+    setCSSVariable('--left-pane-width', `${initialLeftWidth}%`);
+    setCSSVariable('--test-results-height', `${initialTestHeight * 100}%`);
+
+    // Load and apply saved state
+    const savedState = loadLayoutState();
+    if (savedState) {
+      setCSSVariable('--left-pane-width', `${savedState.leftPaneWidth}%`);
+      setCSSVariable(
+        '--test-results-height',
+        `${savedState.testResultsHeight * 100}%`
+      );
+    }
+  }, [initialLeftWidth, initialTestHeight, setCSSVariable]);
+
   const handleHorizontalMouseDown = useCallback((e: React.MouseEvent) => {
-    setLayoutState((prev) => ({ ...prev, isDraggingHorizontal: true }));
+    setIsDraggingHorizontal(true);
     e.preventDefault();
   }, []);
 
   const handleVerticalMouseDown = useCallback((e: React.MouseEvent) => {
-    setLayoutState((prev) => ({ ...prev, isDraggingVertical: true }));
+    setIsDraggingVertical(true);
     e.preventDefault();
   }, []);
 
   const handleMouseMove = useCallback(
     (e: MouseEvent) => {
-      if (layoutState.isDraggingHorizontal && containerRef.current) {
+      if (isDraggingHorizontal && containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect();
         const newLeftWidth =
           ((e.clientX - containerRect.left) / containerRect.width) * 100;
@@ -85,44 +121,35 @@ export const useResizableLayout = (
           LAYOUT_CONSTANTS.MIN_LEFT_PANE_WIDTH,
           Math.min(LAYOUT_CONSTANTS.MAX_LEFT_PANE_WIDTH, newLeftWidth)
         );
-        setLayoutState((prev) => ({
-          ...prev,
-          leftPaneWidth: constrainedWidth,
-        }));
+
+        // Update CSS variable
+        setCSSVariable('--left-pane-width', `${constrainedWidth}%`);
       }
 
-      if (
-        layoutState.isDraggingVertical &&
-        rightPaneRef.current &&
-        containerRef.current
-      ) {
+      if (isDraggingVertical && rightPaneRef.current && containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect();
         const newTestHeightPx = containerRect.bottom - e.clientY;
         const totalHeight = containerRect.height;
         let newTestHeightFrac = newTestHeightPx / totalHeight;
         newTestHeightFrac = Math.max(0, Math.min(1, newTestHeightFrac));
-        setLayoutState((prev) => ({
-          ...prev,
-          testResultsHeight: newTestHeightFrac,
-        }));
+
+        // Update CSS variable
+        setCSSVariable('--test-results-height', `${newTestHeightFrac * 100}%`);
       }
     },
-    [layoutState.isDraggingHorizontal, layoutState.isDraggingVertical]
+    [isDraggingHorizontal, isDraggingVertical, setCSSVariable]
   );
 
   const handleMouseUp = useCallback(() => {
-    setLayoutState((prev) => ({
-      ...prev,
-      isDraggingHorizontal: false,
-      isDraggingVertical: false,
-    }));
+    setIsDraggingHorizontal(false);
+    setIsDraggingVertical(false);
   }, []);
 
   useEffect(() => {
-    if (layoutState.isDraggingHorizontal || layoutState.isDraggingVertical) {
+    if (isDraggingHorizontal || isDraggingVertical) {
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
-      document.body.style.cursor = layoutState.isDraggingHorizontal
+      document.body.style.cursor = isDraggingHorizontal
         ? 'col-resize'
         : 'row-resize';
       document.body.style.userSelect = 'none';
@@ -140,20 +167,45 @@ export const useResizableLayout = (
       document.body.style.userSelect = '';
     };
   }, [
-    layoutState.isDraggingHorizontal,
-    layoutState.isDraggingVertical,
+    isDraggingHorizontal,
+    isDraggingVertical,
     handleMouseMove,
     handleMouseUp,
   ]);
 
-  // Save layout state to localStorage whenever it changes
+  // Save layout state to localStorage whenever it changes (only on client)
   useEffect(() => {
-    const persistedState: PersistedLayoutState = {
-      leftPaneWidth: layoutState.leftPaneWidth,
-      testResultsHeight: layoutState.testResultsHeight,
-    };
-    saveLayoutState(persistedState);
-  }, [layoutState.leftPaneWidth, layoutState.testResultsHeight]);
+    if (isClient && layoutVersion > 0) {
+      const leftPaneWidth =
+        parseFloat(getCSSVariable('--left-pane-width')) || initialLeftWidth;
+      const testResultsHeight =
+        (parseFloat(getCSSVariable('--test-results-height')) ||
+          initialTestHeight * 100) / 100;
+
+      const persistedState: PersistedLayoutState = {
+        leftPaneWidth,
+        testResultsHeight,
+      };
+      saveLayoutState(persistedState);
+    }
+  }, [
+    isClient,
+    layoutVersion,
+    initialLeftWidth,
+    initialTestHeight,
+    getCSSVariable,
+  ]);
+
+  // Return layout state for components that need it
+  const layoutState: LayoutState = {
+    leftPaneWidth:
+      parseFloat(getCSSVariable('--left-pane-width')) || initialLeftWidth,
+    testResultsHeight:
+      (parseFloat(getCSSVariable('--test-results-height')) ||
+        initialTestHeight * 100) / 100,
+    isDraggingHorizontal,
+    isDraggingVertical,
+  };
 
   return {
     layoutState,

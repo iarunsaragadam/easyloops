@@ -21,10 +21,7 @@ const RightPane: React.FC<RightPaneProps> = ({
   return (
     <>
       {/* Code Editor */}
-      <div
-        className="overflow-hidden"
-        style={{ height: `${100 - (testResultsProps.height ?? 0.5) * 100}%` }}
-      >
+      <div className="overflow-hidden code-editor-container">
         {(() => {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const { key, ...rest } = codeEditorProps as any;
@@ -41,7 +38,7 @@ const RightPane: React.FC<RightPaneProps> = ({
       )}
 
       {/* Test Results */}
-      <div style={{ height: `${(testResultsProps.height ?? 0.5) * 100}%` }}>
+      <div className="test-results-container">
         <TestResultsPanel {...testResultsProps} />
       </div>
     </>
