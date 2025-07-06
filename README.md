@@ -1,6 +1,6 @@
 # EasyLoops React 🔄
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0.html)
 [![GitHub issues](https://img.shields.io/badge/github-issues-orange)](https://github.com/username/easyloops-react/issues)
 [![GitHub stars](https://img.shields.io/badge/github-stars-yellow)](https://github.com/username/easyloops-react/stargazers)
 [![GitHub forks](https://img.shields.io/badge/github-forks-blue)](https://github.com/username/easyloops-react/network)
@@ -355,7 +355,7 @@ We welcome contributions from developers of all skill levels! Whether you're fix
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 

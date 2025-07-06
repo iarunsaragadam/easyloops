@@ -174,12 +174,10 @@ docker logs <container-name>
    ```
 
 2. **Firebase Authentication Error**
-
    - Verify service account key is correct
    - Check Firebase project ID matches
 
 3. **Go Execution Timeout**
-
    - Check Docker daemon is running
    - Verify container resource limits
 
@@ -245,4 +243,4 @@ RATE_LIMIT_DURATION=60
 
 ## License
 
-MIT License - see LICENSE file for details
+This project is licensed under the GNU Affero General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
