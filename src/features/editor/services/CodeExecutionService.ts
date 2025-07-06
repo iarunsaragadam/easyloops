@@ -3,11 +3,18 @@ import {
   TestResult,
   CodeExecutionResult,
   PyodideManager,
+  ExecutionMode,
+  SubmissionResult,
 } from '@/shared/types';
 import { User } from 'firebase/auth';
+import { submissionService } from './SubmissionService';
 
 export interface ExecutionStrategy {
-  execute(code: string, testCases: TestCase[]): Promise<CodeExecutionResult>;
+  execute(
+    code: string,
+    testCases: TestCase[],
+    mode: ExecutionMode
+  ): Promise<CodeExecutionResult>;
   isAvailable(): boolean;
   requiresAuth(): boolean;
 }
@@ -17,7 +24,8 @@ export class PyodideExecutionStrategy implements ExecutionStrategy {
 
   async execute(
     code: string,
-    testCases: TestCase[]
+    testCases: TestCase[],
+    mode: ExecutionMode
   ): Promise<CodeExecutionResult> {
     if (!this.isAvailable()) {
       throw new Error(
@@ -25,7 +33,12 @@ export class PyodideExecutionStrategy implements ExecutionStrategy {
       );
     }
 
-    return await this.pyodideManager.runCode(code, testCases);
+    // Apply test case limit for RUN mode
+    const casesToRun = mode.type === 'RUN' && mode.testCaseLimit
+      ? testCases.slice(0, mode.testCaseLimit)
+      : testCases;
+
+    return await this.pyodideManager.runCode(code, casesToRun);
   }
 
   isAvailable(): boolean {
@@ -42,16 +55,22 @@ export class GoExecutionStrategy implements ExecutionStrategy {
 
   async execute(
     code: string,
-    testCases: TestCase[]
+    testCases: TestCase[],
+    mode: ExecutionMode
   ): Promise<CodeExecutionResult> {
     if (!this.isAvailable()) {
       throw new Error('Authentication required for Go code execution');
     }
 
+    // Apply test case limit for RUN mode
+    const casesToRun = mode.type === 'RUN' && mode.testCaseLimit
+      ? testCases.slice(0, mode.testCaseLimit)
+      : testCases;
+
     const testResults: TestResult[] = [];
     const allOutputs: string[] = [];
 
-    for (const testCase of testCases) {
+    for (const testCase of casesToRun) {
       try {
         const [inputContent, expectedOutput] = await Promise.all([
           this.fetchTestCaseContent(testCase.inputFile),
@@ -88,12 +107,7 @@ export class GoExecutionStrategy implements ExecutionStrategy {
       }
     }
 
-    const mainOutput =
-      testResults.length > 0
-        ? testResults
-            .map((r) => (r.passed ? `✅ ${r.testCase}` : `❌ ${r.testCase}`))
-            .join('\n')
-        : 'No test cases executed';
+    const mainOutput = this.formatOutput(testResults, mode);
 
     return {
       output: mainOutput,
@@ -109,28 +123,31 @@ export class GoExecutionStrategy implements ExecutionStrategy {
     return true;
   }
 
-  private async fetchTestCaseContent(filePath: string): Promise<string> {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000);
-
-    try {
-      const response = await fetch(filePath, { signal: controller.signal });
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        throw new Error(
-          `Failed to fetch file: ${filePath} (${response.status})`
-        );
-      }
-
-      return await response.text();
-    } catch (error) {
-      clearTimeout(timeoutId);
-      if (error instanceof Error && error.name === 'AbortError') {
-        throw new Error(`Timeout fetching ${filePath}`);
-      }
-      throw error;
+  private formatOutput(testResults: TestResult[], mode: ExecutionMode): string {
+    if (testResults.length === 0) {
+      return 'No test cases executed';
     }
+
+    const passedCount = testResults.filter(r => r.passed).length;
+    const totalCount = testResults.length;
+    
+    const statusLines = testResults.map(r => 
+      r.passed ? `✅ ${r.testCase}` : `❌ ${r.testCase}`
+    );
+
+    if (mode.type === 'RUN') {
+      return `Sample Test Results (${passedCount}/${totalCount} passed):\n${statusLines.join('\n')}`;
+    } else {
+      return `Full Evaluation Results (${passedCount}/${totalCount} passed):\n${statusLines.join('\n')}`;
+    }
+  }
+
+  private async fetchTestCaseContent(filePath: string): Promise<string> {
+    const response = await fetch(filePath);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch file: ${filePath}`);
+    }
+    return await response.text();
   }
 
   private async executeGoCode(
@@ -175,17 +192,19 @@ export class Judge0ExecutionStrategy implements ExecutionStrategy {
 
   async execute(
     code: string,
-    testCases: TestCase[]
+    testCases: TestCase[],
+    mode: ExecutionMode
   ): Promise<CodeExecutionResult> {
     if (!this.isAvailable()) {
       throw new Error('Authentication required for code execution');
     }
 
-    // const input = testCases.length > 0 ? testCases[0].inputFile : "";
+    // Apply test case limit for RUN mode
+    const casesToRun = mode.type === 'RUN' && mode.testCaseLimit
+      ? testCases.slice(0, mode.testCaseLimit)
+      : testCases;
 
-    // This would integrate with Judge0 API
-    // For now, return a mock result
-    const testResults = testCases.map((testCase) => ({
+    const testResults = casesToRun.map((testCase) => ({
       testCase: testCase.description,
       expected: 'Expected output from Judge0',
       actual: 'Mock output',
@@ -193,8 +212,15 @@ export class Judge0ExecutionStrategy implements ExecutionStrategy {
       input: testCase.inputFile,
     }));
 
+    const passedCount = testResults.filter(r => r.passed).length;
+    const totalCount = testResults.length;
+    
+    const output = mode.type === 'RUN' 
+      ? `Sample Test Results (${passedCount}/${totalCount} passed)`
+      : `Full Evaluation Results (${passedCount}/${totalCount} passed)`;
+
     return {
-      output: 'Mock Judge0 execution result',
+      output,
       testResults,
     };
   }
@@ -240,7 +266,8 @@ export class CodeExecutionService {
   async executeCode(
     code: string,
     testCases: TestCase[],
-    language: string
+    language: string,
+    mode: ExecutionMode = { type: 'RUN', testCaseLimit: 2, createSnapshot: false }
   ): Promise<CodeExecutionResult> {
     const strategy = this.strategies.get(language);
 
@@ -252,7 +279,45 @@ export class CodeExecutionService {
       throw new Error(`Language ${language} is not available`);
     }
 
-    return await strategy.execute(code, testCases);
+    const startTime = Date.now();
+    const result = await strategy.execute(code, testCases, mode);
+    const executionTime = Date.now() - startTime;
+
+    return {
+      ...result,
+      executionTime,
+    };
+  }
+
+  async executeAndSubmit(
+    code: string,
+    testCases: TestCase[],
+    language: string,
+    questionId: string
+  ): Promise<{ result: CodeExecutionResult; submission: SubmissionResult }> {
+    const mode: ExecutionMode = { type: 'SUBMIT', createSnapshot: true };
+    
+    const startTime = Date.now();
+    const result = await this.executeCode(code, testCases, language, mode);
+    const executionTime = Date.now() - startTime;
+
+    const submission = submissionService.createSubmission(
+      code,
+      questionId,
+      language,
+      result.testResults,
+      executionTime
+    );
+
+    await submissionService.saveSubmission(submission);
+
+    return {
+      result: {
+        ...result,
+        executionTime,
+      },
+      submission,
+    };
   }
 
   isLanguageAvailable(language: string): boolean {

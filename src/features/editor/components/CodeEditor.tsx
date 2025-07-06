@@ -9,6 +9,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   language = 'python',
   height = '100%',
   isRunning = false,
+  isSubmitting = false,
   onRun,
   onSubmit,
 }) => {
@@ -29,29 +30,39 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
         <div className="flex items-center space-x-2 justify-end md:justify-start">
           <button
             onClick={onRun}
-            disabled={isRunning}
+            disabled={isRunning || isSubmitting}
             className="px-3 py-1.5 md:py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex-1 md:flex-none min-w-[80px]"
+            title="Run your code against sample test cases (first 2 test cases)"
           >
             {isRunning ? (
               <span className="flex items-center justify-center">
                 <span className="hidden md:inline">⏳ Running...</span>
-                <span className="md:hidden">⏳ Run...</span>
+                <span className="md:hidden">⏳</span>
               </span>
             ) : (
               <span className="flex items-center justify-center">
-                <span className="hidden md:inline">✅ Run</span>
+                <span className="hidden md:inline">▶️ Run</span>
                 <span className="md:hidden">▶️</span>
               </span>
             )}
           </button>
           <button
             onClick={onSubmit}
-            className="px-3 py-1.5 md:py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors flex-1 md:flex-none min-w-[80px]"
+            disabled={isRunning || isSubmitting}
+            className="px-3 py-1.5 md:py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex-1 md:flex-none min-w-[120px]"
+            title="Evaluate your code against all test cases and create a submission snapshot"
           >
-            <span className="flex items-center justify-center">
-              <span className="hidden md:inline">📤 Submit</span>
-              <span className="md:hidden">📤</span>
-            </span>
+            {isSubmitting ? (
+              <span className="flex items-center justify-center">
+                <span className="hidden md:inline">� Evaluating...</span>
+                <span className="md:hidden">📊</span>
+              </span>
+            ) : (
+              <span className="flex items-center justify-center">
+                <span className="hidden md:inline">🚀 Evaluate All</span>
+                <span className="md:hidden">�</span>
+              </span>
+            )}
           </button>
         </div>
       </div>

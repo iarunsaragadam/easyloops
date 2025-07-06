@@ -91,7 +91,8 @@ describe('useCodeExecution', () => {
     expect(mockExecuteCode).toHaveBeenCalledWith(
       'print("test")',
       mockTestCases,
-      'python'
+      'python',
+      { type: 'RUN', testCaseLimit: 2, createSnapshot: false }
     );
   });
 

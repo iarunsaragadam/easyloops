@@ -7,6 +7,7 @@ import { useQuestionState } from '@/features/question';
 import { useAuth } from '@/features/auth';
 import { Header, MainLayout, RightPane, MobileUsageTip } from '@/shared';
 import { ProblemDescription } from '@/features/question';
+import { ExecutionMode, SubmissionResult } from '@/shared/types';
 
 interface QuestionPageProps {
   questionId: string;
@@ -31,11 +32,13 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
     setTestResults,
     setIsRunning,
   } = useQuestionState(questionId);
-  const { executeCode } = useCodeExecution(pyodideManager);
+  const { executeCode, executeAndSubmit } = useCodeExecution(pyodideManager);
   const { isAuthorizedForGo, user } = useAuth();
 
   // Force editor to update when language changes
   const [editorKey, setEditorKey] = React.useState(0);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [lastSubmission, setLastSubmission] = React.useState<SubmissionResult | null>(null);
 
   // Custom language change handler
   const handleLanguageChangeWithUpdate = (language: string) => {
@@ -46,14 +49,13 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
   };
 
   const handleRunCode = async () => {
-    console.log('🚀 Run button clicked!');
+    console.log('🚀 Run button clicked - running sample test cases!');
 
-    // Add a timeout to prevent infinite loops
     const timeoutId = setTimeout(() => {
       console.log('⏰ Timeout reached - execution taking too long');
       setOutput('Execution timeout - taking too long');
       setIsRunning(false);
-    }, 10000); // 10 second timeout
+    }, 10000);
 
     try {
       console.log('Current state:', {
@@ -70,7 +72,6 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
         return;
       }
 
-      // Check if user is authorized for Go language
       if (appState.selectedLanguage === 'go' && !isAuthorizedForGo) {
         console.log('❌ User not authorized for Go');
         setOutput(
@@ -80,27 +81,33 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
         return;
       }
 
-      console.log('✅ Starting code execution...');
+      console.log('✅ Starting code execution in RUN mode (first 2 test cases)...');
       setIsRunning(true);
       setOutput('');
 
-      const codeToExecute =
-        appState.selectedLanguage === 'go'
-          ? appState.goCode
-          : appState.pythonCode;
-      console.log(
-        '📝 Executing code:',
-        codeToExecute.substring(0, 100) + '...'
-      );
-      console.log('🧪 Test cases:', appState.currentQuestion.testCases.length);
+      const codeToExecute = appState.selectedLanguage === 'go'
+        ? appState.goCode
+        : appState.pythonCode;
+
+      console.log('📝 Executing code:', codeToExecute.substring(0, 100) + '...');
+      console.log('🧪 Total test cases:', appState.currentQuestion.testCases.length);
+      console.log('📊 Running sample test cases (first 2)...');
+
+      const runMode: ExecutionMode = {
+        type: 'RUN',
+        testCaseLimit: 2,
+        createSnapshot: false,
+      };
 
       const result = await executeCode(
         codeToExecute,
         appState.currentQuestion.testCases,
-        appState.selectedLanguage
+        appState.selectedLanguage,
+        runMode
       );
-      console.log('✅ Execution completed:', result);
 
+      console.log('✅ Sample execution completed:', result);
+      
       clearTimeout(timeoutId);
       setOutput(result.output);
       setTestResults(result.testResults);
@@ -110,25 +117,92 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
       setOutput(`Error: ${error}`);
       setTestResults([]);
     } finally {
-      console.log('🏁 Execution finished, setting isRunning to false');
+      console.log('🏁 Sample execution finished');
       setIsRunning(false);
     }
   };
 
   const handleSubmitCode = async () => {
-    // TODO: Implement code submission
-    const codeToSubmit =
-      appState.selectedLanguage === 'go'
+    console.log('🚀 Evaluate All button clicked - running full submission!');
+
+    const timeoutId = setTimeout(() => {
+      console.log('⏰ Timeout reached - submission taking too long');
+      setOutput('Submission timeout - taking too long');
+      setIsSubmitting(false);
+    }, 30000); // 30 seconds timeout for full submission
+
+    try {
+      if (!appState.currentQuestion) {
+        console.log('❌ No question selected');
+        setOutput('No question selected');
+        clearTimeout(timeoutId);
+        return;
+      }
+
+      if (appState.selectedLanguage === 'go' && !isAuthorizedForGo) {
+        console.log('❌ User not authorized for Go');
+        setOutput(
+          'Error: Go language requires authentication. Please login with an authorized account.'
+        );
+        clearTimeout(timeoutId);
+        return;
+      }
+
+      console.log('✅ Starting full submission evaluation...');
+      setIsSubmitting(true);
+      setOutput('');
+
+      const codeToSubmit = appState.selectedLanguage === 'go'
         ? appState.goCode
         : appState.pythonCode;
-    console.log('Submitting code:', codeToSubmit);
+
+      console.log('📝 Submitting code:', codeToSubmit.substring(0, 100) + '...');
+      console.log('🧪 Total test cases:', appState.currentQuestion.testCases.length);
+      console.log('📊 Running full evaluation against all test cases...');
+
+      const { result, submission } = await executeAndSubmit(
+        codeToSubmit,
+        appState.currentQuestion.testCases,
+        appState.selectedLanguage,
+        appState.currentQuestion.id
+      );
+
+      console.log('✅ Full submission completed:', { result, submission });
+      
+      clearTimeout(timeoutId);
+      
+      const submissionSummary = `
+🎯 Full Evaluation Complete!
+
+📊 Results Summary:
+• Passed: ${submission.passedCount}/${submission.totalCount} test cases
+• Status: ${submission.overallStatus}
+• Execution Time: ${submission.executionTime}ms
+• Submission ID: ${submission.id}
+
+${result.output}
+
+💾 Submission saved as snapshot for future reference.
+      `.trim();
+
+      setOutput(submissionSummary);
+      setTestResults(result.testResults);
+      setLastSubmission(submission);
+    } catch (error) {
+      console.error('❌ Submission failed:', error);
+      clearTimeout(timeoutId);
+      setOutput(`Submission Error: ${error}`);
+      setTestResults([]);
+      setLastSubmission(null);
+    } finally {
+      console.log('🏁 Full submission finished');
+      setIsSubmitting(false);
+    }
   };
 
   const handleCodeChange = (code: string) => {
     const language = appState.selectedLanguage;
     console.log(`Updating ${language} code:`, code.substring(0, 100) + '...');
-
-    // Use the new generic function for any language
     setCodeForLanguage(language, code);
   };
 
@@ -163,6 +237,7 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
               language: appState.selectedLanguage,
               height: '100%',
               isRunning: appState.isRunning,
+              isSubmitting: isSubmitting,
               onRun: handleRunCode,
               onSubmit: handleSubmitCode,
             }}
@@ -170,13 +245,13 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
               testResults: appState.testResults,
               output: appState.output,
               height: layoutState.testResultsHeight,
+              lastSubmission: lastSubmission,
             }}
             onVerticalMouseDown={handleVerticalMouseDown}
           />
         }
       />
 
-      {/* Mobile Usage Tip */}
       <MobileUsageTip />
     </div>
   );

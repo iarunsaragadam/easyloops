@@ -1,5 +1,11 @@
 import { useCallback, useMemo } from 'react';
-import { TestCase, CodeExecutionResult, PyodideManager } from '@/shared/types';
+import { 
+  TestCase, 
+  CodeExecutionResult, 
+  PyodideManager, 
+  ExecutionMode, 
+  SubmissionResult 
+} from '@/shared/types';
 import { CodeExecutionService } from '../services';
 import { useAuth } from '@/features/auth';
 
@@ -15,14 +21,32 @@ export const useCodeExecution = (pyodideManager: PyodideManager) => {
     async (
       code: string,
       testCases: TestCase[],
-      language: string
+      language: string,
+      mode: ExecutionMode = { type: 'RUN', testCaseLimit: 2, createSnapshot: false }
     ): Promise<CodeExecutionResult> => {
       console.log(
-        `Executing ${language} code:`,
+        `Executing ${language} code in ${mode.type} mode:`,
         code.substring(0, 100) + '...'
       );
 
-      return await executionService.executeCode(code, testCases, language);
+      return await executionService.executeCode(code, testCases, language, mode);
+    },
+    [executionService]
+  );
+
+  const executeAndSubmit = useCallback(
+    async (
+      code: string,
+      testCases: TestCase[],
+      language: string,
+      questionId: string
+    ): Promise<{ result: CodeExecutionResult; submission: SubmissionResult }> => {
+      console.log(
+        `Submitting ${language} code for question ${questionId}:`,
+        code.substring(0, 100) + '...'
+      );
+
+      return await executionService.executeAndSubmit(code, testCases, language, questionId);
     },
     [executionService]
   );
@@ -43,6 +67,7 @@ export const useCodeExecution = (pyodideManager: PyodideManager) => {
 
   return {
     executeCode,
+    executeAndSubmit,
     isLanguageAvailable,
     requiresAuth,
   };
