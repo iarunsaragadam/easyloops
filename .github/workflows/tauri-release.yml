@@ -12,8 +12,12 @@ jobs:
     name: Build Tauri App
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        include:
+          - os: macos-latest
+          - os: ubuntu-22.04
+          - os: windows-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -56,38 +60,38 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: tauri-${{ matrix.os }}
+          name: ${{ runner.os }}-${{ matrix.target || 'default' }}
           path: |
-            src-tauri/target/release/bundle/**/*
-            !src-tauri/target/release/bundle/**/*.dSYM
+            src-tauri/target/release/bundle/
+            src-tauri/target/release/app*
 
   release:
-    name: Create GitHub Release
+    name: Create Release
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/tauri-cross-platform-ci'
+    if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: tauri-macos-latest
-          path: macos
-      - uses: actions/download-artifact@v4
-        with:
-          name: tauri-ubuntu-latest
-          path: linux
-      - uses: actions/download-artifact@v4
-        with:
-          name: tauri-windows-latest
-          path: windows
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: tauri-auto-release-${{ github.head_ref || github.ref_name }}
-          name: 'Tauri Release ${{ github.head_ref || github.ref_name }}'
+          tag_name: ${{ github.ref_name }}-v${{ github.run_number }}
+          name: Release ${{ github.ref_name }} v${{ github.run_number }}
+          body: |
+            Cross-platform Tauri desktop builds for ${{ github.ref_name }}
+
+            **Build Info:**
+            - Commit: ${{ github.sha }}
+            - Branch: ${{ github.ref_name }}
+            - Run: #${{ github.run_number }}
+          files: |
+            macos-default/*.dmg
+            macos-default/*.app
+            ubuntu-22.04-default/*.deb
+            ubuntu-22.04-default/*.AppImage
+            windows-latest-default/*.msi
+            windows-latest-default/*.exe
           draft: false
           prerelease: false
-          files: |
-            macos/**
-            linux/**
-            windows/**
