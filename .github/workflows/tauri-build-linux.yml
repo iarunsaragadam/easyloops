@@ -1,4 +1,4 @@
-name: Tauri Cross-Platform Release
+name: Tauri Linux Build & Release
 
 on:
   push:
@@ -8,16 +8,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build Tauri App
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - os: macos-latest
-          - os: ubuntu-22.04
-          - os: windows-latest
+  build-linux:
+    name: Build Linux Tauri App
+    runs-on: ubuntu-22.04
 
     steps:
       - uses: actions/checkout@v4
@@ -38,7 +31,6 @@ jobs:
         run: npm ci
 
       - name: Install Linux dependencies
-        if: runner.os == 'Linux'
         run: |
           sudo apt-get update
           sudo apt-get install -y \
@@ -59,38 +51,37 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ runner.os }}-${{ matrix.target || 'default' }}
+          name: linux-build
           path: |
             src-tauri/target/release/bundle/
             src-tauri/target/release/app*
 
-  release:
-    name: Create Release
-    needs: build
+  release-linux:
+    name: Create Linux Release
+    needs: build-linux
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Download all artifacts
+      - name: Download Linux artifacts
         uses: actions/download-artifact@v4
+        with:
+          name: linux-build
 
-      - name: Create Release
+      - name: Create Linux Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref_name }}-v${{ github.run_number }}
-          name: Release ${{ github.ref_name }} v${{ github.run_number }}
+          tag_name: linux-v${{ github.run_number }}
+          name: Linux Release v${{ github.run_number }}
           body: |
-            Cross-platform Tauri desktop builds for ${{ github.ref_name }}
+            Linux Tauri desktop build
 
             **Build Info:**
             - Commit: ${{ github.sha }}
             - Branch: ${{ github.ref_name }}
             - Run: #${{ github.run_number }}
+            - Platform: Linux (Ubuntu 22.04)
           files: |
-            macos-default/*.dmg
-            macos-default/*.app
-            ubuntu-22.04-default/*.deb
-            ubuntu-22.04-default/*.AppImage
-            windows-latest-default/*.msi
-            windows-latest-default/*.exe
+            **/*.deb
+            **/*.AppImage
           draft: false
           prerelease: false
