@@ -2,9 +2,9 @@ name: Tauri macOS Build & Release
 
 on:
   push:
-    branches: [main, tauri-cross-platform-ci]
+    branches: [main]
   pull_request:
-    branches: [main, tauri-cross-platform-ci]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
