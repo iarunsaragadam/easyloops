@@ -127,7 +127,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="h-screen bg-gray-50 flex flex-col">
+    <div className="h-screen bg-gray-50 dark:bg-gray-900 flex flex-col transition-colors">
       <Header
         selectedQuestionId={appState.selectedQuestionId}
         availableQuestions={appState.availableQuestions}
