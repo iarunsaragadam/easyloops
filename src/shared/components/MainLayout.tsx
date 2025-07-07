@@ -31,7 +31,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
     >
       {/* Left Pane - Problem Description */}
       <div
-        className="bg-white border-b md:border-b-0 md:border-r border-gray-200 overflow-y-auto left-pane"
+        className="bg-white dark:bg-gray-900 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700 overflow-y-auto left-pane"
         style={{
           width: isMobile ? '100%' : undefined,
           height: isMobile ? '50vh' : 'auto',
@@ -52,7 +52,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       {/* Right Pane - Code Editor and Test Results */}
       <div
         ref={rightPaneRef}
-        className="bg-white flex flex-col flex-1 right-pane"
+        className="bg-white dark:bg-gray-900 flex flex-col flex-1 right-pane"
         style={{
           width: isMobile ? '100%' : undefined,
           height: isMobile ? '50vh' : 'auto',
