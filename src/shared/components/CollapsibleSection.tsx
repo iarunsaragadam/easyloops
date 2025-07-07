@@ -22,17 +22,21 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
   };
 
   return (
-    <div className={`border border-gray-200 rounded-lg bg-white ${className}`}>
+    <div
+      className={`border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 ${className}`}
+    >
       <button
         onClick={toggleExpanded}
-        className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-50 rounded-t-lg transition-colors"
+        className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-50 dark:hover:bg-gray-800 rounded-t-lg transition-colors"
       >
         <div className="flex items-center gap-2">
           <span className="text-lg">{icon}</span>
-          <h3 className="text-sm font-medium text-gray-700">{title}</h3>
+          <h3 className="text-sm font-medium text-gray-700 dark:text-gray-200">
+            {title}
+          </h3>
         </div>
         <svg
-          className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
+          className={`w-4 h-4 text-gray-500 dark:text-gray-400 transition-transform duration-200 ${
             isExpanded ? 'rotate-180' : ''
           }`}
           fill="none"
@@ -49,9 +53,11 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-none' : 'max-h-0'}`}
+        className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-none' : 'max-h-0'} bg-white dark:bg-gray-900`}
       >
-        <div className="px-4 pb-4">{children}</div>
+        <div className="px-4 pb-4 text-gray-900 dark:text-gray-100">
+          {children}
+        </div>
       </div>
     </div>
   );
