@@ -183,6 +183,7 @@ describe('App', () => {
 
     mockUseCodeExecution.mockReturnValue({
       executeCode: mockExecuteCode,
+      executeAndSubmit: jest.fn(),
       isLanguageAvailable: jest.fn(() => true),
       requiresAuth: jest.fn(() => false),
     });
@@ -239,7 +240,8 @@ describe('App', () => {
       expect(mockExecuteCode).toHaveBeenCalledWith(
         'print("Hello")',
         defaultMockState.currentQuestion.testCases,
-        'python'
+        'python',
+        { type: 'RUN', testCaseLimit: 2, createSnapshot: false }
       );
       expect(mockSetOutput).toHaveBeenCalledWith('Hello');
       expect(mockSetTestResults).toHaveBeenCalledWith([]);
@@ -277,7 +279,8 @@ describe('App', () => {
       expect(mockExecuteCode).toHaveBeenCalledWith(
         'package main\nfunc main() {}',
         defaultMockState.currentQuestion.testCases,
-        'go'
+        'go',
+        { type: 'RUN', testCaseLimit: 2, createSnapshot: false }
       );
     });
   });

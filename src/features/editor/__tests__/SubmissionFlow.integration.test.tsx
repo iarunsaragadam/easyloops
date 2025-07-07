@@ -13,8 +13,12 @@ jest.mock('@/features/auth', () => ({
   useAuth: () => ({ user: { email: 'test@example.com' } }),
 }));
 
-const MockedCodeExecutionService = CodeExecutionService as jest.MockedClass<typeof CodeExecutionService>;
-const MockedLocalSubmissionService = LocalSubmissionService as jest.MockedClass<typeof LocalSubmissionService>;
+const MockedCodeExecutionService = CodeExecutionService as jest.MockedClass<
+  typeof CodeExecutionService
+>;
+const MockedLocalSubmissionService = LocalSubmissionService as jest.MockedClass<
+  typeof LocalSubmissionService
+>;
 
 // Test component that uses the submission flow
 const TestSubmissionComponent: React.FC = () => {
@@ -25,7 +29,8 @@ const TestSubmissionComponent: React.FC = () => {
     runCode: jest.fn(),
   };
 
-  const { executeCode, executeAndSubmit } = useCodeExecution(mockPyodideManager);
+  const { executeCode, executeAndSubmit } =
+    useCodeExecution(mockPyodideManager);
   const [output, setOutput] = React.useState('');
   const [isRunning, setIsRunning] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -51,14 +56,13 @@ const TestSubmissionComponent: React.FC = () => {
   const handleRun = async () => {
     setIsRunning(true);
     setOutput('');
-    
+
     try {
-      const result = await executeCode(
-        'print("hello")',
-        testCases,
-        'python',
-        { type: 'RUN', testCaseLimit: 2, createSnapshot: false }
-      );
+      const result = await executeCode('print("hello")', testCases, 'python', {
+        type: 'RUN',
+        testCaseLimit: 2,
+        createSnapshot: false,
+      });
       setOutput(result.output || 'No output');
     } catch (error) {
       setOutput(`Error: ${error}`);
@@ -70,7 +74,7 @@ const TestSubmissionComponent: React.FC = () => {
   const handleSubmit = async () => {
     setIsSubmitting(true);
     setOutput('');
-    
+
     try {
       const { submission } = await executeAndSubmit(
         'print("hello")',
@@ -78,8 +82,10 @@ const TestSubmissionComponent: React.FC = () => {
         'python',
         'question-1'
       );
-      
-      setOutput(`Submission ${submission.id} created: ${submission.passedCount}/${submission.totalCount} passed`);
+
+      setOutput(
+        `Submission ${submission.id} created: ${submission.passedCount}/${submission.totalCount} passed`
+      );
     } catch (error) {
       setOutput(`Submission Error: ${error}`);
     } finally {
@@ -89,15 +95,15 @@ const TestSubmissionComponent: React.FC = () => {
 
   return (
     <div>
-      <button 
-        onClick={handleRun} 
+      <button
+        onClick={handleRun}
         disabled={isRunning || isSubmitting}
         data-testid="run-button"
       >
         {isRunning ? 'Running...' : 'Run'}
       </button>
-      <button 
-        onClick={handleSubmit} 
+      <button
+        onClick={handleSubmit}
         disabled={isRunning || isSubmitting}
         data-testid="submit-button"
       >
@@ -116,17 +122,19 @@ describe('Submission Flow Integration', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    
+
     // Mock CodeExecutionService
     mockExecuteCode = jest.fn();
     mockExecuteAndSubmit = jest.fn();
     MockedCodeExecutionService.prototype.executeCode = mockExecuteCode;
-    MockedCodeExecutionService.prototype.executeAndSubmit = mockExecuteAndSubmit;
+    MockedCodeExecutionService.prototype.executeAndSubmit =
+      mockExecuteAndSubmit;
 
     // Mock LocalSubmissionService
     mockCreateSubmission = jest.fn();
     mockSaveSubmission = jest.fn();
-    MockedLocalSubmissionService.prototype.createSubmission = mockCreateSubmission;
+    MockedLocalSubmissionService.prototype.createSubmission =
+      mockCreateSubmission;
     MockedLocalSubmissionService.prototype.saveSubmission = mockSaveSubmission;
   });
 
@@ -134,7 +142,8 @@ describe('Submission Flow Integration', () => {
     it('should execute code with RUN mode and show results', async () => {
       const user = userEvent.setup();
       const mockResult: CodeExecutionResult = {
-        output: 'Sample Test Results (2/2 passed):\n✅ Test case 1\n✅ Test case 2',
+        output:
+          'Sample Test Results (2/2 passed):\n✅ Test case 1\n✅ Test case 2',
         testResults: [
           {
             testCase: 'Test case 1',
@@ -151,7 +160,6 @@ describe('Submission Flow Integration', () => {
             input: '',
           },
         ],
-        executionTime: 150,
       };
 
       mockExecuteCode.mockResolvedValue(mockResult);
@@ -170,12 +178,14 @@ describe('Submission Flow Integration', () => {
         );
       });
 
-      expect(screen.getByTestId('output')).toHaveTextContent('Sample Test Results (2/2 passed)');
+      expect(screen.getByTestId('output')).toHaveTextContent(
+        'Sample Test Results (2/2 passed)'
+      );
     });
 
     it('should handle run errors gracefully', async () => {
       const user = userEvent.setup();
-      
+
       mockExecuteCode.mockRejectedValue(new Error('Execution failed'));
 
       render(<TestSubmissionComponent />);
@@ -184,15 +194,19 @@ describe('Submission Flow Integration', () => {
       await user.click(runButton);
 
       await waitFor(() => {
-        expect(screen.getByTestId('output')).toHaveTextContent('Error: Error: Execution failed');
+        expect(screen.getByTestId('output')).toHaveTextContent(
+          'Error: Error: Execution failed'
+        );
       });
     });
 
     it('should disable both buttons during execution', async () => {
       const user = userEvent.setup();
-      
+
       // Make the execution take some time
-      mockExecuteCode.mockImplementation(() => new Promise(resolve => setTimeout(resolve, 100)));
+      mockExecuteCode.mockImplementation(
+        () => new Promise((resolve) => setTimeout(resolve, 100))
+      );
 
       render(<TestSubmissionComponent />);
 
@@ -211,9 +225,10 @@ describe('Submission Flow Integration', () => {
   describe('Submit Flow', () => {
     it('should execute code with SUBMIT mode and create submission', async () => {
       const user = userEvent.setup();
-      
+
       const mockResult: CodeExecutionResult = {
-        output: 'Full Evaluation Results (3/3 passed):\n✅ Test case 1\n✅ Test case 2\n✅ Test case 3',
+        output:
+          'Full Evaluation Results (3/3 passed):\n✅ Test case 1\n✅ Test case 2\n✅ Test case 3',
         testResults: [
           {
             testCase: 'Test case 1',
@@ -237,7 +252,6 @@ describe('Submission Flow Integration', () => {
             input: '',
           },
         ],
-        executionTime: 300,
       };
 
       const mockSubmission = {
@@ -273,14 +287,17 @@ describe('Submission Flow Integration', () => {
         );
       });
 
-      expect(screen.getByTestId('output')).toHaveTextContent('Submission submission-123 created: 3/3 passed');
+      expect(screen.getByTestId('output')).toHaveTextContent(
+        'Submission submission-123 created: 3/3 passed'
+      );
     });
 
     it('should handle partial submissions correctly', async () => {
       const user = userEvent.setup();
-      
+
       const mockResult: CodeExecutionResult = {
-        output: 'Full Evaluation Results (1/3 passed):\n✅ Test case 1\n❌ Test case 2\n❌ Test case 3',
+        output:
+          'Full Evaluation Results (1/3 passed):\n✅ Test case 1\n❌ Test case 2\n❌ Test case 3',
         testResults: [
           {
             testCase: 'Test case 1',
@@ -304,7 +321,6 @@ describe('Submission Flow Integration', () => {
             input: '',
           },
         ],
-        executionTime: 250,
       };
 
       const mockSubmission = {
@@ -332,13 +348,15 @@ describe('Submission Flow Integration', () => {
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(screen.getByTestId('output')).toHaveTextContent('Submission submission-456 created: 1/3 passed');
+        expect(screen.getByTestId('output')).toHaveTextContent(
+          'Submission submission-456 created: 1/3 passed'
+        );
       });
     });
 
     it('should handle submission errors gracefully', async () => {
       const user = userEvent.setup();
-      
+
       mockExecuteAndSubmit.mockRejectedValue(new Error('Submission failed'));
 
       render(<TestSubmissionComponent />);
@@ -347,15 +365,19 @@ describe('Submission Flow Integration', () => {
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(screen.getByTestId('output')).toHaveTextContent('Submission Error: Error: Submission failed');
+        expect(screen.getByTestId('output')).toHaveTextContent(
+          'Submission Error: Error: Submission failed'
+        );
       });
     });
 
     it('should show loading state during submission', async () => {
       const user = userEvent.setup();
-      
+
       // Make the submission take some time
-      mockExecuteAndSubmit.mockImplementation(() => new Promise(resolve => setTimeout(resolve, 100)));
+      mockExecuteAndSubmit.mockImplementation(
+        () => new Promise((resolve) => setTimeout(resolve, 100))
+      );
 
       render(<TestSubmissionComponent />);
 
@@ -374,10 +396,14 @@ describe('Submission Flow Integration', () => {
   describe('Button States', () => {
     it('should prevent multiple simultaneous executions', async () => {
       const user = userEvent.setup();
-      
+
       // Mock both to take some time
-      mockExecuteCode.mockImplementation(() => new Promise(resolve => setTimeout(resolve, 100)));
-      mockExecuteAndSubmit.mockImplementation(() => new Promise(resolve => setTimeout(resolve, 100)));
+      mockExecuteCode.mockImplementation(
+        () => new Promise((resolve) => setTimeout(resolve, 100))
+      );
+      mockExecuteAndSubmit.mockImplementation(
+        () => new Promise((resolve) => setTimeout(resolve, 100))
+      );
 
       render(<TestSubmissionComponent />);
 
@@ -386,7 +412,7 @@ describe('Submission Flow Integration', () => {
 
       // Start a run
       await user.click(runButton);
-      
+
       // Try to click submit while run is in progress
       await user.click(submitButton);
 
@@ -399,7 +425,7 @@ describe('Submission Flow Integration', () => {
 
     it('should re-enable buttons after execution completes', async () => {
       const user = userEvent.setup();
-      
+
       mockExecuteCode.mockResolvedValue({
         output: 'Test output',
         testResults: [],

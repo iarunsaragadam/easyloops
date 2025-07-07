@@ -1,8 +1,32 @@
-import { SubmissionResult, SubmissionService, TestResult, SubmissionSnapshot } from '@/shared/types';
+import {
+  SubmissionResult,
+  SubmissionService,
+  TestResult,
+  SubmissionSnapshot,
+  TestCase,
+} from '@/shared/types';
 
 export class LocalSubmissionService implements SubmissionService {
   private static readonly STORAGE_KEY = 'easyloops_submissions';
   private static readonly SNAPSHOTS_KEY = 'easyloops_snapshots';
+
+  async submitCode(
+    code: string,
+    testCases: TestCase[],
+    language: string,
+    questionId: string
+  ): Promise<SubmissionResult> {
+    // Dummy implementation for local
+    const submission = this.createSubmission(
+      code,
+      questionId,
+      language,
+      [], // testResults dummy
+      0 // executionTime dummy
+    );
+    await this.saveSubmission(submission);
+    return submission;
+  }
 
   createSubmission(
     code: string,
@@ -11,7 +35,7 @@ export class LocalSubmissionService implements SubmissionService {
     testResults: TestResult[],
     executionTime: number
   ): SubmissionResult {
-    const passedCount = testResults.filter(result => result.passed).length;
+    const passedCount = testResults.filter((result) => result.passed).length;
     const failedCount = testResults.length - passedCount;
     const totalCount = testResults.length;
 
@@ -36,6 +60,8 @@ export class LocalSubmissionService implements SubmissionService {
       totalCount,
       executionTime,
       overallStatus,
+      success: passedCount === totalCount,
+      message: overallStatus,
     };
   }
 
@@ -43,10 +69,10 @@ export class LocalSubmissionService implements SubmissionService {
     try {
       const existingSubmissions = await this.getSubmissions();
       const updatedSubmissions = [...existingSubmissions, submission];
-      
+
       // Keep only the latest 100 submissions per question
       const filteredSubmissions = this.pruneSubmissions(updatedSubmissions);
-      
+
       localStorage.setItem(
         LocalSubmissionService.STORAGE_KEY,
         JSON.stringify(filteredSubmissions)
@@ -59,7 +85,7 @@ export class LocalSubmissionService implements SubmissionService {
         questionId: submission.questionId,
         language: submission.language,
         code: submission.code,
-        result: submission,
+        testResults: submission.testResults,
       };
 
       await this.saveSnapshot(snapshot);
@@ -82,7 +108,7 @@ export class LocalSubmissionService implements SubmissionService {
       ) as SubmissionResult[];
 
       if (questionId) {
-        return submissions.filter(s => s.questionId === questionId);
+        return submissions.filter((s) => s.questionId === questionId);
       }
 
       return submissions;
@@ -95,7 +121,7 @@ export class LocalSubmissionService implements SubmissionService {
   async getSubmissionById(id: string): Promise<SubmissionResult | null> {
     try {
       const submissions = await this.getSubmissions();
-      return submissions.find(s => s.id === id) || null;
+      return submissions.find((s) => s.id === id) || null;
     } catch (error) {
       console.error('Failed to get submission by ID:', error);
       return null;
@@ -108,10 +134,12 @@ export class LocalSubmissionService implements SubmissionService {
       if (!stored) return [];
 
       const snapshots: SubmissionSnapshot[] = JSON.parse(stored).map(
-        (snapshot: Partial<SubmissionSnapshot> & { 
-          timestamp: string;
-          result: Partial<SubmissionResult> & { timestamp: string };
-        }) => ({
+        (
+          snapshot: Partial<SubmissionSnapshot> & {
+            timestamp: string;
+            result: Partial<SubmissionResult> & { timestamp: string };
+          }
+        ) => ({
           ...snapshot,
           timestamp: new Date(snapshot.timestamp),
           result: {
@@ -122,10 +150,12 @@ export class LocalSubmissionService implements SubmissionService {
       ) as SubmissionSnapshot[];
 
       if (questionId) {
-        return snapshots.filter(s => s.questionId === questionId);
+        return snapshots.filter((s) => s.questionId === questionId);
       }
 
-      return snapshots.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+      return snapshots.sort(
+        (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
+      );
     } catch (error) {
       console.error('Failed to get snapshots:', error);
       return [];
@@ -136,10 +166,10 @@ export class LocalSubmissionService implements SubmissionService {
     try {
       const existingSnapshots = await this.getSnapshots();
       const updatedSnapshots = [...existingSnapshots, snapshot];
-      
+
       // Keep only the latest 20 snapshots per question
       const filteredSnapshots = this.pruneSnapshots(updatedSnapshots);
-      
+
       localStorage.setItem(
         LocalSubmissionService.SNAPSHOTS_KEY,
         JSON.stringify(filteredSnapshots)
@@ -154,38 +184,52 @@ export class LocalSubmissionService implements SubmissionService {
     return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  private pruneSubmissions(submissions: SubmissionResult[]): SubmissionResult[] {
+  private pruneSubmissions(
+    submissions: SubmissionResult[]
+  ): SubmissionResult[] {
     // Group by question ID and keep only the latest 100 per question
-    const grouped = submissions.reduce((acc, submission) => {
-      if (!acc[submission.questionId]) {
-        acc[submission.questionId] = [];
-      }
-      acc[submission.questionId].push(submission);
-      return acc;
-    }, {} as Record<string, SubmissionResult[]>);
+    const grouped = submissions.reduce(
+      (acc, submission) => {
+        if (!acc[submission.questionId]) {
+          acc[submission.questionId] = [];
+        }
+        acc[submission.questionId].push(submission);
+        return acc;
+      },
+      {} as Record<string, SubmissionResult[]>
+    );
 
     const pruned: SubmissionResult[] = [];
-    Object.values(grouped).forEach(questionSubmissions => {
-      const sorted = questionSubmissions.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+    Object.values(grouped).forEach((questionSubmissions) => {
+      const sorted = questionSubmissions.sort(
+        (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
+      );
       pruned.push(...sorted.slice(0, 100));
     });
 
     return pruned;
   }
 
-  private pruneSnapshots(snapshots: SubmissionSnapshot[]): SubmissionSnapshot[] {
+  private pruneSnapshots(
+    snapshots: SubmissionSnapshot[]
+  ): SubmissionSnapshot[] {
     // Group by question ID and keep only the latest 20 per question
-    const grouped = snapshots.reduce((acc, snapshot) => {
-      if (!acc[snapshot.questionId]) {
-        acc[snapshot.questionId] = [];
-      }
-      acc[snapshot.questionId].push(snapshot);
-      return acc;
-    }, {} as Record<string, SubmissionSnapshot[]>);
+    const grouped = snapshots.reduce(
+      (acc, snapshot) => {
+        if (!acc[snapshot.questionId]) {
+          acc[snapshot.questionId] = [];
+        }
+        acc[snapshot.questionId].push(snapshot);
+        return acc;
+      },
+      {} as Record<string, SubmissionSnapshot[]>
+    );
 
     const pruned: SubmissionSnapshot[] = [];
-    Object.values(grouped).forEach(questionSnapshots => {
-      const sorted = questionSnapshots.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+    Object.values(grouped).forEach((questionSnapshots) => {
+      const sorted = questionSnapshots.sort(
+        (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
+      );
       pruned.push(...sorted.slice(0, 20));
     });
 

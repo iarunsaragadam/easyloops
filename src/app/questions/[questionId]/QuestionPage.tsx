@@ -7,7 +7,7 @@ import { useQuestionState } from '@/features/question';
 import { useAuth } from '@/features/auth';
 import { Header, MainLayout, RightPane, MobileUsageTip } from '@/shared';
 import { ProblemDescription } from '@/features/question';
-import { ExecutionMode, SubmissionResult } from '@/shared/types';
+import { ExecutionMode } from '@/shared/types';
 
 interface QuestionPageProps {
   questionId: string;
@@ -38,7 +38,6 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
   // Force editor to update when language changes
   const [editorKey, setEditorKey] = React.useState(0);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [lastSubmission, setLastSubmission] = React.useState<SubmissionResult | null>(null);
 
   // Custom language change handler
   const handleLanguageChangeWithUpdate = (language: string) => {
@@ -81,16 +80,22 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
         return;
       }
 
-      console.log('✅ Starting code execution in RUN mode (first 2 test cases)...');
+      console.log(
+        '✅ Starting code execution in RUN mode (first 2 test cases)...'
+      );
       setIsRunning(true);
       setOutput('');
 
-      const codeToExecute = appState.selectedLanguage === 'go'
-        ? appState.goCode
-        : appState.pythonCode;
+      const codeToExecute = getCurrentCode();
 
-      console.log('📝 Executing code:', codeToExecute.substring(0, 100) + '...');
-      console.log('🧪 Total test cases:', appState.currentQuestion.testCases.length);
+      console.log(
+        '📝 Executing code:',
+        codeToExecute.substring(0, 100) + '...'
+      );
+      console.log(
+        '🧪 Total test cases:',
+        appState.currentQuestion.testCases.length
+      );
       console.log('📊 Running sample test cases (first 2)...');
 
       const runMode: ExecutionMode = {
@@ -107,7 +112,7 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
       );
 
       console.log('✅ Sample execution completed:', result);
-      
+
       clearTimeout(timeoutId);
       setOutput(result.output);
       setTestResults(result.testResults);
@@ -152,12 +157,16 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
       setIsSubmitting(true);
       setOutput('');
 
-      const codeToSubmit = appState.selectedLanguage === 'go'
-        ? appState.goCode
-        : appState.pythonCode;
+      const codeToSubmit = getCurrentCode();
 
-      console.log('📝 Submitting code:', codeToSubmit.substring(0, 100) + '...');
-      console.log('🧪 Total test cases:', appState.currentQuestion.testCases.length);
+      console.log(
+        '📝 Submitting code:',
+        codeToSubmit.substring(0, 100) + '...'
+      );
+      console.log(
+        '🧪 Total test cases:',
+        appState.currentQuestion.testCases.length
+      );
       console.log('📊 Running full evaluation against all test cases...');
 
       const { result, submission } = await executeAndSubmit(
@@ -168,9 +177,9 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
       );
 
       console.log('✅ Full submission completed:', { result, submission });
-      
+
       clearTimeout(timeoutId);
-      
+
       const submissionSummary = `
 🎯 Full Evaluation Complete!
 
@@ -187,13 +196,11 @@ ${result.output}
 
       setOutput(submissionSummary);
       setTestResults(result.testResults);
-      setLastSubmission(submission);
     } catch (error) {
       console.error('❌ Submission failed:', error);
       clearTimeout(timeoutId);
       setOutput(`Submission Error: ${error}`);
       setTestResults([]);
-      setLastSubmission(null);
     } finally {
       console.log('🏁 Full submission finished');
       setIsSubmitting(false);
@@ -202,7 +209,6 @@ ${result.output}
 
   const handleCodeChange = (code: string) => {
     const language = appState.selectedLanguage;
-    console.log(`Updating ${language} code:`, code.substring(0, 100) + '...');
     setCodeForLanguage(language, code);
   };
 
@@ -245,7 +251,6 @@ ${result.output}
               testResults: appState.testResults,
               output: appState.output,
               height: layoutState.testResultsHeight,
-              lastSubmission: lastSubmission,
             }}
             onVerticalMouseDown={handleVerticalMouseDown}
           />

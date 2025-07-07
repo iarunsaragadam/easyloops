@@ -25,6 +25,48 @@ export interface CodeExecutionResult {
   executionTime?: number;
 }
 
+export interface ExecutionMode {
+  type: 'RUN' | 'SUBMIT';
+  testCaseLimit?: number;
+  createSnapshot?: boolean;
+}
+
+export interface SubmissionResult {
+  id: string;
+  success: boolean;
+  message: string;
+  timestamp: Date;
+  questionId: string;
+  language: string;
+  code: string;
+  testResults: TestResult[];
+  passedCount: number;
+  failedCount: number;
+  totalCount: number;
+  executionTime?: number;
+  overallStatus: 'PASSED' | 'PARTIAL' | 'FAILED';
+}
+
+export interface SubmissionSnapshot {
+  id: string;
+  timestamp: Date;
+  questionId: string;
+  language: string;
+  code: string;
+  testResults: TestResult[];
+}
+
+export interface SubmissionService {
+  submitCode: (
+    code: string,
+    testCases: TestCase[],
+    language: string,
+    questionId: string
+  ) => Promise<SubmissionResult>;
+  getSubmissions: (questionId?: string) => Promise<SubmissionResult[]>;
+  getSnapshots: (questionId?: string) => Promise<SubmissionSnapshot[]>;
+}
+
 export interface ResizablePaneProps {
   width: number;
   onWidthChange: (width: number) => void;
@@ -97,47 +139,4 @@ export interface AppState {
   selectedQuestionId: string;
   selectedLanguage: string;
   isLoadingQuestion: boolean;
-}
-
-export interface SubmissionResult {
-  id: string;
-  timestamp: Date;
-  questionId: string;
-  language: string;
-  code: string;
-  testResults: TestResult[];
-  passedCount: number;
-  failedCount: number;
-  totalCount: number;
-  executionTime: number;
-  overallStatus: 'PASSED' | 'FAILED' | 'PARTIAL';
-}
-
-export interface ExecutionMode {
-  type: 'RUN' | 'SUBMIT';
-  testCaseLimit?: number;
-  createSnapshot: boolean;
-}
-
-export interface SubmissionSnapshot {
-  id: string;
-  timestamp: Date;
-  questionId: string;
-  language: string;
-  code: string;
-  result: SubmissionResult;
-}
-
-export interface SubmissionService {
-  createSubmission(
-    code: string,
-    questionId: string,
-    language: string,
-    testResults: TestResult[],
-    executionTime: number
-  ): SubmissionResult;
-  
-  saveSubmission(submission: SubmissionResult): Promise<void>;
-  getSubmissions(questionId?: string): Promise<SubmissionResult[]>;
-  getSubmissionById(id: string): Promise<SubmissionResult | null>;
 }

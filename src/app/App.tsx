@@ -32,7 +32,8 @@ const App: React.FC = () => {
   // Force editor to update when language changes
   const [editorKey, setEditorKey] = React.useState(0);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [lastSubmission, setLastSubmission] = React.useState<SubmissionResult | null>(null);
+  const [lastSubmission, setLastSubmission] =
+    React.useState<SubmissionResult | null>(null);
 
   // Custom language change handler
   const handleLanguageChangeWithUpdate = (language: string) => {
@@ -75,16 +76,22 @@ const App: React.FC = () => {
         return;
       }
 
-      console.log('✅ Starting code execution in RUN mode (first 2 test cases)...');
+      console.log(
+        '✅ Starting code execution in RUN mode (first 2 test cases)...'
+      );
       setIsRunning(true);
       setOutput('');
 
-      const codeToExecute = appState.selectedLanguage === 'go'
-        ? appState.goCode
-        : appState.pythonCode;
+      const codeToExecute = getCurrentCode();
 
-      console.log('📝 Executing code:', codeToExecute.substring(0, 100) + '...');
-      console.log('🧪 Total test cases:', appState.currentQuestion.testCases.length);
+      console.log(
+        '📝 Executing code:',
+        codeToExecute.substring(0, 100) + '...'
+      );
+      console.log(
+        '🧪 Total test cases:',
+        appState.currentQuestion.testCases.length
+      );
       console.log('📊 Running sample test cases (first 2)...');
 
       const runMode: ExecutionMode = {
@@ -101,7 +108,7 @@ const App: React.FC = () => {
       );
 
       console.log('✅ Sample execution completed:', result);
-      
+
       clearTimeout(timeoutId);
       setOutput(result.output);
       setTestResults(result.testResults);
@@ -146,12 +153,16 @@ const App: React.FC = () => {
       setIsSubmitting(true);
       setOutput('');
 
-      const codeToSubmit = appState.selectedLanguage === 'go'
-        ? appState.goCode
-        : appState.pythonCode;
+      const codeToSubmit = getCurrentCode();
 
-      console.log('📝 Submitting code:', codeToSubmit.substring(0, 100) + '...');
-      console.log('🧪 Total test cases:', appState.currentQuestion.testCases.length);
+      console.log(
+        '📝 Submitting code:',
+        codeToSubmit.substring(0, 100) + '...'
+      );
+      console.log(
+        '🧪 Total test cases:',
+        appState.currentQuestion.testCases.length
+      );
       console.log('📊 Running full evaluation against all test cases...');
 
       const { result, submission } = await executeAndSubmit(
@@ -162,9 +173,9 @@ const App: React.FC = () => {
       );
 
       console.log('✅ Full submission completed:', { result, submission });
-      
+
       clearTimeout(timeoutId);
-      
+
       const submissionSummary = `
 🎯 Full Evaluation Complete!
 
