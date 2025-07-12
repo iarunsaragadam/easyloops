@@ -1,0 +1,72 @@
+name: Tauri macOS Build & Release
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-macos:
+    name: Build macOS Tauri App
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Tauri CLI
+        run: npm install -g @tauri-apps/cli
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Tauri app
+        run: npm run tauri:build
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-build
+          path: |
+            src-tauri/target/release/bundle/
+            src-tauri/target/release/app*
+
+  release-macos:
+    name: Create macOS Release
+    needs: build-macos
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Download macOS artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: macos-build
+
+      - name: Create macOS Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: macos-v${{ github.run_number }}
+          name: macOS Release v${{ github.run_number }}
+          body: |
+            macOS Tauri desktop build
+
+            **Build Info:**
+            - Commit: ${{ github.sha }}
+            - Branch: ${{ github.ref_name }}
+            - Run: #${{ github.run_number }}
+            - Platform: macOS (Apple Silicon)
+          files: |
+            **/*.dmg
+            **/*.app
+          draft: false
+          prerelease: false
