@@ -199,6 +199,18 @@ npm run test:components   # Test React components
 npm run test:utils        # Test utility functions
 ```
 
+## 📝 Sample PR Process
+
+This is a sample pull request to demonstrate the contribution workflow:
+
+1. **Create a feature branch**: `git checkout -b sample-pr-documentation-update`
+2. **Make your changes**: Update documentation, add features, or fix bugs
+3. **Commit your changes**: `git commit -m "docs: add sample PR documentation section"`
+4. **Push to your fork**: `git push origin sample-pr-documentation-update`
+5. **Create a Pull Request**: Submit your changes for review
+
+This sample PR adds a documentation section to help new contributors understand the PR process.
+
 ## 🛠️ Development
 
 ### Available Scripts
