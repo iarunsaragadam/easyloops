@@ -2,12 +2,11 @@
 
 ## Problem Statement
 
-Write a program that demonstrates proper variable declaration and initialization for different data types. Your program should read values from standard input and use them to demonstrate various programming concepts.
+Write a program that demonstrates proper [[wiki:variable]] declaration and initialization for different data types. Your program should read values from standard input and use them to demonstrate various programming concepts.
 
 Your program should:
 
 1. Read input values and declare variables of the following types:
-
    - Integer (read from line 1)
    - String (read from line 2)
    - Boolean (read from line 3)
@@ -17,7 +16,6 @@ Your program should:
 2. Print each variable with a descriptive label showing its type and value
 
 3. Demonstrate variable reassignment by:
-
    - Reading a new integer value (from line 6)
    - Reassigning the integer variable to this new value
    - Printing the updated value

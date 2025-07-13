@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getAvailableQuestions } from '@/shared/lib';
 import { formatQuestionName } from '@/shared/lib/formatters';
+import { SimpleHeader } from '@/shared/components';
 
 export default function QuestionsPage() {
   const [questions, setQuestions] = useState<string[]>([]);
@@ -21,7 +22,9 @@ export default function QuestionsPage() {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center transition-colors">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-300">Loading problems...</p>
+          <p className="text-gray-600 dark:text-gray-300">
+            Loading problems...
+          </p>
         </div>
       </div>
     );
@@ -29,26 +32,7 @@ export default function QuestionsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
-      {/* Header */}
-      <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700 transition-colors">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <Link
-                href="/"
-                className="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              >
-                🧠 EasyLoops
-              </Link>
-            </div>
-            <nav className="flex space-x-8">
-              <span className="text-gray-900 dark:text-white px-3 py-2 text-sm font-medium">
-                Practice Problems
-              </span>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <SimpleHeader />
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

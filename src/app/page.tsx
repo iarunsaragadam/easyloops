@@ -3,35 +3,22 @@
 import React from 'react';
 import Link from 'next/link';
 import { DEFAULT_QUESTION_ID } from '@/shared/constants';
+import { SimpleHeader } from '@/shared/components';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 transition-colors">
-      {/* Header */}
-      <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700 transition-colors">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">🧠 EasyLoops</h1>
-            </div>
-            <nav className="flex space-x-8">
-              <Link
-                href="/questions"
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Practice Problems
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <SimpleHeader />
 
       {/* Hero Section */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
             Master Programming
-            <span className="text-blue-600 dark:text-blue-400"> One Problem at a Time</span>
+            <span className="text-blue-600 dark:text-blue-400">
+              {' '}
+              One Problem at a Time
+            </span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
             Interactive coding challenges designed to build your programming
@@ -99,28 +86,36 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 text-center">
               <div className="text-2xl mb-2">🔢</div>
-              <h4 className="font-semibold text-gray-900 dark:text-white">Fundamentals</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">
+                Fundamentals
+              </h4>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                 Variables, data types, operators
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 text-center">
               <div className="text-2xl mb-2">🔄</div>
-              <h4 className="font-semibold text-gray-900 dark:text-white">Control Flow</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">
+                Control Flow
+              </h4>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                 Loops, conditionals, functions
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 text-center">
               <div className="text-2xl mb-2">📊</div>
-              <h4 className="font-semibold text-gray-900 dark:text-white">Data Structures</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">
+                Data Structures
+              </h4>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                 Arrays, lists, trees, graphs
               </p>
             </div>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 text-center">
               <div className="text-2xl mb-2">⚡</div>
-              <h4 className="font-semibold text-gray-900 dark:text-white">Algorithms</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white">
+                Algorithms
+              </h4>
               <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                 Sorting, searching, optimization
               </p>

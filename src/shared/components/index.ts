@@ -4,5 +4,7 @@ export { default as DraggableDivider } from './DraggableDivider';
 export { default as RightPane } from './RightPane';
 export { default as MainLayout } from './MainLayout';
 export { default as Header } from './Header';
+export { default as SimpleHeader } from './SimpleHeader';
+export { default as ClientHeader } from './ClientHeader';
 export { default as DebugPanel } from './DebugPanel';
 export { default as MobileUsageTip } from './MobileUsageTip';
