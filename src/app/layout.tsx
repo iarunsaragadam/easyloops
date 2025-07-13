@@ -1,21 +1,24 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import ThemeProvider from "@/shared/components/ThemeProvider";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import ThemeProvider from '@/shared/components/ThemeProvider';
+import { Provider } from 'react-redux';
+import { store } from '@/store';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "EasyLoops - Learn Programming",
-  description: "Interactive coding challenges designed to build your programming skills systematically.",
+  title: 'EasyLoops - Learn Programming',
+  description:
+    'Interactive coding challenges designed to build your programming skills systematically.',
 };
 
 export default function RootLayout({
@@ -29,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          {children}
+          <Provider store={store}>{children}</Provider>
         </ThemeProvider>
       </body>
     </html>
