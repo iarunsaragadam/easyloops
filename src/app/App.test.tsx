@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import App from './App';
 import * as usePyodideModule from '@/features/editor';
 import * as useResizableLayoutModule from '@/shared';
-import * as useAppStateModule from '@/features/question';
+import * as useAppContextModule from '@/contexts';
 import * as useCodeExecutionModule from '@/features/editor';
 import * as useAuthModule from '@/features/auth';
 import { User } from 'firebase/auth';
@@ -74,8 +74,11 @@ jest.mock('@/shared', () => ({
   MobileUsageTip: () => <div data-testid="mobile-tip" />,
 }));
 
+jest.mock('@/contexts', () => ({
+  useAppContext: jest.fn(),
+}));
+
 jest.mock('@/features/question', () => ({
-  useAppState: jest.fn(),
   ProblemDescription: ({
     question,
     isLoading,
@@ -104,7 +107,7 @@ const mockUsePyodide = jest.mocked(usePyodideModule.usePyodide);
 const mockUseResizableLayout = jest.mocked(
   useResizableLayoutModule.useResizableLayout
 );
-const mockUseAppState = jest.mocked(useAppStateModule.useAppState);
+const mockUseAppContext = jest.mocked(useAppContextModule.useAppContext);
 const mockUseCodeExecution = jest.mocked(
   useCodeExecutionModule.useCodeExecution
 );
@@ -168,8 +171,14 @@ describe('App', () => {
       handleVerticalMouseDown: jest.fn(),
     });
 
-    mockUseAppState.mockReturnValue({
+    mockUseAppContext.mockReturnValue({
       appState: defaultMockState,
+      currentQuestion: defaultMockState.currentQuestion,
+      selectedLanguage: defaultMockState.selectedLanguage,
+      isRunning: defaultMockState.isRunning,
+      isLoadingQuestion: defaultMockState.isLoadingQuestion,
+      output: defaultMockState.output,
+      testResults: defaultMockState.testResults,
       handleQuestionChange: mockHandleQuestionChange,
       handleLanguageChange: mockHandleLanguageChange,
       setPythonCode: mockSetPythonCode,
@@ -179,6 +188,10 @@ describe('App', () => {
       setOutput: mockSetOutput,
       setTestResults: mockSetTestResults,
       setIsRunning: mockSetIsRunning,
+      clearCodeStubsCache: jest.fn(),
+      fetchAvailableQuestions: jest.fn(),
+      fetchQuestion: jest.fn(),
+      fetchCodeStub: jest.fn(),
     });
 
     mockUseCodeExecution.mockReturnValue({
@@ -257,8 +270,14 @@ describe('App', () => {
     mockExecuteCode.mockResolvedValue(mockResult);
 
     // Update state to use Go
-    mockUseAppState.mockReturnValue({
+    mockUseAppContext.mockReturnValue({
       appState: { ...defaultMockState, selectedLanguage: 'go' },
+      currentQuestion: defaultMockState.currentQuestion,
+      selectedLanguage: 'go',
+      isRunning: defaultMockState.isRunning,
+      isLoadingQuestion: defaultMockState.isLoadingQuestion,
+      output: defaultMockState.output,
+      testResults: defaultMockState.testResults,
       handleQuestionChange: mockHandleQuestionChange,
       handleLanguageChange: mockHandleLanguageChange,
       setPythonCode: mockSetPythonCode,
@@ -268,6 +287,10 @@ describe('App', () => {
       setOutput: mockSetOutput,
       setTestResults: mockSetTestResults,
       setIsRunning: mockSetIsRunning,
+      clearCodeStubsCache: jest.fn(),
+      fetchAvailableQuestions: jest.fn(),
+      fetchQuestion: jest.fn(),
+      fetchCodeStub: jest.fn(),
     });
 
     render(<App />);
@@ -286,8 +309,14 @@ describe('App', () => {
   });
 
   it('should show error when no question is selected', async () => {
-    mockUseAppState.mockReturnValue({
+    mockUseAppContext.mockReturnValue({
       appState: { ...defaultMockState, currentQuestion: null },
+      currentQuestion: null,
+      selectedLanguage: defaultMockState.selectedLanguage,
+      isRunning: defaultMockState.isRunning,
+      isLoadingQuestion: defaultMockState.isLoadingQuestion,
+      output: defaultMockState.output,
+      testResults: defaultMockState.testResults,
       handleQuestionChange: mockHandleQuestionChange,
       handleLanguageChange: mockHandleLanguageChange,
       setPythonCode: mockSetPythonCode,
@@ -297,6 +326,10 @@ describe('App', () => {
       setOutput: mockSetOutput,
       setTestResults: mockSetTestResults,
       setIsRunning: mockSetIsRunning,
+      clearCodeStubsCache: jest.fn(),
+      fetchAvailableQuestions: jest.fn(),
+      fetchQuestion: jest.fn(),
+      fetchCodeStub: jest.fn(),
     });
 
     render(<App />);
@@ -319,8 +352,14 @@ describe('App', () => {
     });
 
     // Update state to use Go
-    mockUseAppState.mockReturnValue({
+    mockUseAppContext.mockReturnValue({
       appState: { ...defaultMockState, selectedLanguage: 'go' },
+      currentQuestion: defaultMockState.currentQuestion,
+      selectedLanguage: 'go',
+      isRunning: defaultMockState.isRunning,
+      isLoadingQuestion: defaultMockState.isLoadingQuestion,
+      output: defaultMockState.output,
+      testResults: defaultMockState.testResults,
       handleQuestionChange: mockHandleQuestionChange,
       handleLanguageChange: mockHandleLanguageChange,
       setPythonCode: mockSetPythonCode,
@@ -330,6 +369,10 @@ describe('App', () => {
       setOutput: mockSetOutput,
       setTestResults: mockSetTestResults,
       setIsRunning: mockSetIsRunning,
+      clearCodeStubsCache: jest.fn(),
+      fetchAvailableQuestions: jest.fn(),
+      fetchQuestion: jest.fn(),
+      fetchCodeStub: jest.fn(),
     });
 
     render(<App />);
@@ -379,8 +422,14 @@ describe('App', () => {
   });
 
   it('should show loading state when running', () => {
-    mockUseAppState.mockReturnValue({
+    mockUseAppContext.mockReturnValue({
       appState: { ...defaultMockState, isRunning: true },
+      currentQuestion: defaultMockState.currentQuestion,
+      selectedLanguage: defaultMockState.selectedLanguage,
+      isRunning: defaultMockState.isRunning,
+      isLoadingQuestion: defaultMockState.isLoadingQuestion,
+      output: defaultMockState.output,
+      testResults: defaultMockState.testResults,
       handleQuestionChange: mockHandleQuestionChange,
       handleLanguageChange: mockHandleLanguageChange,
       setPythonCode: mockSetPythonCode,
@@ -390,6 +439,10 @@ describe('App', () => {
       setOutput: mockSetOutput,
       setTestResults: mockSetTestResults,
       setIsRunning: mockSetIsRunning,
+      clearCodeStubsCache: jest.fn(),
+      fetchAvailableQuestions: jest.fn(),
+      fetchQuestion: jest.fn(),
+      fetchCodeStub: jest.fn(),
     });
 
     render(<App />);
@@ -409,8 +462,14 @@ describe('App', () => {
       },
     ];
 
-    mockUseAppState.mockReturnValue({
+    mockUseAppContext.mockReturnValue({
       appState: { ...defaultMockState, testResults: mockTestResults },
+      currentQuestion: defaultMockState.currentQuestion,
+      selectedLanguage: defaultMockState.selectedLanguage,
+      isRunning: defaultMockState.isRunning,
+      isLoadingQuestion: defaultMockState.isLoadingQuestion,
+      output: defaultMockState.output,
+      testResults: defaultMockState.testResults,
       handleQuestionChange: mockHandleQuestionChange,
       handleLanguageChange: mockHandleLanguageChange,
       setPythonCode: mockSetPythonCode,
@@ -420,6 +479,10 @@ describe('App', () => {
       setOutput: mockSetOutput,
       setTestResults: mockSetTestResults,
       setIsRunning: mockSetIsRunning,
+      clearCodeStubsCache: jest.fn(),
+      fetchAvailableQuestions: jest.fn(),
+      fetchQuestion: jest.fn(),
+      fetchCodeStub: jest.fn(),
     });
 
     render(<App />);

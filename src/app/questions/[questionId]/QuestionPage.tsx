@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { usePyodide, useCodeExecution } from '@/features/editor';
 import { useResizableLayout } from '@/shared';
-import { useQuestionState } from '@/features/question';
+import { useAppContext } from '@/contexts';
 import { useAuth } from '@/features/auth';
 import { Header, MainLayout, RightPane, MobileUsageTip } from '@/shared';
 import { ProblemDescription } from '@/features/question';
@@ -24,6 +24,11 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
   } = useResizableLayout();
   const {
     appState,
+    currentQuestion,
+    selectedLanguage,
+    isRunning,
+    output,
+    testResults,
     handleQuestionChange,
     handleLanguageChange,
     setCodeForLanguage,
@@ -31,9 +36,16 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
     setOutput,
     setTestResults,
     setIsRunning,
-  } = useQuestionState(questionId);
+  } = useAppContext();
   const { executeCode, executeAndSubmit } = useCodeExecution(pyodideManager);
   const { isAuthorizedForGo, user } = useAuth();
+
+  // Set the question ID when the component mounts
+  useEffect(() => {
+    if (questionId && questionId !== appState.selectedQuestionId) {
+      handleQuestionChange(questionId);
+    }
+  }, [questionId, appState.selectedQuestionId, handleQuestionChange]);
 
   // Force editor to update when language changes
   const [editorKey, setEditorKey] = React.useState(0);
@@ -60,20 +72,20 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
 
     try {
       console.log('Current state:', {
-        currentQuestion: appState.currentQuestion?.name,
-        selectedLanguage: appState.selectedLanguage,
+        currentQuestion: currentQuestion?.name,
+        selectedLanguage,
         isAuthorizedForGo,
         user: user?.email,
       });
 
-      if (!appState.currentQuestion) {
+      if (!currentQuestion) {
         console.log('❌ No question selected');
         setOutput('No question selected');
         clearTimeout(timeoutId);
         return;
       }
 
-      if (appState.selectedLanguage === 'go' && !isAuthorizedForGo) {
+      if (selectedLanguage === 'go' && !isAuthorizedForGo) {
         console.log('❌ User not authorized for Go');
         setOutput(
           'Error: Go language requires authentication. Please login with an authorized account.'
@@ -94,10 +106,7 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
         '📝 Executing code:',
         codeToExecute.substring(0, 100) + '...'
       );
-      console.log(
-        '🧪 Total test cases:',
-        appState.currentQuestion.testCases.length
-      );
+      console.log('🧪 Total test cases:', currentQuestion.testCases.length);
       console.log('📊 Running sample test cases (first 2)...');
 
       const runMode: ExecutionMode = {
@@ -108,8 +117,8 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
 
       const result = await executeCode(
         codeToExecute,
-        appState.currentQuestion.testCases,
-        appState.selectedLanguage,
+        currentQuestion.testCases,
+        selectedLanguage,
         runMode
       );
 
@@ -139,14 +148,14 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
     }, 30000); // 30 seconds timeout for full submission
 
     try {
-      if (!appState.currentQuestion) {
+      if (!currentQuestion) {
         console.log('❌ No question selected');
         setOutput('No question selected');
         clearTimeout(timeoutId);
         return;
       }
 
-      if (appState.selectedLanguage === 'go' && !isAuthorizedForGo) {
+      if (selectedLanguage === 'go' && !isAuthorizedForGo) {
         console.log('❌ User not authorized for Go');
         setOutput(
           'Error: Go language requires authentication. Please login with an authorized account.'
@@ -165,17 +174,14 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
         '📝 Submitting code:',
         codeToSubmit.substring(0, 100) + '...'
       );
-      console.log(
-        '🧪 Total test cases:',
-        appState.currentQuestion.testCases.length
-      );
+      console.log('🧪 Total test cases:', currentQuestion.testCases.length);
       console.log('📊 Running full evaluation against all test cases...');
 
       const { result, submission } = await executeAndSubmit(
         codeToSubmit,
-        appState.currentQuestion.testCases,
-        appState.selectedLanguage,
-        appState.currentQuestion.id
+        currentQuestion.testCases,
+        selectedLanguage,
+        currentQuestion.id
       );
 
       console.log('✅ Full submission completed:', { result, submission });
@@ -211,8 +217,7 @@ ${result.output}
   };
 
   const handleCodeChange = (code: string) => {
-    const language = appState.selectedLanguage;
-    setCodeForLanguage(language, code);
+    setCodeForLanguage(selectedLanguage, code);
   };
 
   return (
@@ -222,7 +227,7 @@ ${result.output}
         availableQuestions={appState.availableQuestions}
         onQuestionChange={handleQuestionChange}
         isLoading={appState.isLoadingQuestion}
-        selectedLanguage={appState.selectedLanguage}
+        selectedLanguage={selectedLanguage}
         onLanguageChange={handleLanguageChangeWithUpdate}
       />
 
@@ -233,7 +238,7 @@ ${result.output}
         onHorizontalMouseDown={handleHorizontalMouseDown}
         leftPane={
           <ProblemDescription
-            question={appState.currentQuestion}
+            question={currentQuestion}
             isLoading={appState.isLoadingQuestion}
           />
         }
@@ -243,16 +248,16 @@ ${result.output}
             codeEditorProps={{
               value: getCurrentCode(),
               onChange: handleCodeChange,
-              language: appState.selectedLanguage,
+              language: selectedLanguage,
               height: '100%',
-              isRunning: appState.isRunning,
+              isRunning: isRunning,
               isSubmitting: isSubmitting,
               onRun: handleRunCode,
               onSubmit: handleSubmitCode,
             }}
             testResultsProps={{
-              testResults: appState.testResults,
-              output: appState.output,
+              testResults: testResults,
+              output: output,
               height: layoutState.testResultsHeight,
               lastSubmission: lastSubmission,
             }}
