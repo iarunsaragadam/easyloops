@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import ThemeProvider from '@/shared/components/ThemeProvider';
 import ReduxProvider from '@/shared/components/ReduxProvider';
-import { AppProvider } from '@/contexts/AppContext';
+import { AppProvider, AuthProvider } from '@/contexts';
 import { Suspense } from 'react';
 
 const geistSans = Geist({
@@ -52,9 +52,11 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <ReduxProvider>
-            <Suspense fallback={<div>Loading...</div>}>
-              <AppProvider>{children}</AppProvider>
-            </Suspense>
+            <AuthProvider>
+              <Suspense fallback={<div>Loading...</div>}>
+                <AppProvider>{children}</AppProvider>
+              </Suspense>
+            </AuthProvider>
           </ReduxProvider>
         </ThemeProvider>
       </body>

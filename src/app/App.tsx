@@ -2,7 +2,7 @@ import React from 'react';
 import { usePyodide, useCodeExecution } from '@/features/editor';
 import { useResizableLayout } from '@/shared';
 import { useAppContext } from '@/contexts';
-import { useAuth } from '@/features/auth';
+import { useAuthContext } from '@/contexts';
 import { Header, MainLayout, RightPane, MobileUsageTip } from '@/shared';
 import { ProblemDescription } from '@/features/question';
 import { ExecutionMode, SubmissionResult } from '@/shared/types';
@@ -32,7 +32,7 @@ const App: React.FC = () => {
     setIsRunning,
   } = useAppContext();
   const { executeCode, executeAndSubmit } = useCodeExecution(pyodideManager);
-  const { isAuthorizedForGo, user } = useAuth();
+  const { isAuthorizedForGo, user } = useAuthContext();
 
   // Force editor to update when language changes
   const [editorKey, setEditorKey] = React.useState(0);

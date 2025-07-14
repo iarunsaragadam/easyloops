@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { SUPPORTED_LANGUAGES } from '@/shared/constants';
-import { useAuth } from '@/features/auth';
+import { useAuthContext } from '@/contexts';
 
 interface LanguageSelectorProps {
   selectedLanguage: string;
@@ -11,7 +11,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   selectedLanguage,
   onLanguageChange,
 }) => {
-  const { isAuthorizedForGo } = useAuth();
+  const { isAuthorizedForGo } = useAuthContext();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 

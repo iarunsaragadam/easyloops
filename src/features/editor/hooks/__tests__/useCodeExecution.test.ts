@@ -2,11 +2,20 @@ import { renderHook, act } from '@testing-library/react';
 import { useCodeExecution } from '../useCodeExecution';
 import { CodeExecutionService } from '../../services';
 import { TestCase, CodeExecutionResult, PyodideManager } from '@/shared/types';
-import * as useAuthModule from '@/features/auth';
-
 // Mock the service
 jest.mock('../../services');
-jest.mock('@/features/auth');
+jest.mock('@/contexts', () => ({
+  useAuthContext: () => ({
+    user: null,
+    isAuthenticated: false,
+    isAuthorizedForGo: false,
+    loading: false,
+    error: null,
+    login: jest.fn(),
+    logout: jest.fn(),
+    clearError: jest.fn(),
+  }),
+}));
 
 const mockExecuteCode = jest.fn();
 const mockIsLanguageAvailable = jest.fn();
@@ -15,9 +24,6 @@ const mockRequiresAuth = jest.fn();
 const MockCodeExecutionService = CodeExecutionService as jest.MockedClass<
   typeof CodeExecutionService
 >;
-
-// Mock useAuth hook
-const mockUseAuth = jest.mocked(useAuthModule.useAuth);
 
 describe('useCodeExecution', () => {
   const mockPyodideManager = {
@@ -37,15 +43,6 @@ describe('useCodeExecution', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-
-    // Mock useAuth to return expected structure
-    mockUseAuth.mockReturnValue({
-      user: null,
-      login: jest.fn(),
-      logout: jest.fn(),
-      loading: false,
-      isAuthorizedForGo: false,
-    });
 
     MockCodeExecutionService.mockImplementation(
       () =>
