@@ -1,91 +1,21 @@
-'use client';
+import type { Metadata } from 'next';
+import { QuestionsPageClient } from './QuestionsPageClient';
 
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { getAvailableQuestions } from '@/shared/lib';
-import { formatQuestionName } from '@/shared/lib/formatters';
-import { SimpleHeader } from '@/shared/components';
+export const metadata: Metadata = {
+  title: 'EasyLoops - All Practice Problems',
+  description:
+    'Browse all interactive programming challenges and practice problems',
+  alternates: {
+    canonical: '/questions',
+  },
+  openGraph: {
+    url: 'https://easyloops.app/questions',
+    title: 'EasyLoops - All Practice Problems',
+    description:
+      'Browse all interactive programming challenges and practice problems',
+  },
+};
 
 export default function QuestionsPage() {
-  const [questions, setQuestions] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    getAvailableQuestions().then((questionList) => {
-      setQuestions(questionList);
-      setLoading(false);
-    });
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center transition-colors">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-300">
-            Loading problems...
-          </p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors">
-      <SimpleHeader />
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Practice Problems
-          </h1>
-          <p className="text-gray-600 dark:text-gray-300">
-            Choose a problem to start practicing. Problems are organized by
-            difficulty and topic.
-          </p>
-        </div>
-
-        {/* Problem Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {questions.map((questionId) => (
-            <Link
-              key={questionId}
-              href={`/questions/${questionId}`}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow duration-200 hover:border-blue-300 dark:hover:border-blue-500"
-            >
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {formatQuestionName(questionId)}
-                </h3>
-                <span className="text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full">
-                  {questionId.split('-')[0]}
-                </span>
-              </div>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                Practice {questionId.replace(/-/g, ' ').replace(/\d+-/, '')}{' '}
-                concepts and improve your skills.
-              </p>
-              <div className="flex items-center text-sm text-blue-600 dark:text-blue-400">
-                <span>Start Problem</span>
-                <svg
-                  className="w-4 h-4 ml-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </main>
-    </div>
-  );
+  return <QuestionsPageClient />;
 }

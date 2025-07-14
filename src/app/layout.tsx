@@ -20,6 +20,24 @@ export const metadata: Metadata = {
   title: 'EasyLoops - Learn Programming',
   description:
     'Interactive coding challenges designed to build your programming skills systematically.',
+  metadataBase: new URL('https://easyloops.app'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    url: 'https://easyloops.app',
+    siteName: 'EasyLoops',
+    title: 'EasyLoops - Learn Programming',
+    description:
+      'Interactive coding challenges designed to build your programming skills systematically.',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EasyLoops - Learn Programming',
+    description:
+      'Interactive coding challenges designed to build your programming skills systematically.',
+  },
 };
 
 export default function RootLayout({
