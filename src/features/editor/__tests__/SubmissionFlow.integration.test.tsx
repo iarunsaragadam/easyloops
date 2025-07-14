@@ -9,8 +9,17 @@ import { PyodideManager, TestCase, CodeExecutionResult } from '@/shared/types';
 // Mock the services
 jest.mock('../services/CodeExecutionService');
 jest.mock('../services/SubmissionService');
-jest.mock('@/features/auth', () => ({
-  useAuth: () => ({ user: { email: 'test@example.com' } }),
+jest.mock('@/contexts', () => ({
+  useAuthContext: () => ({
+    user: { email: 'test@example.com' },
+    isAuthenticated: true,
+    isAuthorizedForGo: true,
+    loading: false,
+    error: null,
+    login: jest.fn(),
+    logout: jest.fn(),
+    clearError: jest.fn(),
+  }),
 }));
 
 const MockedCodeExecutionService = CodeExecutionService as jest.MockedClass<

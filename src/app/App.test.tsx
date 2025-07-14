@@ -6,7 +6,6 @@ import * as usePyodideModule from '@/features/editor';
 import * as useResizableLayoutModule from '@/shared';
 import * as useAppContextModule from '@/contexts';
 import * as useCodeExecutionModule from '@/features/editor';
-import * as useAuthModule from '@/features/auth';
 import { User } from 'firebase/auth';
 
 // Mock all the hooks and components
@@ -98,8 +97,9 @@ jest.mock('@/features/question', () => ({
   ),
 }));
 
-jest.mock('@/features/auth', () => ({
-  useAuth: jest.fn(),
+jest.mock('@/contexts', () => ({
+  useAppContext: jest.fn(),
+  useAuthContext: jest.fn(),
 }));
 
 // Get mocked functions
@@ -111,7 +111,7 @@ const mockUseAppContext = jest.mocked(useAppContextModule.useAppContext);
 const mockUseCodeExecution = jest.mocked(
   useCodeExecutionModule.useCodeExecution
 );
-const mockUseAuth = jest.mocked(useAuthModule.useAuth);
+const mockUseAuthContext = jest.mocked(useAppContextModule.useAuthContext);
 
 describe('App', () => {
   const mockExecuteCode = jest.fn();
@@ -201,8 +201,9 @@ describe('App', () => {
       requiresAuth: jest.fn(() => false),
     });
 
-    mockUseAuth.mockReturnValue({
+    mockUseAuthContext.mockReturnValue({
       isAuthorizedForGo: true,
+      isAuthenticated: true,
       user: {
         email: 'test@example.com',
         emailVerified: true,
@@ -225,6 +226,8 @@ describe('App', () => {
       login: jest.fn(),
       logout: jest.fn(),
       loading: false,
+      error: null,
+      clearError: jest.fn(),
     });
   });
 
@@ -343,12 +346,15 @@ describe('App', () => {
   });
 
   it('should show error when user is not authorized for Go', async () => {
-    mockUseAuth.mockReturnValue({
+    mockUseAuthContext.mockReturnValue({
       isAuthorizedForGo: false,
+      isAuthenticated: false,
       user: null,
       login: jest.fn(),
       logout: jest.fn(),
       loading: false,
+      error: null,
+      clearError: jest.fn(),
     });
 
     // Update state to use Go

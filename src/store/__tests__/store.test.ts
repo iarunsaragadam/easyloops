@@ -10,9 +10,10 @@ describe('Redux Store', () => {
       expect(typeof store.subscribe).toBe('function');
     });
 
-    it('should have the app reducer', () => {
+    it('should have the app and auth reducers', () => {
       const state = store.getState();
       expect(state).toHaveProperty('app');
+      expect(state).toHaveProperty('auth');
     });
 
     it('should have correct initial state', () => {

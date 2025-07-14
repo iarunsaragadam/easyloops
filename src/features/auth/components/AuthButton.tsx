@@ -1,8 +1,8 @@
 import React from 'react';
-import { useAuth } from '@/features/auth';
+import { useAuthContext } from '@/contexts';
 
 const AuthButton: React.FC = () => {
-  const { user, loading, login, logout } = useAuth();
+  const { user, loading, login, logout } = useAuthContext();
 
   if (loading) {
     return (

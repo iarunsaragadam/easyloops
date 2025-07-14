@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from '@/features/auth';
+import { useAuthContext } from '@/contexts';
 import { Question, TestResult } from '@/shared/types';
 
 interface DebugPanelProps {
@@ -22,7 +22,7 @@ const DebugPanel: React.FC<DebugPanelProps> = ({
   testResults,
   pyodideManager,
 }) => {
-  const { user, isAuthorizedForGo } = useAuth();
+  const { user, isAuthorizedForGo } = useAuthContext();
 
   return (
     <div className="bg-yellow-50 border border-yellow-200 p-4 rounded mb-4">
