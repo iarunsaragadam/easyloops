@@ -102,6 +102,35 @@ const appSlice = createSlice({
     clearCodeStubsCache: () => {
       Object.keys(codeStubsCache).forEach((key) => delete codeStubsCache[key]);
     },
+    clearSessionForQuestion: (state, action: PayloadAction<string>) => {
+      const questionId = action.payload;
+
+      // Clear from cache if it's the current question
+      if (questionId === state.selectedQuestionId) {
+        state.pythonCode = '';
+        state.goCode = '';
+        state.output = '';
+        state.testResults = [];
+        state.isRunning = false;
+      }
+    },
+    loadSessionForQuestion: (
+      state,
+      action: PayloadAction<{
+        questionId: string;
+        language: string;
+        code: string;
+      }>
+    ) => {
+      const { language, code } = action.payload;
+
+      if (language === 'python') {
+        state.pythonCode = code;
+      } else if (language === 'go') {
+        state.goCode = code;
+      }
+      codeStubsCache[language] = code;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -131,8 +160,8 @@ const appSlice = createSlice({
       // Fetch code stub
       .addCase(fetchCodeStub.fulfilled, (state, action) => {
         const { language, stub } = action.payload;
-        codeStubsCache[language] = stub;
 
+        codeStubsCache[language] = stub;
         if (language === 'python') {
           state.pythonCode = stub;
         } else if (language === 'go') {
@@ -155,6 +184,8 @@ export const {
   setTestResults,
   setIsRunning,
   clearCodeStubsCache,
+  clearSessionForQuestion,
+  loadSessionForQuestion,
 } = appSlice.actions;
 
 // Selectors

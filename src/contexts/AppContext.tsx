@@ -26,6 +26,7 @@ import {
   setTestResults,
   setIsRunning,
   clearCodeStubsCache,
+  clearSessionForQuestion,
   fetchAvailableQuestions,
   fetchQuestion,
   fetchCodeStub,
@@ -54,6 +55,7 @@ interface AppContextType {
   setTestResults: (testResults: ReturnType<typeof selectTestResults>) => void;
   setIsRunning: (isRunning: boolean) => void;
   clearCodeStubsCache: () => void;
+  clearSessionForQuestion: (questionId: string) => void;
 
   // Async actions
   fetchAvailableQuestions: () => Promise<void>;
@@ -65,14 +67,6 @@ interface AppContextType {
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
-
-export const useAppContext = () => {
-  const context = useContext(AppContext);
-  if (context === undefined) {
-    throw new Error('useAppContext must be used within an AppProvider');
-  }
-  return context;
-};
 
 interface AppProviderProps {
   children: React.ReactNode;
@@ -162,62 +156,65 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     dispatch(clearCodeStubsCache());
   }, [dispatch]);
 
+  const clearSessionForQuestionAction = useCallback(
+    (questionId: string) => {
+      dispatch(clearSessionForQuestion(questionId));
+    },
+    [dispatch]
+  );
+
   // Async actions
   const fetchAvailableQuestionsAction = useCallback(async () => {
-    await dispatch(fetchAvailableQuestions());
+    await dispatch(fetchAvailableQuestions()).unwrap();
   }, [dispatch]);
 
   const fetchQuestionAction = useCallback(
     async (questionId: string) => {
-      await dispatch(fetchQuestion(questionId));
+      await dispatch(fetchQuestion(questionId)).unwrap();
     },
     [dispatch]
   );
 
   const fetchCodeStubAction = useCallback(
     async (questionId: string, language: SupportedLanguage) => {
-      await dispatch(fetchCodeStub({ questionId, language }));
+      await dispatch(fetchCodeStub({ questionId, language })).unwrap();
     },
     [dispatch]
   );
 
-  // Sync question ID with URL
+  // Effects
   useEffect(() => {
+    // Sync selected question ID with URL query parameters
     const questionFromUrl = searchParams.get('q');
     if (questionFromUrl && questionFromUrl !== appState.selectedQuestionId) {
-      dispatch(setSelectedQuestionId(questionFromUrl));
+      handleQuestionChange(questionFromUrl);
     }
-  }, [searchParams, appState.selectedQuestionId, dispatch]);
+  }, [searchParams, appState.selectedQuestionId, handleQuestionChange]);
 
-  // Load available questions on mount
   useEffect(() => {
+    // Fetch available questions on mount
     fetchAvailableQuestionsAction();
   }, [fetchAvailableQuestionsAction]);
 
-  // Load question when selectedQuestionId changes
   useEffect(() => {
+    // Fetch current question when selectedQuestionId changes
     if (appState.selectedQuestionId) {
       fetchQuestionAction(appState.selectedQuestionId);
     }
   }, [appState.selectedQuestionId, fetchQuestionAction]);
 
-  // Load code stub when question or language changes
   useEffect(() => {
-    const lang = appState.selectedLanguage;
-    if (appState.selectedQuestionId && lang) {
+    // Fetch code stub when question or selected language changes
+    if (appState.selectedQuestionId && selectedLanguage) {
       fetchCodeStubAction(
         appState.selectedQuestionId,
-        lang as SupportedLanguage
+        selectedLanguage as SupportedLanguage
       );
     }
-  }, [
-    appState.selectedQuestionId,
-    appState.selectedLanguage,
-    fetchCodeStubAction,
-  ]);
+  }, [appState.selectedQuestionId, selectedLanguage, fetchCodeStubAction]);
 
-  // Clear code stub cache when question changes
   useEffect(() => {
+    // Clear code stub cache when question changes
     clearCodeStubsCacheAction();
   }, [appState.selectedQuestionId, clearCodeStubsCacheAction]);
 
@@ -242,6 +239,7 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
     setTestResults: setTestResultsAction,
     setIsRunning: setIsRunningAction,
     clearCodeStubsCache: clearCodeStubsCacheAction,
+    clearSessionForQuestion: clearSessionForQuestionAction,
 
     // Async actions
     fetchAvailableQuestions: fetchAvailableQuestionsAction,
@@ -252,4 +250,12 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   return (
     <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
   );
+};
+
+export const useAppContext = (): AppContextType => {
+  const context = useContext(AppContext);
+  if (context === undefined) {
+    throw new Error('useAppContext must be used within an AppProvider');
+  }
+  return context;
 };
