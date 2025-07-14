@@ -1,13 +1,46 @@
 import { notFound } from 'next/navigation';
-import { wikiSlugs } from '@/constants/wikiSlugs';
-import ClientHeader from '@/shared/components/ClientHeader';
 import WikiPageClient from './WikiPageClient';
 import { loadAllWikiLanguages } from '@/shared/lib/wikiLoader';
+import { wikiSlugs } from '@/constants/wikiSlugs';
+import type { Metadata } from 'next';
+import ClientHeader from '@/shared/components/ClientHeader';
 
 interface WikiPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  if (!wikiSlugs.includes(slug as (typeof wikiSlugs)[number])) {
+    return {
+      title: 'Page Not Found',
+    };
+  }
+
+  const title = slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+  return {
+    title: `EasyLoops Wiki - ${title}`,
+    description: `Learn about ${title.toLowerCase()} in programming with EasyLoops`,
+    alternates: {
+      canonical: `/wiki/${slug}`,
+    },
+    openGraph: {
+      url: `https://easyloops.app/wiki/${slug}`,
+      title: `EasyLoops Wiki - ${title}`,
+      description: `Learn about ${title.toLowerCase()} in programming with EasyLoops`,
+    },
+  };
 }
 
 export default async function WikiPage({ params }: WikiPageProps) {
