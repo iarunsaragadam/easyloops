@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { usePyodide, useCodeExecution } from '@/features/editor';
+import { useCodeExecution } from '@/features/editor';
 import { useResizableLayout } from '@/shared';
 import { useQuestionState } from '@/features/question';
 import { useAuth } from '@/features/auth';
@@ -14,7 +14,6 @@ interface QuestionPageProps {
 }
 
 const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
-  const pyodideManager = usePyodide();
   const {
     layoutState,
     containerRef,
@@ -32,7 +31,7 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
     setTestResults,
     setIsRunning,
   } = useQuestionState(questionId);
-  const { executeCode, executeAndSubmit } = useCodeExecution(pyodideManager);
+  const { executeCode, executeAndSubmit } = useCodeExecution();
   const { isAuthorizedForGo, user } = useAuth();
 
   // Force editor to update when language changes
