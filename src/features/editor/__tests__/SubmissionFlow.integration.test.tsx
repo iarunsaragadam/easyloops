@@ -1,36 +1,41 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { CodeExecutionService } from '../services/CodeExecutionService';
+
 import { LocalSubmissionService } from '../services/SubmissionService';
 import { useCodeExecution } from '../hooks/useCodeExecution';
-import { PyodideManager, TestCase, CodeExecutionResult } from '@/shared/types';
+import { TestCase, CodeExecutionResult } from '@/shared/types';
 
 // Mock the services
-jest.mock('../services/CodeExecutionService');
+jest.mock('../services/execution/CodeExecutionService');
 jest.mock('../services/SubmissionService');
 jest.mock('@/features/auth', () => ({
   useAuth: () => ({ user: { email: 'test@example.com' } }),
 }));
 
-const MockedCodeExecutionService = CodeExecutionService as jest.MockedClass<
-  typeof CodeExecutionService
->;
+// Mock useCodeExecution hook
+const mockExecuteCode = jest.fn();
+const mockExecuteAndSubmit = jest.fn();
+
+jest.mock('../hooks/useCodeExecution', () => ({
+  useCodeExecution: () => ({
+    executeCode: mockExecuteCode,
+    executeAndSubmit: mockExecuteAndSubmit,
+    isLanguageAvailable: () => true,
+    requiresAuth: () => false,
+  }),
+}));
+
+
 const MockedLocalSubmissionService = LocalSubmissionService as jest.MockedClass<
   typeof LocalSubmissionService
 >;
 
 // Test component that uses the submission flow
 const TestSubmissionComponent: React.FC = () => {
-  const mockPyodideManager: PyodideManager = {
-    pyodide: null,
-    isLoaded: true,
-    loadingError: null,
-    runCode: jest.fn(),
-  };
 
-  const { executeCode, executeAndSubmit } =
-    useCodeExecution(mockPyodideManager);
+
+  const { executeCode, executeAndSubmit } = useCodeExecution();
   const [output, setOutput] = React.useState('');
   const [isRunning, setIsRunning] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -115,20 +120,11 @@ const TestSubmissionComponent: React.FC = () => {
 };
 
 describe('Submission Flow Integration', () => {
-  let mockExecuteCode: jest.Mock;
-  let mockExecuteAndSubmit: jest.Mock;
   let mockCreateSubmission: jest.Mock;
   let mockSaveSubmission: jest.Mock;
 
   beforeEach(() => {
     jest.clearAllMocks();
-
-    // Mock CodeExecutionService
-    mockExecuteCode = jest.fn();
-    mockExecuteAndSubmit = jest.fn();
-    MockedCodeExecutionService.prototype.executeCode = mockExecuteCode;
-    MockedCodeExecutionService.prototype.executeAndSubmit =
-      mockExecuteAndSubmit;
 
     // Mock LocalSubmissionService
     mockCreateSubmission = jest.fn();

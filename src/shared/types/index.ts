@@ -111,18 +111,6 @@ export interface ProblemDescriptionProps {
   isLoading: boolean;
 }
 
-// PyodideManager is now deprecated - use the new execution system instead
-export interface PyodideManager {
-  pyodide: unknown;
-  isLoaded: boolean;
-  loadingError?: string | null;
-  runCode: (
-    code: string,
-    testCases: TestCase[],
-    mode?: ExecutionMode
-  ) => Promise<CodeExecutionResult>;
-}
-
 export interface LayoutState {
   leftPaneWidth: number;
   testResultsHeight: number;

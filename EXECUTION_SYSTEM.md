@@ -109,7 +109,7 @@ interface ExecutionStrategy {
 #### PyodideRuntime (Python)
 
 - **Purpose**: Executes Python code using Pyodide WASM
-- **Features**: 
+- **Features**:
   - Automatic Pyodide loading from CDN
   - Stdin/stdout handling
   - Error capture and reporting
@@ -163,7 +163,7 @@ interface ExecutionStrategy {
 ## Language Support Matrix
 
 | Language   | WASM Support | Judge0 Support | Auth Required |
-|------------|--------------|----------------|---------------|
+| ---------- | ------------ | -------------- | ------------- |
 | Python     | ✅ Primary   | ✅ Fallback    | No (WASM)     |
 | JavaScript | ✅ Primary   | ✅ Fallback    | No (WASM)     |
 | TypeScript | ✅ Primary   | ✅ Fallback    | No (WASM)     |
@@ -331,28 +331,31 @@ The system is designed to be extensible:
 ### From Old System
 
 1. **Update imports**:
+
    ```typescript
    // Old
    import { CodeExecutionService } from './CodeExecutionService';
-   
+
    // New
    import { CodeExecutionService } from './execution';
    ```
 
 2. **Update constructor**:
+
    ```typescript
    // Old
    new CodeExecutionService(pyodideManager, user);
-   
+
    // New
    new CodeExecutionService(user);
    ```
 
 3. **Update hooks**:
+
    ```typescript
    // Old
-   const { executeCode } = useCodeExecution(pyodideManager);
-   
+   const { executeCode } = useCodeExecution();
+
    // New
    const { executeCode } = useCodeExecution();
    ```

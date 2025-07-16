@@ -9,7 +9,7 @@
     "node": "22.5.0"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3010",
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings 0",
