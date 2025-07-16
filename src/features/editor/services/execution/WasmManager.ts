@@ -1,15 +1,29 @@
 import { WasmRuntime } from './interfaces';
 import { TestCase, CodeExecutionResult } from '@/shared/types';
-import { PyodideRuntime } from './runtimes/PyodideRuntime';
-import { QuickJsRuntime } from './runtimes/QuickJsRuntime';
-import { RubyRuntime } from './runtimes/RubyRuntime';
+import {
+  PyodideRuntime,
+  QuickJsRuntime,
+  RubyRuntime,
+} from './internal/wasm-runtimes';
 
 export class WasmManager {
   private runtimes: Map<string, WasmRuntime> = new Map();
+  private loadingPromises: Map<string, Promise<void>> = new Map();
 
   constructor(runtimeList: WasmRuntime[]) {
     for (const runtime of runtimeList) {
       this.runtimes.set(runtime.language, runtime);
+      // Start loading each runtime immediately
+      this.loadingPromises.set(
+        runtime.language,
+        runtime.load().catch((error) => {
+          console.warn(
+            `Failed to load runtime for ${runtime.language}:`,
+            error
+          );
+          // Don't throw, just log the error
+        })
+      );
     }
   }
 
@@ -29,8 +43,33 @@ export class WasmManager {
 
   /**
    * Check if a runtime is loaded for the given language
+   * This method waits for the loading to complete if it's still in progress
    */
-  isLoaded(language: string): boolean {
+  async isLoaded(language: string): Promise<boolean> {
+    const runtime = this.runtimes.get(language);
+    if (!runtime) {
+      return false;
+    }
+
+    // Wait for the loading promise to complete
+    const loadingPromise = this.loadingPromises.get(language);
+    if (loadingPromise) {
+      try {
+        await loadingPromise;
+      } catch {
+        // Loading failed, return false
+        return false;
+      }
+    }
+
+    return runtime.isLoaded();
+  }
+
+  /**
+   * Synchronous check for runtime loading status
+   * This doesn't wait for loading to complete
+   */
+  isLoadedSync(language: string): boolean {
     const runtime = this.runtimes.get(language);
     return runtime ? runtime.isLoaded() : false;
   }
@@ -44,19 +83,26 @@ export class WasmManager {
       throw new Error(`Unsupported language: ${language}`);
     }
 
-    await runtime.load();
+    const loadingPromise = runtime.load();
+    this.loadingPromises.set(language, loadingPromise);
+    await loadingPromise;
   }
 
   /**
    * Execute code using the runtime for the given language
    */
-  async runCode(language: string, code: string, tests: TestCase[]): Promise<CodeExecutionResult> {
+  async runCode(
+    language: string,
+    code: string,
+    tests: TestCase[]
+  ): Promise<CodeExecutionResult> {
     const runtime = this.runtimes.get(language);
     if (!runtime) {
       throw new Error(`Unsupported language: ${language}`);
     }
 
-    if (!runtime.isLoaded()) {
+    // Ensure the runtime is loaded before executing
+    if (!(await this.isLoaded(language))) {
       throw new Error(`Runtime for ${language} is not loaded yet`);
     }
 
@@ -75,7 +121,7 @@ export class WasmManager {
    */
   getRuntimeStatus(): Record<string, { loaded: boolean; language: string }> {
     const status: Record<string, { loaded: boolean; language: string }> = {};
-    
+
     for (const [language, runtime] of this.runtimes) {
       status[language] = {
         loaded: runtime.isLoaded(),
@@ -90,8 +136,8 @@ export class WasmManager {
    * Load all runtimes in parallel
    */
   async loadAll(): Promise<void> {
-    const loadPromises = Array.from(this.runtimes.values()).map(runtime => 
-      runtime.load().catch(error => {
+    const loadPromises = Array.from(this.runtimes.values()).map((runtime) =>
+      runtime.load().catch((error) => {
         console.warn(`Failed to load runtime for ${runtime.language}:`, error);
         // Don't throw, just log the error
       })
@@ -105,12 +151,20 @@ export class WasmManager {
    */
   addRuntime(runtime: WasmRuntime): void {
     this.runtimes.set(runtime.language, runtime);
+    // Start loading the new runtime
+    this.loadingPromises.set(
+      runtime.language,
+      runtime.load().catch((error) => {
+        console.warn(`Failed to load runtime for ${runtime.language}:`, error);
+      })
+    );
   }
 
   /**
    * Remove a runtime
    */
   removeRuntime(language: string): boolean {
+    this.loadingPromises.delete(language);
     return this.runtimes.delete(language);
   }
 }

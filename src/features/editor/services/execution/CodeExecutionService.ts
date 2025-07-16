@@ -11,6 +11,7 @@ import { CompositeExecutionStrategy } from './CompositeExecutionStrategy';
 import { WasmBackend } from './backends/WasmBackend';
 import { Judge0Backend } from './backends/Judge0Backend';
 import { WasmManager } from './WasmManager';
+import { logger } from './internal/logger';
 
 // Judge0 Language IDs
 const JUDGE0_LANGUAGE_IDS = {
@@ -33,11 +34,22 @@ export class CodeExecutionService {
     judge0Url: string = 'https://judge0-ce.p.rapidapi.com',
     wasmManager?: WasmManager
   ) {
+    logger.info('Initializing CodeExecutionService', {
+      hasUser: !!user,
+      judge0Url,
+      hasWasmManager: !!wasmManager,
+    });
+
     this.wasmManager = wasmManager || WasmManager.default();
     this.initializeStrategies(user, judge0Url);
   }
 
   private initializeStrategies(user: User | null, judge0Url: string): void {
+    logger.info('Initializing execution strategies', {
+      supportedLanguages: Object.keys(JUDGE0_LANGUAGE_IDS),
+      hasUser: !!user,
+    });
+
     // Register Python: WASM first, then Judge0 fallback
     this.register('python', [
       new WasmBackend('python', this.wasmManager),
@@ -96,6 +108,10 @@ export class CodeExecutionService {
     this.register('rust', [
       new Judge0Backend('rust', judge0Url, JUDGE0_LANGUAGE_IDS.rust, user),
     ]);
+
+    logger.info('Execution strategies initialized', {
+      registeredLanguages: Array.from(this.strategies.keys()),
+    });
   }
 
   /**
@@ -103,8 +119,20 @@ export class CodeExecutionService {
    */
   private register(language: string, backends: ExecutionBackend[]): void {
     if (backends.length === 0) {
-      throw new Error(`No backends provided for language: ${language}`);
+      const error = new Error(`No backends provided for language: ${language}`);
+      logger.error(
+        'Failed to register language - no backends provided',
+        error,
+        { language }
+      );
+      throw error;
     }
+
+    logger.debug('Registering language', {
+      language,
+      backendCount: backends.length,
+      backendTypes: backends.map((b) => b.constructor.name),
+    });
 
     const strategy = new CompositeExecutionStrategy(backends);
     this.strategies.set(language, strategy);
@@ -123,15 +151,53 @@ export class CodeExecutionService {
       createSnapshot: false,
     }
   ): Promise<CodeExecutionResult> {
+    logger.info('CodeExecutionService executing code', {
+      language,
+      codeLength: code.length,
+      testCaseCount: testCases.length,
+      mode: mode.type,
+      testCaseLimit: mode.testCaseLimit,
+    });
+
     const strategy = this.strategies.get(language);
 
     if (!strategy) {
-      throw new Error(`Unsupported language: ${language}`);
+      const error = new Error(`Unsupported language: ${language}`);
+      logger.error('Unsupported language requested', error, {
+        language,
+        supportedLanguages: Array.from(this.strategies.keys()),
+      });
+      throw error;
     }
 
-    if (!strategy.isAvailable()) {
-      throw new Error(`Language ${language} is not available`);
+    // Check availability asynchronously to ensure runtimes are loaded
+    let isAvailable = false;
+    if (
+      'isAvailableAsync' in strategy &&
+      typeof (
+        strategy as ExecutionStrategy & {
+          isAvailableAsync?: () => Promise<boolean>;
+        }
+      ).isAvailableAsync === 'function'
+    ) {
+      logger.debug('Checking async availability for language', { language });
+      isAvailable = await (
+        strategy as ExecutionStrategy & {
+          isAvailableAsync: () => Promise<boolean>;
+        }
+      ).isAvailableAsync();
+    } else {
+      logger.debug('Checking sync availability for language', { language });
+      isAvailable = strategy.isAvailable();
     }
+
+    if (!isAvailable) {
+      const error = new Error(`Language ${language} is not available`);
+      logger.error('Language not available for execution', error, { language });
+      throw error;
+    }
+
+    logger.debug('Language available, proceeding with execution', { language });
 
     // Apply test case limit for RUN mode
     const casesToRun =
@@ -139,9 +205,22 @@ export class CodeExecutionService {
         ? testCases.slice(0, mode.testCaseLimit)
         : testCases;
 
+    logger.debug('Test cases prepared for execution', {
+      originalCount: testCases.length,
+      actualCount: casesToRun.length,
+    });
+
     const startTime = Date.now();
     const result = await strategy.execute(code, casesToRun);
     const executionTime = Date.now() - startTime;
+
+    logger.info('Code execution completed', {
+      language,
+      executionTime,
+      testResultCount: result.testResults.length,
+      passedCount: result.testResults.filter((r) => r.passed).length,
+      failedCount: result.testResults.filter((r) => !r.passed).length,
+    });
 
     // Format output based on execution mode
     const formattedOutput = this.formatOutput(result, mode);

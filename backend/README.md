@@ -40,7 +40,7 @@ Create a `.env` file in the backend directory:
 
 ```env
 PORT=3001
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:3010
 FIREBASE_SERVICE_ACCOUNT={"type":"service_account",...}
 DOCKER_HOST=unix:///var/run/docker.sock
 ```

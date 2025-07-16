@@ -43,7 +43,7 @@ Create `backend/.env`:
 
 ```env
 PORT=3001
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:3010
 DOCKER_HOST=unix:///var/run/docker.sock
 RATE_LIMIT_POINTS=10
 RATE_LIMIT_DURATION=60
@@ -108,10 +108,10 @@ The backend currently has hardcoded authorized users in `backend/server.js`:
 
 ```javascript
 const authorizedUsers = [
-  "arun@elloloop.com",
-  "arun88m@gmail.com",
-  "admin@easyloops.com",
-  "developer@easyloops.com",
+  'arun@elloloop.com',
+  'arun88m@gmail.com',
+  'admin@easyloops.com',
+  'developer@easyloops.com',
 ];
 ```
 
@@ -121,8 +121,8 @@ For production, move this to Firestore:
 
 ```javascript
 // In checkGoAuthorization middleware
-const authorizedUsersRef = admin.firestore().collection("authorizedUsers");
-const snapshot = await authorizedUsersRef.where("email", "==", userEmail).get();
+const authorizedUsersRef = admin.firestore().collection('authorizedUsers');
+const snapshot = await authorizedUsersRef.where('email', '==', userEmail).get();
 const isAuthorized = !snapshot.empty;
 ```
 
@@ -140,7 +140,7 @@ cd backend && npm run dev
 
 ### 2. Test Authentication
 
-1. **Open browser**: http://localhost:3000
+1. **Open browser**: http://localhost:3010
 2. **Login with Google**: Use `arun88m@gmail.com`
 3. **Select Go language**: Should be available after login
 
@@ -247,7 +247,7 @@ Enable debug logging in backend:
 
 ```javascript
 // In server.js, add:
-console.log("Request details:", {
+console.log('Request details:', {
   user: req.user?.email,
   questionId: req.body.questionId,
   codeLength: req.body.code?.length,

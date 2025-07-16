@@ -1,14 +1,14 @@
-version: "3.8"
+version: '3.8'
 
 services:
   easyloops-backend:
     build: .
     ports:
-      - "3001:3001"
+      - '3001:3001'
     environment:
       - NODE_ENV=production
       - PORT=3001
-      - FRONTEND_URL=http://localhost:3000
+      - FRONTEND_URL=http://localhost:3010
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./temp:/usr/src/app/temp
@@ -22,7 +22,7 @@ services:
   redis:
     image: redis:7-alpine
     ports:
-      - "6379:6379"
+      - '6379:6379'
     volumes:
       - redis-data:/data
     restart: unless-stopped

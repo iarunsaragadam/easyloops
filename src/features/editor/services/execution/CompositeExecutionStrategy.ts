@@ -1,5 +1,6 @@
 import { ExecutionStrategy, ExecutionBackend } from './interfaces';
 import { TestCase, CodeExecutionResult } from '@/shared/types';
+import { logger } from './internal/logger';
 
 export class CompositeExecutionStrategy implements ExecutionStrategy {
   private backends: ExecutionBackend[];
@@ -12,19 +13,57 @@ export class CompositeExecutionStrategy implements ExecutionStrategy {
   }
 
   async execute(code: string, tests: TestCase[]): Promise<CodeExecutionResult> {
-    const availableBackends = this.backends.filter(backend => backend.isAvailable());
-    
+    // Check availability asynchronously to ensure runtimes are loaded
+    const availableBackends: ExecutionBackend[] = [];
+
+    for (const backend of this.backends) {
+      try {
+        // For WASM backends, use async availability check
+        if (
+          'isAvailableAsync' in backend &&
+          typeof (
+            backend as ExecutionBackend & {
+              isAvailableAsync?: () => Promise<boolean>;
+            }
+          ).isAvailableAsync === 'function'
+        ) {
+          const isAvailable = await (
+            backend as ExecutionBackend & {
+              isAvailableAsync: () => Promise<boolean>;
+            }
+          ).isAvailableAsync();
+          if (isAvailable) {
+            availableBackends.push(backend);
+          }
+        } else {
+          // For other backends, use sync availability check
+          if (backend.isAvailable()) {
+            availableBackends.push(backend);
+          }
+        }
+      } catch (error) {
+        logger.warn(
+          `Error checking availability for ${backend.constructor.name}`,
+          {
+            error: error instanceof Error ? error.message : String(error),
+            backendName: backend.constructor.name,
+          }
+        );
+        // Continue checking other backends
+      }
+    }
+
     if (availableBackends.length === 0) {
       throw new Error('No execution backends are available');
     }
 
     // Try each backend in order until one succeeds
     let lastError: Error | null = null;
-    
+
     for (const backend of availableBackends) {
       try {
         const result = await backend.execute(code, tests);
-        
+
         // Add metadata about which backend was used
         return {
           ...result,
@@ -32,8 +71,12 @@ export class CompositeExecutionStrategy implements ExecutionStrategy {
         };
       } catch (error) {
         lastError = error instanceof Error ? error : new Error(String(error));
-        console.warn(`Backend ${backend.constructor.name} failed:`, lastError);
-        
+        logger.warn(`Backend ${backend.constructor.name} failed`, {
+          error: lastError.message,
+          stack: lastError.stack,
+          backendName: backend.constructor.name,
+        });
+
         // Continue to next backend
         continue;
       }
@@ -44,13 +87,63 @@ export class CompositeExecutionStrategy implements ExecutionStrategy {
   }
 
   isAvailable(): boolean {
-    return this.backends.some(backend => backend.isAvailable());
+    return this.backends.some((backend) => backend.isAvailable());
+  }
+
+  async isAvailableAsync(): Promise<boolean> {
+    for (const backend of this.backends) {
+      try {
+        // For WASM backends, use async availability check
+        if (
+          'isAvailableAsync' in backend &&
+          typeof (
+            backend as ExecutionBackend & {
+              isAvailableAsync?: () => Promise<boolean>;
+            }
+          ).isAvailableAsync === 'function'
+        ) {
+          const isAvailable = await (
+            backend as ExecutionBackend & {
+              isAvailableAsync: () => Promise<boolean>;
+            }
+          ).isAvailableAsync();
+          if (isAvailable) {
+            return true;
+          }
+        } else {
+          // For other backends, use sync availability check
+          if (backend.isAvailable()) {
+            return true;
+          }
+        }
+      } catch (error) {
+        console.warn(
+          `Error checking availability for ${backend.constructor.name}:`,
+          error
+        );
+        // Continue checking other backends
+      }
+    }
+    return false;
   }
 
   requiresAuth(): boolean {
-    // Return true if any available backend requires auth
-    const availableBackends = this.backends.filter(backend => backend.isAvailable());
-    return availableBackends.some(backend => backend.requiresAuth());
+    // Check if any available backend requires authentication
+    // If we have a WASM backend that's available, we don't need auth
+    // If we only have Judge0 backends that are available, we need auth
+    const availableBackends = this.backends.filter((backend) =>
+      backend.isAvailable()
+    );
+
+    if (availableBackends.length === 0) {
+      // If no backends are available, check if any require auth
+      // This is for languages that only have auth-required backends
+      return this.backends.some((backend) => backend.requiresAuth());
+    }
+
+    // If we have available backends, check if any of them don't require auth
+    // If any available backend doesn't require auth, then the language doesn't require auth
+    return !availableBackends.some((backend) => !backend.requiresAuth());
   }
 
   /**
@@ -62,7 +155,7 @@ export class CompositeExecutionStrategy implements ExecutionStrategy {
     isAvailable: boolean;
     requiresAuth: boolean;
   }> {
-    return this.backends.map(backend => ({
+    return this.backends.map((backend) => ({
       name: backend.constructor.name,
       language: backend.language,
       isAvailable: backend.isAvailable(),
@@ -74,14 +167,14 @@ export class CompositeExecutionStrategy implements ExecutionStrategy {
    * Get the first available backend
    */
   getFirstAvailableBackend(): ExecutionBackend | null {
-    return this.backends.find(backend => backend.isAvailable()) || null;
+    return this.backends.find((backend) => backend.isAvailable()) || null;
   }
 
   /**
    * Get all available backends
    */
   getAvailableBackends(): ExecutionBackend[] {
-    return this.backends.filter(backend => backend.isAvailable());
+    return this.backends.filter((backend) => backend.isAvailable());
   }
 
   /**
