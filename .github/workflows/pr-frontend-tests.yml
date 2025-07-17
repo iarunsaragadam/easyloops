@@ -1,13 +1,7 @@
-name: Deploy Firebase Hosting
+name: PR Frontend Tests
 
 on:
-  workflow_call:
-    inputs:
-      ref:
-        required: false
-        type: string
-        default: 'main'
-  push:
+  pull_request:
     branches: [main]
     paths:
       - 'src/**'
@@ -24,12 +18,10 @@ on:
       - '!functions/**'
 
 jobs:
-  deploy-hosting:
+  test-frontend:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ inputs.ref || github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -40,6 +32,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run linting
+        run: npm run lint
+
+      - name: Run type checking
+        run: npm run typecheck
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Run E2E tests
+        run: npm run test:e2e
+
       - name: Build
         run: npm run build
         env:
@@ -49,30 +53,3 @@ jobs:
           NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: ${{ secrets.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET }}
           NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID }}
           NEXT_PUBLIC_FIREBASE_APP_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }}
-
-      - name: Deploy to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
-          channelId: live
-          projectId: elloloop-easyloops
-          entryPoint: .
-
-      - name: Verify Hosting Deployment
-        run: |
-          echo "🔍 Verifying Firebase Hosting deployment..."
-
-          # Wait a moment for deployment to propagate
-          sleep 10
-
-          # Test the main site
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" https://elloloop-easyloops.web.app)
-
-          if [[ "$RESPONSE" == "200" ]]; then
-            echo "✅ Firebase Hosting deployed successfully!"
-            echo "🌐 Site URL: https://elloloop-easyloops.web.app"
-          else
-            echo "❌ Firebase Hosting deployment verification failed (HTTP $RESPONSE)"
-            exit 1
-          fi

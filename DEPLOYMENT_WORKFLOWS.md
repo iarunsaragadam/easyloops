@@ -4,42 +4,39 @@ This document describes the GitHub Actions workflows for the Easyloops project.
 
 ## Workflow Overview
 
-### 1. PR Checks (`pr-checks.yml`)
+### 1. PR Frontend Tests (`pr-frontend-tests.yml`)
 
-**Trigger**: Pull requests to main branch
-**Purpose**: Quality assurance and testing based on changed files
+**Trigger**: Pull requests to main branch with frontend file changes
+**Paths**: `src/`, `public/`, `package.json`, `e2e/`, config files
+**Purpose**: Quality assurance for frontend changes
 **Actions**:
 
-#### 🔍 **Change Detection**
-
-- **Frontend Changes**: `src/`, `public/`, `package.json`, `e2e/`, config files
-- **Backend Changes**: `functions/`, `firebase.json`, `judge0-docker/`, deployment scripts
-- **Smart Filtering**: Only runs relevant tests based on what actually changed
-
-#### 🧪 **Conditional Test Execution**
-
-- **Frontend Tests** (only if frontend files changed):
-  - ✅ **Linting**: ESLint checks
-  - ✅ **Type Checking**: TypeScript validation
-  - ✅ **Unit Tests**: Jest test suite
-  - ✅ **E2E Tests**: Playwright end-to-end tests
-  - ✅ **Build Verification**: Next.js build process
-
-- **Backend Tests** (only if backend files changed):
-  - ✅ **Linting**: ESLint checks for Cloud Functions
-  - ✅ **Type Checking**: TypeScript validation
-  - ✅ **Unit Tests**: Jest test suite (60+ tests)
-  - ✅ **Build Verification**: TypeScript compilation
-
-- **Summary Job**: Reports overall test status
+- ✅ **Linting**: ESLint checks
+- ✅ **Type Checking**: TypeScript validation
+- ✅ **Unit Tests**: Jest test suite
+- ✅ **E2E Tests**: Playwright end-to-end tests
+- ✅ **Build Verification**: Next.js build process
 - ❌ **No Deployments**: PRs never deploy to production
 
-### 2. Firebase Hosting Deployment (`deploy-firebase.yml`)
+### 2. PR Backend Tests (`pr-backend-tests.yml`)
+
+**Trigger**: Pull requests to main branch with backend file changes
+**Paths**: `functions/`, `firebase.json`, `judge0-docker/`, deployment scripts
+**Purpose**: Quality assurance for backend changes
+**Actions**:
+
+- ✅ **Linting**: ESLint checks for Cloud Functions
+- ✅ **Type Checking**: TypeScript validation
+- ✅ **Unit Tests**: Jest test suite (60+ tests)
+- ✅ **Build Verification**: TypeScript compilation
+- ❌ **No Deployments**: PRs never deploy to production
+
+### 3. Firebase Hosting Deployment (`deploy-firebase.yml`)
 
 **Trigger**:
 
 - Push to main branch
-- Only when frontend files change: `src/`, `public/`, `package.json`, etc.
+- Only when frontend files change: `src/`, `public/`, `package.json`, `e2e/`, config files
 - Excludes: `functions/**` changes
   **Purpose**: Deploy frontend application
   **Actions**:
@@ -47,12 +44,12 @@ This document describes the GitHub Actions workflows for the Easyloops project.
 - ✅ **Deploy**: Firebase Hosting deployment
 - ✅ **Verification**: Health check and smoke tests
 
-### 3. Firebase Cloud Functions Deployment (`deploy-firebase-functions.yml`)
+### 4. Firebase Cloud Functions Deployment (`deploy-firebase-functions.yml`)
 
 **Trigger**:
 
 - Push to main branch
-- Only when backend files change: `functions/`, `firebase.json`, `.firebaserc`
+- Only when backend files change: `functions/`, `firebase.json`, `judge0-docker/`, deployment scripts
 - Excludes: Frontend changes
   **Purpose**: Deploy Cloud Functions
   **Actions**:
@@ -65,17 +62,17 @@ This document describes the GitHub Actions workflows for the Easyloops project.
 
 ### 🚀 **Performance Optimizations**
 
-- **Parallel Execution**: Frontend and backend tests run in parallel when both change
-- **Conditional Jobs**: Only relevant tests run based on file changes
+- **Path-Based Triggers**: Only relevant workflows run based on file changes
+- **Separate Concerns**: Frontend and backend workflows are completely independent
 - **Faster Feedback**: Developers get quick feedback on their specific changes
-- **Resource Efficiency**: No unnecessary test execution
+- **Resource Efficiency**: No unnecessary workflow execution
 
-### 🎯 **Targeted Testing**
+### 🎯 **Targeted Execution**
 
-- **Frontend Changes**: Only frontend tests run (linting, unit tests, E2E tests, build)
-- **Backend Changes**: Only backend tests run (Cloud Functions tests, build)
-- **Mixed Changes**: Both test suites run in parallel
-- **No Changes**: No tests run (efficient for documentation-only PRs)
+- **Frontend Changes**: Only `pr-frontend-tests.yml` runs
+- **Backend Changes**: Only `pr-backend-tests.yml` runs
+- **Mixed Changes**: Both PR workflows run in parallel
+- **Infrastructure Changes**: No tests run (efficient for workflow-only changes)
 
 ### 🔒 **Security & Quality**
 
@@ -90,31 +87,31 @@ This document describes the GitHub Actions workflows for the Easyloops project.
 
 ```yaml
 # Changes: src/components/Button.tsx
-# Runs: Frontend tests only (linting, unit tests, E2E tests, build)
-# Skips: Backend tests
+# Runs: pr-frontend-tests.yml only
+# Skips: pr-backend-tests.yml
 ```
 
 ### Backend-Only PR
 
 ```yaml
 # Changes: functions/src/services/code-execution.service.ts
-# Runs: Backend tests only (Cloud Functions tests, build)
-# Skips: Frontend tests
+# Runs: pr-backend-tests.yml only
+# Skips: pr-frontend-tests.yml
 ```
 
 ### Mixed PR
 
 ```yaml
 # Changes: src/components/ + functions/src/
-# Runs: Both frontend and backend tests in parallel
+# Runs: Both pr-frontend-tests.yml and pr-backend-tests.yml in parallel
 # Result: Faster overall execution
 ```
 
-### Documentation PR
+### Infrastructure PR
 
 ```yaml
-# Changes: README.md, docs/
-# Runs: No tests (efficient for docs-only changes)
+# Changes: .github/workflows/, README.md, docs/
+# Runs: No workflows (efficient for infrastructure changes)
 ```
 
 ## Configuration
@@ -137,7 +134,7 @@ All workflows use the same environment variables for consistency:
 
 ### Success Notifications
 
-- ✅ **PR Checks**: All relevant tests passed
+- ✅ **PR Tests**: All relevant tests passed
 - ✅ **Deployments**: Successful deployment with verification
 - ✅ **Health Checks**: API endpoints responding correctly
 
@@ -154,3 +151,16 @@ All workflows use the same environment variables for consistency:
 3. **Review PR checks** before requesting reviews
 4. **Monitor deployment logs** for any issues
 5. **Test in staging** before production deployment
+
+## Workflow Structure
+
+```
+PR Created → Path Detection → Conditional Workflow Execution
+├── Frontend Changes → pr-frontend-tests.yml
+├── Backend Changes → pr-backend-tests.yml
+└── Mixed Changes → Both workflows (parallel)
+
+Main Branch Push → Path Detection → Conditional Deployment
+├── Frontend Changes → deploy-firebase.yml
+└── Backend Changes → deploy-firebase-functions.yml
+```

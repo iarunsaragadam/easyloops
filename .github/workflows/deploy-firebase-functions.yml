@@ -13,6 +13,9 @@ on:
       - 'functions/**'
       - 'firebase.json'
       - '.firebaserc'
+      - 'judge0-docker/**'
+      - 'scripts/deploy-functions.sh'
+      - 'scripts/test-cloud-functions.sh'
 
 jobs:
   test:
