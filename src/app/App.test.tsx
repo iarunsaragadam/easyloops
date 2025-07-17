@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
-import * as usePyodideModule from '@/features/editor';
 import * as useResizableLayoutModule from '@/shared';
 import * as useAppStateModule from '@/features/question';
 import * as useCodeExecutionModule from '@/features/editor';
@@ -11,7 +10,6 @@ import { User } from 'firebase/auth';
 
 // Mock all the hooks and components
 jest.mock('@/features/editor', () => ({
-  usePyodide: jest.fn(),
   useCodeExecution: jest.fn(),
 }));
 
@@ -100,7 +98,6 @@ jest.mock('@/features/auth', () => ({
 }));
 
 // Get mocked functions
-const mockUsePyodide = jest.mocked(usePyodideModule.usePyodide);
 const mockUseResizableLayout = jest.mocked(
   useResizableLayoutModule.useResizableLayout
 );
@@ -148,13 +145,6 @@ describe('App', () => {
     jest.clearAllMocks();
 
     // Setup default mocks
-    mockUsePyodide.mockReturnValue({
-      pyodide: null,
-      isLoaded: true,
-      runCode: jest.fn(),
-      loadingError: null,
-    });
-
     mockUseResizableLayout.mockReturnValue({
       layoutState: {
         leftPaneWidth: 50,

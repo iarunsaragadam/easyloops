@@ -1,0 +1,64 @@
+import { ExecutionBackend } from '../interfaces';
+import { TestCase, CodeExecutionResult } from '@/shared/types';
+import { WasmManager } from '../WasmManager';
+
+export class WasmBackend implements ExecutionBackend {
+  public readonly language: string;
+  private wasmManager: WasmManager;
+
+  constructor(language: string, wasmManager: WasmManager) {
+    this.language = language;
+    this.wasmManager = wasmManager;
+  }
+
+  isAvailable(): boolean {
+    // Use synchronous check for immediate availability
+    return this.wasmManager.isLoadedSync(this.language);
+  }
+
+  async isAvailableAsync(): Promise<boolean> {
+    // Check if runtime is loaded, and if not, try to load it
+    if (!this.wasmManager.isLoadedSync(this.language)) {
+      try {
+        await this.wasmManager.load(this.language);
+        return true;
+      } catch (error) {
+        console.warn(
+          `Failed to load WASM runtime for ${this.language}:`,
+          error
+        );
+        return false;
+      }
+    }
+    return true;
+  }
+
+  requiresAuth(): boolean {
+    return false; // WASM execution doesn't require authentication
+  }
+
+  async execute(code: string, tests: TestCase[]): Promise<CodeExecutionResult> {
+    // Ensure the runtime is available before executing
+    if (!(await this.isAvailableAsync())) {
+      throw new Error(`WASM runtime for ${this.language} is not available`);
+    }
+
+    try {
+      return await this.wasmManager.runCode(this.language, code, tests);
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : String(error);
+
+      return {
+        output: `WASM execution failed: ${errorMessage}`,
+        testResults: tests.map((test) => ({
+          testCase: test.description,
+          expected: 'Error',
+          actual: `Error: ${errorMessage}`,
+          passed: false,
+          input: '',
+        })),
+      };
+    }
+  }
+}

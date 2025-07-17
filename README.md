@@ -130,7 +130,7 @@ In a world where programming education is often expensive, fragmented, or inacce
    yarn dev
    ```
 
-6. **Open your browser** and navigate to [http://localhost:3000](http://localhost:3000)
+6. **Open your browser** and navigate to [http://localhost:3010](http://localhost:3010)
 
 ## 📖 Usage
 
@@ -316,7 +316,7 @@ npm run build
 
 ```bash
 docker build -t easyloops-react .
-docker run -p 3000:3000 easyloops-react
+docker run -p 3010:3010 easyloops-react
 ```
 
 ### macOS Desktop App (Tauri)

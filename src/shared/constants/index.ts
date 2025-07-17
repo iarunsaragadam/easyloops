@@ -19,11 +19,6 @@ export const LAYOUT_CONSTANTS = {
   STORAGE_KEY: 'easyloops-layout-state',
 } as const;
 
-export const PYODIDE_CONFIG = {
-  CDN_URL: 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js',
-  INDEX_URL: 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/',
-} as const;
-
 export const MONACO_CONFIG = {
   CDN_URL: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs/loader.js',
   VS_PATH: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.52.2/min/vs',

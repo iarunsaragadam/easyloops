@@ -5,6 +5,7 @@ import {
   SubmissionSnapshot,
   TestCase,
 } from '@/shared/types';
+import { logger } from './execution/internal/logger';
 
 export class LocalSubmissionService implements SubmissionService {
   private static readonly STORAGE_KEY = 'easyloops_submissions';
@@ -90,7 +91,10 @@ export class LocalSubmissionService implements SubmissionService {
 
       await this.saveSnapshot(snapshot);
     } catch (error) {
-      console.error('Failed to save submission:', error);
+      logger.error(
+        'Failed to save submission',
+        error instanceof Error ? error : new Error(String(error))
+      );
       throw new Error('Failed to save submission');
     }
   }
@@ -101,9 +105,11 @@ export class LocalSubmissionService implements SubmissionService {
       if (!stored) return [];
 
       const submissions: SubmissionResult[] = JSON.parse(stored).map(
-        (submission: Partial<SubmissionResult> & { timestamp: string }) => ({
+        (submission: Partial<SubmissionResult> & { timestamp?: string }) => ({
           ...submission,
-          timestamp: new Date(submission.timestamp),
+          timestamp: submission.timestamp
+            ? new Date(submission.timestamp)
+            : new Date(),
         })
       ) as SubmissionResult[];
 
@@ -113,7 +119,10 @@ export class LocalSubmissionService implements SubmissionService {
 
       return submissions;
     } catch (error) {
-      console.error('Failed to get submissions:', error);
+      logger.error(
+        'Failed to get submissions',
+        error instanceof Error ? error : new Error(String(error))
+      );
       return [];
     }
   }
@@ -123,7 +132,10 @@ export class LocalSubmissionService implements SubmissionService {
       const submissions = await this.getSubmissions();
       return submissions.find((s) => s.id === id) || null;
     } catch (error) {
-      console.error('Failed to get submission by ID:', error);
+      logger.error(
+        'Failed to get submission by ID',
+        error instanceof Error ? error : new Error(String(error))
+      );
       return null;
     }
   }
@@ -136,16 +148,22 @@ export class LocalSubmissionService implements SubmissionService {
       const snapshots: SubmissionSnapshot[] = JSON.parse(stored).map(
         (
           snapshot: Partial<SubmissionSnapshot> & {
-            timestamp: string;
-            result: Partial<SubmissionResult> & { timestamp: string };
+            timestamp?: string;
+            result?: Partial<SubmissionResult> & { timestamp?: string };
           }
         ) => ({
           ...snapshot,
-          timestamp: new Date(snapshot.timestamp),
-          result: {
-            ...snapshot.result,
-            timestamp: new Date(snapshot.result.timestamp),
-          },
+          timestamp: snapshot.timestamp
+            ? new Date(snapshot.timestamp)
+            : new Date(),
+          result: snapshot.result
+            ? {
+                ...snapshot.result,
+                timestamp: snapshot.result.timestamp
+                  ? new Date(snapshot.result.timestamp)
+                  : new Date(),
+              }
+            : undefined,
         })
       ) as SubmissionSnapshot[];
 
@@ -157,7 +175,10 @@ export class LocalSubmissionService implements SubmissionService {
         (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
       );
     } catch (error) {
-      console.error('Failed to get snapshots:', error);
+      logger.error(
+        'Failed to get snapshots',
+        error instanceof Error ? error : new Error(String(error))
+      );
       return [];
     }
   }
@@ -175,7 +196,10 @@ export class LocalSubmissionService implements SubmissionService {
         JSON.stringify(filteredSnapshots)
       );
     } catch (error) {
-      console.error('Failed to save snapshot:', error);
+      logger.error(
+        'Failed to save snapshot',
+        error instanceof Error ? error : new Error(String(error))
+      );
       throw new Error('Failed to save snapshot');
     }
   }

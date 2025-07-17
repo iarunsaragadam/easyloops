@@ -31,7 +31,7 @@ Each component and hook now has a single, well-defined responsibility:
 - **`ProblemDescription`**: Only displays question content
 - **`CodeEditor`**: Only manages code editing interface
 - **`TestResultsPanel`**: Only displays test results
-- **`usePyodide`**: Only manages Pyodide initialization and execution
+
 - **`useResizableLayout`**: Only handles resizable layout logic
 - **`useAppState`**: Only manages application state
 
@@ -87,8 +87,8 @@ export const LAYOUT_CONSTANTS = {
 // src/utils/formatters.ts
 export const formatQuestionName = (id: string): string => {
   return id
-    .replace(/-/g, " ")
-    .replace(/\d+-/, "")
+    .replace(/-/g, ' ')
+    .replace(/\d+-/, '')
     .replace(/\b\w/g, (l) => l.toUpperCase());
 };
 ```
@@ -121,7 +121,7 @@ src/
 ├── hooks/
 │   ├── index.ts                    # Hook exports
 │   ├── useAppState.ts              # Application state management
-│   ├── usePyodide.ts               # Pyodide integration
+
 │   ├── useResizableLayout.ts       # Resizable layout logic
 │   └── useCodeExecution.ts         # Code execution logic
 ├── types/
