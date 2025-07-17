@@ -1,4 +1,4 @@
-name: PR Frontend Tests
+name: Frontend Pipeline
 
 on:
   push:
@@ -63,8 +63,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Frontend CI Tests
-        run: make ci-test
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run linting
+        run: npm run lint
+
+      - name: Run type checking
+        run: npm run typecheck
+
+      - name: Run unit tests
+        run: npm test
 
       - name: Check for skip E2E flag
         id: check-skip-e2e
@@ -82,11 +91,11 @@ jobs:
       - name: Upload test coverage
         uses: actions/upload-artifact@v4
         with:
-          name: frontend-coverage
+          name: coverage
           path: coverage/
 
       - name: Upload Playwright report
         uses: actions/upload-artifact@v4
         with:
-          name: frontend-playwright-report
+          name: playwright-report
           path: playwright-report/
