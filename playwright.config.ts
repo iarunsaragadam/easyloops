@@ -28,9 +28,12 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'npm run dev',
+    command: 'NODE_ENV=test npm run dev -- --port 3001',
     url: 'http://localhost:3001',
     reuseExistingServer: !process.env.CI,
+    timeout: 120000, // Increase web server timeout to 2 minutes
+    stdout: 'pipe', // Pipe stdout to see server logs
+    stderr: 'pipe', // Pipe stderr to see server errors
   },
   // Support for priority-based test filtering
   grep: process.env.TEST_PRIORITY
