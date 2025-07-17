@@ -62,6 +62,12 @@ describe('PyodideRuntime - Comprehensive Tests', () => {
     jest.clearAllMocks();
     mockFetch = fetch as jest.MockedFunction<typeof fetch>;
 
+    // Reset mock implementations to prevent contamination between tests
+    mockPyodide.runPythonAsync.mockReset();
+    mockPyodide.runPythonAsync.mockResolvedValue(undefined);
+    mockPyodide.globals.clear.mockReset();
+    mockPyodide.globals.clear.mockImplementation(() => {});
+
     // Mock the load method to prevent auto-loading
     originalLoad = PyodideRuntime.prototype.load;
     PyodideRuntime.prototype.load = jest.fn();
@@ -672,6 +678,9 @@ infinite_recursion()
         } else {
           url = input.toString();
         }
+        if (url.endsWith('input1.txt')) {
+          return Promise.resolve(createMockResponse(''));
+        }
         if (url.endsWith('output1.txt')) {
           return Promise.resolve(createMockResponse('test'));
         }
@@ -710,7 +719,26 @@ infinite_recursion()
     });
 
     it('should handle memory cleanup between executions', async () => {
-      mockFetch.mockResolvedValue(createMockResponse(''));
+      mockFetch.mockImplementation((input: string | URL | Request) => {
+        let url: string;
+        if (typeof input === 'string') {
+          url = input;
+        } else if (input instanceof Request) {
+          url = input.url;
+        } else {
+          url = input.toString();
+        }
+        if (url.endsWith('input1.txt')) {
+          return Promise.resolve(createMockResponse(''));
+        }
+        if (url.endsWith('output1.txt')) {
+          return Promise.resolve(createMockResponse('test'));
+        }
+        return Promise.resolve(createMockResponse(''));
+      });
+
+      // Reset the globals.clear mock to ensure it's being tracked correctly
+      mockPyodide.globals.clear.mockReset();
 
       // Mock 6 calls (3 calls per execution * 2 executions)
       mockPyodide.runPythonAsync
