@@ -17,8 +17,20 @@ export class WasmBackend implements ExecutionBackend {
   }
 
   async isAvailableAsync(): Promise<boolean> {
-    // Use asynchronous check that waits for loading to complete
-    return await this.wasmManager.isLoaded(this.language);
+    // Check if runtime is loaded, and if not, try to load it
+    if (!this.wasmManager.isLoadedSync(this.language)) {
+      try {
+        await this.wasmManager.load(this.language);
+        return true;
+      } catch (error) {
+        console.warn(
+          `Failed to load WASM runtime for ${this.language}:`,
+          error
+        );
+        return false;
+      }
+    }
+    return true;
   }
 
   requiresAuth(): boolean {

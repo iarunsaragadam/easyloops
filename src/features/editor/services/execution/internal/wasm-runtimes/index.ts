@@ -3,4 +3,3 @@
 
 export { PyodideRuntime } from './PyodideRuntime';
 export { QuickJsRuntime } from './QuickJsRuntime';
-export { RubyRuntime } from './RubyRuntime';

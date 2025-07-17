@@ -10,9 +10,10 @@ class PyodideRuntime implements WasmRuntime {
   private loadingPromise: Promise<void> | null = null;
 
   constructor() {
+    this.language = 'python';
     logger.info('Initializing PyodideRuntime', { language: this.language });
-    // Auto-load on construction
-    this.load();
+    // Don't auto-load on construction - make it lazy
+    // this.load();
   }
 
   isLoaded(): boolean {
@@ -50,30 +51,53 @@ class PyodideRuntime implements WasmRuntime {
       }
 
       logger.info('Loading Pyodide script from CDN');
-      // Load Pyodide from CDN
+      // Load Pyodide from CDN with timeout
       const pyodideScript = document.createElement('script');
       pyodideScript.src =
         'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js';
 
-      await new Promise<void>((resolve, reject) => {
+      const scriptLoadPromise = new Promise<void>((resolve, reject) => {
         pyodideScript.onload = () => {
           logger.debug('Pyodide script loaded successfully');
           resolve();
         };
         pyodideScript.onerror = () => {
-          const error = new Error('Failed to load Pyodide script');
+          const error = new Error('Failed to load Pyodide script from CDN');
           logger.error('Pyodide script load failed', error);
           reject(error);
         };
         document.head.appendChild(pyodideScript);
       });
 
+      // Add timeout for script loading (30 seconds)
+      const scriptLoadWithTimeout = Promise.race([
+        scriptLoadPromise,
+        new Promise<never>((_, reject) =>
+          setTimeout(
+            () => reject(new Error('Pyodide script load timeout (30s)')),
+            30000
+          )
+        ),
+      ]);
+
+      await scriptLoadWithTimeout;
+
       logger.info('Initializing Pyodide instance');
-      // Initialize Pyodide
+      // Initialize Pyodide with timeout (60 seconds)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      this.pyodide = await (window as any).loadPyodide({
+      const initPromise = (window as any).loadPyodide({
         indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full/',
       });
+
+      this.pyodide = await Promise.race([
+        initPromise,
+        new Promise<never>((_, reject) =>
+          setTimeout(
+            () => reject(new Error('Pyodide initialization timeout (60s)')),
+            60000
+          )
+        ),
+      ]);
 
       this._isLoaded = true;
       logger.info('PyodideRuntime loaded successfully');
@@ -124,67 +148,55 @@ class PyodideRuntime implements WasmRuntime {
           expectedLength: expectedOutput.length,
         });
 
-        // Prepare environment
-        this.pyodide.globals.clear();
-        this.pyodide.runPython(`
+        // Set up stdin/stdout redirection for this specific test case
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        await (this.pyodide as any).runPythonAsync(`
 import sys
 from io import StringIO
-import contextlib
-
-# Capture stdin
-class MockStdin:
-    def __init__(self, input_data):
-        self.input_data = input_data.split('\\n')
-        self.index = 0
-    
-    def readline(self):
-        if self.index < len(self.input_data):
-            line = self.input_data[self.index] + '\\n'
-            self.index += 1
-            return line
-        return ''
-
-# Set up mock stdin
-sys.stdin = MockStdin(${JSON.stringify(inputContent)})
-
-# Capture stdout
-stdout_capture = StringIO()
+sys._stdin = sys.stdin
+sys._stdout = sys.stdout
+sys.stdin = StringIO(${JSON.stringify(inputContent)})
+sys.stdout = StringIO()
 `);
 
-        // Execute user code with stdout capture
-        this.pyodide.runPython(`
-with contextlib.redirect_stdout(stdout_capture):
-    try:
-${code
-  .split('\n')
-  .map((line) => `        ${line}`)
-  .join('\n')}
-    except Exception as e:
-        print(f"Error: {e}")
-`);
+        // Run the users code
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        await (this.pyodide as any).runPythonAsync(code);
 
-        // Get output
-        const output = this.pyodide.runPython('stdout_capture.getvalue()');
-        const normalizedOutput = output.trim().replace(/\r\n/g, '\n');
-        const normalizedExpected = expectedOutput.trim().replace(/\r\n/g, '\n');
+        // Get the output for this test case
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const actualOutput = await (this.pyodide as any).runPythonAsync(
+          'sys.stdout.getvalue()'
+        );
 
-        const passed = normalizedOutput === normalizedExpected;
+        // Restore stdin/stdout
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        await (this.pyodide as any).runPythonAsync(
+          'sys.stdin = sys._stdin; sys.stdout = sys._stdout'
+        );
+
+        // Normalize outputs
+        const actual = actualOutput
+          ? actualOutput.trim().replace(/\r\n/g, '\n')
+          : '';
+        const expected = expectedOutput.trim().replace(/\r\n/g, '\n');
+        const passed = actual === expected;
 
         logger.debug('Test case execution completed', {
           passed,
-          actualLength: normalizedOutput.length,
-          expectedLength: normalizedExpected.length,
+          actualLength: actual.length,
+          expectedLength: expected.length,
         });
 
         testResults.push({
           testCase: testCase.description,
           expected: expectedOutput,
-          actual: output,
+          actual: actualOutput || '',
           passed,
           input: inputContent,
         });
 
-        outputs.push(output);
+        outputs.push(actualOutput || '');
       } catch (error) {
         const errorMessage =
           error instanceof Error ? error.message : String(error);

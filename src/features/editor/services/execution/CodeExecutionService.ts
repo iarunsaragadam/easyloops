@@ -27,20 +27,29 @@ const JUDGE0_LANGUAGE_IDS = {
 
 export class CodeExecutionService {
   private strategies: Map<string, ExecutionStrategy> = new Map();
-  private wasmManager: WasmManager;
+  private wasmManager: WasmManager | null = null;
+  private isClientSide: boolean;
 
   constructor(
     user: User | null,
     judge0Url: string = 'https://judge0-ce.p.rapidapi.com',
     wasmManager?: WasmManager
   ) {
+    this.isClientSide = typeof window !== 'undefined';
     logger.info('Initializing CodeExecutionService', {
       hasUser: !!user,
       judge0Url,
       hasWasmManager: !!wasmManager,
+      isClientSide: this.isClientSide,
     });
 
-    this.wasmManager = wasmManager || WasmManager.default();
+    // Only initialize WASM on client side
+    if (this.isClientSide) {
+      this.wasmManager = wasmManager || WasmManager.default();
+    } else {
+      logger.info('Skipping WASM initialization on server side');
+    }
+
     this.initializeStrategies(user, judge0Url);
   }
 
@@ -48,39 +57,77 @@ export class CodeExecutionService {
     logger.info('Initializing execution strategies', {
       supportedLanguages: Object.keys(JUDGE0_LANGUAGE_IDS),
       hasUser: !!user,
+      isClientSide: this.isClientSide,
     });
 
-    // Register Python: WASM first, then Judge0 fallback
-    this.register('python', [
-      new WasmBackend('python', this.wasmManager),
-      new Judge0Backend('python', judge0Url, JUDGE0_LANGUAGE_IDS.python, user),
-    ]);
+    // Register Python: WASM first (if available), then Judge0 fallback
+    if (this.isClientSide && this.wasmManager) {
+      this.register('python', [
+        new WasmBackend('python', this.wasmManager),
+        new Judge0Backend(
+          'python',
+          judge0Url,
+          JUDGE0_LANGUAGE_IDS.python,
+          user
+        ),
+      ]);
+    } else {
+      this.register('python', [
+        new Judge0Backend(
+          'python',
+          judge0Url,
+          JUDGE0_LANGUAGE_IDS.python,
+          user
+        ),
+      ]);
+    }
 
-    // Register JavaScript: WASM first, then Judge0 fallback
-    this.register('javascript', [
-      new WasmBackend('javascript', this.wasmManager),
-      new Judge0Backend(
-        'javascript',
-        judge0Url,
-        JUDGE0_LANGUAGE_IDS.javascript,
-        user
-      ),
-    ]);
+    // Register JavaScript: WASM first (if available), then Judge0 fallback
+    if (this.isClientSide && this.wasmManager) {
+      this.register('javascript', [
+        new WasmBackend('javascript', this.wasmManager),
+        new Judge0Backend(
+          'javascript',
+          judge0Url,
+          JUDGE0_LANGUAGE_IDS.javascript,
+          user
+        ),
+      ]);
+    } else {
+      this.register('javascript', [
+        new Judge0Backend(
+          'javascript',
+          judge0Url,
+          JUDGE0_LANGUAGE_IDS.javascript,
+          user
+        ),
+      ]);
+    }
 
-    // Register TypeScript: WASM first, then Judge0 fallback
-    this.register('typescript', [
-      new WasmBackend('typescript', this.wasmManager),
-      new Judge0Backend(
-        'javascript',
-        judge0Url,
-        JUDGE0_LANGUAGE_IDS.javascript,
-        user
-      ),
-    ]);
+    // Register TypeScript: WASM first (if available), then Judge0 fallback
+    if (this.isClientSide && this.wasmManager) {
+      this.register('typescript', [
+        new WasmBackend('typescript', this.wasmManager),
+        new Judge0Backend(
+          'javascript',
+          judge0Url,
+          JUDGE0_LANGUAGE_IDS.javascript,
+          user
+        ),
+      ]);
+    } else {
+      this.register('typescript', [
+        new Judge0Backend(
+          'javascript',
+          judge0Url,
+          JUDGE0_LANGUAGE_IDS.javascript,
+          user
+        ),
+      ]);
+    }
 
-    // Register Ruby: WASM first, then Judge0 fallback
+    // Register Ruby: Judge0 only (no WASM support)
     this.register('ruby', [
-      new WasmBackend('ruby', this.wasmManager),
       new Judge0Backend('ruby', judge0Url, JUDGE0_LANGUAGE_IDS.ruby, user),
     ]);
 
@@ -111,6 +158,7 @@ export class CodeExecutionService {
 
     logger.info('Execution strategies initialized', {
       registeredLanguages: Array.from(this.strategies.keys()),
+      isClientSide: this.isClientSide,
     });
   }
 
@@ -332,14 +380,16 @@ export class CodeExecutionService {
    * Get WASM runtime status
    */
   getWasmStatus(): Record<string, { loaded: boolean; language: string }> {
-    return this.wasmManager.getRuntimeStatus();
+    return this.wasmManager?.getRuntimeStatus() || {};
   }
 
   /**
    * Load all WASM runtimes
    */
   async loadWasmRuntimes(): Promise<void> {
-    await this.wasmManager.loadAll();
+    if (this.wasmManager) {
+      await this.wasmManager.loadAll();
+    }
   }
 
   private formatOutput(

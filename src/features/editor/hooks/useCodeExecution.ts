@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback, useRef } from 'react';
 import {
   TestCase,
   CodeExecutionResult,
@@ -7,14 +7,24 @@ import {
 } from '@/shared/types';
 import { CodeExecutionService } from '../services/execution';
 import { useAuth } from '@/features/auth';
+import { WasmManager } from '../services/execution/WasmManager';
 
-export const useCodeExecution = () => {
+export const useCodeExecution = (wasmManager?: WasmManager) => {
   const { user } = useAuth();
+  const executionServiceRef = useRef<CodeExecutionService | null>(null);
 
-  const executionService = useMemo(
-    () => new CodeExecutionService(user),
-    [user]
-  );
+  // Lazy initialization of the execution service
+  const getExecutionService = useCallback(() => {
+    if (!executionServiceRef.current && typeof window !== 'undefined') {
+      console.log('🔄 Initializing CodeExecutionService on client side');
+      executionServiceRef.current = new CodeExecutionService(
+        user,
+        undefined,
+        wasmManager
+      );
+    }
+    return executionServiceRef.current;
+  }, [user, wasmManager]);
 
   const executeCode = useCallback(
     async (
@@ -27,19 +37,37 @@ export const useCodeExecution = () => {
         createSnapshot: false,
       }
     ): Promise<CodeExecutionResult> => {
+      console.log('🔍 DEBUG: useCodeExecution.executeCode called');
+      console.log('🔍 DEBUG: Parameters:', {
+        codeLength: code.length,
+        testCaseCount: testCases.length,
+        language,
+        mode,
+      });
+
       console.log(
         `Executing ${language} code in ${mode.type} mode:`,
         code.substring(0, 100) + '...'
       );
 
-      return await executionService.executeCode(
-        code,
-        testCases,
-        language,
-        mode
-      );
+      const service = getExecutionService();
+      console.log('🔍 DEBUG: Service obtained:', !!service);
+
+      if (!service) {
+        const error = new Error(
+          'CodeExecutionService not available - not in browser environment'
+        );
+        console.error('🔍 DEBUG: Service not available');
+        throw error;
+      }
+
+      console.log('🔍 DEBUG: About to call service.executeCode...');
+      const result = await service.executeCode(code, testCases, language, mode);
+      console.log('🔍 DEBUG: Service.executeCode completed:', result);
+
+      return result;
     },
-    [executionService]
+    [getExecutionService]
   );
 
   const executeAndSubmit = useCallback(
@@ -57,28 +85,37 @@ export const useCodeExecution = () => {
         code.substring(0, 100) + '...'
       );
 
-      return await executionService.executeAndSubmit(
+      const service = getExecutionService();
+      if (!service) {
+        throw new Error(
+          'CodeExecutionService not available - not in browser environment'
+        );
+      }
+
+      return await service.executeAndSubmit(
         code,
         testCases,
         language,
         questionId
       );
     },
-    [executionService]
+    [getExecutionService]
   );
 
   const isLanguageAvailable = useCallback(
     (language: string): boolean => {
-      return executionService.isLanguageAvailable(language);
+      const service = getExecutionService();
+      return service ? service.isLanguageAvailable(language) : false;
     },
-    [executionService]
+    [getExecutionService]
   );
 
   const requiresAuth = useCallback(
     (language: string): boolean => {
-      return executionService.requiresAuth(language);
+      const service = getExecutionService();
+      return service ? service.requiresAuth(language) : false;
     },
-    [executionService]
+    [getExecutionService]
   );
 
   return {

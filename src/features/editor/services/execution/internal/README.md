@@ -12,7 +12,6 @@ internal/
 │   ├── index.ts               # Clean exports for internal use
 │   ├── PyodideRuntime.ts      # Python execution via Pyodide WASM
 │   ├── QuickJsRuntime.ts      # JavaScript/TypeScript execution via QuickJS WASM
-│   └── RubyRuntime.ts         # Ruby execution via Ruby WASM
 └── README.md                  # This file
 ```
 
@@ -22,7 +21,6 @@ The `wasm-runtimes/` directory contains language-specific WASM runtime implement
 
 - **PyodideRuntime**: Python execution using Pyodide WASM
 - **QuickJsRuntime**: JavaScript/TypeScript execution using QuickJS WASM
-- **RubyRuntime**: Ruby execution using Ruby WASM
 
 These runtimes are internal implementation details and should only be accessed through:
 

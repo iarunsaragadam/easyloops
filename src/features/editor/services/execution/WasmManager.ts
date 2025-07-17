@@ -1,10 +1,6 @@
 import { WasmRuntime } from './interfaces';
 import { TestCase, CodeExecutionResult } from '@/shared/types';
-import {
-  PyodideRuntime,
-  QuickJsRuntime,
-  RubyRuntime,
-} from './internal/wasm-runtimes';
+import { PyodideRuntime, QuickJsRuntime } from './internal/wasm-runtimes';
 
 export class WasmManager {
   private runtimes: Map<string, WasmRuntime> = new Map();
@@ -13,17 +9,17 @@ export class WasmManager {
   constructor(runtimeList: WasmRuntime[]) {
     for (const runtime of runtimeList) {
       this.runtimes.set(runtime.language, runtime);
-      // Start loading each runtime immediately
-      this.loadingPromises.set(
-        runtime.language,
-        runtime.load().catch((error) => {
-          console.warn(
-            `Failed to load runtime for ${runtime.language}:`,
-            error
-          );
-          // Don't throw, just log the error
-        })
-      );
+      // Don't auto-load on construction - make it lazy
+      // this.loadingPromises.set(
+      //   runtime.language,
+      //   runtime.load().catch((error) => {
+      //     console.warn(
+      //       `Failed to load runtime for ${runtime.language}:`,
+      //       error
+      //     );
+      //     // Dont throw, just log the error
+      //   })
+      // );
     }
   }
 
@@ -35,7 +31,6 @@ export class WasmManager {
       new PyodideRuntime(),
       new QuickJsRuntime('javascript'),
       new QuickJsRuntime('typescript'),
-      new RubyRuntime(),
     ];
 
     return new WasmManager(runtimes);
@@ -151,13 +146,13 @@ export class WasmManager {
    */
   addRuntime(runtime: WasmRuntime): void {
     this.runtimes.set(runtime.language, runtime);
-    // Start loading the new runtime
-    this.loadingPromises.set(
-      runtime.language,
-      runtime.load().catch((error) => {
-        console.warn(`Failed to load runtime for ${runtime.language}:`, error);
-      })
-    );
+    // Don't auto-load on addition - make it lazy
+    // this.loadingPromises.set(
+    //   runtime.language,
+    //   runtime.load().catch((error) => {
+    //     console.warn(`Failed to load runtime for ${runtime.language}:`, error);
+    //   })
+    // );
   }
 
   /**
