@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef, useEffect } from 'react';
 import {
   TestCase,
   CodeExecutionResult,
@@ -12,6 +12,11 @@ import { WasmManager } from '../services/execution/WasmManager';
 export const useCodeExecution = (wasmManager?: WasmManager) => {
   const { user } = useAuth();
   const executionServiceRef = useRef<CodeExecutionService | null>(null);
+
+  // Clear the service when user or wasmManager changes
+  useEffect(() => {
+    executionServiceRef.current = null;
+  }, [user, wasmManager]);
 
   // Lazy initialization of the execution service
   const getExecutionService = useCallback(() => {

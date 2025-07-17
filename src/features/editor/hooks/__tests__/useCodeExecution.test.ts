@@ -80,7 +80,7 @@ describe('useCodeExecution', () => {
       }
     });
 
-    expect(MockedCodeExecutionService).toHaveBeenCalledWith(mockUser);
+    expect(MockedCodeExecutionService).toHaveBeenCalledWith(mockUser, undefined, undefined);
   });
 
   it('should execute code successfully', async () => {
@@ -279,6 +279,6 @@ describe('useCodeExecution', () => {
     });
 
     expect(MockedCodeExecutionService).toHaveBeenCalledTimes(2);
-    expect(MockedCodeExecutionService).toHaveBeenLastCalledWith(mockUser);
+    expect(MockedCodeExecutionService).toHaveBeenLastCalledWith(mockUser, undefined, undefined);
   });
 });
