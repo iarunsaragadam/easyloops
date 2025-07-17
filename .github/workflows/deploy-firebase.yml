@@ -35,7 +35,7 @@ jobs:
           NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID }}
           NEXT_PUBLIC_FIREBASE_APP_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }}
 
-      - name: Deploy to Firebase
+      - name: Deploy to Firebase (Hosting + Functions)
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
@@ -43,3 +43,28 @@ jobs:
           channelId: live
           projectId: elloloop-easyloops
           entryPoint: .
+        env:
+          # Environment variables for Cloud Functions
+          JUDGE0_BASE_URL: ${{ secrets.JUDGE0_BASE_URL }}
+          JUDGE0_API_KEY: ${{ secrets.JUDGE0_API_KEY }}
+          FIREBASE_PROJECT_ID: elloloop-easyloops
+
+      - name: Verify Functions Deployment
+        run: |
+          echo "🔍 Verifying Cloud Functions deployment..."
+
+          # Test health endpoint
+          HEALTH_RESPONSE=$(curl -s https://us-central1-elloloop-easyloops.cloudfunctions.net/health)
+          echo "Health Check Response: $HEALTH_RESPONSE"
+
+          # Test languages endpoint
+          LANGUAGES_RESPONSE=$(curl -s https://us-central1-elloloop-easyloops.cloudfunctions.net/getLanguages)
+          echo "Languages Response: $LANGUAGES_RESPONSE"
+
+          # Check if functions are responding
+          if echo "$HEALTH_RESPONSE" | grep -q '"status":"healthy"'; then
+            echo "✅ Cloud Functions deployed successfully!"
+          else
+            echo "❌ Cloud Functions deployment verification failed"
+            exit 1
+          fi

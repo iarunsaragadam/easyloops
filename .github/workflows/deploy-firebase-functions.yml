@@ -1,0 +1,137 @@
+name: Deploy Firebase Cloud Functions
+
+on:
+  workflow_call:
+    inputs:
+      ref:
+        required: false
+        type: string
+        default: 'main'
+  push:
+    branches: [main]
+    paths: ['functions/**']
+  pull_request:
+    branches: [main]
+    paths: ['functions/**']
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./functions
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: functions/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linting
+        run: npm run lint
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build functions
+        run: npm run build
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: functions/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./functions
+
+      - name: Build functions
+        run: npm run build
+        working-directory: ./functions
+
+      - name: Deploy Cloud Functions
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          projectId: elloloop-easyloops
+          entryPoint: .
+        env:
+          # Environment variables for Cloud Functions
+          JUDGE0_BASE_URL: ${{ secrets.JUDGE0_BASE_URL }}
+          JUDGE0_API_KEY: ${{ secrets.JUDGE0_API_KEY }}
+          FIREBASE_PROJECT_ID: elloloop-easyloops
+
+      - name: Wait for deployment
+        run: sleep 30
+
+      - name: Verify Functions Deployment
+        run: |
+          echo "🔍 Verifying Cloud Functions deployment..."
+
+          # Test health endpoint
+          echo "Testing health endpoint..."
+          HEALTH_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" https://us-central1-elloloop-easyloops.cloudfunctions.net/health)
+          HTTP_STATUS=$(echo "$HEALTH_RESPONSE" | grep "HTTP_STATUS:" | cut -d: -f2)
+          HEALTH_BODY=$(echo "$HEALTH_RESPONSE" | grep -v "HTTP_STATUS:")
+
+          echo "Health Status: $HTTP_STATUS"
+          echo "Health Response: $HEALTH_BODY"
+
+          # Test languages endpoint
+          echo "Testing languages endpoint..."
+          LANGUAGES_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" https://us-central1-elloloop-easyloops.cloudfunctions.net/getLanguages)
+          LANG_HTTP_STATUS=$(echo "$LANGUAGES_RESPONSE" | grep "HTTP_STATUS:" | cut -d: -f2)
+          LANG_BODY=$(echo "$LANGUAGES_RESPONSE" | grep -v "HTTP_STATUS:")
+
+          echo "Languages Status: $LANG_HTTP_STATUS"
+          echo "Languages Response: $LANG_BODY"
+
+          # Check if functions are responding correctly
+          if [[ "$HTTP_STATUS" == "200" ]] && echo "$HEALTH_BODY" | grep -q '"status":"healthy"'; then
+            echo "✅ Health endpoint working correctly!"
+          else
+            echo "❌ Health endpoint verification failed"
+            exit 1
+          fi
+
+          if [[ "$LANG_HTTP_STATUS" == "200" ]] && echo "$LANG_BODY" | grep -q '"success":true'; then
+            echo "✅ Languages endpoint working correctly!"
+          else
+            echo "❌ Languages endpoint verification failed"
+            exit 1
+          fi
+
+          echo "🎉 All Cloud Functions deployed and verified successfully!"
+
+      - name: Notify deployment status
+        if: always()
+        run: |
+          if [[ "${{ job.status }}" == "success" ]]; then
+            echo "✅ Firebase Cloud Functions deployment completed successfully!"
+            echo "🌐 Function URLs:"
+            echo "   - Health: https://us-central1-elloloop-easyloops.cloudfunctions.net/health"
+            echo "   - Languages: https://us-central1-elloloop-easyloops.cloudfunctions.net/getLanguages"
+            echo "   - Execute Code: https://us-central1-elloloop-easyloops.cloudfunctions.net/executeCode"
+            echo "   - Rate Limit Status: https://us-central1-elloloop-easyloops.cloudfunctions.net/rateLimitStatus"
+          else
+            echo "❌ Firebase Cloud Functions deployment failed!"
+            exit 1
+          fi
