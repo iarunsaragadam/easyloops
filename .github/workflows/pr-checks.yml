@@ -33,6 +33,7 @@ jobs:
               - 'tsconfig.json'
               - '.eslintrc.js'
               - '!functions/**'
+              - '!.github/workflows/**'
             backend:
               - 'functions/**'
               - 'firebase.json'
@@ -40,6 +41,7 @@ jobs:
               - 'judge0-docker/**'
               - 'scripts/deploy-functions.sh'
               - 'scripts/test-cloud-functions.sh'
+              - '!.github/workflows/**'
 
   test-frontend:
     runs-on: ubuntu-latest

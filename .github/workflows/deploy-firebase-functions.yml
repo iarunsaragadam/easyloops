@@ -13,12 +13,6 @@ on:
       - 'functions/**'
       - 'firebase.json'
       - '.firebaserc'
-  pull_request:
-    branches: [main]
-    paths:
-      - 'functions/**'
-      - 'firebase.json'
-      - '.firebaserc'
 
 jobs:
   test:
