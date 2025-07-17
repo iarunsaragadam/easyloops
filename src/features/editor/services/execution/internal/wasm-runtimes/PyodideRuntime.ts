@@ -219,6 +219,14 @@ sys.stdout = StringIO()
       }
     }
 
+    // Clean up memory after execution
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (this.pyodide as any).globals.clear();
+    } catch (error) {
+      // Ignore cleanup errors
+    }
+
     const result = {
       output: outputs.join('\n---\n'),
       testResults,

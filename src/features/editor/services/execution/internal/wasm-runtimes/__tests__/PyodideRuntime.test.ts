@@ -340,9 +340,11 @@ describe('PyodideRuntime', () => {
         .mockResolvedValueOnce(undefined) // Setup environment for test 1
         .mockResolvedValueOnce(undefined) // Execute code for test 1
         .mockResolvedValueOnce('6') // Get output for test 1 (should match expected file content)
+        .mockResolvedValueOnce(undefined) // Restore stdin/stdout for test 1
         .mockResolvedValueOnce(undefined) // Setup environment for test 2
         .mockResolvedValueOnce(undefined) // Execute code for test 2
-        .mockResolvedValueOnce('14'); // Get output for test 2 (should match expected file content)
+        .mockResolvedValueOnce('14') // Get output for test 2 (should match expected file content)
+        .mockResolvedValueOnce(undefined); // Restore stdin/stdout for test 2
 
       const result = await runtime.execute(
         'print(int(input()) * 2)',

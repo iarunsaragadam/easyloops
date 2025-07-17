@@ -690,14 +690,20 @@ infinite_recursion()
       // Reset the mock state for runPythonAsync to avoid leftover calls from previous tests
       mockPyodide.runPythonAsync.mockReset();
 
-      // Use a call counter to return the correct value for each call
-      let callCount = 0;
-      mockPyodide.runPythonAsync.mockImplementation(() => {
-        // Every third call is the output
-        callCount++;
-        if (callCount % 3 === 0) {
+      // Use a more robust mock implementation that handles concurrent calls
+      // Track call counts per execution context using a Map
+      const callCounts = new Map();
+      mockPyodide.runPythonAsync.mockImplementation((...args) => {
+        const context = JSON.stringify(args);
+        const count = callCounts.get(context) || 0;
+        callCounts.set(context, count + 1);
+        
+        // For sys.stdout.getvalue() calls, return 'test'
+        if (args[0] && args[0].includes('sys.stdout.getvalue()')) {
           return Promise.resolve('test');
         }
+        
+        // For all other calls, return undefined
         return Promise.resolve(undefined);
       });
 
@@ -714,8 +720,8 @@ infinite_recursion()
         expect(result.testResults[0].passed).toBe(true);
       });
 
-      // Verify all mocks were called
-      expect(mockPyodide.runPythonAsync).toHaveBeenCalledTimes(15);
+      // Verify all mocks were called (4 calls per execution * 5 executions = 20 calls)
+      expect(mockPyodide.runPythonAsync).toHaveBeenCalledTimes(20);
     });
 
     it('should handle memory cleanup between executions', async () => {
