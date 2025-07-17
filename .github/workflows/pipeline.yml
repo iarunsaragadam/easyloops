@@ -1,14 +1,54 @@
-name: Pipeline
+name: Frontend Pipeline
 
 on:
   push:
     branches: [main]
+    paths:
+      - 'src/**/*'
+      - 'public/**/*'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - 'jest.config.js'
+      - 'playwright.config.ts'
+      - 'e2e/**/*'
+      - 'scripts/**/*'
+      - 'Makefile'
+      - '.eslintrc.js'
+      - '.prettierrc'
+      - 'tailwind.config.js'
+      - 'next.config.js'
+      - 'vite.config.ts'
+      - 'index.html'
+      - 'src-tauri/**/*'
+      - 'Cargo.toml'
+      - 'Cargo.lock'
   pull_request:
     branches: [main]
+    paths:
+      - 'src/**/*'
+      - 'public/**/*'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - 'jest.config.js'
+      - 'playwright.config.ts'
+      - 'e2e/**/*'
+      - 'scripts/**/*'
+      - 'Makefile'
+      - '.eslintrc.js'
+      - '.prettierrc'
+      - 'tailwind.config.js'
+      - 'next.config.js'
+      - 'vite.config.ts'
+      - 'index.html'
+      - 'src-tauri/**/*'
+      - 'Cargo.toml'
+      - 'Cargo.lock'
 
 jobs:
-  test:
-    name: Test
+  test-frontend:
+    name: Frontend Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +63,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run CI Tests
+      - name: Run Frontend CI Tests
         run: make ci-test
 
       - name: Check for skip E2E flag
@@ -42,11 +82,11 @@ jobs:
       - name: Upload test coverage
         uses: actions/upload-artifact@v4
         with:
-          name: coverage
+          name: frontend-coverage
           path: coverage/
 
       - name: Upload Playwright report
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
+          name: frontend-playwright-report
           path: playwright-report/
