@@ -1,5 +1,4 @@
 // Test setup file for Jest
-import '@testing-library/jest-dom';
 
 // Mock console methods to reduce noise in tests
 const originalConsole = { ...console };
@@ -18,18 +17,8 @@ afterAll(() => {
   console.error = originalConsole.error;
 });
 
-// Global test utilities
-declare global {
-  var testUtils: {
-    createMock: <T>(partial?: Partial<T>) => T;
-    wait: (ms: number) => Promise<void>;
-    createTestRequest: (
-      overrides?: Record<string, unknown>
-    ) => Record<string, unknown>;
-  };
-}
-
-globalThis.testUtils = {
+// Test utilities
+export const testUtils = {
   // Helper to create mock objects
   createMock: <T>(partial: Partial<T> = {}): T => {
     return {
