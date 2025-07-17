@@ -1,4 +1,4 @@
-name: Frontend Pipeline
+name: PR Frontend Tests
 
 on:
   push:

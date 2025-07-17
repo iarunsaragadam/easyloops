@@ -13,6 +13,7 @@ on:
 
 jobs:
   test-backend:
+    name: Backend Tests
     runs-on: ubuntu-latest
     defaults:
       run:
