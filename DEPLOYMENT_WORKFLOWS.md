@@ -7,11 +7,31 @@ This document describes the GitHub Actions workflows for the Easyloops project.
 ### 1. PR Checks (`pr-checks.yml`)
 
 **Trigger**: Pull requests to main branch
-**Purpose**: Quality assurance and testing
+**Purpose**: Quality assurance and testing based on changed files
 **Actions**:
 
-- ✅ **Frontend Tests**: Linting, type checking, unit tests, build verification
-- ✅ **Backend Tests**: Cloud Functions linting, unit tests, build verification
+#### 🔍 **Change Detection**
+
+- **Frontend Changes**: `src/`, `public/`, `package.json`, `e2e/`, config files
+- **Backend Changes**: `functions/`, `firebase.json`, `judge0-docker/`, deployment scripts
+- **Smart Filtering**: Only runs relevant tests based on what actually changed
+
+#### 🧪 **Conditional Test Execution**
+
+- **Frontend Tests** (only if frontend files changed):
+  - ✅ **Linting**: ESLint checks
+  - ✅ **Type Checking**: TypeScript validation
+  - ✅ **Unit Tests**: Jest test suite
+  - ✅ **E2E Tests**: Playwright end-to-end tests
+  - ✅ **Build Verification**: Next.js build process
+
+- **Backend Tests** (only if backend files changed):
+  - ✅ **Linting**: ESLint checks for Cloud Functions
+  - ✅ **Type Checking**: TypeScript validation
+  - ✅ **Unit Tests**: Jest test suite (60+ tests)
+  - ✅ **Build Verification**: TypeScript compilation
+
+- **Summary Job**: Reports overall test status
 - ❌ **No Deployments**: PRs never deploy to production
 
 ### 2. Firebase Hosting Deployment (`deploy-firebase.yml`)
@@ -25,7 +45,7 @@ This document describes the GitHub Actions workflows for the Easyloops project.
   **Actions**:
 - ✅ **Build**: Next.js application build
 - ✅ **Deploy**: Firebase Hosting deployment
-- ✅ **Verify**: Site accessibility check
+- ✅ **Verification**: Health check and smoke tests
 
 ### 3. Firebase Cloud Functions Deployment (`deploy-firebase-functions.yml`)
 
@@ -33,83 +53,104 @@ This document describes the GitHub Actions workflows for the Easyloops project.
 
 - Push to main branch
 - Only when backend files change: `functions/`, `firebase.json`, `.firebaserc`
-- PRs: Only run tests, no deployment
-  **Purpose**: Deploy backend Cloud Functions
+- Excludes: Frontend changes
+  **Purpose**: Deploy Cloud Functions
   **Actions**:
-- ✅ **Test**: Linting, unit tests, build verification
-- ✅ **Deploy**: Cloud Functions deployment (main branch only)
-- ✅ **Verify**: Health checks and API endpoint verification
+- ✅ **Test**: Run all Cloud Functions tests
+- ✅ **Build**: TypeScript compilation
+- ✅ **Deploy**: Firebase Functions deployment
+- ✅ **Verification**: API health checks and smoke tests
 
-## Deployment Strategy
+## Workflow Benefits
 
-### 🚫 PR Workflows (No Deployments)
+### 🚀 **Performance Optimizations**
 
-- **PR Checks**: Only run tests and quality checks
-- **No Production Deployments**: PRs never deploy to live environment
-- **Quality Gate**: Ensures code quality before merge
+- **Parallel Execution**: Frontend and backend tests run in parallel when both change
+- **Conditional Jobs**: Only relevant tests run based on file changes
+- **Faster Feedback**: Developers get quick feedback on their specific changes
+- **Resource Efficiency**: No unnecessary test execution
 
-### ✅ Main Branch Deployments
+### 🎯 **Targeted Testing**
 
-- **Path-Based Triggers**: Only deploy when relevant files change
-- **Frontend Changes**: Trigger hosting deployment only
-- **Backend Changes**: Trigger functions deployment only
-- **Separate Concerns**: Hosting and functions deploy independently
+- **Frontend Changes**: Only frontend tests run (linting, unit tests, E2E tests, build)
+- **Backend Changes**: Only backend tests run (Cloud Functions tests, build)
+- **Mixed Changes**: Both test suites run in parallel
+- **No Changes**: No tests run (efficient for documentation-only PRs)
 
-### 🔄 Deployment Flow
+### 🔒 **Security & Quality**
 
+- **No PR Deployments**: Production deployments only happen on main branch
+- **Comprehensive Coverage**: All relevant tests run for changed components
+- **Build Verification**: Ensures code compiles before deployment
+- **Quality Gates**: Tests must pass before merge
+
+## Usage Examples
+
+### Frontend-Only PR
+
+```yaml
+# Changes: src/components/Button.tsx
+# Runs: Frontend tests only (linting, unit tests, E2E tests, build)
+# Skips: Backend tests
 ```
-PR Created → PR Checks (test only) → Merge to Main →
-├── Frontend Changes → Deploy Hosting
-└── Backend Changes → Deploy Functions
+
+### Backend-Only PR
+
+```yaml
+# Changes: functions/src/services/code-execution.service.ts
+# Runs: Backend tests only (Cloud Functions tests, build)
+# Skips: Frontend tests
 ```
 
-## Environment Variables
+### Mixed PR
 
-### Frontend (Hosting)
+```yaml
+# Changes: src/components/ + functions/src/
+# Runs: Both frontend and backend tests in parallel
+# Result: Faster overall execution
+```
 
-- `NEXT_PUBLIC_FIREBASE_API_KEY`
-- `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`
-- `NEXT_PUBLIC_FIREBASE_PROJECT_ID`
-- `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`
-- `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`
-- `NEXT_PUBLIC_FIREBASE_APP_ID`
+### Documentation PR
 
-### Backend (Cloud Functions)
+```yaml
+# Changes: README.md, docs/
+# Runs: No tests (efficient for docs-only changes)
+```
 
-- `JUDGE0_BASE_URL`
-- `JUDGE0_API_KEY`
-- `FIREBASE_PROJECT_ID`
-- `FIREBASE_SERVICE_ACCOUNT`
+## Configuration
 
-## Verification
+### Environment Variables
 
-### Hosting Verification
+All workflows use the same environment variables for consistency:
 
-- ✅ HTTP 200 response from main site
-- ✅ Site accessible at `https://elloloop-easyloops.web.app`
+- `NEXT_PUBLIC_FIREBASE_*`: Frontend Firebase configuration
+- `FIREBASE_SERVICE_ACCOUNT_*`: Backend Firebase configuration
+- `JUDGE0_API_URL`: Judge0 API endpoint
 
-### Functions Verification
+### Dependencies
 
-- ✅ Health endpoint: `/health`
-- ✅ Languages endpoint: `/getLanguages`
-- ✅ All endpoints return correct status codes and responses
+- **Node.js**: Version specified in `.nvmrc` for frontend, Node 18 for backend
+- **Firebase CLI**: Latest version for deployments
+- **Cache**: npm cache for faster dependency installation
+
+## Monitoring & Notifications
+
+### Success Notifications
+
+- ✅ **PR Checks**: All relevant tests passed
+- ✅ **Deployments**: Successful deployment with verification
+- ✅ **Health Checks**: API endpoints responding correctly
+
+### Failure Notifications
+
+- ❌ **Test Failures**: Specific test failures with details
+- ❌ **Build Failures**: Compilation errors with stack traces
+- ❌ **Deployment Failures**: Deployment errors with rollback instructions
 
 ## Best Practices
 
-1. **No PR Deployments**: PRs only test, never deploy
-2. **Path-Based Triggers**: Deploy only when relevant files change
-3. **Separate Frontend/Backend**: Independent deployment pipelines
-4. **Verification**: Always verify deployments succeed
-5. **Rollback Ready**: Failed deployments don't affect production
-
-## Troubleshooting
-
-### Common Issues
-
-- **Deployment not triggered**: Check if changed files match path filters
-- **Functions not responding**: Check environment variables and Judge0 service
-- **Hosting not accessible**: Check Firebase project configuration
-
-### Manual Deployment
-
-If needed, workflows can be triggered manually via GitHub Actions UI with proper branch selection.
+1. **Always run tests locally** before pushing
+2. **Use conventional commits** for automatic versioning
+3. **Review PR checks** before requesting reviews
+4. **Monitor deployment logs** for any issues
+5. **Test in staging** before production deployment
