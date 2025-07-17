@@ -59,7 +59,7 @@ describe('useCodeExecution', () => {
     );
   });
 
-  it('should initialize the service with user', () => {
+  it('should initialize the service with user', async () => {
     const mockUser = { uid: 'test-user-id' } as User;
     mockUseAuth.mockReturnValue({
       user: mockUser,
@@ -69,7 +69,16 @@ describe('useCodeExecution', () => {
       isAuthorizedForGo: false,
     });
 
-    renderHook(() => useCodeExecution());
+    const { result } = renderHook(() => useCodeExecution());
+
+    // Trigger service initialization by calling executeCode
+    await act(async () => {
+      try {
+        await result.current.executeCode('print("test")', mockTestCases, 'python');
+      } catch {
+        // Ignore the error, we just want to trigger initialization
+      }
+    });
 
     expect(MockedCodeExecutionService).toHaveBeenCalledWith(mockUser);
   });
@@ -229,8 +238,17 @@ describe('useCodeExecution', () => {
     ).rejects.toThrow('Submission failed');
   });
 
-  it('should memoize the execution service', () => {
-    const { rerender } = renderHook(() => useCodeExecution());
+  it('should memoize the execution service', async () => {
+    const { result, rerender } = renderHook(() => useCodeExecution());
+
+    // Trigger service initialization by calling executeCode
+    await act(async () => {
+      try {
+        await result.current.executeCode('print("test")', mockTestCases, 'python');
+      } catch {
+        // Ignore the error, we just want to trigger initialization
+      }
+    });
 
     // First render
     expect(MockedCodeExecutionService).toHaveBeenCalledTimes(1);
@@ -250,6 +268,16 @@ describe('useCodeExecution', () => {
     });
 
     rerender();
+
+    // Trigger service initialization again with new user
+    await act(async () => {
+      try {
+        await result.current.executeCode('print("test2")', mockTestCases, 'python');
+      } catch {
+        // Ignore the error, we just want to trigger initialization
+      }
+    });
+
     expect(MockedCodeExecutionService).toHaveBeenCalledTimes(2);
     expect(MockedCodeExecutionService).toHaveBeenLastCalledWith(mockUser);
   });

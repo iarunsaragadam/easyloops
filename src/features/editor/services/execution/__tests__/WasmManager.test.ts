@@ -199,9 +199,9 @@ describe('WasmManager', () => {
       const status = manager.getRuntimeStatus();
 
       expect(status.python).toEqual({ loaded: true, language: 'python' });
-      // Since constructor auto-loads, javascript should be loaded
+      // JavaScript was not explicitly loaded, so it should not be loaded
       expect(status.javascript).toEqual({
-        loaded: true,
+        loaded: false,
         language: 'javascript',
       });
     });

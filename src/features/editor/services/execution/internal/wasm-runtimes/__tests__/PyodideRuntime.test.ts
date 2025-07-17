@@ -52,6 +52,7 @@ describe('PyodideRuntime', () => {
   let mockPyodide: {
     globals: { clear: jest.Mock };
     runPython: jest.Mock;
+    runPythonAsync: jest.Mock;
   };
 
   beforeEach(() => {
@@ -62,6 +63,7 @@ describe('PyodideRuntime', () => {
         clear: jest.fn(),
       },
       runPython: jest.fn(),
+      runPythonAsync: jest.fn(),
     };
 
     mockWindow.loadPyodide = jest.fn().mockResolvedValue(mockPyodide);
@@ -241,10 +243,10 @@ describe('PyodideRuntime', () => {
           text: jest.fn().mockResolvedValue(expectedOutput),
         });
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // First call: setup environment
-        .mockReturnValueOnce(undefined) // Second call: execute user code
-        .mockReturnValueOnce(actualOutput); // Third call: get output
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // First call: setup environment
+        .mockResolvedValueOnce(undefined) // Second call: execute user code
+        .mockResolvedValueOnce(actualOutput); // Third call: get output
 
       const result = await runtime.execute(
         'print(int(input()) * 2)',
@@ -268,7 +270,7 @@ describe('PyodideRuntime', () => {
           text: jest.fn().mockResolvedValue('10'),
         });
 
-      mockPyodide.runPython.mockImplementation(() => {
+      mockPyodide.runPythonAsync.mockImplementation(() => {
         throw new Error('Python execution error');
       });
 
@@ -334,13 +336,13 @@ describe('PyodideRuntime', () => {
           text: jest.fn().mockResolvedValue('14'),
         });
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment for test 1
-        .mockReturnValueOnce(undefined) // Execute code for test 1
-        .mockReturnValueOnce('6') // Get output for test 1
-        .mockReturnValueOnce(undefined) // Setup environment for test 2
-        .mockReturnValueOnce(undefined) // Execute code for test 2
-        .mockReturnValueOnce('14'); // Get output for test 2
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment for test 1
+        .mockResolvedValueOnce(undefined) // Execute code for test 1
+        .mockResolvedValueOnce('6') // Get output for test 1
+        .mockResolvedValueOnce(undefined) // Setup environment for test 2
+        .mockResolvedValueOnce(undefined) // Execute code for test 2
+        .mockResolvedValueOnce('14'); // Get output for test 2
 
       const result = await runtime.execute(
         'print(int(input()) * 2)',

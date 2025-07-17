@@ -210,10 +210,10 @@ describe('PyodideRuntime - Comprehensive Tests', () => {
         .mockResolvedValueOnce(createMockResponse('input'))
         .mockResolvedValueOnce(createMockResponse('expected'));
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment
-        .mockReturnValueOnce(undefined) // Execute user code
-        .mockReturnValueOnce(''); // Get output
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment
+        .mockResolvedValueOnce(undefined) // Execute user code
+        .mockResolvedValueOnce(''); // Get output
 
       const result = await runtime.execute('', testCases);
 
@@ -236,10 +236,10 @@ print("Emojis: 😀🎉🚀")
           )
         );
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment
-        .mockReturnValueOnce(undefined) // Execute user code
-        .mockReturnValueOnce(
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment
+        .mockResolvedValueOnce(undefined) // Execute user code
+        .mockResolvedValueOnce(
           'Hello 世界! 🌍\nSpecial chars: !@#$%^&*()\nEmojis: 😀🎉🚀'
         ); // Get output
 
@@ -255,10 +255,10 @@ print("Emojis: 😀🎉🚀")
         .mockResolvedValueOnce(createMockResponse(''))
         .mockResolvedValueOnce(createMockResponse('x'.repeat(10000)));
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment
-        .mockReturnValueOnce(undefined) // Execute user code
-        .mockReturnValueOnce('x'.repeat(10000)); // Get output
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment
+        .mockResolvedValueOnce(undefined) // Execute user code
+        .mockResolvedValueOnce('x'.repeat(10000)); // Get output
 
       const result = await runtime.execute(largeCode, testCases);
 
@@ -277,7 +277,7 @@ while True:
         .mockResolvedValueOnce(createMockResponse(''));
 
       // Mock Pyodide to throw timeout error
-      mockPyodide.runPython.mockImplementation(() => {
+      mockPyodide.runPythonAsync.mockImplementation(() => {
         throw new Error('Execution timeout');
       });
 
@@ -304,10 +304,10 @@ except MemoryError:
         .mockResolvedValueOnce(createMockResponse(''))
         .mockResolvedValueOnce(createMockResponse('Memory allocation failed'));
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment
-        .mockReturnValueOnce(undefined) // Execute user code
-        .mockReturnValueOnce('Memory allocation failed'); // Get output
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment
+        .mockResolvedValueOnce(undefined) // Execute user code
+        .mockResolvedValueOnce('Memory allocation failed'); // Get output
 
       const result = await runtime.execute(memoryIntensiveCode, testCases);
 
@@ -352,10 +352,10 @@ except MemoryError:
         .mockResolvedValueOnce(createMockResponse('hello\r\nworld')) // Windows line endings
         .mockResolvedValueOnce(createMockResponse('hello\nworld')); // Unix line endings
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment
-        .mockReturnValueOnce(undefined) // Execute user code
-        .mockReturnValueOnce('hello\nworld'); // Get output
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment
+        .mockResolvedValueOnce(undefined) // Execute user code
+        .mockResolvedValueOnce('hello\nworld'); // Get output
 
       const result = await runtime.execute(code, testCases);
 
@@ -369,10 +369,10 @@ except MemoryError:
         .mockResolvedValueOnce(createMockResponse('')) // Empty input
         .mockResolvedValueOnce(createMockResponse('Hello')); // Expected output
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment
-        .mockReturnValueOnce(undefined) // Execute user code
-        .mockReturnValueOnce('Hello'); // Get output
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment
+        .mockResolvedValueOnce(undefined) // Execute user code
+        .mockResolvedValueOnce('Hello'); // Get output
 
       const result = await runtime.execute(code, testCases);
 
@@ -387,10 +387,10 @@ except MemoryError:
         .mockResolvedValueOnce(createMockResponse(largeInput))
         .mockResolvedValueOnce(createMockResponse('10005')); // Expected count
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment
-        .mockReturnValueOnce(undefined) // Execute user code
-        .mockReturnValueOnce('10005'); // Get output
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment
+        .mockResolvedValueOnce(undefined) // Execute user code
+        .mockResolvedValueOnce('10005'); // Get output
 
       const result = await runtime.execute(code, testCases);
 
@@ -407,10 +407,10 @@ except MemoryError:
           createMockResponse("'Hello\\nWorld\\tTab\\r\\nWindows'")
         );
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment
-        .mockReturnValueOnce(undefined) // Execute user code
-        .mockReturnValueOnce("'Hello\\nWorld\\tTab\\r\\nWindows'"); // Get output
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment
+        .mockResolvedValueOnce(undefined) // Execute user code
+        .mockResolvedValueOnce("'Hello\\nWorld\\tTab\\r\\nWindows'"); // Get output
 
       const result = await runtime.execute(code, testCases);
 
@@ -473,7 +473,7 @@ except MemoryError:
         .mockResolvedValueOnce(createMockResponse('input'))
         .mockResolvedValueOnce(createMockResponse('expected'));
 
-      mockPyodide.runPython.mockImplementation(() => {
+      mockPyodide.runPythonAsync.mockImplementation(() => {
         throw new Error('Runtime error: division by zero');
       });
 
@@ -490,7 +490,7 @@ except MemoryError:
         .mockResolvedValueOnce(createMockResponse(''))
         .mockResolvedValueOnce(createMockResponse(''));
 
-      mockPyodide.runPython.mockImplementation(() => {
+      mockPyodide.runPythonAsync.mockImplementation(() => {
         throw new Error('SyntaxError: invalid syntax');
       });
 
@@ -507,7 +507,7 @@ except MemoryError:
         .mockResolvedValueOnce(createMockResponse(''))
         .mockResolvedValueOnce(createMockResponse(''));
 
-      mockPyodide.runPython.mockImplementation(() => {
+      mockPyodide.runPythonAsync.mockImplementation(() => {
         throw new Error("ModuleNotFoundError: No module named 'nonexistent'");
       });
 
@@ -539,13 +539,13 @@ except MemoryError:
         .mockResolvedValueOnce(createMockResponse('input2'))
         .mockResolvedValueOnce(createMockResponse('expected2'));
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment for test 1
-        .mockReturnValueOnce(undefined) // Execute user code for test 1
-        .mockReturnValueOnce('expected1') // Get output for test 1
-        .mockReturnValueOnce(undefined) // Setup environment for test 2
-        .mockReturnValueOnce(undefined) // Execute user code for test 2
-        .mockReturnValueOnce('wrong_output'); // Get output for test 2
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment for test 1
+        .mockResolvedValueOnce(undefined) // Execute user code for test 1
+        .mockResolvedValueOnce('expected1') // Get output for test 1
+        .mockResolvedValueOnce(undefined) // Setup environment for test 2
+        .mockResolvedValueOnce(undefined) // Execute user code for test 2
+        .mockResolvedValueOnce('wrong_output'); // Get output for test 2
 
       const result = await runtime.execute('print(input())', multipleTestCases);
 
@@ -598,10 +598,10 @@ print("Attempting dangerous operation")
           createMockResponse('Attempting dangerous operation')
         );
 
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment
-        .mockReturnValueOnce(undefined) // Execute user code
-        .mockReturnValueOnce('Attempting dangerous operation'); // Get output
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment
+        .mockResolvedValueOnce(undefined) // Execute user code
+        .mockResolvedValueOnce('Attempting dangerous operation'); // Get output
 
       const result = await runtime.execute(dangerousCode, testCases);
 
@@ -620,7 +620,7 @@ infinite_recursion()
         .mockResolvedValueOnce(createMockResponse(''))
         .mockResolvedValueOnce(createMockResponse(''));
 
-      mockPyodide.runPython.mockImplementation(() => {
+      mockPyodide.runPythonAsync.mockImplementation(() => {
         throw new Error('RecursionError: maximum recursion depth exceeded');
       });
 
@@ -678,18 +678,18 @@ infinite_recursion()
         return Promise.resolve(createMockResponse(''));
       });
 
-      // Reset the mock state for runPython to avoid leftover calls from previous tests
-      mockPyodide.runPython.mockReset();
+      // Reset the mock state for runPythonAsync to avoid leftover calls from previous tests
+      mockPyodide.runPythonAsync.mockReset();
 
       // Use a call counter to return the correct value for each call
       let callCount = 0;
-      mockPyodide.runPython.mockImplementation(() => {
+      mockPyodide.runPythonAsync.mockImplementation(() => {
         // Every third call is the output
         callCount++;
         if (callCount % 3 === 0) {
-          return 'test';
+          return Promise.resolve('test');
         }
-        return undefined;
+        return Promise.resolve(undefined);
       });
 
       // Execute multiple times rapidly
@@ -706,20 +706,20 @@ infinite_recursion()
       });
 
       // Verify all mocks were called
-      expect(mockPyodide.runPython).toHaveBeenCalledTimes(15);
+      expect(mockPyodide.runPythonAsync).toHaveBeenCalledTimes(15);
     });
 
     it('should handle memory cleanup between executions', async () => {
       mockFetch.mockResolvedValue(createMockResponse(''));
 
       // Mock 6 calls (3 calls per execution * 2 executions)
-      mockPyodide.runPython
-        .mockReturnValueOnce(undefined) // Setup environment for execution 1
-        .mockReturnValueOnce(undefined) // Execute user code for execution 1
-        .mockReturnValueOnce('test') // Get output for execution 1
-        .mockReturnValueOnce(undefined) // Setup environment for execution 2
-        .mockReturnValueOnce(undefined) // Execute user code for execution 2
-        .mockReturnValueOnce('test2'); // Get output for execution 2
+      mockPyodide.runPythonAsync
+        .mockResolvedValueOnce(undefined) // Setup environment for execution 1
+        .mockResolvedValueOnce(undefined) // Execute user code for execution 1
+        .mockResolvedValueOnce('test') // Get output for execution 1
+        .mockResolvedValueOnce(undefined) // Setup environment for execution 2
+        .mockResolvedValueOnce(undefined) // Execute user code for execution 2
+        .mockResolvedValueOnce('test2'); // Get output for execution 2
 
       // First execution
       await runtime.execute('print("test")', testCases);
