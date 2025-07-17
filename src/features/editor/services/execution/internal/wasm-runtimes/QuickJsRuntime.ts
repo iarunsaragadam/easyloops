@@ -12,8 +12,8 @@ class QuickJsRuntime implements WasmRuntime {
   constructor(language: string) {
     this.language = language;
     logger.info('Initializing QuickJsRuntime', { language: this.language });
-    // Auto-load on construction
-    this.load();
+    // Don't auto-load on construction - make it lazy
+    // this.load();
   }
 
   isLoaded(): boolean {

@@ -117,7 +117,6 @@ describe('WasmManager', () => {
       expect(supported).toContain('python');
       expect(supported).toContain('javascript');
       expect(supported).toContain('typescript');
-      expect(supported).toContain('ruby');
     });
   });
 

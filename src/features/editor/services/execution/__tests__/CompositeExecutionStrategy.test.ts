@@ -73,17 +73,19 @@ class MockJudge0Backend implements ExecutionBackend {
 
 class MockFailingBackend implements ExecutionBackend {
   language = 'python';
-
   isAvailable(): boolean {
     return true;
   }
-
   requiresAuth(): boolean {
     return false;
   }
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async execute(code: string, tests: TestCase[]) {
+   
+  async execute(
+    _code: string,
+    _tests: TestCase[]
+  ): Promise<import('@/shared/types').CodeExecutionResult> {
+    void _code;
+    void _tests;
     throw new Error('Backend execution failed');
   }
 }
