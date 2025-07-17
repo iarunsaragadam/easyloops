@@ -1,170 +1,115 @@
-# 🚀 Deployment Workflows - Updated for Cloud Functions
+# Deployment Workflows
 
-## ✅ **Workflow Status: UPDATED**
+This document describes the GitHub Actions workflows for the Easyloops project.
 
-The GitHub Actions workflows have been updated to support the new Firebase Cloud Functions deployment. Here's what's been improved:
+## Workflow Overview
 
-## 📁 **Updated Workflows**
+### 1. PR Checks (`pr-checks.yml`)
 
-### **1. Enhanced Firebase Deployment** (`.github/workflows/deploy-firebase.yml`)
+**Trigger**: Pull requests to main branch
+**Purpose**: Quality assurance and testing
+**Actions**:
 
-- ✅ **Hosting + Functions**: Now deploys both hosting and Cloud Functions
-- ✅ **Environment Variables**: Includes Judge0 configuration
-- ✅ **Verification**: Tests endpoints after deployment
-- ✅ **Integration**: Works with the deployment orchestrator
+- ✅ **Frontend Tests**: Linting, type checking, unit tests, build verification
+- ✅ **Backend Tests**: Cloud Functions linting, unit tests, build verification
+- ❌ **No Deployments**: PRs never deploy to production
 
-### **2. Dedicated Functions Workflow** (`.github/workflows/deploy-firebase-functions.yml`)
+### 2. Firebase Hosting Deployment (`deploy-firebase.yml`)
 
-- ✅ **Functions-Only**: Deploys only Cloud Functions (faster)
-- ✅ **Path-Based Triggers**: Runs when `functions/**` files change
-- ✅ **Testing**: Runs linting and unit tests before deployment
-- ✅ **Verification**: Comprehensive endpoint testing
-- ✅ **Notifications**: Clear deployment status reporting
+**Trigger**:
 
-### **3. Deployment Orchestrator** (`.github/workflows/deployment-orchestrator.yml`)
+- Push to main branch
+- Only when frontend files change: `src/`, `public/`, `package.json`, etc.
+- Excludes: `functions/**` changes
+  **Purpose**: Deploy frontend application
+  **Actions**:
+- ✅ **Build**: Next.js application build
+- ✅ **Deploy**: Firebase Hosting deployment
+- ✅ **Verify**: Site accessibility check
 
-- ✅ **Multi-Target**: Supports Firebase, AWS S3, Vercel, GitHub Pages, Netlify
-- ✅ **Smart Detection**: Auto-detects deployment targets
-- ✅ **Manual Override**: Allows manual deployment selection
-- ✅ **Environment Support**: Production, staging, development
+### 3. Firebase Cloud Functions Deployment (`deploy-firebase-functions.yml`)
 
-## 🔧 **Required GitHub Secrets**
+**Trigger**:
 
-For the workflows to work correctly, you need these secrets in your GitHub repository:
+- Push to main branch
+- Only when backend files change: `functions/`, `firebase.json`, `.firebaserc`
+- PRs: Only run tests, no deployment
+  **Purpose**: Deploy backend Cloud Functions
+  **Actions**:
+- ✅ **Test**: Linting, unit tests, build verification
+- ✅ **Deploy**: Cloud Functions deployment (main branch only)
+- ✅ **Verify**: Health checks and API endpoint verification
 
-### **Firebase Secrets**
+## Deployment Strategy
 
-```bash
-FIREBASE_SERVICE_ACCOUNT          # Firebase service account JSON
-NEXT_PUBLIC_FIREBASE_API_KEY      # Firebase API key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN  # Firebase auth domain
-NEXT_PUBLIC_FIREBASE_PROJECT_ID   # Firebase project ID
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET # Firebase storage bucket
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID # Firebase messaging sender ID
-NEXT_PUBLIC_FIREBASE_APP_ID       # Firebase app ID
+### 🚫 PR Workflows (No Deployments)
+
+- **PR Checks**: Only run tests and quality checks
+- **No Production Deployments**: PRs never deploy to live environment
+- **Quality Gate**: Ensures code quality before merge
+
+### ✅ Main Branch Deployments
+
+- **Path-Based Triggers**: Only deploy when relevant files change
+- **Frontend Changes**: Trigger hosting deployment only
+- **Backend Changes**: Trigger functions deployment only
+- **Separate Concerns**: Hosting and functions deploy independently
+
+### 🔄 Deployment Flow
+
+```
+PR Created → PR Checks (test only) → Merge to Main →
+├── Frontend Changes → Deploy Hosting
+└── Backend Changes → Deploy Functions
 ```
 
-### **Judge0 Secrets** (for Cloud Functions)
+## Environment Variables
 
-```bash
-JUDGE0_BASE_URL                   # Judge0 service URL
-JUDGE0_API_KEY                    # Judge0 API key (optional)
-```
+### Frontend (Hosting)
 
-## 🚀 **How to Use**
+- `NEXT_PUBLIC_FIREBASE_API_KEY`
+- `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`
+- `NEXT_PUBLIC_FIREBASE_PROJECT_ID`
+- `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`
+- `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`
+- `NEXT_PUBLIC_FIREBASE_APP_ID`
 
-### **Automatic Deployment**
+### Backend (Cloud Functions)
 
-1. **Push to main**: Triggers full deployment pipeline
-2. **Functions-only changes**: Triggers dedicated functions workflow
-3. **Manual trigger**: Use GitHub Actions UI to run specific deployments
+- `JUDGE0_BASE_URL`
+- `JUDGE0_API_KEY`
+- `FIREBASE_PROJECT_ID`
+- `FIREBASE_SERVICE_ACCOUNT`
 
-### **Manual Deployment Commands**
+## Verification
 
-```bash
-# Deploy everything (hosting + functions)
-gh workflow run deploy-firebase.yml
+### Hosting Verification
 
-# Deploy only functions
-gh workflow run deploy-firebase-functions.yml
+- ✅ HTTP 200 response from main site
+- ✅ Site accessible at `https://elloloop-easyloops.web.app`
 
-# Deploy with specific target
-gh workflow run deployment-orchestrator.yml -f deployTarget=firebase
-```
+### Functions Verification
 
-## 📊 **Workflow Features**
+- ✅ Health endpoint: `/health`
+- ✅ Languages endpoint: `/getLanguages`
+- ✅ All endpoints return correct status codes and responses
 
-### **Testing & Quality**
+## Best Practices
 
-- ✅ **Linting**: ESLint checks before deployment
-- ✅ **Unit Tests**: 60+ test cases run automatically
-- ✅ **Type Checking**: TypeScript compilation verification
-- ✅ **Build Verification**: Ensures code compiles correctly
+1. **No PR Deployments**: PRs only test, never deploy
+2. **Path-Based Triggers**: Deploy only when relevant files change
+3. **Separate Frontend/Backend**: Independent deployment pipelines
+4. **Verification**: Always verify deployments succeed
+5. **Rollback Ready**: Failed deployments don't affect production
 
-### **Deployment Verification**
+## Troubleshooting
 
-- ✅ **Health Check**: Tests `/health` endpoint
-- ✅ **Languages API**: Tests `/getLanguages` endpoint
-- ✅ **Status Reporting**: Clear success/failure notifications
-- ✅ **Rollback Ready**: Failed deployments don't affect production
+### Common Issues
 
-### **Security & Monitoring**
+- **Deployment not triggered**: Check if changed files match path filters
+- **Functions not responding**: Check environment variables and Judge0 service
+- **Hosting not accessible**: Check Firebase project configuration
 
-- ✅ **Environment Variables**: Secure secret management
-- ✅ **Service Account**: Firebase authentication
-- ✅ **Rate Limiting**: Built-in abuse prevention
-- ✅ **Logging**: Comprehensive execution logs
+### Manual Deployment
 
-## 🔄 **Deployment Flow**
-
-```mermaid
-graph TD
-    A[Code Push] --> B{Path Changed?}
-    B -->|functions/**| C[Functions Workflow]
-    B -->|other files| D[Full Pipeline]
-
-    C --> E[Run Tests]
-    E --> F[Build Functions]
-    F --> G[Deploy to Firebase]
-    G --> H[Verify Endpoints]
-    H --> I[Notify Status]
-
-    D --> J[Build Everything]
-    J --> K[Deploy Hosting + Functions]
-    K --> L[Verify Deployment]
-    L --> M[Notify Status]
-```
-
-## 🎯 **Function URLs**
-
-After successful deployment, these endpoints are available:
-
-- **Health Check**: `https://us-central1-elloloop-easyloops.cloudfunctions.net/health`
-- **Get Languages**: `https://us-central1-elloloop-easyloops.cloudfunctions.net/getLanguages`
-- **Execute Code**: `https://us-central1-elloloop-easyloops.cloudfunctions.net/executeCode`
-- **Rate Limit Status**: `https://us-central1-elloloop-easyloops.cloudfunctions.net/rateLimitStatus`
-
-## 🛠️ **Troubleshooting**
-
-### **Common Issues**
-
-1. **Missing Secrets**: Ensure all required secrets are set in GitHub
-2. **Build Failures**: Check TypeScript compilation and test results
-3. **Deployment Timeout**: Functions may take 2-3 minutes to deploy
-4. **Verification Failures**: Check Judge0 service availability
-
-### **Debug Commands**
-
-```bash
-# Check workflow status
-gh run list --workflow=deploy-firebase-functions.yml
-
-# View logs
-gh run view <run-id> --log
-
-# Re-run failed workflow
-gh run rerun <run-id>
-```
-
-## 📈 **Performance**
-
-- **Deployment Time**: ~3-5 minutes for functions
-- **Cold Start**: ~2-3 seconds for first request
-- **Warm Start**: ~200-500ms for subsequent requests
-- **Rate Limits**: 30 requests/minute per user
-
-## 🎉 **Success Metrics**
-
-The workflows are considered successful when:
-
-- ✅ All tests pass (60+ test cases)
-- ✅ Functions deploy without errors
-- ✅ Health endpoint returns `200 OK`
-- ✅ Languages endpoint returns valid data
-- ✅ No security vulnerabilities detected
-
----
-
-**Last Updated**: July 17, 2025  
-**Version**: 2.0.0  
-**Architecture**: SOLID Principles
+If needed, workflows can be triggered manually via GitHub Actions UI with proper branch selection.

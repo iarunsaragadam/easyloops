@@ -9,10 +9,16 @@ on:
         default: 'main'
   push:
     branches: [main]
-    paths: ['functions/**']
+    paths:
+      - 'functions/**'
+      - 'firebase.json'
+      - '.firebaserc'
   pull_request:
     branches: [main]
-    paths: ['functions/**']
+    paths:
+      - 'functions/**'
+      - 'firebase.json'
+      - '.firebaserc'
 
 jobs:
   test:
