@@ -120,13 +120,13 @@ test.describe('Home Page', () => {
 
     await page.goto('/');
 
-    // Check navigation link in header
+    // Check navigation link in hero section
     await expect(
-      page.getByRole('link', { name: 'Practice Problems' })
+      page.getByRole('link', { name: 'Browse Problems' })
     ).toBeVisible();
 
     // Click navigation link and verify it goes to questions page
-    await page.getByRole('link', { name: 'Practice Problems' }).click();
+    await page.getByRole('link', { name: 'Browse Problems' }).click();
     await expect(page).toHaveURL(/\/questions\/?$/);
   });
 

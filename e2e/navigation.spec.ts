@@ -20,7 +20,7 @@ test.describe('Navigation', () => {
     test.info().annotations.push({ type: 'priority', description: 'P0' });
 
     await page.goto('/');
-    await page.getByRole('link', { name: 'Practice Problems' }).click();
+    await page.getByRole('link', { name: 'Browse Problems' }).click();
     await expect(page).toHaveURL('/questions/');
   });
 

@@ -118,11 +118,11 @@ test.describe('Layout and Responsive Behavior', () => {
 
     // Check that navigation is accessible on mobile
     await expect(
-      page.getByRole('link', { name: 'Practice Problems' })
+      page.getByRole('link', { name: 'Browse Problems' })
     ).toBeVisible();
 
     // Navigate to questions page
-    await page.getByRole('link', { name: 'Practice Problems' }).click();
+    await page.getByRole('link', { name: 'Browse Problems' }).click();
     await expect(page).toHaveURL('/questions/');
 
     // Check that questions page is also responsive
@@ -141,7 +141,7 @@ test.describe('Layout and Responsive Behavior', () => {
 
     // Navigate through different pages
     await page.goto('/');
-    await page.getByRole('link', { name: 'Practice Problems' }).click();
+    await page.getByRole('link', { name: 'Browse Problems' }).click();
     await page.waitForSelector('a[href^="/questions/"]', { timeout: 10000 });
     const firstQuestionLink = page.locator('a[href^="/questions/"]').first();
     await firstQuestionLink.click();
