@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Write a program that demonstrates proper [[wiki:variable]] declaration and initialization for different data types. Your program should read values from standard input and use them to demonstrate various programming concepts.
+Write a program that demonstrates proper [[wiki:variable]] declaration and initialization for different [[wiki:data-types]]. Your program should read values from standard input and use them to demonstrate various programming concepts.
 
 Your program should:
 
