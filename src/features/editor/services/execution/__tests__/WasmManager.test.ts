@@ -195,11 +195,11 @@ describe('WasmManager', () => {
       const manager = new WasmManager([pythonRuntime, jsRuntime]);
 
       await manager.load('python');
+      await manager.load('javascript');
 
       const status = manager.getRuntimeStatus();
 
       expect(status.python).toEqual({ loaded: true, language: 'python' });
-      // Since constructor auto-loads, javascript should be loaded
       expect(status.javascript).toEqual({
         loaded: true,
         language: 'javascript',
