@@ -13,26 +13,33 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   interval = 2000,
   className = '',
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isSpinning, setIsSpinning] = useState(false);
+  const [spinOffset, setSpinOffset] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setIsSpinning(true);
 
-      // Simulate gambling wheel effect with multiple rapid changes
-      const spinDuration = 800; // Total spin duration
-      const spinInterval = 50; // How fast to cycle through words during spin
+      // Slot machine effect with vertical scrolling
+      const spinDuration = 1000; // Total spin duration
+      const spinInterval = 60; // How fast to cycle through words during spin
       const totalSpins = spinDuration / spinInterval;
 
       let spinCounter = 0;
       const spinTimer = setInterval(() => {
         spinCounter++;
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
+
+        // Create vertical scrolling effect
+        const progress = spinCounter / totalSpins;
+        const easeOut = 1 - Math.pow(1 - progress, 3); // Cubic ease-out
+        const offset = Math.floor(easeOut * words.length * 3); // Scroll through words multiple times
+
+        setSpinOffset(offset);
 
         if (spinCounter >= totalSpins) {
           clearInterval(spinTimer);
           setIsSpinning(false);
+          setSpinOffset(0);
         }
       }, spinInterval);
     }, interval);
@@ -43,18 +50,46 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   // Calculate the maximum width needed for all words
   const maxWidth = Math.max(...words.map((word) => word.length));
 
+  // Create a repeating sequence of words for the slot machine effect
+  const slotWords = [...words, ...words, ...words]; // Repeat 3 times for smooth scrolling
+
   return (
     <span
-      className={`inline-block transition-all duration-300 ease-in-out ${className} ${
-        isSpinning ? 'animate-spin' : 'transform-none'
-      }`}
+      className={`inline-block overflow-hidden ${className}`}
       style={{
-        minWidth: `${maxWidth * 0.6}em`, // Approximate character width
-        textAlign: 'center', // Center the text within the container
+        minWidth: `${maxWidth * 0.6}em`,
+        textAlign: 'center',
         display: 'inline-block',
+        height: '1.2em',
+        lineHeight: '1.2em',
+        position: 'relative',
       }}
     >
-      {words[currentIndex]}
+      <div
+        className="transition-transform duration-75 ease-out"
+        style={{
+          transform: isSpinning
+            ? `translateY(-${spinOffset * 1.2}em)`
+            : 'translateY(0)',
+          transition: isSpinning ? 'none' : 'transform 0.3s ease-out',
+        }}
+      >
+        {slotWords.map((word, index) => (
+          <div
+            key={`${word}-${index}`}
+            className="text-center"
+            style={{
+              height: '1.2em',
+              lineHeight: '1.2em',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {word}
+          </div>
+        ))}
+      </div>
     </span>
   );
 };

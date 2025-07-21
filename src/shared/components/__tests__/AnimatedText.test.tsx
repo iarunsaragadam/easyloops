@@ -7,28 +7,24 @@ describe('AnimatedText', () => {
 
   it('renders the first word initially', () => {
     render(<AnimatedText words={words} />);
-    expect(screen.getByText('Programming')).toBeInTheDocument();
+    expect(screen.getAllByText('Programming')[0]).toBeInTheDocument();
   });
 
   it('applies custom className', () => {
     render(<AnimatedText words={words} className="custom-class" />);
-    const element = screen.getByText('Programming');
-    expect(element).toHaveClass('custom-class');
+    const container = screen.getAllByText('Programming')[0].closest('span');
+    expect(container).toHaveClass('custom-class');
   });
 
   it('handles single word array', () => {
     render(<AnimatedText words={['Single']} />);
-    expect(screen.getByText('Single')).toBeInTheDocument();
+    expect(screen.getAllByText('Single')[0]).toBeInTheDocument();
   });
 
   it('renders with correct structure', () => {
     render(<AnimatedText words={words} />);
-    const element = screen.getByText('Programming');
-    expect(element.tagName).toBe('SPAN');
-    expect(element).toHaveClass(
-      'inline-block',
-      'transition-all',
-      'duration-300'
-    );
+    const container = screen.getAllByText('Programming')[0].closest('span');
+    expect(container?.tagName).toBe('SPAN');
+    expect(container).toHaveClass('inline-block', 'overflow-hidden');
   });
 });
