@@ -14,16 +14,27 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   className = '',
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isSpinning, setIsSpinning] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIsTransitioning(true);
+      setIsSpinning(true);
 
-      setTimeout(() => {
+      // Simulate gambling wheel effect with multiple rapid changes
+      const spinDuration = 800; // Total spin duration
+      const spinInterval = 50; // How fast to cycle through words during spin
+      const totalSpins = spinDuration / spinInterval;
+
+      let spinCounter = 0;
+      const spinTimer = setInterval(() => {
+        spinCounter++;
         setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-        setIsTransitioning(false);
-      }, 150); // Shorter transition time to reduce flicker
+
+        if (spinCounter >= totalSpins) {
+          clearInterval(spinTimer);
+          setIsSpinning(false);
+        }
+      }, spinInterval);
     }, interval);
 
     return () => clearInterval(timer);
@@ -35,13 +46,12 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   return (
     <span
       className={`inline-block transition-all duration-300 ease-in-out ${className} ${
-        isTransitioning
-          ? 'opacity-70 transform scale-95'
-          : 'opacity-100 transform scale-100'
+        isSpinning ? 'animate-spin' : 'transform-none'
       }`}
       style={{
         minWidth: `${maxWidth * 0.6}em`, // Approximate character width
-        textAlign: 'left',
+        textAlign: 'center', // Center the text within the container
+        display: 'inline-block',
       }}
     >
       {words[currentIndex]}
