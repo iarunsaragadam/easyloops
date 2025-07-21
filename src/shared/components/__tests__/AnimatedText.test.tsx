@@ -28,7 +28,7 @@ describe('AnimatedText', () => {
     expect(element).toHaveClass(
       'inline-block',
       'transition-all',
-      'duration-600'
+      'duration-300'
     );
   });
 });
