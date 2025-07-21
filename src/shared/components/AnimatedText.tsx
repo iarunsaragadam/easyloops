@@ -29,6 +29,9 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     return () => clearInterval(timer);
   }, [words.length, interval]);
 
+  // Calculate the maximum width needed for all words
+  const maxWidth = Math.max(...words.map((word) => word.length));
+
   return (
     <span
       className={`inline-block transition-all duration-300 ease-in-out ${className} ${
@@ -36,6 +39,10 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
           ? 'opacity-70 transform scale-95'
           : 'opacity-100 transform scale-100'
       }`}
+      style={{
+        minWidth: `${maxWidth * 0.6}em`, // Approximate character width
+        textAlign: 'left',
+      }}
     >
       {words[currentIndex]}
     </span>
