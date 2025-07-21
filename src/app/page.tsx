@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { DEFAULT_QUESTION_ID } from '@/shared/constants';
-import { SimpleHeader } from '@/shared/components';
+import { SimpleHeader, AnimatedText } from '@/shared/components';
 
 export default function Home() {
   return (
@@ -14,7 +14,12 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Master Programming
+            Master{' '}
+            <AnimatedText
+              words={['Programming', 'Logic']}
+              interval={3000}
+              className="text-blue-600 dark:text-blue-400"
+            />
             <span className="text-blue-600 dark:text-blue-400">
               {' '}
               One Problem at a Time

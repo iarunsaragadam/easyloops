@@ -11,3 +11,4 @@ export { default as MobileUsageTip } from './MobileUsageTip';
 export { default as Logo } from './Logo';
 export { default as Navigation } from './Navigation';
 export { default as MobileNavigation } from './MobileNavigation';
+export { default as AnimatedText } from './AnimatedText';
