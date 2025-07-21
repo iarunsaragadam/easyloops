@@ -13,6 +13,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   interval = 2000,
   className = '',
 }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isSpinning, setIsSpinning] = useState(false);
   const [spinOffset, setSpinOffset] = useState(0);
 
@@ -40,6 +41,8 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
           clearInterval(spinTimer);
           setIsSpinning(false);
           setSpinOffset(0);
+          // Move to the next word in the sequence
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
         }
       }, spinInterval);
     }, interval);
@@ -51,7 +54,14 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   const maxWidth = Math.max(...words.map((word) => word.length));
 
   // Create a repeating sequence of words for the slot machine effect
-  const slotWords = [...words, ...words, ...words]; // Repeat 3 times for smooth scrolling
+  // Start with the current word, then alternate through the sequence
+  const currentWord = words[currentIndex];
+  const nextWord = words[(currentIndex + 1) % words.length];
+
+  // Create sequence: current word, next word, current word (for smooth scrolling)
+  const slotWords = isSpinning
+    ? [currentWord, nextWord, currentWord, nextWord, currentWord, nextWord]
+    : [currentWord];
 
   return (
     <span
@@ -76,7 +86,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
       >
         {slotWords.map((word, index) => (
           <div
-            key={`${word}-${index}`}
+            key={`${word}-${index}-${currentIndex}`}
             className="text-center"
             style={{
               height: '1.2em',
