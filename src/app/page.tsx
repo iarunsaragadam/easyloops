@@ -18,7 +18,7 @@ export default function Home() {
             <AnimatedText
               words={['Programming', 'Logic']}
               interval={3000}
-              className="text-blue-600 dark:text-blue-400"
+              className="text-gray-900 dark:text-white"
             />
             <span className="text-blue-600 dark:text-blue-400">
               {' '}
