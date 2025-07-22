@@ -10,58 +10,39 @@ interface AnimatedTextProps {
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
   words,
-  interval = 2000,
+  interval = 3000,
   className = '',
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isSpinning, setIsSpinning] = useState(false);
-  const [spinOffset, setSpinOffset] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setIsSpinning(true);
+    const startTime = Date.now();
+    const animationDuration = interval;
 
-      // Slot machine effect with vertical scrolling
-      const spinDuration = 1000; // Total spin duration
-      const spinInterval = 60; // How fast to cycle through words during spin
-      const totalSpins = spinDuration / spinInterval;
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = (elapsed % animationDuration) / animationDuration;
 
-      let spinCounter = 0;
-      const spinTimer = setInterval(() => {
-        spinCounter++;
+      // Smooth continuous scrolling - one word height per cycle
+      const wordHeight = 1.2; // em units
+      const totalScroll = wordHeight * words.length;
+      const currentScroll = progress * totalScroll;
 
-        // Create vertical scrolling effect
-        const progress = spinCounter / totalSpins;
-        const easeOut = 1 - Math.pow(1 - progress, 3); // Cubic ease-out
-        const offset = Math.floor(easeOut * words.length * 3); // Scroll through words multiple times
+      setScrollPosition(currentScroll);
 
-        setSpinOffset(offset);
+      requestAnimationFrame(animate);
+    };
 
-        if (spinCounter >= totalSpins) {
-          clearInterval(spinTimer);
-          setIsSpinning(false);
-          setSpinOffset(0);
-          // Move to the next word in the sequence
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-        }
-      }, spinInterval);
-    }, interval);
+    const animationId = requestAnimationFrame(animate);
 
-    return () => clearInterval(timer);
+    return () => cancelAnimationFrame(animationId);
   }, [words.length, interval]);
 
   // Calculate the maximum width needed for all words
   const maxWidth = Math.max(...words.map((word) => word.length));
 
-  // Create a repeating sequence of words for the slot machine effect
-  // Start with the current word, then alternate through the sequence
-  const currentWord = words[currentIndex];
-  const nextWord = words[(currentIndex + 1) % words.length];
-
-  // Create sequence: current word, next word, current word (for smooth scrolling)
-  const slotWords = isSpinning
-    ? [currentWord, nextWord, currentWord, nextWord, currentWord, nextWord]
-    : [currentWord];
+  // Create a continuous loop of words (3 sets for smooth infinite scrolling)
+  const continuousWords = [...words, ...words, ...words];
 
   return (
     <span
@@ -76,17 +57,14 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
       }}
     >
       <div
-        className="transition-transform duration-75 ease-out"
         style={{
-          transform: isSpinning
-            ? `translateY(-${spinOffset * 1.2}em)`
-            : 'translateY(0)',
-          transition: isSpinning ? 'none' : 'transform 0.3s ease-out',
+          transform: `translateY(-${scrollPosition}em)`,
+          transition: 'none', // No transition for smooth continuous motion
         }}
       >
-        {slotWords.map((word, index) => (
+        {continuousWords.map((word, index) => (
           <div
-            key={`${word}-${index}-${currentIndex}`}
+            key={`${word}-${index}`}
             className="text-center"
             style={{
               height: '1.2em',
