@@ -17,19 +17,34 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 
   useEffect(() => {
     const startTime = Date.now();
-    const animationDuration = interval;
+    const pauseDuration = 2500; // 2.5 seconds pause at each word
+    const scrollDuration = 1000; // 1 second to scroll between words
+    const totalDuration = pauseDuration + scrollDuration;
 
     const animate = () => {
       const elapsed = Date.now() - startTime;
-      const progress = (elapsed % animationDuration) / animationDuration;
+      const cycleTime = elapsed % (totalDuration * words.length);
+      const wordIndex = Math.floor(cycleTime / totalDuration);
+      const timeInWord = cycleTime % totalDuration;
 
-      // Smooth continuous scrolling - one word height per cycle
+      // Calculate scroll position with pause at each word
       const wordHeight = 1.2; // em units
-      const totalScroll = wordHeight * words.length;
-      const currentScroll = progress * totalScroll;
+      let currentScroll;
+
+      if (timeInWord < pauseDuration) {
+        // Pause phase - stay at current word
+        currentScroll = wordIndex * wordHeight;
+      } else {
+        // Scroll phase - smooth transition to next word
+        const scrollProgress = (timeInWord - pauseDuration) / scrollDuration;
+        const easeInOut =
+          scrollProgress < 0.5
+            ? 2 * scrollProgress * scrollProgress
+            : 1 - Math.pow(-2 * scrollProgress + 2, 2) / 2;
+        currentScroll = wordIndex * wordHeight + easeInOut * wordHeight;
+      }
 
       setScrollPosition(currentScroll);
-
       requestAnimationFrame(animate);
     };
 
