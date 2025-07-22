@@ -37,10 +37,59 @@
 }
 
 @theme inline {
+  /* Legacy variables for backwards compatibility */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+/* Enhanced theme CSS variables */
+:root {
+  /* Base colors */
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-muted: #f8fafc;
+  --color-muted-foreground: #64748b;
+  
+  /* Interactive elements */
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #f8fafc;
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f172a;
+  --color-accent: #f1f5f9;
+  --color-accent-foreground: #0f172a;
+  
+  /* UI elements */
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0f172a;
+  
+  /* Borders and separators */
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #3b82f6;
+  
+  /* Status colors */
+  --color-success: #10b981;
+  --color-success-foreground: #f0fdf4;
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #fffbeb;
+  --color-error: #ef4444;
+  --color-error-foreground: #fef2f2;
+  --color-info: #06b6d4;
+  --color-info-foreground: #f0f9ff;
+  
+  /* Code editor specific */
+  --color-code-background: #f8fafc;
+  --color-code-foreground: #171717;
+  --color-code-selection: #dbeafe;
+  --color-code-comment: #64748b;
+  --color-code-keyword: #8b5cf6;
+  --color-code-string: #10b981;
+  --color-code-number: #3b82f6;
+  --color-code-operator: #ef4444;
 }
 
 @media (prefers-color-scheme: dark) {

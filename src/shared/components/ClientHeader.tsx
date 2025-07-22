@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { LanguageSelector, AuthButton } from '@/features/auth';
-import ThemeToggle from '@/shared/components/ThemeToggle';
+import AdvancedThemeSelector from '@/shared/components/AdvancedThemeSelector';
 import { Logo, Navigation, MobileNavigation } from '@/shared/components';
 
 interface ClientHeaderProps {
@@ -34,7 +34,7 @@ const ClientHeader: React.FC<ClientHeaderProps> = ({
                 onLanguageChange={onLanguageChange}
               />
             )}
-            <ThemeToggle />
+            <AdvancedThemeSelector />
             <AuthButton />
             <MobileNavigation />
           </div>

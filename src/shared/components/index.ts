@@ -12,3 +12,9 @@ export { default as Logo } from './Logo';
 export { default as Navigation } from './Navigation';
 export { default as MobileNavigation } from './MobileNavigation';
 export { default as AnimatedText } from './AnimatedText';
+
+// Theme components
+export { default as AdvancedThemeProvider } from './AdvancedThemeProvider';
+export { default as AdvancedThemeSelector } from './AdvancedThemeSelector';
+export { default as ThemeProvider } from './ThemeProvider';
+export { default as ThemeToggle } from './ThemeToggle';
