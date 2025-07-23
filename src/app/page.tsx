@@ -11,18 +11,19 @@ export default function Home() {
       <SimpleHeader />
 
       {/* Hero Section */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-wrap items-center">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 flex flex-wrap items-center justify-center gap-2 text-center ">
             <span className="text-gray-900 dark:text-white">Master </span>
+
             <AnimatedText
               words={['Programming', 'Logic']}
               interval={3000}
-              className="text-gray-900 dark:text-white"
+              className="text-gray-900 dark:text-white "
             />
+
             <span className="text-blue-600 dark:text-blue-400">
-              {' '}
-              One Problem at a Time
+              &nbsp;One Problem at a Time
             </span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
