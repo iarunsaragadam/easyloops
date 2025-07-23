@@ -16,5 +16,7 @@ export { default as AnimatedText } from './AnimatedText';
 // Theme components
 export { default as AdvancedThemeProvider } from './AdvancedThemeProvider';
 export { default as AdvancedThemeSelector } from './AdvancedThemeSelector';
+export { default as SimpleThemeSelector } from './SimpleThemeSelector';
+export { default as ColorThemeSelector } from './ColorThemeSelector';
 export { default as ThemeProvider } from './ThemeProvider';
 export { default as ThemeToggle } from './ThemeToggle';

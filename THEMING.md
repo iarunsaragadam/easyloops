@@ -1,17 +1,22 @@
-# easyloops Advanced Theming System
+# easyloops CSS Variable Theming System
 
-This document explains the comprehensive theming system implemented for easyloops, which allows for easy theme swapping at one central location.
+This document explains the CSS variable-based theming system implemented for easyloops, which allows for easy theme swapping using data attributes.
 
 ## Overview
 
-The new theming system supports:
-- **Base themes**: Light, Dark, and System (auto-detect)
-- **Color themes**: Multiple color palettes (Default, Ocean, Forest, Sunset, Lavender, Monochrome, High-contrast)
+The theming system supports:
+- **Base themes**: Light, Dark, and System (auto-detect) 
+- **Color themes**: Multiple color palettes (Default, Ocean, Forest)
+- **CSS Variables with Data Attributes**: `[data-theme="theme-name"][data-mode="light"]`
+- **Tailwind Integration**: Direct Tailwind class support for all theme colors
 - **Automatic persistence**: Themes are saved to localStorage
-- **CSS variables**: Complete color system using CSS custom properties
 - **TypeScript support**: Full type safety for theme configuration
 
 ## Quick Start
+
+### Demo Page
+
+Visit `/theme-demo` to see the theming system in action with live examples of all components and color palettes.
 
 ### Basic Usage
 
@@ -22,17 +27,18 @@ function MyComponent() {
   const { theme, setBaseTheme, setColorTheme } = useAdvancedTheme();
   
   return (
-    <div 
-      style={{
-        backgroundColor: theme.currentColors.card,
-        color: theme.currentColors.cardForeground,
-      }}
-    >
+    <div className="bg-theme-card text-theme-card-foreground p-4 rounded-lg">
       <p>Current theme: {theme.baseTheme} + {theme.colorTheme}</p>
-      <button onClick={() => setBaseTheme('dark')}>
+      <button 
+        onClick={() => setBaseTheme('dark')}
+        className="bg-theme-primary text-theme-primary-foreground px-3 py-1 rounded"
+      >
         Switch to Dark
       </button>
-      <button onClick={() => setColorTheme('ocean')}>
+      <button 
+        onClick={() => setColorTheme('ocean')}
+        className="bg-theme-secondary text-theme-secondary-foreground px-3 py-1 rounded"
+      >
         Switch to Ocean Theme
       </button>
     </div>
@@ -40,16 +46,19 @@ function MyComponent() {
 }
 ```
 
-### Using the Theme Selector
+### Using the Theme Selectors
 
 ```tsx
-import { AdvancedThemeSelector } from '@/shared';
+import { SimpleThemeSelector, ColorThemeSelector } from '@/shared';
 
 function Header() {
   return (
-    <header>
-      {/* Your header content */}
-      <AdvancedThemeSelector />
+    <header className="flex items-center justify-between p-4">
+      <h1>My App</h1>
+      <div className="flex items-center space-x-4">
+        <ColorThemeSelector />  {/* For selecting color themes */}
+        <SimpleThemeSelector />  {/* For light/dark/system */}
+      </div>
     </header>
   );
 }
@@ -66,10 +75,6 @@ function Header() {
 - **Default**: The classic easyloops blue theme
 - **Ocean**: Cool blues and teals inspired by the ocean
 - **Forest**: Natural greens for a calming coding experience
-- **Sunset**: Warm oranges and yellows like a sunset
-- **Lavender**: Soft purples for a gentle coding environment
-- **Monochrome**: Pure black and white for minimal distraction
-- **High Contrast**: Maximum contrast for accessibility
 
 ## Architecture
 
@@ -152,20 +157,40 @@ interface ThemeColors {
 
 ## Using Themes in Components
 
-### Method 1: Using the Hook (Recommended)
+### Method 1: Using Tailwind Classes (Recommended)
 ```tsx
-import { useAdvancedTheme } from '@/shared';
-
 function MyComponent() {
-  const { theme } = useAdvancedTheme();
-  
+  return (
+    <div className="bg-theme-card text-theme-card-foreground border border-theme-border p-4 rounded-lg">
+      <h2 className="text-theme-foreground">Themed content</h2>
+      <p className="text-theme-muted-foreground">Muted text content</p>
+      <button className="bg-theme-primary text-theme-primary-foreground px-3 py-1 rounded">
+        Action
+      </button>
+    </div>
+  );
+}
+```
+
+### Method 2: Using CSS Variables Directly
+```css
+.my-component {
+  background-color: hsl(var(--color-card));
+  color: hsl(var(--color-card-foreground));
+  border-color: hsl(var(--color-border));
+}
+```
+
+### Method 3: Using React Inline Styles
+```tsx
+function MyComponent() {
   return (
     <div 
       className="p-4 rounded-lg"
       style={{
-        backgroundColor: theme.currentColors.card,
-        borderColor: theme.currentColors.border,
-        color: theme.currentColors.cardForeground,
+        backgroundColor: 'hsl(var(--color-card))',
+        color: 'hsl(var(--color-card-foreground))',
+        borderColor: 'hsl(var(--color-border))',
       }}
     >
       Themed content
@@ -174,24 +199,9 @@ function MyComponent() {
 }
 ```
 
-### Method 2: Using CSS Variables
-```css
-.my-component {
-  background-color: var(--color-card);
-  color: var(--color-card-foreground);
-  border-color: var(--color-border);
-}
-```
-
-### Method 3: Tailwind Classes (Future Enhancement)
-```tsx
-// Future implementation will support:
-<div className="bg-card text-card-foreground border-border">
-  Themed content
-</div>
-```
-
 ## CSS Variables Reference
+
+### CSS Custom Properties
 
 All theme colors are available as CSS custom properties:
 
@@ -240,6 +250,34 @@ All theme colors are available as CSS custom properties:
 --color-code-string
 --color-code-number
 --color-code-operator
+```
+
+### Tailwind Classes
+
+All colors are available as Tailwind classes with the `theme-` prefix:
+
+```css
+/* Background colors */
+bg-theme-background, bg-theme-foreground, bg-theme-card, bg-theme-popover
+bg-theme-primary, bg-theme-secondary, bg-theme-accent, bg-theme-muted
+bg-theme-success, bg-theme-warning, bg-theme-error, bg-theme-info
+bg-theme-code-background
+
+/* Text colors */
+text-theme-background, text-theme-foreground, text-theme-card-foreground
+text-theme-primary, text-theme-primary-foreground
+text-theme-secondary-foreground, text-theme-muted-foreground
+text-theme-success-foreground, text-theme-warning-foreground
+text-theme-error-foreground, text-theme-info-foreground
+text-theme-code-foreground, text-theme-code-comment
+text-theme-code-keyword, text-theme-code-string
+text-theme-code-number, text-theme-code-operator
+
+/* Border colors */
+border-theme-border, border-theme-input
+
+/* Ring colors */
+ring-theme-ring
 ```
 
 ## API Reference

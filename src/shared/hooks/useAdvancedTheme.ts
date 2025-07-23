@@ -3,10 +3,9 @@ import {
   BaseTheme, 
   ColorTheme, 
   ThemeState, 
-  ThemeContextType,
-  ThemeColors
+  ThemeContextType
 } from '@/shared/types/theme';
-import { themeDefinitions, getThemeColors } from '@/shared/constants/themes';
+import { colorThemes } from '@/shared/constants/themes';
 import { 
   applyTheme, 
   saveThemePreferences, 
@@ -35,9 +34,6 @@ export const useAdvancedThemeState = () => {
   const [baseTheme, setBaseThemeState] = useState<BaseTheme>('system');
   const [colorTheme, setColorThemeState] = useState<ColorTheme>('default');
   const [resolvedBaseTheme, setResolvedBaseTheme] = useState<'light' | 'dark'>('light');
-  const [currentColors, setCurrentColors] = useState<ThemeColors>(() => 
-    getThemeColors('default', 'light')
-  );
   const [isClient, setIsClient] = useState(false);
 
   // Initialize from localStorage on mount
@@ -53,10 +49,7 @@ export const useAdvancedThemeState = () => {
     if (!isClient) return;
 
     const resolved = applyTheme(baseTheme, colorTheme);
-    const colors = getThemeColors(colorTheme, resolved);
-    
     setResolvedBaseTheme(resolved);
-    setCurrentColors(colors);
     
     // Save preferences
     saveThemePreferences(baseTheme, colorTheme);
@@ -71,9 +64,7 @@ export const useAdvancedThemeState = () => {
     const handleChange = () => {
       if (baseTheme === 'system') {
         const resolved = getResolvedBaseTheme(baseTheme);
-        const colors = getThemeColors(colorTheme, resolved);
         setResolvedBaseTheme(resolved);
-        setCurrentColors(colors);
         applyTheme(baseTheme, colorTheme);
       }
     };
@@ -92,8 +83,8 @@ export const useAdvancedThemeState = () => {
     setColorThemeState(newColorTheme);
   };
 
-  const setTheme = (newBaseTheme: BaseTheme, newColorTheme: ColorTheme) => {
-    console.info(`[Theme] Theme changed to: ${newBaseTheme} + ${newColorTheme}`);
+  const setFullTheme = (newBaseTheme: BaseTheme, newColorTheme: ColorTheme) => {
+    console.info(`[Theme] Full theme changed to: ${newBaseTheme} + ${newColorTheme}`);
     setBaseThemeState(newBaseTheme);
     setColorThemeState(newColorTheme);
   };
@@ -102,15 +93,14 @@ export const useAdvancedThemeState = () => {
     baseTheme,
     colorTheme,
     resolvedBaseTheme: isClient ? resolvedBaseTheme : 'light',
-    currentColors: isClient ? currentColors : getThemeColors('default', 'light'),
   };
 
   return {
     theme: themeState,
     setBaseTheme,
     setColorTheme,
-    setTheme,
-    availableThemes: themeDefinitions,
+    setFullTheme,
+    availableColorThemes: colorThemes,
   };
 };
 

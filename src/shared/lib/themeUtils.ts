@@ -1,45 +1,15 @@
-import { ThemeColors, BaseTheme, ColorTheme } from '@/shared/types/theme';
-import { getThemeColors } from '@/shared/constants/themes';
+import { BaseTheme, ColorTheme } from '@/shared/types/theme';
 
 /**
- * Applies theme colors as CSS custom properties to the document root
+ * Sets theme using data attributes on document element
  */
-export const applyThemeColors = (colors: ThemeColors): void => {
+export function setTheme(colorTheme: ColorTheme, mode: 'light' | 'dark') {
   const root = document.documentElement;
+  root.setAttribute('data-theme', colorTheme);
+  root.setAttribute('data-mode', mode);
   
-  Object.entries(colors).forEach(([key, value]) => {
-    // Convert camelCase to kebab-case for CSS variables
-    const cssVar = `--color-${key.replace(/([A-Z])/g, '-$1').toLowerCase()}`;
-    root.style.setProperty(cssVar, value);
-  });
-  
-  // Also set legacy variables for backwards compatibility
-  root.style.setProperty('--background', colors.background);
-  root.style.setProperty('--foreground', colors.foreground);
-};
-
-/**
- * Applies theme classes to HTML elements
- */
-export const applyThemeClasses = (baseTheme: 'light' | 'dark', colorTheme: ColorTheme): void => {
-  const root = document.documentElement;
-  const body = document.body;
-  
-  // Remove all existing theme classes
-  root.className = root.className
-    .split(' ')
-    .filter(cls => !cls.startsWith('theme-') && cls !== 'light' && cls !== 'dark')
-    .join(' ');
-    
-  body.className = body.className
-    .split(' ')
-    .filter(cls => !cls.startsWith('theme-') && cls !== 'light' && cls !== 'dark')
-    .join(' ');
-  
-  // Add new theme classes
-  root.classList.add(baseTheme, `theme-${colorTheme}`);
-  body.classList.add(baseTheme, `theme-${colorTheme}`);
-};
+  console.info(`[Theme] Applied theme: ${colorTheme} in ${mode} mode`);
+}
 
 /**
  * Gets the resolved base theme (light or dark) from system preference
@@ -56,11 +26,7 @@ export const getResolvedBaseTheme = (baseTheme: BaseTheme): 'light' | 'dark' => 
  */
 export const applyTheme = (baseTheme: BaseTheme, colorTheme: ColorTheme): 'light' | 'dark' => {
   const resolvedBaseTheme = getResolvedBaseTheme(baseTheme);
-  const colors = getThemeColors(colorTheme, resolvedBaseTheme);
-  
-  applyThemeColors(colors);
-  applyThemeClasses(resolvedBaseTheme, colorTheme);
-  
+  setTheme(colorTheme, resolvedBaseTheme);
   return resolvedBaseTheme;
 };
 
@@ -96,56 +62,19 @@ export const loadThemePreferences = (): { baseTheme: BaseTheme; colorTheme: Colo
       baseTheme: savedBaseTheme && ['light', 'dark', 'system'].includes(savedBaseTheme) 
         ? savedBaseTheme 
         : 'system',
-      colorTheme: savedColorTheme && ['default', 'ocean', 'forest', 'sunset', 'lavender', 'monochrome', 'high-contrast'].includes(savedColorTheme)
+      colorTheme: savedColorTheme && ['default', 'ocean', 'forest'].includes(savedColorTheme)
         ? savedColorTheme
         : 'default',
     };
   } catch (error) {
     console.warn('Failed to load theme preferences:', error);
-    return { baseTheme: 'system', colorTheme: 'default' };
+    return { baseTheme: 'system', colorTheme: 'default' };  
   }
-};
-
-/**
- * Creates a CSS-safe theme class name
- */
-export const getThemeClassName = (colorTheme: ColorTheme): string => {
-  return `theme-${colorTheme}`;
 };
 
 /**
  * Gets Monaco editor theme name based on current theme
  */
-export const getMonacoTheme = (baseTheme: 'light' | 'dark', colorTheme: ColorTheme): string => {
-  // For now, we'll use the default Monaco themes
-  // In the future, we could create custom Monaco themes for each color theme
+export const getMonacoTheme = (baseTheme: 'light' | 'dark'): string => {
   return baseTheme === 'dark' ? 'vs-dark' : 'vs';
-};
-
-/**
- * Generates Tailwind color classes based on theme colors
- */
-export const generateTailwindClasses = (colors: ThemeColors): Record<string, string> => {
-  return {
-    'bg-background': `background-color: ${colors.background}`,
-    'bg-foreground': `background-color: ${colors.foreground}`,
-    'bg-card': `background-color: ${colors.card}`,
-    'bg-popover': `background-color: ${colors.popover}`,
-    'bg-primary': `background-color: ${colors.primary}`,
-    'bg-secondary': `background-color: ${colors.secondary}`,
-    'bg-muted': `background-color: ${colors.muted}`,
-    'bg-accent': `background-color: ${colors.accent}`,
-    'text-background': `color: ${colors.background}`,
-    'text-foreground': `color: ${colors.foreground}`,
-    'text-card-foreground': `color: ${colors.cardForeground}`,
-    'text-popover-foreground': `color: ${colors.popoverForeground}`,
-    'text-primary': `color: ${colors.primary}`,
-    'text-primary-foreground': `color: ${colors.primaryForeground}`,
-    'text-secondary-foreground': `color: ${colors.secondaryForeground}`,
-    'text-muted-foreground': `color: ${colors.mutedForeground}`,
-    'text-accent-foreground': `color: ${colors.accentForeground}`,
-    'border-border': `border-color: ${colors.border}`,
-    'border-input': `border-color: ${colors.input}`,
-    'ring-ring': `--tw-ring-color: ${colors.ring}`,
-  };
 };

@@ -44,52 +44,301 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Enhanced theme CSS variables */
+/* Default CSS variables (fallback) */
 :root {
-  /* Base colors */
-  --color-background: #ffffff;
-  --color-foreground: #171717;
-  --color-muted: #f8fafc;
-  --color-muted-foreground: #64748b;
+  /* Base colors using HSL values without hsl() wrapper for Tailwind compatibility */
+  --color-background: 0 0% 100%;
+  --color-foreground: 220 30% 20%;
+  --color-muted: 210 40% 98%;
+  --color-muted-foreground: 215 13% 65%;
   
   /* Interactive elements */
-  --color-primary: #3b82f6;
-  --color-primary-foreground: #f8fafc;
-  --color-secondary: #f1f5f9;
-  --color-secondary-foreground: #0f172a;
-  --color-accent: #f1f5f9;
-  --color-accent-foreground: #0f172a;
+  --color-primary: 221 83% 53%;
+  --color-primary-foreground: 210 40% 98%;
+  --color-secondary: 210 40% 96%;
+  --color-secondary-foreground: 222 84% 5%;
+  --color-accent: 210 40% 96%;
+  --color-accent-foreground: 222 84% 5%;
   
   /* UI elements */
-  --color-card: #ffffff;
-  --color-card-foreground: #0f172a;
-  --color-popover: #ffffff;
-  --color-popover-foreground: #0f172a;
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 222 84% 5%;
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 222 84% 5%;
   
   /* Borders and separators */
-  --color-border: #e2e8f0;
-  --color-input: #e2e8f0;
-  --color-ring: #3b82f6;
+  --color-border: 214 32% 91%;
+  --color-input: 214 32% 91%;
+  --color-ring: 221 83% 53%;
   
   /* Status colors */
-  --color-success: #10b981;
-  --color-success-foreground: #f0fdf4;
-  --color-warning: #f59e0b;
-  --color-warning-foreground: #fffbeb;
-  --color-error: #ef4444;
-  --color-error-foreground: #fef2f2;
-  --color-info: #06b6d4;
-  --color-info-foreground: #f0f9ff;
+  --color-success: 142 76% 36%;
+  --color-success-foreground: 355 7% 97%;
+  --color-warning: 38 92% 50%;
+  --color-warning-foreground: 48 96% 89%;
+  --color-error: 0 84% 60%;
+  --color-error-foreground: 210 40% 98%;
+  --color-info: 199 89% 48%;
+  --color-info-foreground: 210 40% 98%;
   
   /* Code editor specific */
-  --color-code-background: #f8fafc;
-  --color-code-foreground: #171717;
-  --color-code-selection: #dbeafe;
-  --color-code-comment: #64748b;
-  --color-code-keyword: #8b5cf6;
-  --color-code-string: #10b981;
-  --color-code-number: #3b82f6;
-  --color-code-operator: #ef4444;
+  --color-code-background: 0 0% 98%;
+  --color-code-foreground: 0 0% 9%;
+  --color-code-selection: 221 83% 93%;
+  --color-code-comment: 215 13% 65%;
+  --color-code-keyword: 262 83% 58%;
+  --color-code-string: 142 76% 36%;
+  --color-code-number: 221 83% 53%;
+  --color-code-operator: 0 84% 60%;
+}
+
+/* Theme: default (blue) */
+[data-theme="default"][data-mode="light"] {
+  --color-background: 0 0% 100%;
+  --color-foreground: 220 30% 20%;
+  --color-muted: 210 40% 98%;
+  --color-muted-foreground: 215 13% 65%;
+  
+  --color-primary: 221 83% 53%;
+  --color-primary-foreground: 210 40% 98%;
+  --color-secondary: 210 40% 96%;
+  --color-secondary-foreground: 222 84% 5%;
+  --color-accent: 210 40% 96%;
+  --color-accent-foreground: 222 84% 5%;
+  
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 222 84% 5%;
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 222 84% 5%;
+  
+  --color-border: 214 32% 91%;
+  --color-input: 214 32% 91%;
+  --color-ring: 221 83% 53%;
+  
+  --color-success: 142 76% 36%;
+  --color-success-foreground: 355 7% 97%;
+  --color-warning: 38 92% 50%;
+  --color-warning-foreground: 48 96% 89%;
+  --color-error: 0 84% 60%;
+  --color-error-foreground: 210 40% 98%;
+  --color-info: 199 89% 48%;
+  --color-info-foreground: 210 40% 98%;
+  
+  --color-code-background: 0 0% 98%;
+  --color-code-foreground: 0 0% 9%;
+  --color-code-selection: 221 83% 93%;
+  --color-code-comment: 215 13% 65%;
+  --color-code-keyword: 262 83% 58%;
+  --color-code-string: 142 76% 36%;
+  --color-code-number: 221 83% 53%;
+  --color-code-operator: 0 84% 60%;
+}
+
+[data-theme="default"][data-mode="dark"] {
+  --color-background: 222 84% 5%;
+  --color-foreground: 210 40% 98%;
+  --color-muted: 217 33% 17%;
+  --color-muted-foreground: 215 20% 65%;
+  
+  --color-primary: 217 91% 60%;
+  --color-primary-foreground: 222 84% 5%;
+  --color-secondary: 217 33% 17%;
+  --color-secondary-foreground: 210 40% 98%;
+  --color-accent: 217 33% 17%;
+  --color-accent-foreground: 210 40% 98%;
+  
+  --color-card: 222 84% 5%;
+  --color-card-foreground: 210 40% 98%;
+  --color-popover: 222 84% 5%;
+  --color-popover-foreground: 210 40% 98%;
+  
+  --color-border: 217 33% 17%;
+  --color-input: 217 33% 17%;
+  --color-ring: 217 91% 60%;
+  
+  --color-success: 142 70% 45%;
+  --color-success-foreground: 144 61% 20%;
+  --color-warning: 38 92% 50%;
+  --color-warning-foreground: 48 96% 89%;
+  --color-error: 0 63% 31%;
+  --color-error-foreground: 210 40% 98%;
+  --color-info: 199 89% 48%;
+  --color-info-foreground: 210 40% 98%;
+  
+  --color-code-background: 217 33% 17%;
+  --color-code-foreground: 210 40% 98%;
+  --color-code-selection: 217 91% 25%;
+  --color-code-comment: 215 20% 65%;
+  --color-code-keyword: 262 83% 78%;
+  --color-code-string: 142 70% 65%;
+  --color-code-number: 217 91% 60%;
+  --color-code-operator: 0 84% 80%;
+}
+
+/* Theme: ocean */
+[data-theme="ocean"][data-mode="light"] {
+  --color-background: 190 60% 98%;
+  --color-foreground: 200 50% 10%;
+  --color-muted: 190 50% 90%;
+  --color-muted-foreground: 200 20% 40%;
+  
+  --color-primary: 200 98% 39%;
+  --color-primary-foreground: 190 60% 98%;
+  --color-secondary: 190 50% 90%;
+  --color-secondary-foreground: 200 50% 10%;
+  --color-accent: 180 100% 85%;
+  --color-accent-foreground: 200 50% 10%;
+  
+  --color-card: 190 60% 98%;
+  --color-card-foreground: 200 50% 10%;
+  --color-popover: 190 60% 98%;
+  --color-popover-foreground: 200 50% 10%;
+  
+  --color-border: 190 30% 85%;
+  --color-input: 190 30% 85%;
+  --color-ring: 200 98% 39%;
+  
+  --color-success: 160 84% 39%;
+  --color-success-foreground: 190 60% 98%;
+  --color-warning: 38 92% 50%;
+  --color-warning-foreground: 48 96% 89%;
+  --color-error: 0 84% 60%;
+  --color-error-foreground: 190 60% 98%;
+  --color-info: 200 98% 39%;
+  --color-info-foreground: 190 60% 98%;
+  
+  --color-code-background: 190 50% 95%;
+  --color-code-foreground: 200 50% 10%;
+  --color-code-selection: 200 98% 90%;
+  --color-code-comment: 200 20% 40%;
+  --color-code-keyword: 200 98% 39%;
+  --color-code-string: 160 84% 39%;
+  --color-code-number: 200 98% 39%;
+  --color-code-operator: 0 84% 60%;
+}
+
+[data-theme="ocean"][data-mode="dark"] {
+  --color-background: 200 50% 10%;
+  --color-foreground: 190 60% 95%;
+  --color-muted: 200 50% 20%;
+  --color-muted-foreground: 200 20% 65%;
+  
+  --color-primary: 200 98% 60%;
+  --color-primary-foreground: 200 50% 10%;
+  --color-secondary: 200 50% 20%;
+  --color-secondary-foreground: 190 60% 95%;
+  --color-accent: 200 50% 20%;
+  --color-accent-foreground: 190 60% 95%;
+  
+  --color-card: 200 50% 10%;
+  --color-card-foreground: 190 60% 95%;
+  --color-popover: 200 50% 10%;
+  --color-popover-foreground: 190 60% 95%;
+  
+  --color-border: 200 50% 20%;
+  --color-input: 200 50% 20%;
+  --color-ring: 200 98% 60%;
+  
+  --color-success: 160 84% 55%;
+  --color-success-foreground: 200 50% 10%;
+  --color-warning: 38 92% 50%;
+  --color-warning-foreground: 48 96% 89%;
+  --color-error: 0 84% 70%;
+  --color-error-foreground: 200 50% 10%;
+  --color-info: 200 98% 60%;
+  --color-info-foreground: 200 50% 10%;
+  
+  --color-code-background: 200 50% 15%;
+  --color-code-foreground: 190 60% 95%;
+  --color-code-selection: 200 98% 25%;
+  --color-code-comment: 200 20% 65%;
+  --color-code-keyword: 200 98% 70%;
+  --color-code-string: 160 84% 65%;
+  --color-code-number: 200 98% 60%;
+  --color-code-operator: 0 84% 80%;
+}
+
+/* Theme: forest */
+[data-theme="forest"][data-mode="light"] {
+  --color-background: 120 30% 98%;
+  --color-foreground: 120 30% 10%;
+  --color-muted: 120 20% 90%;
+  --color-muted-foreground: 120 15% 40%;
+  
+  --color-primary: 120 60% 35%;
+  --color-primary-foreground: 120 30% 98%;
+  --color-secondary: 120 20% 90%;
+  --color-secondary-foreground: 120 30% 10%;
+  --color-accent: 90 50% 85%;
+  --color-accent-foreground: 120 30% 10%;
+  
+  --color-card: 120 30% 98%;
+  --color-card-foreground: 120 30% 10%;
+  --color-popover: 120 30% 98%;
+  --color-popover-foreground: 120 30% 10%;
+  
+  --color-border: 120 20% 85%;
+  --color-input: 120 20% 85%;
+  --color-ring: 120 60% 35%;
+  
+  --color-success: 120 60% 35%;
+  --color-success-foreground: 120 30% 98%;
+  --color-warning: 38 92% 50%;
+  --color-warning-foreground: 48 96% 89%;
+  --color-error: 0 84% 60%;
+  --color-error-foreground: 120 30% 98%;
+  --color-info: 199 89% 48%;
+  --color-info-foreground: 120 30% 98%;
+  
+  --color-code-background: 120 20% 95%;
+  --color-code-foreground: 120 30% 10%;
+  --color-code-selection: 120 60% 90%;
+  --color-code-comment: 120 15% 40%;
+  --color-code-keyword: 120 60% 35%;
+  --color-code-string: 140 70% 40%;
+  --color-code-number: 120 60% 35%;
+  --color-code-operator: 0 84% 60%;
+}
+
+[data-theme="forest"][data-mode="dark"] {
+  --color-background: 120 30% 8%;
+  --color-foreground: 120 30% 95%;
+  --color-muted: 120 20% 18%;
+  --color-muted-foreground: 120 15% 65%;
+  
+  --color-primary: 120 60% 55%;
+  --color-primary-foreground: 120 30% 8%;
+  --color-secondary: 120 20% 18%;
+  --color-secondary-foreground: 120 30% 95%;
+  --color-accent: 120 20% 18%;
+  --color-accent-foreground: 120 30% 95%;
+  
+  --color-card: 120 30% 8%;
+  --color-card-foreground: 120 30% 95%;
+  --color-popover: 120 30% 8%;
+  --color-popover-foreground: 120 30% 95%;
+  
+  --color-border: 120 20% 18%;
+  --color-input: 120 20% 18%;
+  --color-ring: 120 60% 55%;
+  
+  --color-success: 120 60% 55%;
+  --color-success-foreground: 120 30% 8%;
+  --color-warning: 38 92% 50%;
+  --color-warning-foreground: 48 96% 89%;
+  --color-error: 0 84% 70%;
+  --color-error-foreground: 120 30% 8%;
+  --color-info: 199 89% 60%;
+  --color-info-foreground: 120 30% 8%;
+  
+  --color-code-background: 120 20% 12%;
+  --color-code-foreground: 120 30% 95%;
+  --color-code-selection: 120 60% 25%;
+  --color-code-comment: 120 15% 65%;
+  --color-code-keyword: 120 60% 75%;
+  --color-code-string: 140 70% 65%;
+  --color-code-number: 120 60% 55%;
+  --color-code-operator: 0 84% 80%;
 }
 
 @media (prefers-color-scheme: dark) {
