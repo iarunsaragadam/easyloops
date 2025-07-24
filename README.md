@@ -76,6 +76,24 @@ In a world where programming education is often expensive, fragmented, or inacce
 - Functional programming concepts
 - Distributed systems patterns
 
+## 🎯 Learning Objectives (Levels 1-90)
+
+- Understand variables, data types, and constants
+- Perform type conversions and basic input/output
+- Use arithmetic, comparison, and logical operations
+- Control program flow with conditionals and loops
+- Manipulate arrays and strings, including multi-dimensional arrays
+- Define and invoke functions with parameters and return values
+- Apply recursion to solve problems
+- Handle errors with try/catch, validation, and propagation
+- Read from and write to files (CSV, JSON, line-by-line processing)
+- Implement basic data structures (lists, stacks, queues, linked lists, trees)
+- Utilize functional constructs such as lambdas, closures, and generators
+- Build simple object-oriented designs with classes and inheritance
+- Work with regular expressions and pattern matching
+- Implement common search and sorting algorithms, dynamic programming, and greedy techniques
+- Perform basic networking tasks including HTTP requests and API consumption
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: Next.js 15, React 19, TypeScript
