@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Write a program that demonstrates proper [[wiki:variable]] declaration and initialization for different data types. Your program should read values from standard input and use them to demonstrate various programming concepts.
+Write a program that demonstrates proper [[wiki:variable]] declaration and initialization for different [[wiki:data-types]]. Your program should read values from standard input and use them to demonstrate various programming concepts.
 
 Your program should:
 
@@ -30,7 +30,6 @@ Your program should:
 
 The input consists of 7 lines:
 
-```
 Line 1: Integer value (e.g., 42)
 Line 2: String value (e.g., "Hello, World!")
 Line 3: Boolean value (true or false)
@@ -38,13 +37,11 @@ Line 4: Floating-point number (e.g., 3.14159)
 Line 5: Single character (e.g., A)
 Line 6: New integer value for reassignment (e.g., 100)
 Line 7: String value for late initialization (e.g., "Programming")
-```
 
 ## Test Cases
 
-**Input (`input.txt`):**
+**Input (input.txt):**
 
-```
 42
 Hello, World!
 true
@@ -52,11 +49,9 @@ true
 A
 100
 Programming
-```
 
-**Expected Output (`expected.txt`):**
+**Expected Output (expected.txt):**
 
-```
 Integer variable: 42
 String variable: Hello, World!
 Boolean variable: true
@@ -64,51 +59,48 @@ Float variable: 3.14159
 Character variable: A
 Updated integer variable: 100
 Late-initialized variable: Programming
-```
 
 ## How to Test Your Solution
 
-1. Copy your template file: `cp templates/python_template.py solution.py`
-2. Implement your solution in the `solve()` function
-3. Test with: `cat input.txt | python solution.py > output.txt`
-4. Compare: `diff output.txt expected.txt`
-5. If `diff` shows nothing, your solution is correct! ✅
+1. Copy your template file: cp templates/python_template.py solution.py
+2. Implement your solution in the solve() function
+3. Test with: cat input.txt | python solution.py > output.txt
+4. Compare: diff output.txt expected.txt
+5. If diff shows nothing, your solution is correct! ✅
 
 ## Learning Objectives
 
-- Understand different data types available in programming languages
-- Learn the difference between variable declaration and initialization
-- Practice proper variable naming conventions
-- Understand variable reassignment
-- Learn about type inference (in languages that support it)
-- Practice reading input from stdin in the correct order
+Understand different data types available in programming languages
+Learn the difference between variable declaration and initialization
+Practice proper variable naming conventions
+Understand variable reassignment
+Learn about type inference (in languages that support it)
+Practice reading input from stdin in the correct order
 
 ## Implementation Guidelines
 
 ### Python Example Structure:
 
-```python
-def solve():
-    # Read input values
-    integer_val = int(input())
-    string_val = input().strip()
-    boolean_val = input().strip() == "true"
-    float_val = float(input())
-    char_val = input().strip()
-    new_integer_val = int(input())
-    late_init_val = input().strip()
+python
+def solve(): # Read input values
+integer_val = int(input())
+string_val = input().strip()
+boolean_val = input().strip() == "true"
+float_val = float(input())
+char_val = input().strip()
+new_integer_val = int(input())
+late_init_val = input().strip()
 
     # Your variable declaration and output logic here
     # ...
-```
 
 ### Go Example Structure:
 
-```go
+go
 func solve() {
-    // Read input values
-    scanner.Scan()
-    integerVal, _ := strconv.Atoi(scanner.Text())
+// Read input values
+scanner.Scan()
+integerVal, \_ := strconv.Atoi(scanner.Text())
 
     scanner.Scan()
     stringVal := scanner.Text()
@@ -118,20 +110,20 @@ func solve() {
 
     // Continue reading other values...
     // Your variable declaration and output logic here
+
 }
-```
 
 ## Constraints
 
-- Use meaningful variable names that follow the language's naming conventions
-- Include comments explaining each step
-- Handle languages that don't support certain data types gracefully
-- Output format must match exactly (including spacing and punctuation)
+Use meaningful variable names that follow the language's naming conventions
+Include comments explaining each step
+Handle languages that don't support certain data types gracefully
+Output format must match exactly (including spacing and punctuation)
 
 ## Hints
 
-- Some languages require explicit type declaration, others support type inference
-- Pay attention to the language's naming conventions (camelCase, snake_case, etc.)
-- Consider how different languages handle uninitialized variables
-- Be careful with boolean parsing - check if input is "true" or "false"
-- Character handling varies by language (some use single chars, others use strings)
+Some languages require explicit type declaration, others support type inference
+Pay attention to the language's naming conventions (camelCase, snake_case, etc.)
+Consider how different languages handle uninitialized variables
+Be careful with boolean parsing - check if input is "true" or "false"
+Character handling varies by language (some use single chars, others use strings)
