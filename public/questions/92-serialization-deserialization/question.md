@@ -30,8 +30,12 @@ placeholder
 5. If `diff` shows nothing, your solution is correct! ✅
 
 ## Learning Objectives
-- Understand Serialization/deserialization
-- TODO
+- Understand serialization and deserialization concepts
+- Work with common formats such as JSON, XML, and binary
+- Implement serialization functions for complex data structures
+- Safely deserialize data and handle corrupted input
+- Apply serialization for file storage and inter-process communication
+- Consider versioning and compatibility for serialized data
 
 ## Implementation Guidelines
 ### Python Example Structure:
