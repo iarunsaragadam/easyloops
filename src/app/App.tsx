@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePyodide, useCodeExecution } from '@/features/editor';
+import { useCodeExecution } from '@/features/editor';
 import { useResizableLayout } from '@/shared';
 import { useAppState } from '@/features/question';
 import { useAuth } from '@/features/auth';
@@ -8,7 +8,6 @@ import { ProblemDescription } from '@/features/question';
 import { ExecutionMode, SubmissionResult } from '@/shared/types';
 
 const App: React.FC = () => {
-  const pyodideManager = usePyodide();
   const {
     layoutState,
     containerRef,
@@ -26,7 +25,7 @@ const App: React.FC = () => {
     setTestResults,
     setIsRunning,
   } = useAppState();
-  const { executeCode, executeAndSubmit } = useCodeExecution(pyodideManager);
+  const { executeCode, executeAndSubmit } = useCodeExecution();
   const { isAuthorizedForGo, user } = useAuth();
 
   // Force editor to update when language changes

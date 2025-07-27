@@ -5,7 +5,7 @@
   "identifier": "app.easyloops.desktop",
   "build": {
     "frontendDist": "../out",
-    "devUrl": "http://[::1]:3000",
+    "devUrl": "http://[::1]:3010",
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build"
   },

@@ -9,7 +9,7 @@
     "node": "22.5.0"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3010",
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings 0",
@@ -20,6 +20,11 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:debug": "playwright test --debug",
+    "test:wasm": "playwright test e2e/wasm-*.spec.ts",
+    "test:wasm:ui": "playwright test e2e/wasm-*.spec.ts --ui",
+    "test:wasm:debug": "playwright test e2e/wasm-*.spec.ts --debug",
+    "test:wasm:ci": "playwright test e2e/wasm-*.spec.ts --reporter=json",
+    "test:wasm:full": "./scripts/run-wasm-tests.sh",
     "test:ci": "./scripts/run-unit-tests.sh",
     "# Build scripts": "",
     "build:prod": "next build",

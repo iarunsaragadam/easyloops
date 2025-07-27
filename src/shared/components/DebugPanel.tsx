@@ -8,10 +8,6 @@ interface DebugPanelProps {
   isRunning: boolean;
   output: string;
   testResults: TestResult[];
-  pyodideManager?: {
-    isLoaded: boolean;
-    loadingError?: string | null;
-  };
 }
 
 const DebugPanel: React.FC<DebugPanelProps> = ({
@@ -20,7 +16,6 @@ const DebugPanel: React.FC<DebugPanelProps> = ({
   isRunning,
   output,
   testResults,
-  pyodideManager,
 }) => {
   const { user, isAuthorizedForGo } = useAuth();
 
@@ -55,15 +50,6 @@ const DebugPanel: React.FC<DebugPanelProps> = ({
         <div>
           <strong>Test Results:</strong> {testResults.length}
         </div>
-        <div>
-          <strong>Pyodide Loaded:</strong>{' '}
-          {pyodideManager?.isLoaded ? 'Yes' : 'No'}
-        </div>
-        {pyodideManager?.loadingError && (
-          <div>
-            <strong>Pyodide Error:</strong> {pyodideManager.loadingError}
-          </div>
-        )}
       </div>
     </div>
   );

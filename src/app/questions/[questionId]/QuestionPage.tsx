@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import { usePyodide, useCodeExecution } from '@/features/editor';
+import { useCodeExecution } from '@/features/editor';
 import { useResizableLayout } from '@/shared';
 import { useQuestionState } from '@/features/question';
 import { useAuth } from '@/features/auth';
+import { useWasmManager } from '@/features/editor/hooks/useWasmManager';
 import { Header, MainLayout, RightPane, MobileUsageTip } from '@/shared';
 import { ProblemDescription } from '@/features/question';
 import { ExecutionMode, SubmissionResult } from '@/shared/types';
@@ -14,7 +15,6 @@ interface QuestionPageProps {
 }
 
 const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
-  const pyodideManager = usePyodide();
   const {
     layoutState,
     containerRef,
@@ -32,7 +32,8 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
     setTestResults,
     setIsRunning,
   } = useQuestionState(questionId);
-  const { executeCode, executeAndSubmit } = useCodeExecution(pyodideManager);
+  const wasmManager = useWasmManager();
+  const { executeCode, executeAndSubmit } = useCodeExecution(wasmManager);
   const { isAuthorizedForGo, user } = useAuth();
 
   // Force editor to update when language changes
@@ -49,14 +50,83 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
     console.log(`Language changed to ${language}, editor refreshed`);
   };
 
+  // WASM runtime loading state for Python
+  const [pythonWasmLoading, setPythonWasmLoading] = React.useState(false);
+  const [pythonWasmError, setPythonWasmError] = React.useState<string | null>(
+    null
+  );
+  const [pythonWasmProgress, setPythonWasmProgress] =
+    React.useState<string>('');
+
+  React.useEffect(() => {
+    if (appState.selectedLanguage === 'python') {
+      setPythonWasmLoading(true);
+      setPythonWasmError(null);
+      setPythonWasmProgress('Loading Python runtime...');
+
+      // Set a timeout for the loading process
+      const loadingTimeout = setTimeout(() => {
+        setPythonWasmLoading(false);
+        setPythonWasmError('Python runtime loading timeout. Please try again.');
+        setPythonWasmProgress('Loading Python runtime...');
+      }, 90000); // 90 seconds timeout
+
+      wasmManager
+        .load('python')
+        .then(() => {
+          clearTimeout(loadingTimeout);
+          setPythonWasmLoading(false);
+          setPythonWasmProgress('');
+          console.log('✅ Python WASM runtime loaded successfully');
+        })
+        .catch((err) => {
+          clearTimeout(loadingTimeout);
+          setPythonWasmLoading(false);
+          setPythonWasmError(err instanceof Error ? err.message : String(err));
+          setPythonWasmProgress('');
+          console.error('❌ Failed to load Python WASM runtime:', err);
+        });
+    }
+  }, [appState.selectedLanguage, wasmManager]);
+
   const handleRunCode = async () => {
+    console.log('🔍 DEBUG: handleRunCode called');
+    console.log('🔍 DEBUG: Current state:', {
+      selectedLanguage: appState.selectedLanguage,
+      pythonWasmLoading,
+      pythonWasmError,
+      hasCurrentQuestion: !!appState.currentQuestion,
+      testCaseCount: appState.currentQuestion?.testCases.length,
+    });
+
+    if (appState.selectedLanguage === 'python') {
+      if (pythonWasmLoading) {
+        console.log(
+          '🔍 DEBUG: Python WASM is loading, showing loading message'
+        );
+        setOutput(
+          `${pythonWasmProgress}\n\nThis may take up to 90onds on first load.`
+        );
+        return;
+      }
+      if (pythonWasmError) {
+        console.log('🔍 DEBUG: Python WASM error, showing error message');
+        setOutput(
+          `Error loading Python runtime: ${pythonWasmError}\n\nTrying to use fallback execution...`
+        );
+        // Continue with execution - it will fall back to Judge0 if available
+      }
+    }
+
     console.log('🚀 Run button clicked - running sample test cases!');
 
     const timeoutId = setTimeout(() => {
       console.log('⏰ Timeout reached - execution taking too long');
-      setOutput('Execution timeout - taking too long');
+      setOutput(
+        'Execution timeout - taking too long. This might be due to WASM loading or network issues.'
+      );
       setIsRunning(false);
-    }, 10000);
+    }, 120000); // 120 seconds timeout
 
     try {
       console.log('Current state:', {
@@ -89,7 +159,10 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
       setOutput('');
 
       const codeToExecute = getCurrentCode();
-
+      console.log(
+        '🔍 DEBUG: Code to execute:',
+        codeToExecute.substring(0, 200) + '...'
+      );
       console.log(
         '📝 Executing code:',
         codeToExecute.substring(0, 100) + '...'
@@ -106,6 +179,7 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
         createSnapshot: false,
       };
 
+      console.log('🔍 DEBUG: About to call executeCode...');
       const result = await executeCode(
         codeToExecute,
         appState.currentQuestion.testCases,
@@ -114,14 +188,23 @@ const QuestionPage: React.FC<QuestionPageProps> = ({ questionId }) => {
       );
 
       console.log('✅ Sample execution completed:', result);
+      console.log('🔍 DEBUG: Result output:', result.output);
+      console.log('🔍 DEBUG: Test results count:', result.testResults.length);
 
       clearTimeout(timeoutId);
       setOutput(result.output);
       setTestResults(result.testResults);
     } catch (error) {
       console.error('❌ Execution failed:', error);
+      console.error('🔍 DEBUG: Error details:', {
+        message: error instanceof Error ? error.message : String(error),
+        stack: error instanceof Error ? error.stack : undefined,
+        name: error instanceof Error ? error.name : undefined,
+      });
       clearTimeout(timeoutId);
-      setOutput(`Error: ${error}`);
+      setOutput(
+        `Error: ${error instanceof Error ? error.message : String(error)}`
+      );
       setTestResults([]);
     } finally {
       console.log('🏁 Sample execution finished');
